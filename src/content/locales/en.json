@@ -299,7 +299,7 @@
   "about.title": "About",
   "about.noNetwork": "No learning data is sent anywhere. No ads, analytics or external AI calls.",
   "about.art": "Images are placeholders and will be replaced later.",
-  "about.license": "The license will be decided before publication.",
+  "about.license": "Released under the MIT License.",
   "about.version": "Lesson version {v}",
   "rc.title": "Save recovery",
   "rc.corrupt": "The save data is damaged and could not be read. It has not been deleted.",

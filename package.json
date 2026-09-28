@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "description": "Beacon Workshop — an unofficial story-driven learning adventure about working with Codex (Working MVP).",
+  "license": "MIT",
   "type": "module",
   "engines": {
     "node": ">=22"

@@ -46,10 +46,10 @@ None. The working tree is clean.
 - English: all UI keys exist. Content falls back to Japanese until RC.
 - Asset manifest is at `src/content/asset-manifest.json`. All entries are `placeholder`.
 - Sources are `unchecked` and practice cards are `draft`. Nothing is `device_verified`.
-- License: not chosen (owner decision). The About text says it will be decided before publication.
+- License: MIT (owner decision, 2026-09-29). `LICENSE`, `package.json` and the About text (`about.license`) reflect it.
 
 ## Blockers
-None for engineering work. The repo is public but has no license (all rights reserved by default). Choosing one is the owner's decision.
+None.
 
 ## Deferred to Release Candidate
 - English content and practice text (AC18)
@@ -60,4 +60,4 @@ None for engineering work. The repo is public but has no license (all rights res
 - Manual screen-reader and 200% zoom checks (AC17)
 
 ## Exact next action
-The owner chooses a license for the public repo, and it gets added as `LICENSE` plus the About text (`about.license` in the locales). Engineering then continues with RC work, starting with the Q04 sample fixture (AC22).
+RC work, starting with the Q04 broken-sample fixture and its check (AC22). Then English content (AC18), final art (AC27), and device verification of the practice cards (AC20/AC21).

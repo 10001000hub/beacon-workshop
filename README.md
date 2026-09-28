@@ -34,4 +34,8 @@ npm run check                       # 上記すべて
 
 ## 仕様
 
-正本は [docs/PRODUCT_SPEC.md](docs/PRODUCT_SPEC.md) です。ライセンスは公開前にオーナーが決定します（未設定）。
+正本は [docs/PRODUCT_SPEC.md](docs/PRODUCT_SPEC.md) です。
+
+## ライセンス
+
+[MIT License](LICENSE)

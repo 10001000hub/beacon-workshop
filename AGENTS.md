@@ -24,5 +24,5 @@ Canonical spec: `docs/PRODUCT_SPEC.md` (do not edit, do not redesign). State of 
 
 ## Git / publication
 - Work on `feat/working-mvp`; commit checkpoints. No force-push, no `--no-verify`, no history rewrite.
-- Creating a remote, pushing, deploying, merging to main, choosing a license: owner only.
+- Creating a remote, pushing, deploying, merging to main, changing the license: owner only.
 - Do not touch other repositories (Orca Quest, orca-learning-workshop, browser-game, my-project, Beads state, timers).
