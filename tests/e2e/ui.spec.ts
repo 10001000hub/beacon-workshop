@@ -50,7 +50,8 @@ test('keyboard: skip link, visible focus, review tabs with arrow keys, no drag-o
   const skip = page.locator('.skip-link');
   await expect(skip).toBeFocused();
   expect(await skip.evaluate((el) => getComputedStyle(el).outlineStyle)).not.toBe('none');
-  expect(await skip.evaluate((el) => el.getBoundingClientRect().top >= 0)).toBe(true);
+  // The skip link slides in (transition), so wait until it is fully on screen.
+  await expect.poll(() => skip.evaluate((el) => el.getBoundingClientRect().top >= 0)).toBe(true);
   await page.keyboard.press('Enter');
   await expect(page.locator('#main')).toBeFocused();
   // Buttons show a visible focus ring.
