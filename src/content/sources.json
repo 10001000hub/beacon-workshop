@@ -1,0 +1,62 @@
+[
+  {
+    "id": "S1",
+    "title": "Best practices",
+    "originalUrl": null,
+    "resolvedUrl": "https://learn.chatgpt.com/guides/best-practices",
+    "supportsClaimIds": ["q01", "q02", "q03", "q04", "q05", "q06"],
+    "checkedAt": null,
+    "status": "unchecked",
+    "note": { "ja": "目的・関連情報・制約・完了条件を持つ依頼、実行・検査・レビューの考え方。仕様書では 2026-09-29 に取得と記録されているが、この実装では到達確認をしていない。元URLは developers.openai.com/codex/... から転送されたと仕様書にあるが、正確なパスは未記載のため null。" }
+  },
+  {
+    "id": "S2",
+    "title": "Custom instructions with AGENTS.md",
+    "originalUrl": null,
+    "resolvedUrl": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+    "supportsClaimIds": ["glossary.agents-md"],
+    "checkedAt": null,
+    "status": "unchecked",
+    "note": { "ja": "Codex が AGENTS.md からプロジェクト指示を読み込むこと。上級編A01の根拠。この実装では到達確認をしていない。" }
+  },
+  {
+    "id": "S3",
+    "title": "ChatGPT desktop app for Windows",
+    "originalUrl": null,
+    "resolvedUrl": "https://learn.chatgpt.com/docs/windows/windows-app",
+    "supportsClaimIds": ["route.desktop_windows_codex", "q02"],
+    "checkedAt": null,
+    "status": "unchecked",
+    "note": { "ja": "Windows 上の公式デスクトップ環境の案内。画面名称を古い文書名で固定しない根拠。この実装では到達確認も実機確認もしていない。" }
+  },
+  {
+    "id": "S4",
+    "title": "Quickstart",
+    "originalUrl": null,
+    "resolvedUrl": "https://learn.chatgpt.com/docs/quickstart",
+    "supportsClaimIds": ["route.desktop_windows_codex", "q02"],
+    "checkedAt": null,
+    "status": "unchecked",
+    "note": { "ja": "公式の導入経路。ゲーム内から認証情報を集めず、公式環境を利用者自身が使う設計の参照。この実装では到達確認をしていない。" }
+  },
+  {
+    "id": "S5",
+    "title": "Codex for Open Source Program Terms",
+    "originalUrl": null,
+    "resolvedUrl": "https://learn.chatgpt.com/docs/codex-for-oss-terms",
+    "supportsClaimIds": ["project.context"],
+    "checkedAt": null,
+    "status": "unchecked",
+    "note": { "ja": "制作背景の参考資料。採択や審査の結果を保証するものではない。教材の内容の根拠には使っていない。" }
+  },
+  {
+    "id": "S6",
+    "title": "OpenAI Design Guidelines",
+    "originalUrl": null,
+    "resolvedUrl": "https://openai.com/brand/",
+    "supportsClaimIds": ["app.naming"],
+    "checkedAt": null,
+    "status": "unchecked",
+    "note": { "ja": "名称・ロゴ等の扱いと誤認回避の参考。個別の名称使用許可を得たという意味ではない。本作は OpenAI のロゴを使っていない。" }
+  }
+]

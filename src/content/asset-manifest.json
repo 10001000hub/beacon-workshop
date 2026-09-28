@@ -1,0 +1,222 @@
+[
+  {
+    "id": "MAP01",
+    "kind": "map",
+    "path": "assets/placeholders/MAP01.svg",
+    "alt": {
+      "ja": "港町ルーメンの地図（仮素材）",
+      "en": "Map of Lumen harbor town (placeholder)"
+    },
+    "finalSpec": "2048×1536 WebP, text/pins overlaid in HTML",
+    "status": "placeholder"
+  },
+  {
+    "id": "BG01",
+    "kind": "background",
+    "path": "assets/placeholders/BG01.svg",
+    "alt": {
+      "ja": "市場の依頼机（仮素材）",
+      "en": "Market request desk (placeholder)"
+    },
+    "finalSpec": "1920×1080 WebP, no embedded text",
+    "status": "placeholder"
+  },
+  {
+    "id": "BG02",
+    "kind": "background",
+    "path": "assets/placeholders/BG02.svg",
+    "alt": {
+      "ja": "工房の作業机（仮素材）",
+      "en": "Workshop bench (placeholder)"
+    },
+    "finalSpec": "1920×1080 WebP, no embedded text",
+    "status": "placeholder"
+  },
+  {
+    "id": "BG03",
+    "kind": "background",
+    "path": "assets/placeholders/BG03.svg",
+    "alt": {
+      "ja": "記録倉庫の棚（仮素材）",
+      "en": "Record warehouse shelves (placeholder)"
+    },
+    "finalSpec": "1920×1080 WebP, no embedded text",
+    "status": "placeholder"
+  },
+  {
+    "id": "BG04",
+    "kind": "background",
+    "path": "assets/placeholders/BG04.svg",
+    "alt": {
+      "ja": "伝言橋（仮素材）",
+      "en": "Message bridge (placeholder)"
+    },
+    "finalSpec": "1920×1080 WebP, no embedded text",
+    "status": "placeholder"
+  },
+  {
+    "id": "BG05",
+    "kind": "background",
+    "path": "assets/placeholders/BG05.svg",
+    "alt": {
+      "ja": "鏡の検査机（仮素材）",
+      "en": "Mirror inspection desk (placeholder)"
+    },
+    "finalSpec": "1920×1080 WebP, no embedded text",
+    "status": "placeholder"
+  },
+  {
+    "id": "BG06",
+    "kind": "background",
+    "path": "assets/placeholders/BG06.svg",
+    "alt": {
+      "ja": "灯台の内部（仮素材）",
+      "en": "Lighthouse interior (placeholder)"
+    },
+    "finalSpec": "1920×1080 WebP, no embedded text",
+    "status": "placeholder"
+  },
+  {
+    "id": "CH01",
+    "kind": "character",
+    "path": "assets/placeholders/CH01.svg",
+    "alt": {
+      "ja": "ナギ（通常・仮素材）",
+      "en": "Nagi (normal, placeholder)"
+    },
+    "finalSpec": "768×1024 transparent WebP",
+    "status": "placeholder"
+  },
+  {
+    "id": "CH02",
+    "kind": "character",
+    "path": "assets/placeholders/CH02.svg",
+    "alt": {
+      "ja": "ナギ（考える・仮素材）",
+      "en": "Nagi (thinking, placeholder)"
+    },
+    "finalSpec": "768×1024 transparent WebP",
+    "status": "placeholder"
+  },
+  {
+    "id": "CH03",
+    "kind": "character",
+    "path": "assets/placeholders/CH03.svg",
+    "alt": {
+      "ja": "ナギ（喜ぶ・仮素材）",
+      "en": "Nagi (happy, placeholder)"
+    },
+    "finalSpec": "768×1024 transparent WebP",
+    "status": "placeholder"
+  },
+  {
+    "id": "CH04",
+    "kind": "character",
+    "path": "assets/placeholders/CH04.svg",
+    "alt": {
+      "ja": "コト（通常・仮素材）",
+      "en": "Koto (normal, placeholder)"
+    },
+    "finalSpec": "768×1024 transparent WebP",
+    "status": "placeholder"
+  },
+  {
+    "id": "CH05",
+    "kind": "character",
+    "path": "assets/placeholders/CH05.svg",
+    "alt": {
+      "ja": "コト（考える・仮素材）",
+      "en": "Koto (thinking, placeholder)"
+    },
+    "finalSpec": "768×1024 transparent WebP",
+    "status": "placeholder"
+  },
+  {
+    "id": "CH06",
+    "kind": "character",
+    "path": "assets/placeholders/CH06.svg",
+    "alt": {
+      "ja": "コト（喜ぶ・仮素材）",
+      "en": "Koto (happy, placeholder)"
+    },
+    "finalSpec": "768×1024 transparent WebP",
+    "status": "placeholder"
+  },
+  {
+    "id": "CH07",
+    "kind": "character",
+    "path": "assets/placeholders/CH07.svg",
+    "alt": {
+      "ja": "リツ（通常・仮素材）",
+      "en": "Ritsu (normal, placeholder)"
+    },
+    "finalSpec": "768×1024 transparent WebP",
+    "status": "placeholder"
+  },
+  {
+    "id": "CH08",
+    "kind": "character",
+    "path": "assets/placeholders/CH08.svg",
+    "alt": {
+      "ja": "リツ（考える・仮素材）",
+      "en": "Ritsu (thinking, placeholder)"
+    },
+    "finalSpec": "768×1024 transparent WebP",
+    "status": "placeholder"
+  },
+  {
+    "id": "CH09",
+    "kind": "character",
+    "path": "assets/placeholders/CH09.svg",
+    "alt": {
+      "ja": "リツ（喜ぶ・仮素材）",
+      "en": "Ritsu (happy, placeholder)"
+    },
+    "finalSpec": "768×1024 transparent WebP",
+    "status": "placeholder"
+  },
+  {
+    "id": "FX01",
+    "kind": "effect",
+    "path": "assets/placeholders/FX01.svg",
+    "alt": {
+      "ja": "モヤ（仮素材）",
+      "en": "Mist (placeholder)"
+    },
+    "finalSpec": "768×768 transparent WebP",
+    "status": "placeholder"
+  },
+  {
+    "id": "LOGO01",
+    "kind": "logo",
+    "path": "assets/placeholders/LOGO01.svg",
+    "alt": {
+      "ja": "Beacon Workshop の印（仮素材）",
+      "en": "Beacon Workshop mark (placeholder)"
+    },
+    "finalSpec": "Original vector SVG",
+    "status": "placeholder"
+  },
+  {
+    "id": "ICONS01",
+    "kind": "sprite",
+    "path": "assets/placeholders/ICONS01.svg",
+    "alt": {
+      "ja": "アイコン集（仮素材）",
+      "en": "Icon sprite (placeholder)"
+    },
+    "finalSpec": "Single SVG sprite, 12 symbols, 24/48px",
+    "status": "placeholder"
+  },
+  {
+    "id": "BADGES01",
+    "kind": "sprite",
+    "path": "assets/placeholders/BADGES01.svg",
+    "alt": {
+      "ja": "章の達成印（仮素材）",
+      "en": "Quest badges (placeholder)"
+    },
+    "finalSpec": "Single SVG sprite, 6 badges, 64px",
+    "status": "placeholder"
+  }
+]

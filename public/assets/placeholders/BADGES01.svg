@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<symbol id="badge-q01" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="3"/><rect x="20" y="16" width="24" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="3"/></symbol>
+<symbol id="badge-q02" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="32" cy="30" r="10" fill="currentColor"/></symbol>
+<symbol id="badge-q03" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 20h28v26H18z M18 28h28" fill="none" stroke="currentColor" stroke-width="3"/></symbol>
+<symbol id="badge-q04" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="3"/><path d="M14 40 Q32 20 50 40" fill="none" stroke="currentColor" stroke-width="3"/></symbol>
+<symbol id="badge-q05" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="3"/><ellipse cx="32" cy="30" rx="12" ry="16" fill="none" stroke="currentColor" stroke-width="3"/></symbol>
+<symbol id="badge-q06" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="3"/><path d="M27 48 L29 18 L35 18 L37 48 Z" fill="currentColor"/></symbol>
+</svg>

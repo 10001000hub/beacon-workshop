@@ -1,0 +1,361 @@
+{
+  "id": "q03",
+  "revision": "1",
+  "prerequisite": "q02",
+  "title": { "ja": "消える記録の倉庫" },
+  "place": { "ja": "記録倉庫" },
+  "incident": { "ja": "画面を閉じると依頼が消えてしまう。" },
+  "notesState": { "ja": "再読み込み後もメモが残る" },
+  "sample": { "ja": "完成見本：1件追加してページを再読み込みしても、そのメモが一覧に残っている。追加と一覧の動きは前と同じ。保存はこの端末のブラウザ内だけで、外には送らない。" },
+  "objectives": [
+    { "id": "q03-o1", "text": { "ja": "追加したい機能と、変えてはいけない動作を分けて依頼できる" } },
+    { "id": "q03-o2", "text": { "ja": "必要な変更と、関係のない全面変更を見分けられる" } },
+    { "id": "q03-o3", "text": { "ja": "修正後に、新しい機能と今までの機能の両方を確かめられる" } }
+  ],
+  "briefScene": {
+    "id": "q03-brief",
+    "backgroundAssetId": "BG03",
+    "lines": [
+      { "speaker": "narrator", "text": { "ja": "記録倉庫では、戸を閉めるたびに、棚に並べた依頼の札が消えてしまう。" } },
+      { "speaker": "resident", "name": { "ja": "記録倉庫の番人" }, "text": { "ja": "いっそ、大きな管理システムに建て替えましょう！" } },
+      { "speaker": "ritsu", "expression": "think", "text": { "ja": "建て替えたら、今ちゃんと動いている追加と一覧も、全部やり直しになるね。" } },
+      { "speaker": "koto", "expression": "normal", "text": { "ja": "どこまで変えてよいか、どこを変えてはいけないか、教えてください。" } },
+      { "speaker": "nagi", "expression": "think", "text": { "ja": "「閉じても残る」だけを足そう。ほかは今のまま。" } }
+    ]
+  },
+  "clearScene": {
+    "id": "q03-clear",
+    "backgroundAssetId": "BG03",
+    "lines": [
+      { "speaker": "narrator", "text": { "ja": "戸を閉めて、もう一度開ける。棚には、昨日の札がそのまま並んでいた。" } },
+      { "speaker": "resident", "name": { "ja": "記録倉庫の番人" }, "text": { "ja": "建て替えなくても、残るようになるものですね。" } },
+      { "speaker": "koto", "expression": "happy", "text": { "ja": "追加も一覧も、前と同じように動いています。確かめました。" } },
+      { "speaker": "ritsu", "expression": "normal", "text": { "ja": "ただし、この保存はこの端末のブラウザの中だけ。別のブラウザでは別の棚だと覚えておこう。" } }
+    ]
+  },
+  "activities": [
+    {
+      "id": "q03-a",
+      "questId": "q03",
+      "objectiveId": "q03-o1",
+      "type": "prompt_builder",
+      "required": true,
+      "title": { "ja": "Q03-A 保存だけを足す依頼" },
+      "prompt": { "ja": "「閉じても残る」機能を足す変更依頼を組み立ててください。建て替えや関係のない変更の札は置きません。" },
+      "slots": [
+        { "id": "purpose", "label": { "ja": "目的" }, "question": { "ja": "何のために変える？" } },
+        { "id": "context", "label": { "ja": "材料（関連情報）" }, "question": { "ja": "今はどうなっている？" } },
+        { "id": "constraints", "label": { "ja": "制約" }, "question": { "ja": "変えてはいけないもの・守ることは？" } },
+        { "id": "done", "label": { "ja": "完了条件" }, "question": { "ja": "何を確かめたら終わり？" } }
+      ],
+      "cards": [
+        { "id": "q03a-rebuild", "label": { "ja": "大きな管理システムに、全面的に作り直す" }, "explain": { "ja": "今動いている追加と一覧まで作り直しになり、壊れる範囲が広がります。" } },
+        { "id": "q03a-now", "label": { "ja": "今は追加と一覧が動いている。保存はメモリ内だけ" }, "explain": { "ja": "変更前の状態を伝える「材料」です。" } },
+        { "id": "q03a-keep", "label": { "ja": "追加と一覧の今の動きは変えない" }, "explain": { "ja": "残す動作を指定する「制約」です。" } },
+        { "id": "q03a-done", "label": { "ja": "1件追加→再読み込み→同じメモが一覧に残っている" }, "explain": { "ja": "新しい機能を確かめる「完了条件」です。" } },
+        { "id": "q03a-cloud", "label": { "ja": "他の端末からも見られるよう、サーバーへ送る" }, "explain": { "ja": "外部への送信は頼まれていません。個人のメモが外へ出るおそれもあります。" } },
+        { "id": "q03a-purpose", "label": { "ja": "ページを閉じたり再読み込みしたりしても、追加したメモが残るようにする" }, "explain": { "ja": "今回の変更の「目的」です。" } },
+        { "id": "q03a-local", "label": { "ja": "保存はこの端末のブラウザ内（localStorage）だけ。外部には送らない" }, "explain": { "ja": "保存の場所を限る「制約」です。" } },
+        { "id": "q03a-color", "label": { "ja": "ついでに全体の配色も新しくする" }, "explain": { "ja": "保存とは関係のない変更です。確かめる範囲が増えます。" } },
+        { "id": "q03a-fail", "label": { "ja": "保存できないときは、黙って成功扱いにせず画面で知らせる" }, "explain": { "ja": "保存の限界を隠さないための条件です。制約・完了条件のどちらに置いてもかまいません。" } },
+        { "id": "q03a-still", "label": { "ja": "再読み込みの後も、新しいメモを追加できる" }, "explain": { "ja": "今までの機能が壊れていないことを確かめる条件です。完了条件に加えてもかまいません。" } }
+      ],
+      "grading": {
+        "id": "q03-a.rule",
+        "accepted": [
+          {
+            "kind": "placements",
+            "slots": {
+              "purpose": { "required": ["q03a-purpose"] },
+              "context": { "required": ["q03a-now"] },
+              "constraints": { "required": ["q03a-keep", "q03a-local"], "allowed": ["q03a-fail"] },
+              "done": { "required": ["q03a-done"], "allowed": ["q03a-still", "q03a-fail"] }
+            }
+          }
+        ],
+        "diagnostics": [
+          { "when": { "type": "placed", "cards": ["q03a-rebuild"] }, "outcome": "rebuild" },
+          { "when": { "type": "placed", "cards": ["q03a-cloud"] }, "outcome": "external_send" },
+          { "when": { "type": "placed", "cards": ["q03a-color"] }, "outcome": "unrelated_change" },
+          { "when": { "type": "slotMissing", "slot": "constraints", "cards": ["q03a-keep"] }, "outcome": "no_keep" },
+          { "when": { "type": "slotMissing", "slot": "constraints", "cards": ["q03a-local"] }, "outcome": "no_local" },
+          { "when": { "type": "slotMissing", "slot": "purpose", "cards": ["q03a-purpose"] }, "outcome": "missing_purpose" },
+          { "when": { "type": "slotMissing", "slot": "done", "cards": ["q03a-done"] }, "outcome": "missing_done" },
+          { "when": { "type": "slotMissing", "slot": "context", "cards": ["q03a-now"] }, "outcome": "missing_context" }
+        ],
+        "fallbackOutcome": "misplaced"
+      },
+      "feedbackByOutcome": {
+        "correct": {
+          "what": { "ja": "コトは保存だけを足し、追加と一覧はそのまま残す変更に集中できます。" },
+          "why": { "ja": "足す機能・残す動作・保存の場所・確かめ方がそれぞれ伝わっています。" },
+          "next": { "ja": "次は、コトが出した2つの変更案を見比べます。" }
+        },
+        "rebuild": {
+          "what": { "ja": "コトは全部を作り直し、今動いている追加と一覧が一度使えなくなります。" },
+          "why": { "ja": "困り事は「消える」ことだけです。全面的な作り直しは、壊れる範囲を広げます。" },
+          "next": { "ja": "「全面的に作り直す」の札を外しましょう。" }
+        },
+        "external_send": {
+          "what": { "ja": "個人のメモが外部のサーバーへ送られるようになります。" },
+          "why": { "ja": "外部への送信は頼まれておらず、端末内に残せば目的は満たせます。" },
+          "next": { "ja": "「サーバーへ送る」の札を外し、端末内だけに保存する札を制約に置きましょう。" }
+        },
+        "unrelated_change": {
+          "what": { "ja": "配色まで変わり、何が原因で見た目が変わったのか分かりにくくなります。" },
+          "why": { "ja": "保存と関係のない変更を同時に頼むと、確かめる範囲が増えます。" },
+          "next": { "ja": "配色の札を外しましょう。必要なら、あとで別の依頼にします。" }
+        },
+        "no_keep": {
+          "what": { "ja": "コトは保存のついでに、追加や一覧の処理まで書き換えるかもしれません。" },
+          "why": { "ja": "変えてはいけない動作が制約に入っていません。" },
+          "next": { "ja": "「追加と一覧の今の動きは変えない」を制約に置きましょう。" }
+        },
+        "no_local": {
+          "what": { "ja": "保存の場所が決まらず、コトが外部の保存先を選ぶかもしれません。" },
+          "why": { "ja": "「この端末のブラウザ内だけ・外部に送らない」という制約がありません。" },
+          "next": { "ja": "保存の場所を限る札を制約に置きましょう。" }
+        },
+        "missing_purpose": {
+          "what": { "ja": "コトは何のための変更か分からず、関係のない所まで直すかもしれません。" },
+          "why": { "ja": "目的の欄に「閉じても残る」ことが入っていません。" },
+          "next": { "ja": "目的の欄を見直しましょう。" }
+        },
+        "missing_done": {
+          "what": { "ja": "保存が本当に効いているか、確かめる方法が決まっていません。" },
+          "why": { "ja": "「追加→再読み込み→残っている」という確かめ方が完了条件にありません。" },
+          "next": { "ja": "再読み込みで残ることを確かめる札を完了条件に置きましょう。" }
+        },
+        "missing_context": {
+          "what": { "ja": "コトは今どこまで動いているのか知らないまま変更します。" },
+          "why": { "ja": "変更前の状態が材料の欄にありません。" },
+          "next": { "ja": "「今は追加と一覧が動いている」の札を材料に置きましょう。" }
+        },
+        "misplaced": {
+          "what": { "ja": "必要な札はありますが、欄が違うためコトが読み違えます。" },
+          "why": { "ja": "欄の問いと札の中身が一致していない組み合わせがあります。" },
+          "next": { "ja": "各欄の問いと、札の中身を照らし合わせましょう。" }
+        }
+      },
+      "hints": [
+        { "id": "q03-a.h1", "text": { "ja": "変更の依頼では「足すもの」と同じくらい「変えないもの」を伝えることが大切です。" } },
+        { "id": "q03-a.h2", "text": { "ja": "制約の欄には2枚が必要です。残す動作の札と、保存の場所を限る札です。建て替え・送信・配色は置きません。" } },
+        { "id": "q03-a.h3", "text": { "ja": "解答例：目的＝「閉じても再読み込みしてもメモが残る」、材料＝「今は追加と一覧が動いている」、制約＝「追加と一覧は変えない」「端末内だけ・外部に送らない」（保存失敗を知らせるも可）、完了条件＝「追加→再読み込み→残っている」（再読み込み後も追加できる・保存失敗を知らせるも可）。理由：変更範囲を保存だけに絞れるからです。盤面で札を置いてください。" } }
+      ]
+    },
+    {
+      "id": "q03-b",
+      "questId": "q03",
+      "objectiveId": "q03-o2",
+      "type": "change_review",
+      "required": true,
+      "title": { "ja": "Q03-B 2つの変更案を比べる" },
+      "prompt": { "ja": "コトが2つの変更案を出しました。タブで差分を見比べ、保存の追加に必要な案と、その理由を選んでください。差分の行頭には「追加」「削除」「変更」の印があります。" },
+      "views": [
+        {
+          "id": "plan-a",
+          "label": { "ja": "案A" },
+          "panels": [
+            { "kind": "files", "title": { "ja": "変更されたファイル" }, "entries": [{ "path": "app.js", "status": "changed" }, { "path": "index.html", "status": "changed" }, { "path": "style.css", "status": "unchanged" }] },
+            {
+              "kind": "diff",
+              "file": "app.js",
+              "lines": [
+                { "op": "ctx", "text": "function addNote(title, body) {" },
+                { "op": "ctx", "text": "  notes.push({ title, body });" },
+                { "op": "add", "text": "  saveNotes();" },
+                { "op": "ctx", "text": "  renderList();" },
+                { "op": "ctx", "text": "}" },
+                { "op": "add", "text": "function saveNotes() {" },
+                { "op": "add", "text": "  try { localStorage.setItem('beacon-notes.v1', JSON.stringify(notes)); }" },
+                { "op": "add", "text": "  catch { showStatus('この端末に保存できませんでした'); }" },
+                { "op": "add", "text": "}" },
+                { "op": "add", "text": "function loadNotes() { /* 起動時に読み込む */ }" }
+              ]
+            },
+            { "kind": "diff", "file": "index.html", "lines": [{ "op": "ctx", "text": "<ul id=\"list\"></ul>" }, { "op": "add", "text": "<p id=\"save-status\" role=\"status\"></p>" }] }
+          ]
+        },
+        {
+          "id": "plan-b",
+          "label": { "ja": "案B" },
+          "panels": [
+            { "kind": "files", "title": { "ja": "変更されたファイル" }, "entries": [{ "path": "app.js", "status": "removed" }, { "path": "index.html", "status": "changed" }, { "path": "style.css", "status": "changed" }, { "path": "server.js", "status": "added" }, { "path": "framework/", "status": "added" }] },
+            {
+              "kind": "diff",
+              "file": "index.html",
+              "lines": [
+                { "op": "del", "text": "<form id=\"note-form\"> …（入力欄と追加ボタン）" },
+                { "op": "del", "text": "<ul id=\"list\"></ul>" },
+                { "op": "add", "text": "<div id=\"root\"></div>  <!-- 新しい仕組みで全画面を描き直す -->" }
+              ]
+            },
+            { "kind": "diff", "file": "style.css", "lines": [{ "op": "chg", "text": "--main-color: #203F49 → #FF3366" }] },
+            { "kind": "diff", "file": "server.js", "lines": [{ "op": "add", "text": "// メモを外部のサーバーへ送って保存する" }, { "op": "add", "text": "sendToServer(notes);" }] }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "choice",
+          "label": { "ja": "保存の追加に必要なのはどちらの案？" },
+          "options": [
+            { "id": "plan-b", "label": { "ja": "案B" }, "explain": { "ja": "画面・配色・保存先まで全面的に変わり、外部への送信も加わります。" } },
+            { "id": "plan-a", "label": { "ja": "案A" }, "explain": { "ja": "保存と読み込みだけを足し、追加と一覧の処理はそのままです。" } },
+            { "id": "both", "label": { "ja": "どちらも同じ" }, "explain": { "ja": "変更の範囲が大きく違います。差分を見比べましょう。" } }
+          ]
+        },
+        {
+          "id": "reason",
+          "label": { "ja": "そう判断した理由は？" },
+          "options": [
+            { "id": "more-lines", "label": { "ja": "変更された行が多い方が、丁寧な仕事だから" }, "explain": { "ja": "行数の多さは正しさの根拠になりません。" } },
+            { "id": "server", "label": { "ja": "サーバーに送れば、絶対に消えないから" }, "explain": { "ja": "外部送信は頼まれておらず、「絶対に消えない」とも言えません。" } },
+            { "id": "scope", "label": { "ja": "保存に必要な部分だけが変わり、追加・一覧の処理と見た目はそのままだから" }, "explain": { "ja": "頼んだ範囲に収まっていることを差分で確かめた理由です。" } },
+            { "id": "newer", "label": { "ja": "新しい仕組みの方が、将来的に安心だから" }, "explain": { "ja": "「新しいから正しい」とは限りません。今回の目的との関係で判断します。" } }
+          ]
+        }
+      ],
+      "grading": {
+        "id": "q03-b.rule",
+        "accepted": [{ "kind": "picks", "picks": { "choice": ["plan-a"], "reason": ["scope"] } }],
+        "diagnostics": [
+          { "when": { "type": "pick", "item": "choice", "options": ["plan-b"] }, "outcome": "chose_rewrite" },
+          { "when": { "type": "pick", "item": "choice", "options": ["both"] }, "outcome": "not_compared" },
+          { "when": { "type": "pick", "item": "reason", "options": ["more-lines"] }, "outcome": "more_is_better" },
+          { "when": { "type": "pick", "item": "reason", "options": ["server"] }, "outcome": "external_send" },
+          { "when": { "type": "pick", "item": "reason", "options": ["newer"] }, "outcome": "newer_is_better" }
+        ],
+        "fallbackOutcome": "not_compared"
+      },
+      "feedbackByOutcome": {
+        "correct": {
+          "what": { "ja": "案Aを選べば、保存だけが加わり、追加と一覧はこれまでどおり動きます。" },
+          "why": { "ja": "差分を見て、頼んだ範囲に収まっている変更を選びました。" },
+          "next": { "ja": "次は、変更の後に何を確かめるかを組み立てます。" }
+        },
+        "chose_rewrite": {
+          "what": { "ja": "入力欄と一覧が一度消え、配色が変わり、メモが外部へ送られるようになります。" },
+          "why": { "ja": "案Bは「保存だけを足す」という依頼の範囲を大きく超えています。" },
+          "next": { "ja": "案Bの差分の「削除」の行と server.js を見直しましょう。" }
+        },
+        "not_compared": {
+          "what": { "ja": "2つの案の違いを見落としたまま進むことになります。" },
+          "why": { "ja": "案Aは2ファイルの小さな追加、案Bは全面的な作り直しです。" },
+          "next": { "ja": "それぞれのタブの「変更されたファイル」を見比べましょう。" }
+        },
+        "more_is_better": {
+          "what": { "ja": "行数で選ぶと、頼んでいない変更まで受け入れてしまいます。" },
+          "why": { "ja": "変更の多さは丁寧さや正しさの根拠になりません。" },
+          "next": { "ja": "理由を選び直しましょう。今回の目的と差分の範囲に注目します。" }
+        },
+        "external_send": {
+          "what": { "ja": "個人のメモが外部へ送られる変更を正しいと判断してしまいます。" },
+          "why": { "ja": "外部送信は頼まれていません。端末内の保存で目的は満たせます。" },
+          "next": { "ja": "理由を選び直しましょう。" }
+        },
+        "newer_is_better": {
+          "what": { "ja": "「新しい」ことを理由に、動いている部分まで作り直してしまいます。" },
+          "why": { "ja": "新しさは、今回の目的に合っている根拠になりません。" },
+          "next": { "ja": "理由を選び直しましょう。" }
+        }
+      },
+      "hints": [
+        { "id": "q03-b.h1", "text": { "ja": "依頼したのは「保存を足す」ことだけでした。その範囲に収まっている案はどちらでしょう。" } },
+        { "id": "q03-b.h2", "text": { "ja": "案Bの「削除」の行、style.css の「変更」、server.js の「追加」を見てみましょう。" } },
+        { "id": "q03-b.h3", "text": { "ja": "解答例：案Aを選び、理由は「保存に必要な部分だけが変わり、追加・一覧の処理と見た目はそのまま」。理由：案Bは入力欄を消し、配色を変え、外部送信を加えるからです。盤面に戻って選んでください。" } }
+      ]
+    },
+    {
+      "id": "q03-c",
+      "questId": "q03",
+      "objectiveId": "q03-o3",
+      "type": "evidence_board",
+      "mode": "order",
+      "required": true,
+      "title": { "ja": "Q03-C 修正後の確認を組み立てる" },
+      "prompt": { "ja": "案Aを取り込んだ後の確認手順を、札を選んで順に並べてください。新しい機能と、今までの機能の両方を確かめます。" },
+      "cards": [
+        { "id": "q03c-check2", "label": { "ja": "2件とも一覧に表示されるのを見る" }, "explain": { "ja": "再読み込みの後も追加が動くことを確かめる手順です。" } },
+        { "id": "q03c-code", "label": { "ja": "コードに localStorage と書いてあるのを確認するだけにする" }, "explain": { "ja": "書いてあることと、実際に動くことは別です。" } },
+        { "id": "q03c-add", "label": { "ja": "題名「氷の配達」、本文「朝6時」で1件追加する" }, "explain": { "ja": "保存を確かめるための最初の操作です。" } },
+        { "id": "q03c-reload", "label": { "ja": "ページを再読み込みする" }, "explain": { "ja": "「閉じても残る」を確かめるための操作です。" } },
+        { "id": "q03c-other", "label": { "ja": "別のブラウザで開いても残っているかを見る" }, "explain": { "ja": "別のブラウザは別の保存場所です。残らないのが正常なので、合否の根拠になりません。" } },
+        { "id": "q03c-check", "label": { "ja": "「氷の配達」が一覧に残っているのを見る" }, "explain": { "ja": "新しい機能の結果を確かめる手順です。" } },
+        { "id": "q03c-wipe", "label": { "ja": "確認のために、ブラウザの全データを消去する" }, "explain": { "ja": "ほかのサイトの保存まで消えてしまいます。確認に必要ありません。" } },
+        { "id": "q03c-add2", "label": { "ja": "もう1件「網の修理」を追加する" }, "explain": { "ja": "再読み込みの後も追加ができるか、今までの機能を確かめる操作です。" } }
+      ],
+      "grading": {
+        "id": "q03-c.rule",
+        "accepted": [
+          { "kind": "sequence", "ordered": true, "sequence": ["q03c-add", "q03c-reload", "q03c-check", "q03c-add2", "q03c-check2"] },
+          { "kind": "sequence", "ordered": true, "sequence": ["q03c-add", "q03c-reload", "q03c-add2", "q03c-check", "q03c-check2"] }
+        ],
+        "diagnostics": [
+          { "when": { "type": "selected", "cards": ["q03c-wipe"] }, "outcome": "destructive" },
+          { "when": { "type": "selected", "cards": ["q03c-code"] }, "outcome": "code_only" },
+          { "when": { "type": "selected", "cards": ["q03c-other"] }, "outcome": "wrong_expectation" },
+          { "when": { "type": "notSelected", "cards": ["q03c-add", "q03c-reload", "q03c-check"] }, "outcome": "no_persistence_check" },
+          { "when": { "type": "notSelected", "cards": ["q03c-add2", "q03c-check2"] }, "outcome": "no_regression" }
+        ],
+        "fallbackOutcome": "order"
+      },
+      "feedbackByOutcome": {
+        "correct": {
+          "what": { "ja": "保存が効いていること、そして再読み込みの後も追加と一覧が動くことを確かめられます。" },
+          "why": { "ja": "新しい機能だけでなく、今までの機能が壊れていないかも確かめる手順です。" },
+          "next": { "ja": "この章はここまで。持ち帰りカードを受け取りましょう。" }
+        },
+        "destructive": {
+          "what": { "ja": "ほかのサイトの保存やログイン状態まで消えてしまいます。" },
+          "why": { "ja": "確認のために、関係のないデータを消す必要はありません。" },
+          "next": { "ja": "「全データを消去する」の札を手順から外しましょう。" }
+        },
+        "code_only": {
+          "what": { "ja": "コードを読んだだけでは、実際に残るかどうかは分かりません。" },
+          "why": { "ja": "書いてあることと、動くことは別です。" },
+          "next": { "ja": "「コードを確認するだけ」の札を外し、画面で確かめる手順にしましょう。" }
+        },
+        "wrong_expectation": {
+          "what": { "ja": "別のブラウザで残らないのを見て、「保存が壊れている」と誤解します。" },
+          "why": { "ja": "ブラウザ内の保存は、ブラウザごとに別の場所です。残らないのが正常です。" },
+          "next": { "ja": "「別のブラウザで開く」の札を手順から外しましょう。" }
+        },
+        "no_persistence_check": {
+          "what": { "ja": "「閉じても残る」という新しい機能を確かめられていません。" },
+          "why": { "ja": "追加→再読み込み→残っている、の3つがそろって初めて保存を確かめられます。" },
+          "next": { "ja": "足りない札を手順に加えましょう。" }
+        },
+        "no_regression": {
+          "what": { "ja": "保存は確かめましたが、再読み込みの後に追加が壊れていても気づけません。" },
+          "why": { "ja": "変更の後は、今までの機能が引き続き動くことも確かめます。" },
+          "next": { "ja": "「もう1件追加する」と「2件とも表示される」の札を、再読み込みの後に加えましょう。" }
+        },
+        "order": {
+          "what": { "ja": "必要な札はそろっていますが、この順番では保存を確かめられません。" },
+          "why": { "ja": "追加→再読み込み→確認の順でなければ、「残った」かどうかが分かりません。もう1件の追加は再読み込みの後です。" },
+          "next": { "ja": "「上へ」「下へ」で順番を並べ替えましょう。" }
+        }
+      },
+      "hints": [
+        { "id": "q03-c.h1", "text": { "ja": "確かめたいことは2つです。新しく足した「残る」機能と、今までの「追加できる」機能です。" } },
+        { "id": "q03-c.h2", "text": { "ja": "再読み込みは、1件目の追加の後。もう1件の追加は、再読み込みの後に行います。別のブラウザ・全消去・コードを読むだけの札は使いません。" } },
+        { "id": "q03-c.h3", "text": { "ja": "解答例：1件追加→再読み込み→「氷の配達」が残っているのを見る→もう1件追加→2件とも表示されるのを見る（「残っているのを見る」を2件目の追加の後にしても可）。理由：保存と、今までの追加・一覧の両方を確かめる手順だからです。盤面で札を並べてください。" } }
+      ]
+    }
+  ],
+  "takeawayCards": [
+    { "id": "tk-q03-1", "questId": "q03", "title": { "ja": "変更範囲" }, "body": { "ja": "困り事に必要な部分だけを変える。建て替えや配色の変更は、別の依頼に分ける。" } },
+    { "id": "tk-q03-2", "questId": "q03", "title": { "ja": "残す動作" }, "body": { "ja": "「足すもの」と一緒に「変えないもの」を伝え、変更の後に今までの機能も確かめる。" } },
+    { "id": "tk-q03-3", "questId": "q03", "title": { "ja": "保存と限界" }, "body": { "ja": "ブラウザ内の保存は、その端末・そのブラウザだけ。消去や保存拒否もあり得るので、失敗を黙って成功扱いにしない。" } }
+  ],
+  "takeawayTemplate": {
+    "title": { "ja": "小さな変更依頼の見本" },
+    "text": { "ja": "目的：ページを閉じても、追加したメモが残るようにする\n今の状態：追加と一覧は動いている。保存はメモリ内だけ\n変えないもの：追加と一覧の動き、見た目\n守ること：保存は端末内だけ。外部に送らない。保存できないときは画面で知らせる\n完了条件：追加→再読み込み→残っている。再読み込み後も追加できる" }
+  },
+  "practiceCardId": "pc-q03",
+  "sourceIds": ["S1"],
+  "mapRegionId": "warehouse",
+  "badgeId": "badge-q03",
+  "glossaryIds": ["save", "diff", "test", "local"]
+}

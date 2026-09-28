@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Record warehouse shelves placeholder">
+<rect width="1920" height="1080" fill="#E3E0D6"/>
+<rect x="0" y="820" width="1920" height="260" fill="#203F49" opacity="0.18"/>
+<rect x="480" y="270" width="960" height="540" rx="24" fill="#F5F0E6" opacity="0.55"/>
+<text x="60" y="110" font-family="sans-serif" font-size="56" fill="#203F49">BG03</text>
+<text x="1908" y="1068" text-anchor="end" font-family="sans-serif" font-size="39" fill="#7D8792">PLACEHOLDER</text>
+</svg>

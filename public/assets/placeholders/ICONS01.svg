@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<symbol id="icon-purpose" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="currentColor"/></symbol>
+<symbol id="icon-material" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10h8M8 14h5" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="icon-constraint" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="icon-done" viewBox="0 0 24 24"><path d="M5 12l4 4 10-10" fill="none" stroke="currentColor" stroke-width="2.5"/></symbol>
+<symbol id="icon-make" viewBox="0 0 24 24"><path d="M4 20l6-6M14 4l6 6-8 8-6-6z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="icon-change" viewBox="0 0 24 24"><path d="M4 8h13l-3-3M20 16H7l3 3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="icon-fix" viewBox="0 0 24 24"><path d="M14 4a5 5 0 0 0-5 7l-5 5 3 3 5-5a5 5 0 0 0 7-5l-3 3-3-3z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="icon-check" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15 15l5 5" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="icon-handoff" viewBox="0 0 24 24"><path d="M4 12h12M12 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="icon-hint" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3 11v2h6v-2a6 6 0 0 0-3-11z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="icon-source" viewBox="0 0 24 24"><path d="M5 4h10l4 4v12H5z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="icon-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" stroke="currentColor" stroke-width="2"/></symbol>
+</svg>

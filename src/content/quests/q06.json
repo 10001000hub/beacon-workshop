@@ -1,0 +1,385 @@
+{
+  "id": "q06",
+  "revision": "1",
+  "prerequisite": "q05",
+  "title": { "ja": "灯台へ届ける日" },
+  "place": { "ja": "灯台" },
+  "incident": { "ja": "番人が完了報告を盲信したり、軽微な装飾で止めたりする。" },
+  "notesState": { "ja": "完成見本・README・確認記録をまとめる" },
+  "sample": { "ja": "完成見本：灯台メモと一緒に、目的・起動と使い方・確認済みと未確認・残件を書いた引き渡しパックがある。秘密情報や作業ログの全文は入っていない。" },
+  "objectives": [
+    { "id": "q06-o1", "text": { "ja": "目的に関わる不具合と、後でよい小さな改善を分けられる" } },
+    { "id": "q06-o2", "text": { "ja": "起動方法・確認記録・残件をまとめて、他の人へ渡せる" } },
+    { "id": "q06-o3", "text": { "ja": "報告の言葉だけでも、装飾の細部だけでもなく、根拠で届けるかを決められる" } }
+  ],
+  "briefScene": {
+    "id": "q06-brief",
+    "backgroundAssetId": "BG06",
+    "lines": [
+      { "speaker": "narrator", "text": { "ja": "灯台の入口には、古い確認装置「完了印の番人」が立っている。" } },
+      { "speaker": "resident", "name": { "ja": "完了印の番人（灯台の確認装置）" }, "text": { "ja": "報告書ニ「完了」ト アリ。通過ヲ 許可。……ボタンノ 角ガ 丸クナイ。通過ヲ 拒否。" } },
+      { "speaker": "ritsu", "expression": "think", "text": { "ja": "言葉だけで通して、角の丸みで止める。どちらも、確かめる所がずれている。" } },
+      { "speaker": "koto", "expression": "normal", "text": { "ja": "何が必須で、何が後でよいのか。確認記録と一緒に渡せば、番人も判断できます。" } },
+      { "speaker": "nagi", "expression": "think", "text": { "ja": "灯台メモを、次の人にちゃんと渡せる形にしよう。" } }
+    ]
+  },
+  "clearScene": {
+    "id": "q06-clear",
+    "backgroundAssetId": "BG06",
+    "lines": [
+      { "speaker": "narrator", "text": { "ja": "番人の目盛りが、ゆっくりと正しい位置に戻っていく。" } },
+      { "speaker": "resident", "name": { "ja": "完了印の番人（灯台の確認装置）" }, "text": { "ja": "必須条件ヲ 確認。残件ヲ 記録。……引キ渡シヲ 受理。" } },
+      { "speaker": "koto", "expression": "happy", "text": { "ja": "確かめたことと、まだのことを、分けて渡せました。" } },
+      { "speaker": "nagi", "expression": "happy", "text": { "ja": "灯台の上へ行こう。灯りをともす時間だ。" } }
+    ]
+  },
+  "activities": [
+    {
+      "id": "q06-a",
+      "questId": "q06",
+      "objectiveId": "q06-o1",
+      "type": "triage_decision",
+      "required": true,
+      "title": { "ja": "Q06-A 必須と軽微を仕分ける" },
+      "prompt": { "ja": "番人の前に4件の項目があります。それぞれ「進める」「今直す」「確認する」「後で改善に回す」のどれにするか選んでください。" },
+      "decisions": [
+        { "id": "proceed", "label": { "ja": "進める" }, "explain": { "ja": "必要な根拠がそろっていて、止める理由がないとき。" } },
+        { "id": "fix_now", "label": { "ja": "今直す" }, "explain": { "ja": "目的に関わる不具合が確かめられたとき。" } },
+        { "id": "verify", "label": { "ja": "確認する" }, "explain": { "ja": "判断に必要な根拠が足りないとき。" } },
+        { "id": "later", "label": { "ja": "後で改善に回す" }, "explain": { "ja": "目的には関わらない、小さな改善点のとき。" } }
+      ],
+      "cases": [
+        {
+          "id": "i1",
+          "title": { "ja": "項目1：再読み込みでメモが消える" },
+          "evidence": [{ "ja": "現在の版で、追加→再読み込み→一覧が空になる。2回試して2回とも同じ。" }]
+        },
+        {
+          "id": "i2",
+          "title": { "ja": "項目2：ボタンの角が丸くない" },
+          "evidence": [{ "ja": "見本ではボタンの角が丸い。押すと追加は正しく動く。" }]
+        },
+        {
+          "id": "i3",
+          "title": { "ja": "項目3：追加と空白題名の拒否" },
+          "evidence": [{ "ja": "現在の版で、追加・空白題名の拒否・通常題名の登録を確認し、すべて成功。" }]
+        },
+        {
+          "id": "i4",
+          "title": { "ja": "項目4：「全部完了」の報告" },
+          "evidence": [{ "ja": "報告書に「全部完了しました」とある。どの版で何を確かめたかの記録はない。" }]
+        }
+      ],
+      "grading": {
+        "id": "q06-a.rule",
+        "accepted": [{ "kind": "picks", "picks": { "i1": ["fix_now"], "i2": ["later"], "i3": ["proceed"], "i4": ["verify"] } }],
+        "diagnostics": [
+          { "when": { "type": "pick", "item": "i1", "options": ["proceed", "later"] }, "outcome": "blocker_ignored" },
+          { "when": { "type": "pick", "item": "i4", "options": ["proceed"] }, "outcome": "report_trusted" },
+          { "when": { "type": "pick", "item": "i2", "options": ["fix_now", "verify"] }, "outcome": "minor_as_blocker" },
+          { "when": { "type": "pick", "item": "i3", "options": ["fix_now", "verify", "later"] }, "outcome": "over_cautious" },
+          { "when": { "type": "pick", "item": "i1", "options": ["verify"] }, "outcome": "already_confirmed" },
+          { "when": { "type": "pick", "item": "i2", "options": ["proceed"] }, "outcome": "note_remaining" }
+        ],
+        "fallbackOutcome": "no_evidence"
+      },
+      "feedbackByOutcome": {
+        "correct": {
+          "what": { "ja": "保存の不具合は今直り、角の丸みは残件として記録され、確認済みの動作は先へ進み、根拠のない報告は確かめられます。" },
+          "why": { "ja": "目的に関わるか、根拠があるかの2つで仕分けています。" },
+          "next": { "ja": "次は、引き渡しパックをまとめます。" }
+        },
+        "blocker_ignored": {
+          "what": { "ja": "受け取った人のメモが、再読み込みのたびに消えてしまいます。" },
+          "why": { "ja": "メモを残すことは灯台メモの目的そのものです。2回とも再現しています。" },
+          "next": { "ja": "項目1の判断を見直しましょう。" }
+        },
+        "report_trusted": {
+          "what": { "ja": "壊れた作品でも「完了」と書いてあれば通ってしまいます。番人の誤りと同じです。" },
+          "why": { "ja": "項目4には、どの版で何を確かめたかの記録がありません。" },
+          "next": { "ja": "項目4の判断を見直しましょう。" }
+        },
+        "minor_as_blocker": {
+          "what": { "ja": "正しく動く作品が、角の丸みのために届けられません。番人のもう一つの誤りと同じです。" },
+          "why": { "ja": "角の丸みは目的に関わらない見た目の点で、押すと正しく動くことも分かっています。" },
+          "next": { "ja": "項目2の判断を見直しましょう。" }
+        },
+        "over_cautious": {
+          "what": { "ja": "確かめ終わった動作が止まり、作業が先へ進みません。" },
+          "why": { "ja": "項目3は、現在の版ですべて成功しています。止める理由がありません。" },
+          "next": { "ja": "項目3の判断を見直しましょう。" }
+        },
+        "already_confirmed": {
+          "what": { "ja": "すでに2回再現できた不具合を、また確かめるだけで直す作業が始まりません。" },
+          "why": { "ja": "項目1は根拠がそろっています。今必要なのは直すことです。" },
+          "next": { "ja": "項目1の判断を見直しましょう。" }
+        },
+        "note_remaining": {
+          "what": { "ja": "角の丸みが記録に残らず、次の人が気づかないまま忘れられます。" },
+          "why": { "ja": "小さな改善点は、止めずに「後で改善に回す」として残件に残します。" },
+          "next": { "ja": "項目2の判断を見直しましょう。" }
+        },
+        "no_evidence": {
+          "what": { "ja": "根拠がない報告のまま、直す・後回しにするを決めてしまいます。" },
+          "why": { "ja": "項目4で分かっているのは「記録がない」ことだけです。まず確かめます。" },
+          "next": { "ja": "項目4の判断を見直しましょう。" }
+        }
+      },
+      "hints": [
+        { "id": "q06-a.h1", "text": { "ja": "2つの問いで仕分けます。「目的に関わるか」「確かめた根拠があるか」。" } },
+        { "id": "q06-a.h2", "text": { "ja": "メモを残すのが目的です。項目1と2のうち、目的を妨げるのはどちらでしょう。項目4は、記録があるでしょうか。" } },
+        { "id": "q06-a.h3", "text": { "ja": "解答例：項目1＝今直す、項目2＝後で改善に回す、項目3＝進める、項目4＝確認する。理由：目的への影響と根拠の有無で分けるからです。盤面で選んでください。" } }
+      ]
+    },
+    {
+      "id": "q06-b",
+      "questId": "q06",
+      "objectiveId": "q06-o2",
+      "type": "prompt_builder",
+      "required": true,
+      "title": { "ja": "Q06-B 引き渡しパックをまとめる" },
+      "prompt": { "ja": "灯台メモを次の人へ渡すための引き渡しパックを組み立ててください。入れてはいけない札は置かずに残します。" },
+      "slots": [
+        { "id": "purpose", "label": { "ja": "目的" }, "question": { "ja": "これは何のためのもの？" } },
+        { "id": "run", "label": { "ja": "起動と使い方" }, "question": { "ja": "どう開いて、どう使う？" } },
+        { "id": "checked", "label": { "ja": "確認済み・未確認" }, "question": { "ja": "何を確かめて、何がまだ？" } },
+        { "id": "remaining", "label": { "ja": "残件" }, "question": { "ja": "後でやることは？" } }
+      ],
+      "cards": [
+        { "id": "q06b-unchecked", "label": { "ja": "未確認：スマートフォンの画面幅での表示" }, "explain": { "ja": "まだ確かめていないことを、正直に書きます。" } },
+        { "id": "q06b-secret", "label": { "ja": "作業に使ったアカウントのパスワードとAPIキー" }, "explain": { "ja": "秘密情報は、引き渡しパックに絶対に入れません。" } },
+        { "id": "q06b-purpose", "label": { "ja": "港町の依頼を題名と本文で残し、一覧で見返すための小さなメモ帳" }, "explain": { "ja": "受け取った人が、何のためのものか分かります。" } },
+        { "id": "q06b-run", "label": { "ja": "index.html をブラウザで開く。題名と本文を入れて「追加」を押す" }, "explain": { "ja": "受け取った人が、自分で動かせます。" } },
+        { "id": "q06b-log", "label": { "ja": "作業中のやり取りとログの全文" }, "explain": { "ja": "長すぎて要点が伝わらず、個人情報が混ざるおそれもあります。要点だけをまとめます。" } },
+        { "id": "q06b-checked", "label": { "ja": "確認済み（v0.4）：追加・再読み込み後の保持・空白題名の拒否・通常題名の登録" }, "explain": { "ja": "どの版で何を確かめたかが分かります。" } },
+        { "id": "q06b-overclaim", "label": { "ja": "すべて完璧に動作します。未確認の点はありません" }, "explain": { "ja": "確かめていないことまで確かめたことにしてしまいます。" } },
+        { "id": "q06b-remaining", "label": { "ja": "残件：ボタンの角の丸み。削除と編集は未実装" }, "explain": { "ja": "後でやることを、隠さずに渡します。" } },
+        { "id": "q06b-storage", "label": { "ja": "保存はこのブラウザの中だけ。別のブラウザでは別の保存場所になる" }, "explain": { "ja": "使い方の注意として役立ちます。起動と使い方の欄に加えてもかまいません。" } }
+      ],
+      "grading": {
+        "id": "q06-b.rule",
+        "accepted": [
+          {
+            "kind": "placements",
+            "slots": {
+              "purpose": { "required": ["q06b-purpose"] },
+              "run": { "required": ["q06b-run"], "allowed": ["q06b-storage"] },
+              "checked": { "required": ["q06b-checked", "q06b-unchecked"] },
+              "remaining": { "required": ["q06b-remaining"] }
+            }
+          }
+        ],
+        "diagnostics": [
+          { "when": { "type": "placed", "cards": ["q06b-secret"] }, "outcome": "secret" },
+          { "when": { "type": "placed", "cards": ["q06b-log"] }, "outcome": "raw_log" },
+          { "when": { "type": "placed", "cards": ["q06b-overclaim"] }, "outcome": "overclaim" },
+          { "when": { "type": "slotMissing", "slot": "checked", "cards": ["q06b-unchecked"] }, "outcome": "missing_unchecked" },
+          { "when": { "type": "slotMissing", "slot": "checked", "cards": ["q06b-checked"] }, "outcome": "missing_checked" },
+          { "when": { "type": "slotMissing", "slot": "run", "cards": ["q06b-run"] }, "outcome": "missing_run" },
+          { "when": { "type": "slotMissing", "slot": "remaining", "cards": ["q06b-remaining"] }, "outcome": "missing_remaining" },
+          { "when": { "type": "slotMissing", "slot": "purpose", "cards": ["q06b-purpose"] }, "outcome": "missing_purpose" }
+        ],
+        "fallbackOutcome": "misplaced"
+      },
+      "feedbackByOutcome": {
+        "correct": {
+          "what": { "ja": "受け取った人は、何のためのものかを知り、自分で動かし、確かめた範囲と残りを把握できます。" },
+          "why": { "ja": "目的・起動・確認済みと未確認・残件がそろい、秘密情報やログの全文は入っていません。" },
+          "next": { "ja": "最後に、灯台に届いた3件の案件を判断します。" }
+        },
+        "secret": {
+          "what": { "ja": "受け取った人や、パックを見た誰もがアカウントを使えてしまいます。" },
+          "why": { "ja": "パスワードやAPIキーは、引き渡しに必要ありません。絶対に入れません。" },
+          "next": { "ja": "秘密情報の札を外しましょう。" }
+        },
+        "raw_log": {
+          "what": { "ja": "受け取った人は大量の文章から要点を探すことになり、個人情報も一緒に渡ってしまうかもしれません。" },
+          "why": { "ja": "引き渡しに必要なのは、確かめた結果と残件の要点です。" },
+          "next": { "ja": "ログ全文の札を外しましょう。" }
+        },
+        "overclaim": {
+          "what": { "ja": "スマートフォンでの表示に問題があっても、受け取った人は確かめずに使ってしまいます。" },
+          "why": { "ja": "確かめていないことを「未確認はない」と書くと、次の人が判断を誤ります。" },
+          "next": { "ja": "「すべて完璧」の札を外し、未確認の札を置きましょう。" }
+        },
+        "missing_unchecked": {
+          "what": { "ja": "受け取った人は、スマートフォンでも確かめ済みだと思い込むかもしれません。" },
+          "why": { "ja": "確認済みと一緒に、未確認も書いて渡します。" },
+          "next": { "ja": "未確認の札を「確認済み・未確認」の欄に置きましょう。" }
+        },
+        "missing_checked": {
+          "what": { "ja": "受け取った人は、何が確かめられているのか分かりません。" },
+          "why": { "ja": "どの版で何を確かめたかの記録がありません。" },
+          "next": { "ja": "確認済みの札を「確認済み・未確認」の欄に置きましょう。" }
+        },
+        "missing_run": {
+          "what": { "ja": "受け取った人は、灯台メモの開き方や使い方が分かりません。" },
+          "why": { "ja": "起動方法と基本の使い方がありません。" },
+          "next": { "ja": "起動の札を「起動と使い方」の欄に置きましょう。" }
+        },
+        "missing_remaining": {
+          "what": { "ja": "角の丸みや未実装の機能が、誰にも引き継がれずに忘れられます。" },
+          "why": { "ja": "後でやることを、残件として渡していません。" },
+          "next": { "ja": "残件の札を「残件」の欄に置きましょう。" }
+        },
+        "missing_purpose": {
+          "what": { "ja": "受け取った人は、何のためのものか分からないまま使い始めます。" },
+          "why": { "ja": "目的の欄が空か、別の札が入っています。" },
+          "next": { "ja": "目的の札を「目的」の欄に置きましょう。" }
+        },
+        "misplaced": {
+          "what": { "ja": "必要な札はありますが、欄が違うため受け取った人が読み違えます。" },
+          "why": { "ja": "各欄の問いと、札の中身が一致していない組み合わせがあります。" },
+          "next": { "ja": "各欄の問いと、札の中身を照らし合わせましょう。" }
+        }
+      },
+      "hints": [
+        { "id": "q06-b.h1", "text": { "ja": "受け取った人が、自分で動かし、どこまで確かめたかを知り、次に何をするか分かるパックにします。" } },
+        { "id": "q06-b.h2", "text": { "ja": "「確認済み・未確認」の欄には2枚が必要です。秘密情報・ログ全文・「すべて完璧」の札は置きません。" } },
+        { "id": "q06-b.h3", "text": { "ja": "解答例：目的＝「依頼を残して見返すメモ帳」、起動と使い方＝「index.html を開く…」（保存はこのブラウザの中だけ、も可）、確認済み・未確認＝「確認済み（v0.4）…」「未確認：スマートフォン」、残件＝「角の丸み・削除と編集は未実装」。理由：次の人が判断できる情報だけをそろえるからです。盤面で札を置いてください。" } }
+      ]
+    },
+    {
+      "id": "q06-c",
+      "questId": "q06",
+      "objectiveId": "q06-o3",
+      "type": "triage_decision",
+      "required": true,
+      "title": { "ja": "Q06-C 最後の3件を判断する" },
+      "prompt": { "ja": "灯台に、条件の違う3件の最終案件が届きました。それぞれ判断と理由を選んでください。根拠がそろっていれば、提出してよい案件もあります。" },
+      "decisions": [
+        { "id": "proceed", "label": { "ja": "進める（提出する）" }, "explain": { "ja": "必須条件を確かめ、止める理由がないとき。" } },
+        { "id": "fix_now", "label": { "ja": "今直す" }, "explain": { "ja": "目的に関わる不具合が確かめられたとき。" } },
+        { "id": "verify", "label": { "ja": "確認する" }, "explain": { "ja": "判断に必要な根拠が足りないとき。" } },
+        { "id": "later", "label": { "ja": "後で改善に回す" }, "explain": { "ja": "目的には関わらない、小さな改善点のとき。提出と組み合わせられます。" } }
+      ],
+      "cases": [
+        {
+          "id": "f1",
+          "title": { "ja": "案件①：市場の依頼帳" },
+          "evidence": [
+            { "ja": "報告：「完成しました。問題ありません」" },
+            { "ja": "確認記録：なし" },
+            { "ja": "起動方法：書かれていない" }
+          ],
+          "reasons": [
+            { "id": "f1-evidence", "label": { "ja": "動くことを確かめた記録がないから" }, "explain": { "ja": "報告の言葉だけでは、動くかどうか分かりません。" } },
+            { "id": "f1-trust", "label": { "ja": "「問題ありません」と書かれているから" }, "explain": { "ja": "番人の誤りと同じく、言葉だけを信じています。" } },
+            { "id": "f1-broken", "label": { "ja": "記録がないので、きっと壊れているから" }, "explain": { "ja": "壊れていると確かめたわけでもありません。" } }
+          ]
+        },
+        {
+          "id": "f2",
+          "title": { "ja": "案件②：倉庫の在庫メモ" },
+          "evidence": [
+            { "ja": "確認記録（現在の版）：追加は成功。再読み込みすると一覧が空になる（2回再現）" },
+            { "ja": "起動方法と残件：書かれている" }
+          ],
+          "reasons": [
+            { "id": "f2-core", "label": { "ja": "メモが残らず、目的に関わる必須の不具合だから" }, "explain": { "ja": "記録は残すためのものです。再現もしています。" } },
+            { "id": "f2-later", "label": { "ja": "追加はできるので、保存は次の版で十分だから" }, "explain": { "ja": "保存できないメモ帳は、目的を果たせません。" } },
+            { "id": "f2-more", "label": { "ja": "まだ確かめ方が足りないから" }, "explain": { "ja": "2回再現していて、根拠は十分です。" } }
+          ]
+        },
+        {
+          "id": "f3",
+          "title": { "ja": "案件③：灯台メモ（あなたの作品）" },
+          "evidence": [
+            { "ja": "確認記録（v0.4）：追加・再読み込み後の保持・空白題名の拒否・通常題名の登録、すべて成功" },
+            { "ja": "未確認：スマートフォンの画面幅。引き渡しパックに記載済み" },
+            { "ja": "気づいた点：ボタンの角が見本ほど丸くない" }
+          ],
+          "reasons": [
+            { "id": "f3-ready", "label": { "ja": "必須条件は確認済みで、残りは見た目の小さな点として記録したから" }, "explain": { "ja": "目的に関わる動作と、後でよい改善を分けています。" } },
+            { "id": "f3-perfect", "label": { "ja": "角が丸くなるまでは、未完成だから" }, "explain": { "ja": "角の丸みは、メモを残して見返すという目的を妨げていません。" } },
+            { "id": "f3-publish", "label": { "ja": "提出するなら、先に外部へ公開まで済ませる必要があるから" }, "explain": { "ja": "提出と公開は別のことです。公開は、別の明示的な判断で行います。" } }
+          ]
+        }
+      ],
+      "grading": {
+        "id": "q06-c.rule",
+        "accepted": [
+          {
+            "kind": "picks",
+            "picks": {
+              "f1": ["verify"],
+              "f1:reason": ["f1-evidence"],
+              "f2": ["fix_now"],
+              "f2:reason": ["f2-core"],
+              "f3": ["proceed", "later"],
+              "f3:reason": ["f3-ready"]
+            }
+          }
+        ],
+        "diagnostics": [
+          { "when": { "type": "pick", "item": "f1", "options": ["proceed"] }, "outcome": "report_trusted" },
+          { "when": { "type": "pick", "item": "f1:reason", "options": ["f1-trust"] }, "outcome": "report_trusted" },
+          { "when": { "type": "pick", "item": "f2", "options": ["proceed", "later"] }, "outcome": "blocker_ignored" },
+          { "when": { "type": "pick", "item": "f2:reason", "options": ["f2-later"] }, "outcome": "blocker_ignored" },
+          { "when": { "type": "pick", "item": "f3:reason", "options": ["f3-publish"] }, "outcome": "submit_vs_publish" },
+          { "when": { "type": "pick", "item": "f3", "options": ["fix_now", "verify"] }, "outcome": "minor_as_blocker" },
+          { "when": { "type": "pick", "item": "f3:reason", "options": ["f3-perfect"] }, "outcome": "minor_as_blocker" },
+          { "when": { "type": "pick", "item": "f2", "options": ["verify"] }, "outcome": "already_confirmed" },
+          { "when": { "type": "pick", "item": "f2:reason", "options": ["f2-more"] }, "outcome": "already_confirmed" }
+        ],
+        "fallbackOutcome": "no_evidence"
+      },
+      "feedbackByOutcome": {
+        "correct": {
+          "what": { "ja": "案件①は確かめに、案件②は修正に回り、あなたの灯台メモは残件と一緒に提出されます。" },
+          "why": { "ja": "報告の言葉でも装飾の細部でもなく、確かめた根拠と目的への影響で判断しています。" },
+          "next": { "ja": "灯台の上へ。持ち帰りカードを受け取りましょう。" }
+        },
+        "report_trusted": {
+          "what": { "ja": "動くか分からない作品が、「問題ありません」の一言で届いてしまいます。" },
+          "why": { "ja": "案件①には、動くことを確かめた記録がありません。" },
+          "next": { "ja": "案件①の判断と理由を見直しましょう。" }
+        },
+        "blocker_ignored": {
+          "what": { "ja": "受け取った人のメモが、再読み込みのたびに消えてしまいます。" },
+          "why": { "ja": "案件②の保存の不具合は、目的に関わる必須の問題です。" },
+          "next": { "ja": "案件②の判断と理由を見直しましょう。" }
+        },
+        "submit_vs_publish": {
+          "what": { "ja": "提出のために、頼まれていない外部公開まで行ってしまいます。" },
+          "why": { "ja": "提出（相手に渡す）と公開（誰でも見られるようにする）は別のことです。公開は別の明示的な判断で行います。" },
+          "next": { "ja": "案件③の理由を見直しましょう。" }
+        },
+        "minor_as_blocker": {
+          "what": { "ja": "必須条件を確かめた作品が、角の丸みのために届けられません。" },
+          "why": { "ja": "案件③の気づいた点は見た目の小さな点で、残件として記録されています。未確認の点も引き渡しパックに書かれています。" },
+          "next": { "ja": "案件③の判断と理由を見直しましょう。「進める」も大切な判断です。" }
+        },
+        "already_confirmed": {
+          "what": { "ja": "すでに再現できた不具合を、また確かめるだけで直す作業が始まりません。" },
+          "why": { "ja": "案件②は2回再現していて、根拠がそろっています。" },
+          "next": { "ja": "案件②の判断と理由を見直しましょう。" }
+        },
+        "no_evidence": {
+          "what": { "ja": "根拠のない案件①について、確かめる前に結論を出してしまいます。" },
+          "why": { "ja": "案件①で分かっているのは「記録がない」ことだけです。壊れているとも、動くとも言えません。" },
+          "next": { "ja": "案件①の判断と理由を見直しましょう。" }
+        }
+      },
+      "hints": [
+        { "id": "q06-c.h1", "text": { "ja": "3件とも違う判断になります。「根拠はあるか」「目的に関わる問題か」の順に考えます。" } },
+        { "id": "q06-c.h2", "text": { "ja": "案件①は確認記録、案件②は不具合の中身、案件③は気づいた点が目的に関わるかを見ましょう。提出と公開は別のことです。" } },
+        { "id": "q06-c.h3", "text": { "ja": "解答例：案件①＝確認する（確かめた記録がない）、案件②＝今直す（目的に関わる必須の不具合）、案件③＝進める または 後で改善に回す（必須条件は確認済みで、残りは小さな点として記録）。理由：根拠と目的への影響で判断を分けるからです。盤面で選んでください。" } }
+      ]
+    }
+  ],
+  "takeawayCards": [
+    { "id": "tk-q06-1", "questId": "q06", "title": { "ja": "重大と軽微" }, "body": { "ja": "目的を妨げる不具合は今直す。目的に関わらない見た目の点は、止めずに残件として後で改善に回す。" } },
+    { "id": "tk-q06-2", "questId": "q06", "title": { "ja": "引き渡し" }, "body": { "ja": "目的・起動と使い方・確認済みと未確認・残件をまとめて渡す。秘密情報とログの全文は入れない。" } },
+    { "id": "tk-q06-3", "questId": "q06", "title": { "ja": "次の改善" }, "body": { "ja": "提出は相手に渡すこと、公開は誰でも見られるようにすること。公開や取り込みは、別の明示的な判断で行う。" } }
+  ],
+  "takeawayTemplate": {
+    "title": { "ja": "引き渡し用チェックリスト" },
+    "text": { "ja": "□ 目的：何のためのものか\n□ 起動と使い方：開き方と基本の操作\n□ 確認済み：どの版で何を確かめたか\n□ 未確認：まだ確かめていないこと\n□ 残件：後でやること\n□ 入れないもの：パスワード・APIキー・ログの全文" }
+  },
+  "practiceCardId": "pc-q06",
+  "sourceIds": ["S1"],
+  "mapRegionId": "lighthouse",
+  "badgeId": "badge-q06",
+  "glossaryIds": ["repository", "commit", "branch", "pull-request", "review", "publish"]
+}

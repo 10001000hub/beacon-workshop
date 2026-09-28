@@ -1,0 +1,13 @@
+[
+  {
+    "id": "desktop_windows_codex",
+    "displayName": { "ja": "Windows のデスクトップ環境で使う Codex（未検証）", "en": "Codex on the Windows desktop app (unverified)" },
+    "supportedOs": "windows",
+    "testedProductVersion": null,
+    "testedAt": null,
+    "status": "draft",
+    "sourceIds": ["S3", "S4"],
+    "screenshotIds": [],
+    "note": { "ja": "この経路は実機で確認していません。製品名・画面・ボタン名は変わることがあるため、ここでは具体的なボタン名を書いていません。自分の画面が説明と一致しないときは、無理に進めず練習画面へ戻ってください。" }
+  }
+]

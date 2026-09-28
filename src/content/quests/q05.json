@@ -1,0 +1,393 @@
+{
+  "id": "q05",
+  "revision": "1",
+  "prerequisite": "q04",
+  "title": { "ja": "鏡の検査場" },
+  "place": { "ja": "検査場" },
+  "incident": { "ja": "「検査済み」の札が、別の古い版の結果だった。" },
+  "notesState": { "ja": "現在の版の主要動作を確かめる" },
+  "sample": { "ja": "完成見本：現在の版（v0.4）で、追加・再読み込み後の保持・空白題名の拒否・通常題名の登録を確かめた記録。行った検査・結果・まだ行っていない検査が分けて書かれている。" },
+  "objectives": [
+    { "id": "q05-o1", "text": { "ja": "検査記録が、どの版を対象にしたものかを確かめられる" } },
+    { "id": "q05-o2", "text": { "ja": "成功・失敗・実行エラー・未実施を区別できる" } },
+    { "id": "q05-o3", "text": { "ja": "根拠がそろっているときは、止めずに先へ進める" } }
+  ],
+  "briefScene": {
+    "id": "q05-brief",
+    "backgroundAssetId": "BG05",
+    "lines": [
+      { "speaker": "narrator", "text": { "ja": "検査場の大きな鏡には、昨日の作品が映っている。その前に「全部成功」の札が下がっていた。" } },
+      { "speaker": "resident", "name": { "ja": "検査係" }, "text": { "ja": "札に「全部成功」とあるので、今日の作品も合格ですよね？" } },
+      { "speaker": "ritsu", "expression": "think", "text": { "ja": "その札の日付と版を見て。鏡に映っているのは、昨日の版だ。" } },
+      { "speaker": "koto", "expression": "normal", "text": { "ja": "どの版で、何を確かめて、どうなったか。対応させて記録します。" } },
+      { "speaker": "nagi", "expression": "think", "text": { "ja": "でも、全部をいつまでも疑っていたら、先へ進めないよね。" } }
+    ]
+  },
+  "clearScene": {
+    "id": "q05-clear",
+    "backgroundAssetId": "BG05",
+    "lines": [
+      { "speaker": "narrator", "text": { "ja": "鏡がゆっくり曇りを払い、今日の作品を映し出した。新しい札には、版と検査と結果が並んでいる。" } },
+      { "speaker": "resident", "name": { "ja": "検査係" }, "text": { "ja": "何を確かめて、何がまだなのか。札を見れば分かります。" } },
+      { "speaker": "koto", "expression": "happy", "text": { "ja": "根拠がそろっている所は、止めずに進めました。" } },
+      { "speaker": "ritsu", "expression": "normal", "text": { "ja": "疑うのは、根拠が足りない所だけでいい。次はいよいよ灯台だ。" } }
+    ]
+  },
+  "activities": [
+    {
+      "id": "q05-a",
+      "questId": "q05",
+      "objectiveId": "q05-o1",
+      "type": "evidence_board",
+      "mode": "select",
+      "required": true,
+      "title": { "ja": "Q05-A 現在の版の記録を選ぶ" },
+      "prompt": { "ja": "現在の版は v0.4 です。v0.4 が主要動作を満たしている根拠として使える記録を、すべて選んでください。" },
+      "reference": [
+        {
+          "kind": "text",
+          "title": { "ja": "現在の版" },
+          "lines": [
+            { "ja": "v0.4：空白題名の拒否を取り込んだ版（今日の作品）" },
+            { "ja": "v0.3：保存を追加した版（昨日の作品）" },
+            { "ja": "主要動作：追加・再読み込み後の保持・空白題名の拒否" }
+          ]
+        }
+      ],
+      "cards": [
+        { "id": "q05a-old", "label": { "ja": "v0.3・全項目・「全部成功」" }, "explain": { "ja": "昨日の版の記録です。v0.4 で変えた部分は検査されていません。" } },
+        { "id": "q05a-add", "label": { "ja": "v0.4・1件追加→一覧に表示された・成功" }, "explain": { "ja": "現在の版で、追加を確かめた記録です。" } },
+        { "id": "q05a-notarget", "label": { "ja": "版の記載なし・「たぶん全部成功」" }, "explain": { "ja": "どの版を検査したのか分からず、何を確かめたのかも書かれていません。" } },
+        { "id": "q05a-reload", "label": { "ja": "v0.4・追加→再読み込み→残っていた・成功" }, "explain": { "ja": "現在の版で、保存を確かめた記録です。" } },
+        { "id": "q05a-assume", "label": { "ja": "「前の版で動いたので、今回も動くはず」というメモ" }, "explain": { "ja": "推測で、検査の記録ではありません。" } },
+        { "id": "q05a-blank", "label": { "ja": "v0.4・題名に半角空白だけ→拒否された・成功" }, "explain": { "ja": "現在の版で、空白題名の拒否を確かめた記録です。" } },
+        { "id": "q05a-normal", "label": { "ja": "v0.4・題名「氷の配達」→登録された・成功" }, "explain": { "ja": "現在の版で、ふつうの題名が通ることを確かめた記録です。加えても加えなくてもかまいません。" } }
+      ],
+      "grading": {
+        "id": "q05-a.rule",
+        "accepted": [
+          { "kind": "sequence", "ordered": false, "required": ["q05a-add", "q05a-reload", "q05a-blank"], "allowed": ["q05a-normal"] }
+        ],
+        "diagnostics": [
+          { "when": { "type": "selected", "cards": ["q05a-old"] }, "outcome": "old_version" },
+          { "when": { "type": "selected", "cards": ["q05a-notarget"] }, "outcome": "no_target" },
+          { "when": { "type": "selected", "cards": ["q05a-assume"] }, "outcome": "assumption" },
+          { "when": { "type": "notSelected", "cards": ["q05a-add", "q05a-reload", "q05a-blank"] }, "outcome": "missing_core" }
+        ],
+        "fallbackOutcome": "missing_core"
+      },
+      "feedbackByOutcome": {
+        "correct": {
+          "what": { "ja": "v0.4 の主要動作を、v0.4 を対象にした記録だけで説明できます。" },
+          "why": { "ja": "対象の版・行った検査・結果が、それぞれの記録で対応しています。" },
+          "next": { "ja": "次は、今日の検査結果を仕分けます。" }
+        },
+        "old_version": {
+          "what": { "ja": "v0.4 で入れた変更が壊れていても、「全部成功」と判断してしまいます。" },
+          "why": { "ja": "v0.3 の記録は、v0.4 で変えた部分を検査していません。" },
+          "next": { "ja": "v0.3 の札を外しましょう。" }
+        },
+        "no_target": {
+          "what": { "ja": "どの版の、どの検査なのか説明できない記録を根拠にしてしまいます。" },
+          "why": { "ja": "対象の版と検査の中身がない記録は、合格の根拠になりません。" },
+          "next": { "ja": "「版の記載なし」の札を外しましょう。" }
+        },
+        "assumption": {
+          "what": { "ja": "実際には確かめていないことを、確かめたように扱ってしまいます。" },
+          "why": { "ja": "「動くはず」は推測で、検査の記録ではありません。" },
+          "next": { "ja": "推測のメモを外しましょう。" }
+        },
+        "missing_core": {
+          "what": { "ja": "主要動作のうち、まだ根拠のないものがあります。" },
+          "why": { "ja": "追加・再読み込み後の保持・空白題名の拒否の3つに、それぞれ v0.4 の記録が必要です。" },
+          "next": { "ja": "v0.4 の記録を見直して、足りない札を選びましょう。" }
+        }
+      },
+      "hints": [
+        { "id": "q05-a.h1", "text": { "ja": "記録を見るときは、まず「どの版を対象にしたか」を確かめます。" } },
+        { "id": "q05-a.h2", "text": { "ja": "札の先頭の版を見ましょう。v0.4 と書かれ、検査の中身と結果がある記録だけが根拠になります。" } },
+        { "id": "q05-a.h3", "text": { "ja": "解答例：v0.4 の「追加→表示」「追加→再読み込み→残っていた」「半角空白だけ→拒否」の3枚（「氷の配達→登録」を加えても可）。理由：現在の版を対象に、主要動作をそれぞれ確かめた記録だからです。盤面で札を選んでください。" } }
+      ]
+    },
+    {
+      "id": "q05-b",
+      "questId": "q05",
+      "objectiveId": "q05-o2",
+      "type": "change_review",
+      "required": true,
+      "title": { "ja": "Q05-B 今日の検査結果を仕分ける" },
+      "prompt": { "ja": "コトが v0.4 で検査をしました。タブで記録と画面を見て、5つの項目をそれぞれ「成功」「失敗」「実行エラー（結果なし）」「未実施」に仕分けてください。" },
+      "views": [
+        {
+          "id": "log",
+          "label": { "ja": "検査記録" },
+          "panels": [
+            {
+              "kind": "text",
+              "title": { "ja": "v0.4 の検査記録（コト）" },
+              "lines": [
+                { "ja": "① 1件追加→一覧を確認：「氷の配達」が表示された。" },
+                { "ja": "② 追加→再読み込み→一覧を確認：一覧が空になった。" },
+                { "ja": "③ 空白題名の自動確認：開始直後に「確認用のファイルが見つかりません」と出て止まった。結果は出ていない。" },
+                { "ja": "④ 全角空白だけの題名：まだ行っていない。" },
+                { "ja": "⑤ 題名「網の修理」を追加：一覧に表示された。" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "screen",
+          "label": { "ja": "再読み込み後の画面" },
+          "panels": [
+            { "kind": "preview", "title": { "ja": "② の再読み込み後（練習画面の再現）" }, "items": [], "empty": { "ja": "メモはまだありません" } }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "row1",
+          "label": { "ja": "① 追加して一覧に表示" },
+          "options": [
+            { "id": "success", "label": { "ja": "成功" }, "explain": { "ja": "確かめた結果、期待どおり表示されました。" } },
+            { "id": "fail", "label": { "ja": "失敗" }, "explain": { "ja": "表示されているので、失敗ではありません。" } },
+            { "id": "error", "label": { "ja": "実行エラー（結果なし）" }, "explain": { "ja": "確認は最後まで行われ、結果が出ています。" } },
+            { "id": "notrun", "label": { "ja": "未実施" }, "explain": { "ja": "記録に、行った操作と結果があります。" } }
+          ]
+        },
+        {
+          "id": "row2",
+          "label": { "ja": "② 再読み込み後の保持" },
+          "options": [
+            { "id": "success", "label": { "ja": "成功" }, "explain": { "ja": "再読み込み後に一覧が空になっています。期待した結果ではありません。" } },
+            { "id": "fail", "label": { "ja": "失敗" }, "explain": { "ja": "確かめた結果、期待（残っている）と実際（空になった）が違いました。" } },
+            { "id": "error", "label": { "ja": "実行エラー（結果なし）" }, "explain": { "ja": "確認は最後まで行われ、「空になった」という結果が出ています。" } },
+            { "id": "notrun", "label": { "ja": "未実施" }, "explain": { "ja": "操作は行われています。" } }
+          ]
+        },
+        {
+          "id": "row3",
+          "label": { "ja": "③ 空白題名の自動確認" },
+          "options": [
+            { "id": "success", "label": { "ja": "成功" }, "explain": { "ja": "結果が出ていないので、成功とは言えません。" } },
+            { "id": "fail", "label": { "ja": "失敗" }, "explain": { "ja": "作品が間違っていたと分かったわけではありません。確認そのものが止まっています。" } },
+            { "id": "error", "label": { "ja": "実行エラー（結果なし）" }, "explain": { "ja": "確認を始めたものの途中で止まり、作品の動きについての結果は出ていません。" } },
+            { "id": "notrun", "label": { "ja": "未実施" }, "explain": { "ja": "確認を始めてはいます。止まった理由（ファイルが見つからない）も記録に残すため、未実施と分けます。" } }
+          ]
+        },
+        {
+          "id": "row4",
+          "label": { "ja": "④ 全角空白だけの題名" },
+          "options": [
+            { "id": "success", "label": { "ja": "成功" }, "explain": { "ja": "行っていない検査を成功にしてはいけません。" } },
+            { "id": "fail", "label": { "ja": "失敗" }, "explain": { "ja": "行っていないので、失敗かどうかも分かりません。" } },
+            { "id": "error", "label": { "ja": "実行エラー（結果なし）" }, "explain": { "ja": "始めてもいないので、エラーも起きていません。" } },
+            { "id": "notrun", "label": { "ja": "未実施" }, "explain": { "ja": "まだ行っていない検査です。" } }
+          ]
+        },
+        {
+          "id": "row5",
+          "label": { "ja": "⑤ 題名「網の修理」の追加" },
+          "options": [
+            { "id": "success", "label": { "ja": "成功" }, "explain": { "ja": "確かめた結果、期待どおり表示されました。" } },
+            { "id": "fail", "label": { "ja": "失敗" }, "explain": { "ja": "表示されているので、失敗ではありません。" } },
+            { "id": "error", "label": { "ja": "実行エラー（結果なし）" }, "explain": { "ja": "確認は最後まで行われています。" } },
+            { "id": "notrun", "label": { "ja": "未実施" }, "explain": { "ja": "記録に、行った操作と結果があります。" } }
+          ]
+        }
+      ],
+      "grading": {
+        "id": "q05-b.rule",
+        "accepted": [
+          { "kind": "picks", "picks": { "row1": ["success"], "row2": ["fail"], "row3": ["error"], "row4": ["notrun"], "row5": ["success"] } }
+        ],
+        "diagnostics": [
+          { "when": { "type": "pick", "item": "row4", "options": ["success"] }, "outcome": "untested_as_success" },
+          { "when": { "type": "pick", "item": "row3", "options": ["success"] }, "outcome": "error_as_success" },
+          { "when": { "type": "pick", "item": "row2", "options": ["success"] }, "outcome": "fail_as_success" },
+          { "when": { "type": "pick", "item": "row3", "options": ["fail", "notrun"] }, "outcome": "error_confused" },
+          { "when": { "type": "pick", "item": "row4", "options": ["fail", "error"] }, "outcome": "notrun_confused" },
+          { "when": { "type": "pick", "item": "row2", "options": ["error", "notrun"] }, "outcome": "fail_confused" }
+        ],
+        "fallbackOutcome": "success_doubted"
+      },
+      "feedbackByOutcome": {
+        "correct": {
+          "what": { "ja": "直すべき所（②）、確認をやり直す所（③）、まだの所（④）が、はっきり分かります。" },
+          "why": { "ja": "確かめて期待どおり・確かめて違った・確かめられなかった・まだ、を区別しています。" },
+          "next": { "ja": "次は、検査場に届いた3件の案件を判断します。" }
+        },
+        "untested_as_success": {
+          "what": { "ja": "全角空白の題名が登録されてしまう不具合があっても、気づけません。" },
+          "why": { "ja": "行っていない検査は、成功ではなく「未実施」です。" },
+          "next": { "ja": "④ を見直しましょう。" }
+        },
+        "error_as_success": {
+          "what": { "ja": "空白題名の拒否が本当に動くか分からないまま、動くと判断してしまいます。" },
+          "why": { "ja": "確認が途中で止まり、結果が出ていません。エラーが出なかったわけではありません。" },
+          "next": { "ja": "③ を見直しましょう。" }
+        },
+        "fail_as_success": {
+          "what": { "ja": "再読み込みでメモが消える不具合を、見逃して引き渡してしまいます。" },
+          "why": { "ja": "② は再読み込み後に一覧が空になっています。「再読み込み後の画面」タブも見てみましょう。" },
+          "next": { "ja": "② を見直しましょう。" }
+        },
+        "error_confused": {
+          "what": { "ja": "作品の不具合を探すべきか、確認の手順を直すべきかを取り違えます。" },
+          "why": { "ja": "③ は確認そのものが止まり、作品についての結果が出ていません。失敗や未実施とは直し方が違います。" },
+          "next": { "ja": "③ を見直しましょう。" }
+        },
+        "notrun_confused": {
+          "what": { "ja": "まだ行っていない検査を、行ったものとして扱ってしまいます。" },
+          "why": { "ja": "④ は始めてもいません。失敗もエラーも、まだ起きていません。" },
+          "next": { "ja": "④ を見直しましょう。" }
+        },
+        "fail_confused": {
+          "what": { "ja": "② の不具合が「確かめられていないだけ」に見え、直す作業が後回しになります。" },
+          "why": { "ja": "② は最後まで確かめ、期待と違う結果が出ています。" },
+          "next": { "ja": "② を見直しましょう。" }
+        },
+        "success_doubted": {
+          "what": { "ja": "期待どおりに動いた項目まで疑うと、確認がいつまでも終わりません。" },
+          "why": { "ja": "① と ⑤ は、確かめて期待どおりの結果が出ています。成功として扱ってよい項目です。" },
+          "next": { "ja": "① と ⑤ を見直しましょう。" }
+        }
+      },
+      "hints": [
+        { "id": "q05-b.h1", "text": { "ja": "4つの違いは「確かめたか」「結果が出たか」「期待どおりか」です。" } },
+        { "id": "q05-b.h2", "text": { "ja": "③ は途中で止まって結果がなく、④ は始めてもいません。② は「再読み込み後の画面」タブも見ましょう。" } },
+        { "id": "q05-b.h3", "text": { "ja": "解答例：①成功、②失敗、③実行エラー（結果なし）、④未実施、⑤成功。理由：確かめた結果・止まった確認・まだの確認を区別すると、次に何をするかが決まるからです。盤面で選んでください。" } }
+      ]
+    },
+    {
+      "id": "q05-c",
+      "questId": "q05",
+      "objectiveId": "q05-o3",
+      "type": "triage_decision",
+      "required": true,
+      "title": { "ja": "Q05-C 3件の案件を判断する" },
+      "prompt": { "ja": "検査場に3件の案件が届きました。それぞれ判断と理由を選んでください。根拠がそろっていれば、止めずに進めるのも正しい判断です。" },
+      "decisions": [
+        { "id": "proceed", "label": { "ja": "進める" }, "explain": { "ja": "必要な根拠がそろっていて、止める理由がないとき。" } },
+        { "id": "fix_now", "label": { "ja": "今直す" }, "explain": { "ja": "目的に関わる不具合が確かめられたとき。" } },
+        { "id": "verify", "label": { "ja": "確認する" }, "explain": { "ja": "判断に必要な根拠が足りないとき。" } },
+        { "id": "later", "label": { "ja": "後で改善に回す" }, "explain": { "ja": "目的には関わらない、小さな改善点のとき。" } }
+      ],
+      "cases": [
+        {
+          "id": "case1",
+          "title": { "ja": "案件1：港の掲示板" },
+          "evidence": [
+            { "ja": "対象：v0.4（現在の版）" },
+            { "ja": "追加・再読み込み後の保持・空白題名の拒否・通常題名の登録：4項目とも v0.4 で確認し成功" },
+            { "ja": "未実施の検査：なし" }
+          ],
+          "reasons": [
+            { "id": "c1-enough", "label": { "ja": "現在の版で、主要動作の成功記録がそろっているから" }, "explain": { "ja": "対象の版・検査・結果がそろっています。" } },
+            { "id": "c1-redo", "label": { "ja": "念のため、すべての検査を最初からやり直すべきだから" }, "explain": { "ja": "根拠がそろっているのにやり直す理由がありません。" } },
+            { "id": "c1-feeling", "label": { "ja": "何か見落としがありそうな気がするから" }, "explain": { "ja": "気がするだけでは、止める根拠になりません。" } }
+          ]
+        },
+        {
+          "id": "case2",
+          "title": { "ja": "案件2：漁協の連絡帳" },
+          "evidence": [
+            { "ja": "対象：v0.3（昨日の版）" },
+            { "ja": "札：「全部成功」" },
+            { "ja": "現在の版は v0.4。v0.4 の検査記録はない" }
+          ],
+          "reasons": [
+            { "id": "c2-version", "label": { "ja": "記録の対象が、現在の版と違うから" }, "explain": { "ja": "v0.4 で変えた部分は、まだ誰も確かめていません。" } },
+            { "id": "c2-broken", "label": { "ja": "古い記録なので、きっと壊れているから" }, "explain": { "ja": "壊れていると確かめたわけではありません。" } },
+            { "id": "c2-label", "label": { "ja": "「全部成功」と書かれているから" }, "explain": { "ja": "札の言葉だけでは、現在の版の根拠になりません。" } }
+          ]
+        },
+        {
+          "id": "case3",
+          "title": { "ja": "案件3：灯台守の日誌" },
+          "evidence": [
+            { "ja": "対象：v0.4（現在の版）" },
+            { "ja": "主要動作4項目：v0.4 で確認し成功" },
+            { "ja": "気づいた点：一覧の行の間隔が、見本より少し広い" }
+          ],
+          "reasons": [
+            { "id": "c3-minor", "label": { "ja": "主要動作は確認済みで、残りは見た目の小さな点だから" }, "explain": { "ja": "目的に関わる動作と、見た目の調整を分けて考えています。" } },
+            { "id": "c3-perfect", "label": { "ja": "見本と完全に同じになるまで、先へ進めないから" }, "explain": { "ja": "行の間隔は、メモを残して見返すという目的を妨げていません。" } },
+            { "id": "c3-unknown", "label": { "ja": "主要動作がまだ確かめられていないから" }, "explain": { "ja": "記録を見ると、4項目とも v0.4 で確認済みです。" } }
+          ]
+        }
+      ],
+      "grading": {
+        "id": "q05-c.rule",
+        "accepted": [
+          {
+            "kind": "picks",
+            "picks": {
+              "case1": ["proceed"],
+              "case1:reason": ["c1-enough"],
+              "case2": ["verify"],
+              "case2:reason": ["c2-version"],
+              "case3": ["proceed", "later"],
+              "case3:reason": ["c3-minor"]
+            }
+          }
+        ],
+        "diagnostics": [
+          { "when": { "type": "pick", "item": "case2", "options": ["proceed"] }, "outcome": "old_evidence" },
+          { "when": { "type": "pick", "item": "case1", "options": ["fix_now", "verify", "later"] }, "outcome": "over_cautious" },
+          { "when": { "type": "pick", "item": "case1:reason", "options": ["c1-redo", "c1-feeling"] }, "outcome": "over_cautious" },
+          { "when": { "type": "pick", "item": "case2", "options": ["fix_now", "later"] }, "outcome": "no_evidence_of_bug" },
+          { "when": { "type": "pick", "item": "case2:reason", "options": ["c2-broken", "c2-label"] }, "outcome": "no_evidence_of_bug" },
+          { "when": { "type": "pick", "item": "case3", "options": ["fix_now", "verify"] }, "outcome": "minor_as_blocker" },
+          { "when": { "type": "pick", "item": "case3:reason", "options": ["c3-perfect", "c3-unknown"] }, "outcome": "minor_as_blocker" }
+        ],
+        "fallbackOutcome": "over_cautious"
+      },
+      "feedbackByOutcome": {
+        "correct": {
+          "what": { "ja": "案件1と3は止まらずに進み、案件2だけが現在の版の確認に回ります。" },
+          "why": { "ja": "根拠がそろっている所は進め、足りない所だけを確かめています。見た目の小さな点は、進めたうえで後で改善に回せます。" },
+          "next": { "ja": "この章はここまで。持ち帰りカードを受け取りましょう。" }
+        },
+        "old_evidence": {
+          "what": { "ja": "v0.4 で入った変更を誰も確かめないまま、案件2が先へ進んでしまいます。" },
+          "why": { "ja": "案件2の「全部成功」は v0.3 の記録です。現在の版の根拠になりません。" },
+          "next": { "ja": "案件2の判断を見直しましょう。" }
+        },
+        "over_cautious": {
+          "what": { "ja": "根拠のそろった案件1が止まり、確認の作業がいつまでも終わりません。" },
+          "why": { "ja": "案件1は、現在の版で主要動作をすべて確かめ、未実施もありません。止める理由がありません。" },
+          "next": { "ja": "案件1の判断と理由を見直しましょう。「進める」も大切な判断です。" }
+        },
+        "no_evidence_of_bug": {
+          "what": { "ja": "壊れているか分からないのに、直す作業を始めたり、後回しにしたりしてしまいます。" },
+          "why": { "ja": "案件2で分かっているのは「現在の版の記録がない」ことです。まず確かめます。" },
+          "next": { "ja": "案件2の判断と理由を見直しましょう。" }
+        },
+        "minor_as_blocker": {
+          "what": { "ja": "主要動作が確かめられた案件3が、行の間隔のために止まってしまいます。" },
+          "why": { "ja": "行の間隔は目的を妨げない小さな見た目の点です。主要動作は v0.4 で確認済みです。" },
+          "next": { "ja": "案件3の判断と理由を見直しましょう。" }
+        }
+      },
+      "hints": [
+        { "id": "q05-c.h1", "text": { "ja": "止めることが、いつも慎重で正しいとは限りません。根拠がそろっているかで判断します。" } },
+        { "id": "q05-c.h2", "text": { "ja": "それぞれの案件の「対象」の版と、未実施の検査があるかを見ましょう。案件3の気づいた点は、目的に関わるでしょうか。" } },
+        { "id": "q05-c.h3", "text": { "ja": "解答例：案件1＝進める（主要動作の成功記録がそろっている）、案件2＝確認する（対象の版が違う）、案件3＝進める または 後で改善に回す（主要動作は確認済みで、残りは見た目の小さな点）。理由：根拠の有無で判断を分けるからです。盤面で選んでください。" } }
+      ]
+    }
+  ],
+  "takeawayCards": [
+    { "id": "tk-q05-1", "questId": "q05", "title": { "ja": "対象の版" }, "body": { "ja": "検査記録は、まずどの版を確かめたものかを見る。古い版の成功は、今の版の根拠にならない。" } },
+    { "id": "tk-q05-2", "questId": "q05", "title": { "ja": "確認の証拠" }, "body": { "ja": "「何を・どうして・どうなったか」がそろった記録を根拠にする。根拠がそろえば、止めずに進める。" } },
+    { "id": "tk-q05-3", "questId": "q05", "title": { "ja": "未確認の区別" }, "body": { "ja": "成功・失敗・実行エラー（結果なし）・未実施を分ける。行っていない検査を成功にしない。" } }
+  ],
+  "takeawayTemplate": {
+    "title": { "ja": "現在版と検査の短い記録" },
+    "text": { "ja": "対象の版：v0.4\n成功：追加→表示／通常題名の登録\n失敗：再読み込み後の保持（一覧が空になった）\n実行エラー（結果なし）：空白題名の自動確認（確認用ファイルが見つからない）\n未実施：全角空白だけの題名\n次の行動：保持の不具合を直す→止まった確認をやり直す→未実施を行う" }
+  },
+  "practiceCardId": "pc-q05",
+  "sourceIds": ["S1"],
+  "mapRegionId": "inspection",
+  "badgeId": "badge-q05",
+  "glossaryIds": ["test", "review", "error"]
+}
