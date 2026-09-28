@@ -158,7 +158,7 @@ export function recoverScreen(ctx: Ctx): HTMLElement {
             onclick: () => {
               ctx.session.startOver();
               ctx.flash(t('rc.startedOver'));
-              location.hash = '#/start';
+              ctx.navigate('#/start');
             },
           },
           t('rc.startOverYes'),
@@ -202,7 +202,7 @@ export function recoverScreen(ctx: Ctx): HTMLElement {
               onclick: () => {
                 ctx.session.restoreBackup();
                 ctx.flash(t('rc.restored'));
-                location.hash = '#/map';
+                ctx.navigate('#/map');
               },
             },
             t('rc.restore', { at: load.backup.updatedAt }),
@@ -216,7 +216,7 @@ export function recoverScreen(ctx: Ctx): HTMLElement {
           'data-testid': 'recover-defer',
           onclick: () => {
             ctx.session.deferRecovery();
-            location.hash = '#/map';
+            ctx.navigate('#/map');
           },
         },
         t('rc.defer'),

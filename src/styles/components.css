@@ -737,3 +737,11 @@ button:disabled,
   border-top: 1px solid var(--line);
   margin-top: 16px;
 }
+.field > * {
+  min-width: 0;
+  max-width: 100%;
+}
+input[type='file'] {
+  max-width: 100%;
+  min-height: var(--touch);
+}

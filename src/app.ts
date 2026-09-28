@@ -31,6 +31,10 @@ const ctx: Ctx = {
   drafts: new Map(),
   flash: (m) => pendingFlash.push(m),
   rerender: () => render(),
+  navigate: (hash) => {
+    if (location.hash === hash) render();
+    else location.hash = hash;
+  },
 };
 
 const root = document.getElementById('app')!;

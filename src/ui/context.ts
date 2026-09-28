@@ -12,4 +12,6 @@ export interface Ctx {
   flash(message: string): void;
   /** Re-render the current route (after state changes that the screen does not patch itself). */
   rerender(): void;
+  /** Go to a hash; re-renders even when the hash is already current. */
+  navigate(hash: string): void;
 }
