@@ -13,14 +13,14 @@ Working MVP complete. Japanese learners can play from the introduction through Q
 | WP04 | Progress (sim / read / practice separated), notebook, glossary (24), settings, English UI strings | 70b5cc4 |
 | WP05 | Placeholder art + 20-entry asset manifest, responsive 320–1440, keyboard, reduced motion, text scale | 70b5cc4 / 4aa6f05 |
 | WP06 | Unit, content, E2E suites; fixes (recovery navigation, 320px overflow) | 4aa6f05 |
-| WP07 | README, AGENTS/CLAUDE, VERIFY, HANDOFF, CI workflow file (not run on GitHub) | WP07 docs commit (`git log -1`) |
+| WP07 | README, AGENTS/CLAUDE, VERIFY, HANDOFF, CI workflow (green on GitHub Actions) | 0f1f7ab, c4d44a9, e9f154a |
 
 ## Branch / last commit
 - Branch: `feat/working-mvp` → `origin` (public; currently the default branch because there is no `main`)
 - Last code commit: `c4d44a9` (skip-link test waits for its transition); HEAD = the docs update after it
 
 ## Files being changed
-None. The working tree is clean after the WP07 commit.
+None. The working tree is clean.
 
 ## Tests last run (2026-09-29, WSL2, Node 22.23.1)
 - `npm run typecheck`: PASS
