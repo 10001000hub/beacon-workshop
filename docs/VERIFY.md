@@ -1,6 +1,6 @@
 # VERIFY — Working MVP 検証報告
 
-- 対象: ブランチ `feat/working-mvp`（コード最終コミット `4aa6f05` + WP07 文書コミット）
+- 対象: ブランチ `feat/working-mvp`（公開リポジトリ https://github.com/10001000hub/beacon-workshop 、テスト最終修正 `c4d44a9`）
 - 実行日: 2026-09-29 / 環境: WSL2 Linux, Node 22.23.1, npm 10.9.8, Playwright 1.61.0 Chromium（WebKit は未導入）
 - 実行結果: `npm run typecheck` 成功 / `npm test` 6 files, 119 tests passed / `npm run validate:content` OK（6 quests, 18 activities）/ `npm run build` 成功 / `npm run test:e2e` 20 passed (chromium)
 - 新しい作業場所での再現: `git clone` → `npm ci` → typecheck / test / validate / build / `CI=true npx playwright test` がすべて成功（スクラッチ領域に clone）。ただし Playwright のブラウザキャッシュは同一マシンのものを共用
@@ -34,7 +34,7 @@
 | AC23 | 必須 | PASS | 表示 / 文言 | `ui.spec.ts` "simulation banner is on every screen"、実習は「下書き」、`device_verified` が存在しない（`content.test.ts`） | |
 | AC24 | 必須 | PASS | セキュリティテスト | `save.spec.ts`: HTML を含むノートを import しても実行・要素化されない（`__pwned` なし、img なし）。描画は textContent のみ、CSP meta | |
 | AC25 | 必須 | PASS | ネットワーク / コード | E2E の外部リクエスト 0 件。`src` に fetch / XMLHttpRequest / sendBeacon / WebSocket / password 入力なし（grep） | |
-| AC26 | 必須 | NOT RUN | CI 設定 / 実行 | `.github/workflows/ci.yml` を追加（npm ci → Chromium → typecheck/test/validate/build/e2e、AI・有料 API・secret なし）。同じ手順をローカルの clean clone で実行し成功 | リモート未作成のため GitHub Actions では未実行 |
+| AC26 | 必須 | PASS | CI 設定 / 実行 | `.github/workflows/ci.yml`（npm ci → Chromium → typecheck/test/validate/build/e2e、AI・有料 API・secret なし）。GitHub Actions run 36498603515 が commit `c4d44a9` で success | 初回 run 36498169680 は skip link の遷移待ち不足で e2e 1件 FAIL → テストを修正して解消 |
 | AC27 | RC 条件（最終素材） | DEFERRED TO RELEASE CANDIDATE | 台帳 / 表示 | `asset-manifest.json` に20件（MAP01, BG01–06, CH01–09, FX01, LOGO01, ICONS01, BADGES01）、全ファイル存在、alt あり、`status: placeholder`、SVG にスクリプト・外部参照なし | 台帳と代替表示は MVP で確認済み。最終アートと使用条件は RC |
 | AC28 | 必須 | PASS | 報告照合 | 本表。NOT RUN / DEFERRED を PASS と書いていない | |
 | AC29 | 必須 | PASS | clean environment | clone → `npm ci` → 全コマンド成功（上記） | 別マシン・Windows ではない。ブラウザキャッシュは共用 |

@@ -1,7 +1,7 @@
 # HANDOFF — Beacon Workshop
 
 ## Current state
-Working MVP complete on a local branch. Japanese learners can play from the introduction through Q01–Q06 (18 activities) to the lighthouse ending, using placeholder art. All local checks pass (Chromium). Nothing has been pushed or published.
+Working MVP complete. Japanese learners can play from the introduction through Q01–Q06 (18 activities) to the lighthouse ending, using placeholder art. All checks pass locally and on GitHub Actions (Chromium). With owner authorization (2026-09-29), the branch was pushed to the public repo https://github.com/10001000hub/beacon-workshop. It has not been deployed, and there is no main branch or merge.
 
 ## Completed WPs
 | WP | Result | Commit |
@@ -16,8 +16,8 @@ Working MVP complete on a local branch. Japanese learners can play from the intr
 | WP07 | README, AGENTS/CLAUDE, VERIFY, HANDOFF, CI workflow file (not run on GitHub) | WP07 docs commit (`git log -1`) |
 
 ## Branch / last commit
-- Branch: `feat/working-mvp` (no remote configured)
-- Last code commit: `4aa6f05`; HEAD = the WP07 docs commit on top of it
+- Branch: `feat/working-mvp` → `origin` (public; currently the default branch because there is no `main`)
+- Last code commit: `c4d44a9` (skip-link test waits for its transition); HEAD = the docs update after it
 
 ## Files being changed
 None. The working tree is clean after the WP07 commit.
@@ -29,12 +29,13 @@ None. The working tree is clean after the WP07 commit.
 - `npm run build`: PASS
 - `npm run test:e2e`: PASS (20 tests, Chromium)
 - Clean clone in scratch dir + `npm ci` + the commands above: PASS
-- NOT RUN: Playwright WebKit (not installed), iPhone Safari, Windows, screen reader, GitHub Actions (no remote)
+- GitHub Actions: run 36498603515 success on `c4d44a9`. The first run, 36498169680, failed one e2e check because of skip-link transition timing, and the test was fixed.
+- NOT RUN: Playwright WebKit (not installed), iPhone Safari, Windows, screen reader
 
 ## PASS / FAIL / NOT RUN (AC01–AC30; details in `docs/VERIFY.md`)
-- PASS: AC01–AC16, AC19, AC23–AC25, AC28–AC30
+- PASS: AC01–AC16, AC19, AC23–AC26, AC28–AC30
 - FAIL: none
-- NOT RUN: AC17 (manual screen reader / zoom), AC26 (CI not run on GitHub)
+- NOT RUN: AC17 (manual screen reader / zoom)
 - DEFERRED TO RELEASE CANDIDATE: AC18, AC20 (device part), AC21, AC22, AC27 (final art)
 
 ## Design decisions recorded
@@ -48,7 +49,7 @@ None. The working tree is clean after the WP07 commit.
 - License: not chosen (owner decision). The About text says it will be decided before publication.
 
 ## Blockers
-None for local work. Publication needs owner decisions: a remote/repo, visibility, a license, and device checks.
+None for engineering work. The repo is public but has no license (all rights reserved by default). Choosing one is the owner's decision.
 
 ## Deferred to Release Candidate
 - English content and practice text (AC18)
@@ -59,4 +60,4 @@ None for local work. Publication needs owner decisions: a remote/repo, visibilit
 - Manual screen-reader and 200% zoom checks (AC17)
 
 ## Exact next action
-The owner decides whether to create a GitHub repository and push `feat/working-mvp`, and whether it is private or public. After pushing, the first GitHub Actions run of `.github/workflows/ci.yml` settles AC26. Until then, the next engineering task is RC work, starting with the Q04 sample fixture (AC22).
+The owner chooses a license for the public repo, and it gets added as `LICENSE` plus the About text (`about.license` in the locales). Engineering then continues with RC work, starting with the Q04 sample fixture (AC22).
