@@ -1,0 +1,43 @@
+/* Design tokens (§6). Colors are always paired with text labels, never used alone. */
+:root {
+  --ink: #202830;
+  --paper: #f5f0e6;
+  --harbor: #203f49;
+  --light: #e5b85a;
+  --mist: #7d8792;
+  --repair: #a73d42;
+  --verified: #226b56;
+
+  --surface: #fffdf8;
+  --surface-2: #ebe4d6;
+  --line: #cfc6b4;
+  --text-muted: #4d5661;
+  --focus: #1c5fb8;
+  --add-bg: #e3f1ea;
+  --del-bg: #f6e2e2;
+  --chg-bg: #f7eed6;
+
+  --text-scale: 1;
+  --fs-base: calc(16px * var(--text-scale));
+  --fs-small: calc(14px * var(--text-scale));
+  --fs-h1: calc(26px * var(--text-scale));
+  --fs-h2: calc(20px * var(--text-scale));
+  --fs-h3: calc(17px * var(--text-scale));
+  --lh: 1.7;
+
+  --radius: 10px;
+  --gap: 16px;
+  --touch: 44px;
+  --dur: 180ms;
+  --font: system-ui, -apple-system, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Meiryo', sans-serif;
+  --mono: ui-monospace, 'SFMono-Regular', Consolas, 'Noto Sans Mono', monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur: 0ms;
+  }
+}
+:root[data-reduce-motion] {
+  --dur: 0ms;
+}
