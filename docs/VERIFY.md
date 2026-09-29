@@ -1,7 +1,7 @@
 # VERIFY — Working MVP 検証報告
 
 - 対象: ブランチ `feat/working-mvp`、実装コミット `aebbef8`（pre-RC 修正。この SHA に対して下記を実行）。ベースは `a3c8c13`。リポジトリは公開済み（https://github.com/10001000hub/beacon-workshop ）だが、**アプリはデプロイしていない**
-- CI: `aebbef8` はまだ push していないため、この SHA の GitHub Actions 結果は **NOT RUN（未観測）**。過去の run 36498603515 は `c4d44a9` のもので、この修正には適用しない。この後の docs のみのコミットは別に扱う
+- CI: 実装コミット `aebbef8` 単体の run は無い（`aebbef8` と `e82d2bb` を同時に push し、run は push 先端の `e82d2bb` 1 件）。**GitHub Actions run 36576369888 が `e82d2bb`（docs のみ、`aebbef8` の直後）で success**（2026-09-29 観測）。過去の run 36498603515 は `c4d44a9` のもので、この修正には適用しない。この後の docs のみのコミットは別に扱う
 - 実行日: 2026-09-29 / 環境: WSL2 Linux, Node 22.23.1, npm 10.9.8, Playwright 1.61.0 Chromium（WebKit は未導入）
 - 実行結果（`aebbef8` の作業ツリーで `npm run check`、終了コード 0）: typecheck 成功 / `npm test` 7 files, 138 tests passed / `npm run validate:content` OK（6 quests, 18 activities）/ `npm run build` 成功 / `npm run test:e2e` 30 passed (chromium)
 - クリーン clone での再現（AC29）は、この修正後は **NOT RUN**。MVP 時点（`c4d44a9`）の結果は下表 AC29 の備考を参照

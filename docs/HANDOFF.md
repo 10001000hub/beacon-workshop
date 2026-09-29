@@ -1,7 +1,7 @@
 # HANDOFF — Beacon Workshop
 
 ## Current state
-Working MVP complete. Japanese learners can play from the introduction through Q01–Q06 (18 activities) to the lighthouse ending, using placeholder art. All checks pass locally and on GitHub Actions (Chromium). The repository is published (public, https://github.com/10001000hub/beacon-workshop, pushed with owner authorization on 2026-09-29). The application is **not deployed**, and there is no main branch or merge. The pre-RC defect fixes below are committed locally and **not pushed yet**.
+Working MVP complete. Japanese learners can play from the introduction through Q01–Q06 (18 activities) to the lighthouse ending, using placeholder art. All checks pass locally and on GitHub Actions (Chromium). The repository is published (public, https://github.com/10001000hub/beacon-workshop, pushed with owner authorization on 2026-09-29). The application is **not deployed**, and there is no main branch or merge. The pre-RC defect fixes below were pushed with owner authorization (2026-09-29).
 
 ## Completed WPs
 | WP | Result | Commit |
@@ -25,7 +25,7 @@ None. The working tree is clean after the docs commit.
 
 ## Tests last run (2026-09-29, WSL2, Node 22.23.1, on `aebbef8`)
 - `npm run check`: PASS (exit 0) = typecheck, `npm test` (7 files, 138 tests), `validate:content` (6 quests, 18 activities), build, `test:e2e` (30 tests, Chromium)
-- GitHub Actions for `aebbef8`: NOT RUN (not pushed). Run 36498603515 belongs to `c4d44a9` and is not evidence for the fixes.
+- GitHub Actions: run 36576369888 succeeded on `e82d2bb` (docs-only commit on top of `aebbef8`; pushed together, no separate run for `aebbef8`). Run 36498603515 belongs to `c4d44a9` and is not evidence for the fixes.
 - Clean-clone reproduction after the fixes: NOT RUN
 - NOT RUN: Playwright WebKit, iPhone Safari, Windows, screen reader, real Codex
 
@@ -64,4 +64,4 @@ None.
 - Manual screen-reader and 200% zoom checks (AC17)
 
 ## Exact next action
-Owner: authorize pushing the pre-RC fix commits, then confirm the CI run for the pushed SHA (record it separately). After that, RC work, starting with the Q04 broken-sample fixture and its check (AC22). Then English content (AC18), final art (AC27), and device verification of the practice cards (AC20/AC21).
+RC work, starting with the Q04 broken-sample fixture and its check (AC22). Then English content (AC18), final art (AC27), and device verification of the practice cards (AC20/AC21).
