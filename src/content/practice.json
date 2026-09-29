@@ -76,12 +76,12 @@
     "expectedResult": { "ja": "題名の確認処理だけが直され、変更の要点が返る。" },
     "successExample": { "ja": "空・半角空白だけ・全角空白だけの題名は拒否され理由が出る。「氷の配達」は登録される。保存済みのメモは残っている。" },
     "failureRecovery": [
-      { "situation": { "ja": "自分の作品では不具合が起きない" }, "action": { "ja": "自分の作品が正しい可能性が高い。不具合があると決めつけたり、わざと壊したりしない。隔離された「壊れた練習用見本」は、まだ配布していない（準備中）。" } },
+      { "situation": { "ja": "自分の作品では不具合が起きない" }, "action": { "ja": "自分の作品が正しい可能性が高い。不具合があると決めつけたり、わざと壊したりしない。必要なら、隔離された「壊れた練習用見本」（public/practice/q04-broken-sample。別の保存キー）をコピーして使う。" } },
       { "situation": { "ja": "保存済みのメモを消す変更が提案された" }, "action": { "ja": "範囲を確認処理だけに絞るよう伝え直す。" }, "instruction": { "ja": "保存済みのメモは消さないでください。題名の確認処理だけを直してください。" } },
       { "situation": { "ja": "直した後、ふつうの題名も登録できない" }, "action": { "ja": "直しすぎを伝える。" }, "instruction": { "ja": "修正後、題名「氷の配達」も登録できなくなりました。空白だけの題名だけを拒否するように直してください。" } }
     ],
     "status": "draft",
-    "verification": { "verifiedAt": null, "testedProductVersion": null, "contentVersion": "0.1.0", "note": { "ja": "未検証の下書き。Q04 用の隔離された壊れた練習用見本は、まだ用意していません。" } },
+    "verification": { "verifiedAt": null, "testedProductVersion": null, "contentVersion": "0.1.0", "note": { "ja": "未検証の下書き。Q04 用の壊れた練習用見本は用意済み（自動テストで不具合の再現と修正後の確認を検査）。ただし実際の Codex での実習は未検証です。" } },
     "sourceIds": ["S1"]
   },
   {

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'" />
+    <title>壊れた練習用見本（Q04）</title>
+    <style>body{font-family:sans-serif;max-width:32rem;margin:1rem auto;padding:0 1rem}label{display:block;margin:.5rem 0}input,textarea{width:100%;box-sizing:border-box;font:inherit}</style>
+  </head>
+  <body>
+    <h1>灯台メモ（壊れた練習用見本）</h1>
+    <p>これは Beacon Workshop Q04 の練習用です。<strong>わざと不具合が入っています</strong>。あなた自身の作品ではありません。</p>
+    <form id="form">
+      <label>題名<input id="title" autocomplete="off" /></label>
+      <label>本文<textarea id="body" rows="3"></textarea></label>
+      <button type="submit">追加</button>
+    </form>
+    <p id="msg" role="alert"></p>
+    <ul id="list"></ul>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
