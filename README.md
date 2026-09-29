@@ -13,7 +13,7 @@
 
 ## 現在の状態
 
-**Working MVP**（ブランチ `feat/working-mvp`）。導入 → Q01〜Q06（必須課題18）→ 終幕までを日本語で一周できます。英語は UI 文字列のみで、教材本文は日本語で表示されます。英語教材、最終アート、実習の実機検証は Release Candidate の範囲です。詳細は [docs/VERIFY.md](docs/VERIFY.md) と [docs/HANDOFF.md](docs/HANDOFF.md) を参照してください。
+**Working MVP + pre-RC 修正**（ブランチ `feat/working-mvp`）。リポジトリは公開されていますが、**アプリはデプロイされていません**（公開ページはありません）。導入 → Q01〜Q06（必須課題18）→ 終幕までを日本語で一周できます。英語は UI 文字列のみで、教材本文は日本語で表示されます。英語教材、最終アート、実習の実機検証は Release Candidate の範囲です。詳細は [docs/VERIFY.md](docs/VERIFY.md) と [docs/HANDOFF.md](docs/HANDOFF.md) を参照してください。
 
 ## コマンド
 
@@ -30,7 +30,18 @@ npm run test:e2e                    # Playwright E2E（ビルドして 127.0.0.1
 npm run check                       # 上記すべて
 ```
 
-`dist/` は静的ファイルのみで、`index.html` を相対パスで配信できます（ハッシュルーティング）。
+`dist/` は静的ファイルのみです。静的サーバー（例: `npm run preview`）で配信して開いてください。`index.html` をダブルクリックして開く方法（`file://`）は確認していないため、対応をうたっていません。
+
+## 既知の制限
+
+- 英語は UI 文字列のみで、教材本文は日本語で表示されます（英語 UI では日本語部分に `lang="ja"` を付けています）。
+- 検証は Chromium の自動テストのみです。WebKit・iPhone Safari・Windows・スクリーンリーダー・実際の Codex での確認は未実施です。
+- リセット／インポート前のバックアップ保護は、ページを再読み込みするまでの間の保持です。大事な進捗は設定画面のエクスポートで控えてください。
+- CI: `.github/workflows/ci.yml`（GitHub Actions）。結果は各コミットごとに確認してください。
+
+## 貢献・セキュリティ
+
+[CONTRIBUTING.md](CONTRIBUTING.md) と [SECURITY.md](SECURITY.md) を参照してください。
 
 ## 仕様
 

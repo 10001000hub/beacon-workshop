@@ -17,6 +17,7 @@ Canonical spec: `docs/PRODUCT_SPEC.md` (do not edit, do not redesign). State of 
 - 6 quests × 3 activities = 18; 3 objectives, 3 takeaways, 1 practice card per quest. Only types: prompt_builder, evidence_board, change_review, triage_decision.
 - XP = 20/activity + 40/quest, max 600; level = min(7, floor(XP/100)+1). Hints and reading mode never award or remove XP; re-answers never double-award.
 - Every declared outcome has feedback; every activity has exactly 3 hints; Q05-C/Q06-C contain a case where "proceed" is correct.
+- Q06-A grades a decision and a reason per case; Q05-A includes insufficient v0.4 records. Navigation does not write to storage.
 - Storage: only `beacon-workshop.save.v1` and `beacon-workshop.backup.v1`; never call `localStorage.clear()`; never silently overwrite corrupt/newer saves; import ≤ 64 KiB, allowlisted fields, text stays inert.
 - Never use `innerHTML`; CSP in `index.html` stays strict. No network calls, analytics, auth, LLM or paid API — in app, tests or CI.
 - Truthfulness: the simulation banner shows on every screen; nothing is `device_verified`; sources stay `unchecked` until someone actually checks them; no fabricated Codex UI/versions/screenshots.
