@@ -178,6 +178,7 @@ button:disabled,
   padding: 12px 16px;
   margin: 12px 0;
 }
+.panel h3,
 .panel h4 {
   margin-top: 0;
 }
@@ -334,9 +335,9 @@ button:disabled,
   background: var(--light);
 }
 .pin.locked {
-  background: var(--mist);
+  background: var(--text-muted);
   color: #fff;
-  border-color: var(--mist);
+  border-color: var(--text-muted);
 }
 .pin.lit::before {
   content: '★ ';
@@ -490,7 +491,7 @@ button:disabled,
   align-items: flex-start;
   min-height: var(--touch);
   padding: 8px 10px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--control-line);
   border-radius: 8px;
   background: var(--surface);
   cursor: pointer;

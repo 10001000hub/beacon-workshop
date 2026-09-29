@@ -11,6 +11,7 @@
   --surface: #fffdf8;
   --surface-2: #ebe4d6;
   --line: #cfc6b4;
+  --control-line: #766e5f; /* boundary of form controls: >= 3:1 on --surface (WCAG 1.4.11) */
   --text-muted: #4d5661;
   --focus: #1c5fb8;
   --add-bg: #e3f1ea;

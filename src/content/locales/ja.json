@@ -1,6 +1,7 @@
 {
   "app.name": "Beacon Workshop",
   "app.subtitle": "灯台の町と六つの依頼",
+  "banner.region": "お知らせ",
   "banner.simulation": "練習画面／実際のCodexではありません",
   "banner.memory": "この端末には保存できていません。進捗はこのタブを閉じると消えます。設定から書き出してください。",
   "banner.writeFailed": "この端末には保存できていません（書き込みに失敗しました）。設定から書き出すか、もう一度保存してください。",
@@ -261,7 +262,7 @@
   "src.status.unreachable": "到達できない",
   "set.title": "設定・作品情報",
   "set.locale": "言語",
-  "set.localeNote": "英語は準備中です。英訳のない部分は日本語で表示します。言語を変えても進捗は変わりません。",
+  "set.localeNote": "英語の教材は機械的な検査のみで、母語話者による校閲は受けていません。英訳のない部分は日本語で表示します。言語を変えても進捗は変わりません。",
   "set.textScale": "文字の大きさ",
   "set.scale0": "標準",
   "set.scale1": "大きめ",

@@ -11,7 +11,12 @@ export default defineConfig({
     baseURL: 'http://127.0.0.1:4173/',
     trace: 'retain-on-failure',
   },
-  projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
+  // WebKit runs only when asked (PW_WEBKIT=1, and always in CI's separate webkit job) because it needs
+  // system libraries that not every development machine has.
+  projects: [
+    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
+    ...(process.env.PW_WEBKIT === '1' ? [{ name: 'webkit', use: { ...devices['Desktop Safari'] } }] : []),
+  ],
   webServer: {
     command: 'npm run build && npx vite preview --host 127.0.0.1 --port 4173 --strictPort',
     url: 'http://127.0.0.1:4173/',

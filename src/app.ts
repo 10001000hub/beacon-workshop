@@ -40,7 +40,7 @@ const ctx: Ctx = {
 
 const root = document.getElementById('app')!;
 const header = h('header', { class: 'app-header' });
-const banners = h('div', { class: 'banners' });
+const banners = h('div', { class: 'banners', role: 'region' });
 const main = h('main', { id: 'main', class: 'app-main', tabindex: -1 });
 const live = h('div', { class: 'visually-hidden', 'aria-live': 'polite', 'data-testid': 'route-announcer' });
 root.append(h('a', { class: 'skip-link', href: '#main', onclick: (e: Event) => { e.preventDefault(); main.focus(); } }, ''), header, banners, main, live);
@@ -82,6 +82,7 @@ function renderHeader(): void {
 
 function renderBanners(): void {
   clear(banners);
+  banners.setAttribute('aria-label', t('banner.region'));
   // Always visible (§7.1).
   banners.append(h('p', { class: 'sim-banner', 'data-testid': 'sim-banner' }, t('banner.simulation')));
   const st = session.status;

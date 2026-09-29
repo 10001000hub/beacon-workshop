@@ -1,6 +1,7 @@
 {
   "app.name": "Beacon Workshop",
   "app.subtitle": "The Lighthouse Town and Six Requests",
+  "banner.region": "Notices",
   "banner.simulation": "Practice screen — this is not the real Codex",
   "banner.memory": "Progress is not being saved on this device and will be lost when this tab closes. Export it from Settings.",
   "banner.writeFailed": "Progress is not being saved on this device (a write failed). Export it from Settings or try saving again.",
@@ -261,7 +262,7 @@
   "src.status.unreachable": "Unreachable",
   "set.title": "Settings & about",
   "set.locale": "Language",
-  "set.localeNote": "English is in preparation. Untranslated parts are shown in Japanese. Changing language never changes progress.",
+  "set.localeNote": "The English text has had no native-speaker review yet. Any part without a translation is shown in Japanese. Changing language never changes progress.",
   "set.textScale": "Text size",
   "set.scale0": "Standard",
   "set.scale1": "Large",

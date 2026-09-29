@@ -62,7 +62,7 @@ textarea {
 textarea {
   width: 100%;
   padding: 8px 10px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--control-line);
   border-radius: 8px;
   background: var(--surface);
   line-height: 1.6;
@@ -70,7 +70,7 @@ textarea {
 select {
   min-height: var(--touch);
   padding: 4px 10px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--control-line);
   border-radius: 8px;
   background: var(--surface);
 }

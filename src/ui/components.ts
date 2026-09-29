@@ -65,8 +65,8 @@ export function dialogue(ctx: Ctx, lines: DialogueLine[]): HTMLElement {
 export function sceneView(ctx: Ctx, scene: Scene, headingText?: string): HTMLElement {
   const bg = scene.backgroundAssetId ? assetSrc(ctx, scene.backgroundAssetId) : null;
   return h(
-    'section',
-    { class: 'scene', 'aria-label': headingText ?? t('scene.label') },
+    'div',
+    { class: 'scene', role: 'group', 'aria-label': headingText ?? t('scene.label') },
     bg ? image(bg.src, bg.alt, 'scene-bg', bg.alt) : null,
     dialogue(ctx, scene.lines),
   );
@@ -92,14 +92,14 @@ export function panelView(panel: Panel): HTMLElement {
       return h(
         'div',
         { class: 'panel panel-text' },
-        panel.title ? h('h4', {}, lt(panel.title)) : null,
+        panel.title ? h('h3', {}, lt(panel.title)) : null,
         h('ul', {}, ...panel.lines.map((l) => h('li', {}, lt(l)))),
       );
     case 'files':
       return h(
         'div',
         { class: 'panel panel-files' },
-        panel.title ? h('h4', {}, lt(panel.title)) : null,
+        panel.title ? h('h3', {}, lt(panel.title)) : null,
         h(
           'ul',
           {},
@@ -112,7 +112,7 @@ export function panelView(panel: Panel): HTMLElement {
       return h(
         'div',
         { class: 'panel panel-diff' },
-        h('h4', {}, h('code', {}, panel.file)),
+        h('h3', {}, h('code', {}, panel.file)),
         h(
           'div',
           { class: 'diff-scroll', tabindex: 0, role: 'region', 'aria-label': t('diff.region', { file: panel.file }) },
@@ -135,7 +135,7 @@ export function panelView(panel: Panel): HTMLElement {
       return h(
         'div',
         { class: 'panel panel-preview' },
-        h('h4', {}, panel.title ? lt(panel.title) : t('panel.preview')),
+        h('h3', {}, panel.title ? lt(panel.title) : t('panel.preview')),
         h('p', { class: 'sim-note' }, t('panel.previewNote')),
         panel.items.length > 0
           ? h('ul', { class: 'preview-list' }, ...panel.items.map((i) => h('li', {}, lt(i))))

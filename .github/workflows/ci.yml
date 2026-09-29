@@ -31,3 +31,25 @@ jobs:
           path: test-results/
           if-no-files-found: ignore
           retention-days: 7
+  webkit:
+    # Playwright WebKit is an automated check only; it is not real-iPhone Safari verification.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps webkit
+      - run: npm run test:e2e:webkit
+        env:
+          CI: 'true'
+      - name: Keep Playwright traces when WebKit fails
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-webkit-results
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 7
