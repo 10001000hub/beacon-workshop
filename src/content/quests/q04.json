@@ -2,35 +2,35 @@
   "id": "q04",
   "revision": "1",
   "prerequisite": "q03",
-  "title": { "ja": "からっぽの伝言橋" },
-  "place": { "ja": "伝言橋" },
-  "incident": { "ja": "空白だけの依頼が届いて、仕事の行き先が分からない。" },
-  "notesState": { "ja": "空白題名を受け付けず、理由を表示する" },
-  "sample": { "ja": "完成見本：題名が空、または空白だけのときは追加せず、「題名を入力してください」と表示する。通常の日本語題名は今までどおり登録でき、保存済みのメモはそのまま残る。" },
+  "title": { "ja": "からっぽの伝言橋", "en": "The Empty Message Bridge" },
+  "place": { "ja": "伝言橋", "en": "Message Bridge" },
+  "incident": { "ja": "空白だけの依頼が届いて、仕事の行き先が分からない。", "en": "Blank requests arrive, and nobody knows where the work should go." },
+  "notesState": { "ja": "空白題名を受け付けず、理由を表示する", "en": "Do not accept a blank title, and show the reason" },
+  "sample": { "ja": "完成見本：題名が空、または空白だけのときは追加せず、「題名を入力してください」と表示する。通常の日本語題名は今までどおり登録でき、保存済みのメモはそのまま残る。", "en": "Worked example: when the title is empty or only whitespace, do not add it and show \"Please enter a title.\" Normal Japanese titles can still be registered as before, and saved notes stay as they are." },
   "objectives": [
-    { "id": "q04-o1", "text": { "ja": "不具合を、誰がやっても同じになる手順で再現できる" } },
-    { "id": "q04-o2", "text": { "ja": "期待した結果と実際の結果を分け、直す範囲を絞って報告できる" } },
-    { "id": "q04-o3", "text": { "ja": "修正後に、同じ確認と正常な入力の確認をやり直せる" } }
+    { "id": "q04-o1", "text": { "ja": "不具合を、誰がやっても同じになる手順で再現できる", "en": "Reproduce a bug with steps that give the same result for anyone" } },
+    { "id": "q04-o2", "text": { "ja": "期待した結果と実際の結果を分け、直す範囲を絞って報告できる", "en": "Separate the expected result from the actual result, and report with the scope to fix narrowed down" } },
+    { "id": "q04-o3", "text": { "ja": "修正後に、同じ確認と正常な入力の確認をやり直せる", "en": "After a fix, redo the same check and a check with normal input" } }
   ],
   "briefScene": {
     "id": "q04-brief",
     "backgroundAssetId": "BG04",
     "lines": [
-      { "speaker": "narrator", "text": { "ja": "伝言橋の上に、宛名も題名もない札が何枚も積み重なって、通り道をふさいでいる。" } },
-      { "speaker": "resident", "name": { "ja": "橋守" }, "text": { "ja": "誰の仕事か分からない札ばかり。何となく、橋の調子が悪いんです。" } },
-      { "speaker": "koto", "expression": "think", "text": { "ja": "「何となく」だと、どこを直せばいいのか探せません。" } },
-      { "speaker": "ritsu", "expression": "normal", "text": { "ja": "まず、同じ札が生まれる手順を探そう。直すのはその後だ。" } },
-      { "speaker": "nagi", "expression": "think", "text": { "ja": "もしかして、題名に空白だけを入れると……？" } }
+      { "speaker": "narrator", "text": { "ja": "伝言橋の上に、宛名も題名もない札が何枚も積み重なって、通り道をふさいでいる。", "en": "On the message bridge, many tags with neither an address nor a title are piled up, blocking the way." } },
+      { "speaker": "resident", "name": { "ja": "橋守", "en": "Bridge keeper" }, "text": { "ja": "誰の仕事か分からない札ばかり。何となく、橋の調子が悪いんです。", "en": "They're all tags nobody can tell whose job they are. Somehow, the bridge isn't running well." } },
+      { "speaker": "koto", "expression": "think", "text": { "ja": "「何となく」だと、どこを直せばいいのか探せません。", "en": "With \"somehow,\" I can't look for where to fix." } },
+      { "speaker": "ritsu", "expression": "normal", "text": { "ja": "まず、同じ札が生まれる手順を探そう。直すのはその後だ。", "en": "First, let's find the steps that produce the same tag. Fixing comes after." } },
+      { "speaker": "nagi", "expression": "think", "text": { "ja": "もしかして、題名に空白だけを入れると……？", "en": "Could it be that... if you put only whitespace in the title...?" } }
     ]
   },
   "clearScene": {
     "id": "q04-clear",
     "backgroundAssetId": "BG04",
     "lines": [
-      { "speaker": "narrator", "text": { "ja": "空白だけの札は、橋の手前で「題名を入力してください」と止められるようになった。橋の上に、道が戻る。" } },
-      { "speaker": "resident", "name": { "ja": "橋守" }, "text": { "ja": "ちゃんと題名のある札は、今までどおり渡っていきますね。" } },
-      { "speaker": "koto", "expression": "happy", "text": { "ja": "直した後に、同じ手順でもう一度確かめました。" } },
-      { "speaker": "nagi", "expression": "happy", "text": { "ja": "壊れていた所だけ直して、ほかの札は消さずに済んだね。" } }
+      { "speaker": "narrator", "text": { "ja": "空白だけの札は、橋の手前で「題名を入力してください」と止められるようになった。橋の上に、道が戻る。", "en": "Tags with only whitespace are now stopped before the bridge with \"Please enter a title.\" The road on the bridge is back." } },
+      { "speaker": "resident", "name": { "ja": "橋守", "en": "Bridge keeper" }, "text": { "ja": "ちゃんと題名のある札は、今までどおり渡っていきますね。", "en": "Tags that do have a proper title still cross as before." } },
+      { "speaker": "koto", "expression": "happy", "text": { "ja": "直した後に、同じ手順でもう一度確かめました。", "en": "After the fix, I checked again with the same steps." } },
+      { "speaker": "nagi", "expression": "happy", "text": { "ja": "壊れていた所だけ直して、ほかの札は消さずに済んだね。", "en": "You fixed only the broken part, and no other tags had to be thrown away." } }
     ]
   },
   "activities": [
@@ -41,17 +41,17 @@
       "type": "evidence_board",
       "mode": "order",
       "required": true,
-      "title": { "ja": "Q04-A 再現手順を並べる" },
-      "prompt": { "ja": "空白だけの題名のメモが登録されてしまう不具合を、誰がやっても同じ結果になる手順にしてください。必要な札を選び、順に並べます。" },
+      "title": { "ja": "Q04-A 再現手順を並べる", "en": "Q04-A Line up the reproduction steps" },
+      "prompt": { "ja": "空白だけの題名のメモが登録されてしまう不具合を、誰がやっても同じ結果になる手順にしてください。必要な札を選び、順に並べます。", "en": "Turn the bug where a note with a whitespace-only title gets registered into steps that give the same result for anyone. Choose the needed cards and line them up in order." },
       "cards": [
-        { "id": "q04a-add", "label": { "ja": "「追加」を押す" }, "explain": { "ja": "不具合が起きる操作です。" } },
-        { "id": "q04a-guess", "label": { "ja": "原因はきっと保存の仕組みだと決めておく" }, "explain": { "ja": "推測は手順ではありません。再現する前に原因を決めると、見るべき所を見落とします。" } },
-        { "id": "q04a-open", "label": { "ja": "灯台メモの画面を開く" }, "explain": { "ja": "手順の出発点です。" } },
-        { "id": "q04a-result", "label": { "ja": "一覧に、題名が空白のメモが1件増えているのを見る" }, "explain": { "ja": "実際に起きた結果を確かめる手順です。" } },
-        { "id": "q04a-vague", "label": { "ja": "しばらくいろいろ触ってみる" }, "explain": { "ja": "何をしたか残らず、ほかの人が同じ操作をできません。" } },
-        { "id": "q04a-space", "label": { "ja": "題名の欄に半角空白を1つだけ入れる" }, "explain": { "ja": "不具合の条件になる入力です。" } },
-        { "id": "q04a-body", "label": { "ja": "本文の欄に「朝の配達」と入れる" }, "explain": { "ja": "本文は普通の文にして、題名だけが条件になるようにします。題名の入力と前後してもかまいません。" } },
-        { "id": "q04a-delete", "label": { "ja": "念のため、保存済みのメモを全部消してから試す" }, "explain": { "ja": "再現に必要なく、大切な記録を失います。" } }
+        { "id": "q04a-add", "label": { "ja": "「追加」を押す", "en": "Press \"Add\"" }, "explain": { "ja": "不具合が起きる操作です。", "en": "The action that triggers the bug." } },
+        { "id": "q04a-guess", "label": { "ja": "原因はきっと保存の仕組みだと決めておく", "en": "Decide beforehand that the cause must be the saving mechanism" }, "explain": { "ja": "推測は手順ではありません。再現する前に原因を決めると、見るべき所を見落とします。", "en": "A guess is not a step. Deciding the cause before reproducing makes you overlook what you should look at." } },
+        { "id": "q04a-open", "label": { "ja": "灯台メモの画面を開く", "en": "Open the lighthouse notes screen" }, "explain": { "ja": "手順の出発点です。", "en": "The starting point of the steps." } },
+        { "id": "q04a-result", "label": { "ja": "一覧に、題名が空白のメモが1件増えているのを見る", "en": "See on the list that one note with a whitespace title was added" }, "explain": { "ja": "実際に起きた結果を確かめる手順です。", "en": "A step to confirm the result that actually happened." } },
+        { "id": "q04a-vague", "label": { "ja": "しばらくいろいろ触ってみる", "en": "Poke around for a while" }, "explain": { "ja": "何をしたか残らず、ほかの人が同じ操作をできません。", "en": "What you did is not recorded, and others cannot repeat the same actions." } },
+        { "id": "q04a-space", "label": { "ja": "題名の欄に半角空白を1つだけ入れる", "en": "Enter just one half-width space in the title field" }, "explain": { "ja": "不具合の条件になる入力です。", "en": "The input that is the condition for the bug." } },
+        { "id": "q04a-body", "label": { "ja": "本文の欄に「朝の配達」と入れる", "en": "Enter \"朝の配達\" in the body field" }, "explain": { "ja": "本文は普通の文にして、題名だけが条件になるようにします。題名の入力と前後してもかまいません。", "en": "Make the body an ordinary sentence so that only the title is the condition. It may come before or after the title input." } },
+        { "id": "q04a-delete", "label": { "ja": "念のため、保存済みのメモを全部消してから試す", "en": "Just in case, delete all saved notes before trying" }, "explain": { "ja": "再現に必要なく、大切な記録を失います。", "en": "It is not needed for reproduction and you would lose important records." } }
       ],
       "grading": {
         "id": "q04-a.rule",
@@ -70,55 +70,55 @@
         "fallbackOutcome": "order"
       },
       "successLines": [
-        { "speaker": "koto", "expression": "happy", "text": { "ja": "同じ操作で、同じ困り事を見つけました。" } },
-        { "speaker": "ritsu", "expression": "normal", "text": { "ja": "それなら、もう“何となく動かない”ではないね。直す場所を探せる。" } }
+        { "speaker": "koto", "expression": "happy", "text": { "ja": "同じ操作で、同じ困り事を見つけました。", "en": "With the same actions, we found the same trouble." } },
+        { "speaker": "ritsu", "expression": "normal", "text": { "ja": "それなら、もう“何となく動かない”ではないね。直す場所を探せる。", "en": "Then it is no longer \"somehow it doesn't work.\" We can look for where to fix." } }
       ],
       "feedbackByOutcome": {
         "correct": {
-          "what": { "ja": "誰がこの手順をたどっても、題名が空白のメモが登録されるのを確かめられます。" },
-          "why": { "ja": "出発点・条件になる入力・操作・結果が、順番どおりにそろっています。" },
-          "next": { "ja": "次は、この手順を使って不具合の報告を組み立てます。" }
+          "what": { "ja": "誰がこの手順をたどっても、題名が空白のメモが登録されるのを確かめられます。", "en": "Anyone following these steps can confirm that a note with a whitespace title gets registered." },
+          "why": { "ja": "出発点・条件になる入力・操作・結果が、順番どおりにそろっています。", "en": "The starting point, the conditioning input, the action and the result are all there, in order." },
+          "next": { "ja": "次は、この手順を使って不具合の報告を組み立てます。", "en": "Next, use these steps to build a bug report." }
         },
         "destructive": {
-          "what": { "ja": "再現はできても、保存済みのメモがすべて失われます。" },
-          "why": { "ja": "不具合を確かめるために、関係のない記録を消す必要はありません。" },
-          "next": { "ja": "「全部消してから試す」の札を外しましょう。" }
+          "what": { "ja": "再現はできても、保存済みのメモがすべて失われます。", "en": "You can reproduce it, but all saved notes are lost." },
+          "why": { "ja": "不具合を確かめるために、関係のない記録を消す必要はありません。", "en": "To confirm the bug, there is no need to delete unrelated records." },
+          "next": { "ja": "「全部消してから試す」の札を外しましょう。", "en": "Take the \"delete everything before trying\" card out." }
         },
         "vague": {
-          "what": { "ja": "ほかの人が同じ操作をできず、不具合が起きたり起きなかったりします。" },
-          "why": { "ja": "「いろいろ触る」では、何をしたら起きるのかが残りません。" },
-          "next": { "ja": "あいまいな札を外し、具体的な操作だけで並べましょう。" }
+          "what": { "ja": "ほかの人が同じ操作をできず、不具合が起きたり起きなかったりします。", "en": "Others cannot do the same actions, and the bug appears and disappears." },
+          "why": { "ja": "「いろいろ触る」では、何をしたら起きるのかが残りません。", "en": "With \"poke around,\" what you did to make it happen is not recorded." },
+          "next": { "ja": "あいまいな札を外し、具体的な操作だけで並べましょう。", "en": "Remove the vague card and line up only concrete actions." }
         },
         "guess": {
-          "what": { "ja": "原因を先に決めたため、保存の仕組みばかり調べて、入力の確認を見落とします。" },
-          "why": { "ja": "再現手順は「何をしたら何が起きたか」の記録です。推測は含めません。" },
-          "next": { "ja": "推測の札を外しましょう。" }
+          "what": { "ja": "原因を先に決めたため、保存の仕組みばかり調べて、入力の確認を見落とします。", "en": "Because you decided the cause first, you investigate only the saving mechanism and overlook the input check." },
+          "why": { "ja": "再現手順は「何をしたら何が起きたか」の記録です。推測は含めません。", "en": "Reproduction steps are a record of \"what was done and what happened.\" Do not include guesses." },
+          "next": { "ja": "推測の札を外しましょう。", "en": "Take out the guess card." }
         },
         "no_condition": {
-          "what": { "ja": "題名に空白を入れていないので、不具合が起きません。" },
-          "why": { "ja": "この不具合の条件は「題名が空白だけ」であることです。" },
-          "next": { "ja": "「題名の欄に半角空白を1つだけ入れる」を手順に加えましょう。" }
+          "what": { "ja": "題名に空白を入れていないので、不具合が起きません。", "en": "You did not put whitespace in the title, so the bug does not occur." },
+          "why": { "ja": "この不具合の条件は「題名が空白だけ」であることです。", "en": "The condition for this bug is that \"the title is only whitespace.\"" },
+          "next": { "ja": "「題名の欄に半角空白を1つだけ入れる」を手順に加えましょう。", "en": "Add \"Enter just one half-width space in the title field\" to the steps." }
         },
         "no_result": {
-          "what": { "ja": "操作はしましたが、何が起きたかを確かめていません。" },
-          "why": { "ja": "結果を見るまでが再現手順です。" },
-          "next": { "ja": "「一覧に、題名が空白のメモが増えているのを見る」を最後に加えましょう。" }
+          "what": { "ja": "操作はしましたが、何が起きたかを確かめていません。", "en": "You did the action, but have not checked what happened." },
+          "why": { "ja": "結果を見るまでが再現手順です。", "en": "Reproduction steps run until you see the result." },
+          "next": { "ja": "「一覧に、題名が空白のメモが増えているのを見る」を最後に加えましょう。", "en": "Add \"See on the list that a note with a whitespace title was added\" at the end." }
         },
         "missing_step": {
-          "what": { "ja": "途中の手順が抜けていて、同じ結果にたどり着けないことがあります。" },
-          "why": { "ja": "画面を開く・本文を入れる・追加を押す、のどれかが足りません。" },
-          "next": { "ja": "手順の抜けを探して、札を加えましょう。" }
+          "what": { "ja": "途中の手順が抜けていて、同じ結果にたどり着けないことがあります。", "en": "A step in the middle is missing, so you may not reach the same result." },
+          "why": { "ja": "画面を開く・本文を入れる・追加を押す、のどれかが足りません。", "en": "One of these is missing: open the screen, enter the body, press Add." },
+          "next": { "ja": "手順の抜けを探して、札を加えましょう。", "en": "Look for the missing step and add the card." }
         },
         "order": {
-          "what": { "ja": "必要な札はそろっていますが、この順番では同じ結果になりません。" },
-          "why": { "ja": "画面を開いてから入力し、入力してから「追加」を押し、最後に結果を見ます。" },
-          "next": { "ja": "「上へ」「下へ」で順番を並べ替えましょう。" }
+          "what": { "ja": "必要な札はそろっていますが、この順番では同じ結果になりません。", "en": "The needed cards are all there, but this order does not give the same result." },
+          "why": { "ja": "画面を開いてから入力し、入力してから「追加」を押し、最後に結果を見ます。", "en": "Open the screen, then type, then press \"Add,\" and finally look at the result." },
+          "next": { "ja": "「上へ」「下へ」で順番を並べ替えましょう。", "en": "Use \"Up\" and \"Down\" to reorder." }
         }
       },
       "hints": [
-        { "id": "q04-a.h1", "text": { "ja": "再現手順は、ほかの人が読んでも同じ操作ができる「何をしたら・何が起きたか」の記録です。" } },
-        { "id": "q04-a.h2", "text": { "ja": "推測・あいまいな操作・記録を消す札は使いません。最後は、実際に起きた結果を見る札です。" } },
-        { "id": "q04-a.h3", "text": { "ja": "解答例：画面を開く→題名に半角空白を1つ→本文に「朝の配達」→「追加」を押す→題名が空白のメモが増えているのを見る（題名と本文の入力は逆でも可）。理由：条件・操作・結果が順にそろうからです。盤面で札を並べてください。" } }
+        { "id": "q04-a.h1", "text": { "ja": "再現手順は、ほかの人が読んでも同じ操作ができる「何をしたら・何が起きたか」の記録です。", "en": "Reproduction steps are a record of \"what was done and what happened\" that lets another person repeat the same actions." } },
+        { "id": "q04-a.h2", "text": { "ja": "推測・あいまいな操作・記録を消す札は使いません。最後は、実際に起きた結果を見る札です。", "en": "Do not use cards for guesses, vague actions or deleting records. The last card is the one for seeing the result that actually happened." } },
+        { "id": "q04-a.h3", "text": { "ja": "解答例：画面を開く→題名に半角空白を1つ→本文に「朝の配達」→「追加」を押す→題名が空白のメモが増えているのを見る（題名と本文の入力は逆でも可）。理由：条件・操作・結果が順にそろうからです。盤面で札を並べてください。", "en": "Sample answer: open the screen → one half-width space in the title → \"朝の配達\" in the body → press \"Add\" → see that a note with a whitespace title was added (the title and body inputs may be reversed). Reason: the condition, action and result line up in order. Line up the cards on the board." } }
       ]
     },
     {
@@ -127,23 +127,23 @@
       "objectiveId": "q04-o2",
       "type": "prompt_builder",
       "required": true,
-      "title": { "ja": "Q04-B 不具合を報告する" },
-      "prompt": { "ja": "コトへの不具合報告を組み立ててください。再現手順・期待した結果・実際の結果・依頼の範囲の4つを分けて書きます。" },
+      "title": { "ja": "Q04-B 不具合を報告する", "en": "Q04-B Report the bug" },
+      "prompt": { "ja": "コトへの不具合報告を組み立ててください。再現手順・期待した結果・実際の結果・依頼の範囲の4つを分けて書きます。", "en": "Build a bug report to Koto. Write four parts separately: reproduction steps, expected result, actual result and the scope of the request." },
       "slots": [
-        { "id": "repro", "label": { "ja": "再現手順" }, "question": { "ja": "何をすると起きる？" } },
-        { "id": "expected", "label": { "ja": "期待した結果" }, "question": { "ja": "本当はどうなってほしい？" } },
-        { "id": "actual", "label": { "ja": "実際の結果" }, "question": { "ja": "実際には何が起きた？" } },
-        { "id": "scope", "label": { "ja": "依頼の範囲" }, "question": { "ja": "何を直して、何を変えない？" } }
+        { "id": "repro", "label": { "ja": "再現手順", "en": "Reproduction steps" }, "question": { "ja": "何をすると起きる？", "en": "What do you do to make it happen?" } },
+        { "id": "expected", "label": { "ja": "期待した結果", "en": "Expected result" }, "question": { "ja": "本当はどうなってほしい？", "en": "What should really happen?" } },
+        { "id": "actual", "label": { "ja": "実際の結果", "en": "Actual result" }, "question": { "ja": "実際には何が起きた？", "en": "What actually happened?" } },
+        { "id": "scope", "label": { "ja": "依頼の範囲", "en": "Scope of the request" }, "question": { "ja": "何を直して、何を変えない？", "en": "What to fix and what not to change?" } }
       ],
       "cards": [
-        { "id": "q04b-actual", "label": { "ja": "題名が空白のメモが、一覧に1件登録された" }, "explain": { "ja": "実際に起きたことです。「実際の結果」の欄に置きます。" } },
-        { "id": "q04b-wipe", "label": { "ja": "おかしなメモが混ざったので、保存済みのメモを全部消して作り直す" }, "explain": { "ja": "不具合と関係のない、大切な記録まで失われます。" } },
-        { "id": "q04b-repro", "label": { "ja": "画面を開く→題名に半角空白を1つ→本文に「朝の配達」→「追加」を押す" }, "explain": { "ja": "同じ結果になる手順です。「再現手順」の欄に置きます。" } },
-        { "id": "q04b-vague", "label": { "ja": "何となく動かないので、いい感じに直してほしい" }, "explain": { "ja": "何が起きて、どうしてほしいのかが伝わりません。" } },
-        { "id": "q04b-expected", "label": { "ja": "題名が空白だけなら追加せず、「題名を入力してください」と表示される" }, "explain": { "ja": "本来の動きです。「期待した結果」の欄に置きます。" } },
-        { "id": "q04b-scope", "label": { "ja": "題名が空・空白だけのときの拒否だけを直す。保存済みのメモは消さない" }, "explain": { "ja": "直す範囲と、守るものを示します。" } },
-        { "id": "q04b-wide", "label": { "ja": "ついでに、すべての入力欄に新しい細かい入力ルールを追加する" }, "explain": { "ja": "頼まれていない変更で、正常な入力まで拒否されるおそれがあります。" } },
-        { "id": "q04b-normal", "label": { "ja": "通常の日本語の題名は、今までどおり登録できる" }, "explain": { "ja": "壊してはいけない動きです。期待した結果・依頼の範囲のどちらに置いてもかまいません。" } }
+        { "id": "q04b-actual", "label": { "ja": "題名が空白のメモが、一覧に1件登録された", "en": "One note with a whitespace title was registered in the list" }, "explain": { "ja": "実際に起きたことです。「実際の結果」の欄に置きます。", "en": "This is what actually happened. Place it in the \"actual result\" field." } },
+        { "id": "q04b-wipe", "label": { "ja": "おかしなメモが混ざったので、保存済みのメモを全部消して作り直す", "en": "Because a strange note got mixed in, delete all saved notes and rebuild them" }, "explain": { "ja": "不具合と関係のない、大切な記録まで失われます。", "en": "Even important records unrelated to the bug would be lost." } },
+        { "id": "q04b-repro", "label": { "ja": "画面を開く→題名に半角空白を1つ→本文に「朝の配達」→「追加」を押す", "en": "Open the screen → one half-width space in the title → \"朝の配達\" in the body → press \"Add\"" }, "explain": { "ja": "同じ結果になる手順です。「再現手順」の欄に置きます。", "en": "Steps that give the same result. Place them in the \"reproduction steps\" field." } },
+        { "id": "q04b-vague", "label": { "ja": "何となく動かないので、いい感じに直してほしい", "en": "Somehow it doesn't work, so please fix it nicely" }, "explain": { "ja": "何が起きて、どうしてほしいのかが伝わりません。", "en": "It does not convey what happened or what you want." } },
+        { "id": "q04b-expected", "label": { "ja": "題名が空白だけなら追加せず、「題名を入力してください」と表示される", "en": "If the title is only whitespace, do not add it and show \"Please enter a title\"" }, "explain": { "ja": "本来の動きです。「期待した結果」の欄に置きます。", "en": "This is the intended behavior. Place it in the \"expected result\" field." } },
+        { "id": "q04b-scope", "label": { "ja": "題名が空・空白だけのときの拒否だけを直す。保存済みのメモは消さない", "en": "Fix only the rejection when the title is empty or whitespace only. Do not delete saved notes" }, "explain": { "ja": "直す範囲と、守るものを示します。", "en": "It shows the scope to fix and what to protect." } },
+        { "id": "q04b-wide", "label": { "ja": "ついでに、すべての入力欄に新しい細かい入力ルールを追加する", "en": "While at it, add new detailed input rules to all input fields" }, "explain": { "ja": "頼まれていない変更で、正常な入力まで拒否されるおそれがあります。", "en": "A change nobody asked for; normal input might also be rejected." } },
+        { "id": "q04b-normal", "label": { "ja": "通常の日本語の題名は、今までどおり登録できる", "en": "Normal Japanese titles can still be registered as before" }, "explain": { "ja": "壊してはいけない動きです。期待した結果・依頼の範囲のどちらに置いてもかまいません。", "en": "Behavior that must not be broken. It may go under either expected result or scope of the request." } }
       ],
       "grading": {
         "id": "q04-b.rule",
@@ -173,50 +173,50 @@
       },
       "feedbackByOutcome": {
         "correct": {
-          "what": { "ja": "コトは同じ手順で不具合を確かめ、空白題名の拒否だけを直せます。" },
-          "why": { "ja": "起きたこと・本来の動き・直す範囲が分かれていて、保存済みのメモを守る条件もあります。" },
-          "next": { "ja": "次は、直した後に何を確かめるかを選びます。" }
+          "what": { "ja": "コトは同じ手順で不具合を確かめ、空白題名の拒否だけを直せます。", "en": "Koto can confirm the bug with the same steps and fix only the rejection of blank titles." },
+          "why": { "ja": "起きたこと・本来の動き・直す範囲が分かれていて、保存済みのメモを守る条件もあります。", "en": "What happened, the intended behavior and the scope to fix are separate, and there is a condition protecting saved notes." },
+          "next": { "ja": "次は、直した後に何を確かめるかを選びます。", "en": "Next, choose what to check after the fix." }
         },
         "destroy_data": {
-          "what": { "ja": "空白のメモだけでなく、大切なメモまで全部消えてしまいます。" },
-          "why": { "ja": "直したいのは「空白題名を受け付けてしまう」ことで、保存済みの記録ではありません。" },
-          "next": { "ja": "「全部消して作り直す」の札を外しましょう。" }
+          "what": { "ja": "空白のメモだけでなく、大切なメモまで全部消えてしまいます。", "en": "Not only the blank note but even the important notes would all disappear." },
+          "why": { "ja": "直したいのは「空白題名を受け付けてしまう」ことで、保存済みの記録ではありません。", "en": "What you want fixed is \"accepting a blank title,\" not the saved records." },
+          "next": { "ja": "「全部消して作り直す」の札を外しましょう。", "en": "Take the \"delete everything and rebuild\" card out." }
         },
         "too_wide": {
-          "what": { "ja": "新しいルールのせいで、今まで登録できた題名まで拒否されるかもしれません。" },
-          "why": { "ja": "頼まれていない入力ルールを足すと、直す範囲が広がり、確かめることも増えます。" },
-          "next": { "ja": "「すべての入力欄に新しいルール」の札を外しましょう。" }
+          "what": { "ja": "新しいルールのせいで、今まで登録できた題名まで拒否されるかもしれません。", "en": "Because of the new rule, even titles that could be registered until now might be rejected." },
+          "why": { "ja": "頼まれていない入力ルールを足すと、直す範囲が広がり、確かめることも増えます。", "en": "Adding input rules nobody asked for widens the scope to fix and adds more to check." },
+          "next": { "ja": "「すべての入力欄に新しいルール」の札を外しましょう。", "en": "Take out the \"new rules on all input fields\" card." }
         },
         "vague": {
-          "what": { "ja": "コトは何を直せばよいか分からず、関係のない所を変えるかもしれません。" },
-          "why": { "ja": "「何となく動かない」では、起きたことも、本来の動きも伝わりません。" },
-          "next": { "ja": "あいまいな札を外しましょう。" }
+          "what": { "ja": "コトは何を直せばよいか分からず、関係のない所を変えるかもしれません。", "en": "Koto does not know what to fix and might change unrelated places." },
+          "why": { "ja": "「何となく動かない」では、起きたことも、本来の動きも伝わりません。", "en": "\"Somehow it doesn't work\" conveys neither what happened nor the intended behavior." },
+          "next": { "ja": "あいまいな札を外しましょう。", "en": "Take out the vague card." }
         },
         "swapped": {
-          "what": { "ja": "コトは「空白のメモが登録される」ことを正しい動きだと受け取ってしまいます。" },
-          "why": { "ja": "期待した結果と実際の結果が入れ替わっています。" },
-          "next": { "ja": "「期待」と「実際」の欄の札を入れ替えましょう。" }
+          "what": { "ja": "コトは「空白のメモが登録される」ことを正しい動きだと受け取ってしまいます。", "en": "Koto takes \"a blank note gets registered\" to be correct behavior." },
+          "why": { "ja": "期待した結果と実際の結果が入れ替わっています。", "en": "The expected result and the actual result are swapped." },
+          "next": { "ja": "「期待」と「実際」の欄の札を入れ替えましょう。", "en": "Swap the cards in the \"expected\" and \"actual\" fields." }
         },
         "missing_repro": {
-          "what": { "ja": "コトは不具合を自分で起こせず、直ったかどうかも確かめられません。" },
-          "why": { "ja": "再現手順の欄に、同じ結果になる操作が入っていません。" },
-          "next": { "ja": "Q04-Aで並べた手順の札を、再現手順の欄に置きましょう。" }
+          "what": { "ja": "コトは不具合を自分で起こせず、直ったかどうかも確かめられません。", "en": "Koto cannot cause the bug themselves and cannot check whether it is fixed." },
+          "why": { "ja": "再現手順の欄に、同じ結果になる操作が入っていません。", "en": "The reproduction steps field lacks the actions that give the same result." },
+          "next": { "ja": "Q04-Aで並べた手順の札を、再現手順の欄に置きましょう。", "en": "Place the step cards you lined up in Q04-A in the reproduction steps field." }
         },
         "missing_scope": {
-          "what": { "ja": "直す範囲が決まらず、保存済みのメモに影響する変更が入るかもしれません。" },
-          "why": { "ja": "「空白題名の拒否だけ・メモは消さない」という範囲の札がありません。" },
-          "next": { "ja": "範囲の札を「依頼の範囲」の欄に置きましょう。" }
+          "what": { "ja": "直す範囲が決まらず、保存済みのメモに影響する変更が入るかもしれません。", "en": "The scope of the fix is not decided, and changes affecting saved notes might get in." },
+          "why": { "ja": "「空白題名の拒否だけ・メモは消さない」という範囲の札がありません。", "en": "There is no card for the scope \"only reject blank titles; do not delete notes.\"" },
+          "next": { "ja": "範囲の札を「依頼の範囲」の欄に置きましょう。", "en": "Place the scope card in the \"scope of the request\" field." }
         },
         "misplaced": {
-          "what": { "ja": "必要な札はありますが、欄が違うためコトが読み違えます。" },
-          "why": { "ja": "各欄の問いと、札の中身が一致していない組み合わせがあります。" },
-          "next": { "ja": "「何をすると」「本当は」「実際には」「何を直す」の問いと照らし合わせましょう。" }
+          "what": { "ja": "必要な札はありますが、欄が違うためコトが読み違えます。", "en": "The needed cards are there, but they are in the wrong fields, so Koto misreads them." },
+          "why": { "ja": "各欄の問いと、札の中身が一致していない組み合わせがあります。", "en": "Some combinations do not match a field's question with the card's content." },
+          "next": { "ja": "「何をすると」「本当は」「実際には」「何を直す」の問いと照らし合わせましょう。", "en": "Compare with the questions \"what do you do,\" \"what should really happen,\" \"what actually happened,\" and \"what to fix.\"" }
         }
       },
       "hints": [
-        { "id": "q04-b.h1", "text": { "ja": "良い不具合報告は「起きたこと」と「本当はこうなってほしいこと」を分けて書きます。" } },
-        { "id": "q04-b.h2", "text": { "ja": "記録を消す札・範囲を広げる札・あいまいな札は置きません。「通常の日本語題名は登録できる」は、期待か範囲のどちらに置いても大丈夫です。" } },
-        { "id": "q04-b.h3", "text": { "ja": "解答例：再現手順＝「画面を開く→半角空白→本文→追加」、期待＝「空白だけなら追加せず理由を表示」、実際＝「空白のメモが1件登録された」、範囲＝「空・空白だけの拒否だけを直す。メモは消さない」。理由：起きたことと本来の動き、直す範囲が分かれるからです。盤面で札を置いてください。" } }
+        { "id": "q04-b.h1", "text": { "ja": "良い不具合報告は「起きたこと」と「本当はこうなってほしいこと」を分けて書きます。", "en": "A good bug report separates \"what happened\" from \"what should happen.\"" } },
+        { "id": "q04-b.h2", "text": { "ja": "記録を消す札・範囲を広げる札・あいまいな札は置きません。「通常の日本語題名は登録できる」は、期待か範囲のどちらに置いても大丈夫です。", "en": "Do not place cards that delete records, widen the scope or are vague. \"Normal Japanese titles can be registered\" is fine under either expected result or scope." } },
+        { "id": "q04-b.h3", "text": { "ja": "解答例：再現手順＝「画面を開く→半角空白→本文→追加」、期待＝「空白だけなら追加せず理由を表示」、実際＝「空白のメモが1件登録された」、範囲＝「空・空白だけの拒否だけを直す。メモは消さない」。理由：起きたことと本来の動き、直す範囲が分かれるからです。盤面で札を置いてください。", "en": "Sample answer: reproduction steps = \"open screen → half-width space → body → Add\"; expected = \"if only whitespace, do not add and show the reason\"; actual = \"one blank note was registered\"; scope = \"fix only the rejection of empty and whitespace-only titles; do not delete notes.\" Reason: what happened, the intended behavior and the scope to fix are separated. Place the cards on the board." } }
       ]
     },
     {
@@ -226,28 +226,28 @@
       "type": "evidence_board",
       "mode": "select",
       "required": true,
-      "title": { "ja": "Q04-C 修正後の確認ケースを選ぶ" },
-      "prompt": { "ja": "コトが修正を終えました。修正後に確かめるケースと、その正しい結果の札をすべて選んでください。" },
+      "title": { "ja": "Q04-C 修正後の確認ケースを選ぶ", "en": "Q04-C Choose the checks after the fix" },
+      "prompt": { "ja": "コトが修正を終えました。修正後に確かめるケースと、その正しい結果の札をすべて選んでください。", "en": "Koto has finished the fix. Choose all the cards for the cases to check after the fix and their correct results." },
       "reference": [
         {
           "kind": "text",
-          "title": { "ja": "コトの修正内容" },
+          "title": { "ja": "コトの修正内容", "en": "What Koto changed" },
           "lines": [
-            { "ja": "題名の前後の空白（半角・全角）を取り除いた結果が空なら、追加しない。" },
-            { "ja": "そのとき「題名を入力してください」と表示する。" },
-            { "ja": "保存済みのメモと、ほかの入力欄は変更していない。" }
+            { "ja": "題名の前後の空白（半角・全角）を取り除いた結果が空なら、追加しない。", "en": "If what remains after removing whitespace (half-width and full-width) before and after the title is empty, do not add it." },
+            { "ja": "そのとき「題名を入力してください」と表示する。", "en": "In that case show \"Please enter a title.\"" },
+            { "ja": "保存済みのメモと、ほかの入力欄は変更していない。", "en": "Saved notes and the other input fields are not changed." }
           ]
         }
       ],
       "cards": [
-        { "id": "q04c-normal", "label": { "ja": "題名「氷の配達」→ 登録される" }, "explain": { "ja": "正常な日本語の題名が今までどおり登録されることを確かめます。" } },
-        { "id": "q04c-empty", "label": { "ja": "題名が空（何も入れない）→ 拒否され、理由が表示される" }, "explain": { "ja": "いちばん基本の拒否ケースです。" } },
-        { "id": "q04c-overblock", "label": { "ja": "題名「朝 の配達」（途中に空白）→ 拒否される" }, "explain": { "ja": "途中の空白は正常な題名の一部です。拒否されるのが正しいとすると、直しすぎを見逃します。" } },
-        { "id": "q04c-half", "label": { "ja": "題名が半角空白だけ → 拒否され、理由が表示される" }, "explain": { "ja": "Q04-Aで再現した不具合そのものを、同じ手順で確かめ直します。" } },
-        { "id": "q04c-inner", "label": { "ja": "題名「朝 の配達」（途中に空白）→ 登録される" }, "explain": { "ja": "直しすぎていないかを確かめる追加のケースです。選んでも選ばなくてもかまいません。" } },
-        { "id": "q04c-full", "label": { "ja": "題名が全角空白だけ → 拒否され、理由が表示される" }, "explain": { "ja": "日本語入力でよく入る全角空白も、空白だけとして扱われるかを確かめます。" } },
-        { "id": "q04c-newrule", "label": { "ja": "題名が5文字未満 → 拒否される" }, "explain": { "ja": "頼んでいない新しいルールです。短い正常な題名まで拒否されてしまいます。" } },
-        { "id": "q04c-code", "label": { "ja": "修正したとコトが言ったので、確認は省く" }, "explain": { "ja": "報告だけでは、直ったかどうかは分かりません。" } }
+        { "id": "q04c-normal", "label": { "ja": "題名「氷の配達」→ 登録される", "en": "Title \"氷の配達\" → it is registered" }, "explain": { "ja": "正常な日本語の題名が今までどおり登録されることを確かめます。", "en": "Check that a normal Japanese title is still registered as before." } },
+        { "id": "q04c-empty", "label": { "ja": "題名が空（何も入れない）→ 拒否され、理由が表示される", "en": "Title is empty (nothing entered) → rejected, and the reason is shown" }, "explain": { "ja": "いちばん基本の拒否ケースです。", "en": "The most basic rejection case." } },
+        { "id": "q04c-overblock", "label": { "ja": "題名「朝 の配達」（途中に空白）→ 拒否される", "en": "Title \"朝 の配達\" (whitespace in the middle) → rejected" }, "explain": { "ja": "途中の空白は正常な題名の一部です。拒否されるのが正しいとすると、直しすぎを見逃します。", "en": "Whitespace in the middle is part of a normal title. If you judged rejection to be correct, you would miss over-fixing." } },
+        { "id": "q04c-half", "label": { "ja": "題名が半角空白だけ → 拒否され、理由が表示される", "en": "Title is only a half-width space → rejected, and the reason is shown" }, "explain": { "ja": "Q04-Aで再現した不具合そのものを、同じ手順で確かめ直します。", "en": "Check again, with the same steps, the very bug reproduced in Q04-A." } },
+        { "id": "q04c-inner", "label": { "ja": "題名「朝 の配達」（途中に空白）→ 登録される", "en": "Title \"朝 の配達\" (whitespace in the middle) → it is registered" }, "explain": { "ja": "直しすぎていないかを確かめる追加のケースです。選んでも選ばなくてもかまいません。", "en": "An extra case to check for over-fixing. You may choose it or not." } },
+        { "id": "q04c-full", "label": { "ja": "題名が全角空白だけ → 拒否され、理由が表示される", "en": "Title is only a full-width space → rejected, and the reason is shown" }, "explain": { "ja": "日本語入力でよく入る全角空白も、空白だけとして扱われるかを確かめます。", "en": "Check that the full-width space often typed with Japanese input is also treated as whitespace only." } },
+        { "id": "q04c-newrule", "label": { "ja": "題名が5文字未満 → 拒否される", "en": "Title is under 5 characters → rejected" }, "explain": { "ja": "頼んでいない新しいルールです。短い正常な題名まで拒否されてしまいます。", "en": "A new rule nobody asked for. Even short normal titles would be rejected." } },
+        { "id": "q04c-code", "label": { "ja": "修正したとコトが言ったので、確認は省く", "en": "Koto said it was fixed, so skip the check" }, "explain": { "ja": "報告だけでは、直ったかどうかは分かりません。", "en": "A report alone does not tell you whether it is fixed." } }
       ],
       "grading": {
         "id": "q04-c.rule",
@@ -267,61 +267,61 @@
       },
       "feedbackByOutcome": {
         "correct": {
-          "what": { "ja": "空白だけの題名は止まり、ふつうの題名は今までどおり登録されることを確かめられます。" },
-          "why": { "ja": "再現した不具合を同じ手順で確かめ直し、似たケースと正常なケースも確かめています。" },
-          "next": { "ja": "この章はここまで。持ち帰りカードを受け取りましょう。" }
+          "what": { "ja": "空白だけの題名は止まり、ふつうの題名は今までどおり登録されることを確かめられます。", "en": "You can check that whitespace-only titles are stopped and ordinary titles are registered as before." },
+          "why": { "ja": "再現した不具合を同じ手順で確かめ直し、似たケースと正常なケースも確かめています。", "en": "You re-checked the reproduced bug with the same steps, and also checked similar and normal cases." },
+          "next": { "ja": "この章はここまで。持ち帰りカードを受け取りましょう。", "en": "That is all for this chapter. Let's receive the take-home card." }
         },
         "report_only": {
-          "what": { "ja": "本当に直ったか、ほかが壊れていないかが分からないまま進みます。" },
-          "why": { "ja": "「修正した」という報告と、確かめた結果は別のものです。" },
-          "next": { "ja": "「確認は省く」の札を外しましょう。" }
+          "what": { "ja": "本当に直ったか、ほかが壊れていないかが分からないまま進みます。", "en": "You would go on without knowing whether it is really fixed or whether anything else broke." },
+          "why": { "ja": "「修正した」という報告と、確かめた結果は別のものです。", "en": "A report saying \"fixed\" and a result you checked are different things." },
+          "next": { "ja": "「確認は省く」の札を外しましょう。", "en": "Take the \"skip the check\" card out." }
         },
         "overblock": {
-          "what": { "ja": "途中に空白がある正常な題名まで拒否される状態を、正しいと判断してしまいます。" },
-          "why": { "ja": "直したいのは「空白だけ」の題名です。途中の空白は題名の一部です。" },
-          "next": { "ja": "「朝 の配達 → 拒否される」の札を外しましょう。" }
+          "what": { "ja": "途中に空白がある正常な題名まで拒否される状態を、正しいと判断してしまいます。", "en": "You would judge a state that rejects even normal titles with whitespace in the middle to be right." },
+          "why": { "ja": "直したいのは「空白だけ」の題名です。途中の空白は題名の一部です。", "en": "What you want fixed is titles of \"only whitespace.\" Whitespace in the middle is part of the title." },
+          "next": { "ja": "「朝 の配達 → 拒否される」の札を外しましょう。", "en": "Take out the \"朝 の配達 → rejected\" card." }
         },
         "new_rule": {
-          "what": { "ja": "頼んでいないルールで、「氷」のような短い題名が登録できなくなります。" },
-          "why": { "ja": "依頼の範囲は空白題名の拒否だけでした。" },
-          "next": { "ja": "「5文字未満 → 拒否」の札を外しましょう。" }
+          "what": { "ja": "頼んでいないルールで、「氷」のような短い題名が登録できなくなります。", "en": "With a rule nobody asked for, a short title like \"氷\" could no longer be registered." },
+          "why": { "ja": "依頼の範囲は空白題名の拒否だけでした。", "en": "The scope of the request was only rejecting blank titles." },
+          "next": { "ja": "「5文字未満 → 拒否」の札を外しましょう。", "en": "Take out the \"under 5 characters → rejected\" card." }
         },
         "no_retest": {
-          "what": { "ja": "報告のきっかけになった不具合が、本当に直ったか確かめていません。" },
-          "why": { "ja": "修正後は、再現したときと同じ手順（半角空白だけ）で確かめ直します。" },
-          "next": { "ja": "「半角空白だけ → 拒否」の札を選びましょう。" }
+          "what": { "ja": "報告のきっかけになった不具合が、本当に直ったか確かめていません。", "en": "You have not checked whether the bug that started the report is really fixed." },
+          "why": { "ja": "修正後は、再現したときと同じ手順（半角空白だけ）で確かめ直します。", "en": "After a fix, check again with the same steps as when you reproduced it (only a half-width space)." },
+          "next": { "ja": "「半角空白だけ → 拒否」の札を選びましょう。", "en": "Choose the \"only a half-width space → rejected\" card." }
         },
         "no_fullwidth": {
-          "what": { "ja": "日本語入力で入りやすい全角空白だけの題名が、まだ登録されるかもしれません。" },
-          "why": { "ja": "半角と全角の空白は、別の文字として扱われることがあります。" },
-          "next": { "ja": "「全角空白だけ → 拒否」の札を選びましょう。" }
+          "what": { "ja": "日本語入力で入りやすい全角空白だけの題名が、まだ登録されるかもしれません。", "en": "A title of only a full-width space, easy to enter with Japanese input, might still be registered." },
+          "why": { "ja": "半角と全角の空白は、別の文字として扱われることがあります。", "en": "Half-width and full-width spaces may be treated as different characters." },
+          "next": { "ja": "「全角空白だけ → 拒否」の札を選びましょう。", "en": "Choose the \"only a full-width space → rejected\" card." }
         },
         "no_empty": {
-          "what": { "ja": "何も入れないときの動きを確かめていません。" },
-          "why": { "ja": "空の題名は、空白だけの題名と同じく拒否されるべき基本のケースです。" },
-          "next": { "ja": "「題名が空 → 拒否」の札を選びましょう。" }
+          "what": { "ja": "何も入れないときの動きを確かめていません。", "en": "You have not checked what happens when nothing is entered." },
+          "why": { "ja": "空の題名は、空白だけの題名と同じく拒否されるべき基本のケースです。", "en": "An empty title is a basic case that should be rejected just like a whitespace-only title." },
+          "next": { "ja": "「題名が空 → 拒否」の札を選びましょう。", "en": "Choose the \"title is empty → rejected\" card." }
         },
         "no_normal": {
-          "what": { "ja": "空白は止まっても、ふつうの題名まで登録できなくなっていたら気づけません。" },
-          "why": { "ja": "直した後は、正常な入力が今までどおり動くことも確かめます。" },
-          "next": { "ja": "「氷の配達 → 登録される」の札を選びましょう。" }
+          "what": { "ja": "空白は止まっても、ふつうの題名まで登録できなくなっていたら気づけません。", "en": "Even if whitespace is stopped, you would not notice if ordinary titles could no longer be registered." },
+          "why": { "ja": "直した後は、正常な入力が今までどおり動くことも確かめます。", "en": "After a fix, also check that normal input still works as before." },
+          "next": { "ja": "「氷の配達 → 登録される」の札を選びましょう。", "en": "Choose the \"氷の配達 → registered\" card." }
         }
       },
       "hints": [
-        { "id": "q04-c.h1", "text": { "ja": "確かめたいのは2種類です。止めるべき入力が止まること、そして通すべき入力が通ることです。" } },
-        { "id": "q04-c.h2", "text": { "ja": "空・半角空白・全角空白の3つの拒否と、ふつうの日本語題名の登録を見ましょう。途中に空白がある題名は、止めてはいけません。" } },
-        { "id": "q04-c.h3", "text": { "ja": "解答例：「空→拒否」「半角空白だけ→拒否」「全角空白だけ→拒否」「氷の配達→登録」の4枚（「朝 の配達→登録される」も加えて可）。理由：再テストと、直しすぎていないかの両方を確かめられるからです。盤面で札を選んでください。" } }
+        { "id": "q04-c.h1", "text": { "ja": "確かめたいのは2種類です。止めるべき入力が止まること、そして通すべき入力が通ることです。", "en": "There are two kinds of things to check: input that should be stopped is stopped, and input that should pass does pass." } },
+        { "id": "q04-c.h2", "text": { "ja": "空・半角空白・全角空白の3つの拒否と、ふつうの日本語題名の登録を見ましょう。途中に空白がある題名は、止めてはいけません。", "en": "Look at the three rejections (empty, half-width space, full-width space) and the registration of an ordinary Japanese title. A title with whitespace in the middle must not be stopped." } },
+        { "id": "q04-c.h3", "text": { "ja": "解答例：「空→拒否」「半角空白だけ→拒否」「全角空白だけ→拒否」「氷の配達→登録」の4枚（「朝 の配達→登録される」も加えて可）。理由：再テストと、直しすぎていないかの両方を確かめられるからです。盤面で札を選んでください。", "en": "Sample answer: four cards, \"empty → rejected,\" \"only half-width space → rejected,\" \"only full-width space → rejected\" and \"氷の配達 → registered\" (adding \"朝 の配達 → registered\" is also fine). Reason: you can check both the re-test and that nothing was over-fixed. Choose the cards on the board." } }
       ]
     }
   ],
   "takeawayCards": [
-    { "id": "tk-q04-1", "questId": "q04", "title": { "ja": "再現手順" }, "body": { "ja": "「何となく動かない」を、誰がやっても同じ結果になる手順に変える。推測や記録の削除は手順に入れない。" } },
-    { "id": "tk-q04-2", "questId": "q04", "title": { "ja": "期待と実際" }, "body": { "ja": "本当はどうなってほしいかと、実際に何が起きたかを分けて書く。直す範囲と守るものも添える。" } },
-    { "id": "tk-q04-3", "questId": "q04", "title": { "ja": "再テスト" }, "body": { "ja": "直した後は、再現と同じ手順で確かめ直す。似たケースと、正常なケースも一緒に確かめる。" } }
+    { "id": "tk-q04-1", "questId": "q04", "title": { "ja": "再現手順", "en": "Reproduction steps" }, "body": { "ja": "「何となく動かない」を、誰がやっても同じ結果になる手順に変える。推測や記録の削除は手順に入れない。", "en": "Turn \"somehow it doesn't work\" into steps that give the same result for anyone. Do not put guesses or deleting records into the steps." } },
+    { "id": "tk-q04-2", "questId": "q04", "title": { "ja": "期待と実際", "en": "Expected and actual" }, "body": { "ja": "本当はどうなってほしいかと、実際に何が起きたかを分けて書く。直す範囲と守るものも添える。", "en": "Write separately what should really happen and what actually happened. Add the scope to fix and what to protect." } },
+    { "id": "tk-q04-3", "questId": "q04", "title": { "ja": "再テスト", "en": "Re-test" }, "body": { "ja": "直した後は、再現と同じ手順で確かめ直す。似たケースと、正常なケースも一緒に確かめる。", "en": "After a fix, check again with the same steps as the reproduction. Also check similar cases and normal cases together." } }
   ],
   "takeawayTemplate": {
-    "title": { "ja": "不具合報告テンプレート" },
-    "text": { "ja": "再現手順：画面を開く→題名に半角空白を1つ→本文を入れる→「追加」を押す\n期待した結果：追加されず「題名を入力してください」と表示される\n実際の結果：題名が空白のメモが1件登録された\n依頼の範囲：空・空白だけの題名の拒否だけを直す。保存済みのメモは消さない\n修正後の確認：空／半角空白／全角空白→拒否、通常の題名→登録" }
+    "title": { "ja": "不具合報告テンプレート", "en": "Bug report template" },
+    "text": { "ja": "再現手順：画面を開く→題名に半角空白を1つ→本文を入れる→「追加」を押す\n期待した結果：追加されず「題名を入力してください」と表示される\n実際の結果：題名が空白のメモが1件登録された\n依頼の範囲：空・空白だけの題名の拒否だけを直す。保存済みのメモは消さない\n修正後の確認：空／半角空白／全角空白→拒否、通常の題名→登録", "en": "Reproduction steps: open the screen → one half-width space in the title → enter the body → press \"Add\"\nExpected result: it is not added and \"Please enter a title\" is shown\nActual result: one note with a whitespace title was registered\nScope of the request: fix only the rejection of empty and whitespace-only titles. Do not delete saved notes\nCheck after the fix: empty / half-width space / full-width space → rejected; normal title → registered" }
   },
   "practiceCardId": "pc-q04",
   "sourceIds": ["S1"],

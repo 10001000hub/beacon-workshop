@@ -2,35 +2,35 @@
   "id": "q05",
   "revision": "1",
   "prerequisite": "q04",
-  "title": { "ja": "鏡の検査場" },
-  "place": { "ja": "検査場" },
-  "incident": { "ja": "「検査済み」の札が、別の古い版の結果だった。" },
-  "notesState": { "ja": "現在の版の主要動作を確かめる" },
-  "sample": { "ja": "完成見本：現在の版（v0.4）で、追加・再読み込み後の保持・空白題名の拒否・通常題名の登録を確かめた記録。行った検査・結果・まだ行っていない検査が分けて書かれている。" },
+  "title": { "ja": "鏡の検査場", "en": "The Mirror Inspection Hall" },
+  "place": { "ja": "検査場", "en": "Inspection Hall" },
+  "incident": { "ja": "「検査済み」の札が、別の古い版の結果だった。", "en": "The \"inspected\" tag turned out to be the result of another, older version." },
+  "notesState": { "ja": "現在の版の主要動作を確かめる", "en": "Check the main actions of the current version" },
+  "sample": { "ja": "完成見本：現在の版（v0.4）で、追加・再読み込み後の保持・空白題名の拒否・通常題名の登録を確かめた記録。行った検査・結果・まだ行っていない検査が分けて書かれている。", "en": "Sample answer: a record for the current version (v0.4) confirming adding, keeping after reload, rejecting a blank title and registering a normal title. It separates the checks done, the results and the checks not yet done." },
   "objectives": [
-    { "id": "q05-o1", "text": { "ja": "検査記録が、どの版を対象にしたものかを確かめられる" } },
-    { "id": "q05-o2", "text": { "ja": "成功・失敗・実行エラー・未実施を区別できる" } },
-    { "id": "q05-o3", "text": { "ja": "根拠がそろっているときは、止めずに先へ進める" } }
+    { "id": "q05-o1", "text": { "ja": "検査記録が、どの版を対象にしたものかを確かめられる", "en": "You can tell which version an inspection record is about" } },
+    { "id": "q05-o2", "text": { "ja": "成功・失敗・実行エラー・未実施を区別できる", "en": "You can tell success, failure, run error and not run apart" } },
+    { "id": "q05-o3", "text": { "ja": "根拠がそろっているときは、止めずに先へ進める", "en": "When the evidence is complete, go ahead without stopping" } }
   ],
   "briefScene": {
     "id": "q05-brief",
     "backgroundAssetId": "BG05",
     "lines": [
-      { "speaker": "narrator", "text": { "ja": "検査場の大きな鏡には、昨日の作品が映っている。その前に「全部成功」の札が下がっていた。" } },
-      { "speaker": "resident", "name": { "ja": "検査係" }, "text": { "ja": "札に「全部成功」とあるので、今日の作品も合格ですよね？" } },
-      { "speaker": "ritsu", "expression": "think", "text": { "ja": "その札の日付と版を見て。鏡に映っているのは、昨日の版だ。" } },
-      { "speaker": "koto", "expression": "normal", "text": { "ja": "どの版で、何を確かめて、どうなったか。対応させて記録します。" } },
-      { "speaker": "nagi", "expression": "think", "text": { "ja": "でも、全部をいつまでも疑っていたら、先へ進めないよね。" } }
+      { "speaker": "narrator", "text": { "ja": "検査場の大きな鏡には、昨日の作品が映っている。その前に「全部成功」の札が下がっていた。", "en": "The big mirror in the inspection hall shows yesterday's work. In front of it hangs a tag saying \"All passed.\"" } },
+      { "speaker": "resident", "name": { "ja": "検査係", "en": "Inspector" }, "text": { "ja": "札に「全部成功」とあるので、今日の作品も合格ですよね？", "en": "The tag says \"All passed,\" so today's work passes too, right?" } },
+      { "speaker": "ritsu", "expression": "think", "text": { "ja": "その札の日付と版を見て。鏡に映っているのは、昨日の版だ。", "en": "Look at the date and version on that tag. What the mirror shows is yesterday's version." } },
+      { "speaker": "koto", "expression": "normal", "text": { "ja": "どの版で、何を確かめて、どうなったか。対応させて記録します。", "en": "Which version, what was checked, and what happened. I will record them matched up." } },
+      { "speaker": "nagi", "expression": "think", "text": { "ja": "でも、全部をいつまでも疑っていたら、先へ進めないよね。", "en": "But if you doubt everything forever, we can never move on." } }
     ]
   },
   "clearScene": {
     "id": "q05-clear",
     "backgroundAssetId": "BG05",
     "lines": [
-      { "speaker": "narrator", "text": { "ja": "鏡がゆっくり曇りを払い、今日の作品を映し出した。新しい札には、版と検査と結果が並んでいる。" } },
-      { "speaker": "resident", "name": { "ja": "検査係" }, "text": { "ja": "何を確かめて、何がまだなのか。札を見れば分かります。" } },
-      { "speaker": "koto", "expression": "happy", "text": { "ja": "根拠がそろっている所は、止めずに進めました。" } },
-      { "speaker": "ritsu", "expression": "normal", "text": { "ja": "疑うのは、根拠が足りない所だけでいい。次はいよいよ灯台だ。" } }
+      { "speaker": "narrator", "text": { "ja": "鏡がゆっくり曇りを払い、今日の作品を映し出した。新しい札には、版と検査と結果が並んでいる。", "en": "The mirror slowly cleared its haze and showed today's work. The new tag lists the version, the checks and the results." } },
+      { "speaker": "resident", "name": { "ja": "検査係", "en": "Inspector" }, "text": { "ja": "何を確かめて、何がまだなのか。札を見れば分かります。", "en": "What was checked and what is still pending. You can see it from the tag." } },
+      { "speaker": "koto", "expression": "happy", "text": { "ja": "根拠がそろっている所は、止めずに進めました。", "en": "Where the evidence was complete, I went ahead without stopping." } },
+      { "speaker": "ritsu", "expression": "normal", "text": { "ja": "疑うのは、根拠が足りない所だけでいい。次はいよいよ灯台だ。", "en": "You only need to doubt where the evidence is lacking. Next, the lighthouse at last." } }
     ]
   },
   "activities": [
@@ -41,29 +41,29 @@
       "type": "evidence_board",
       "mode": "select",
       "required": true,
-      "title": { "ja": "Q05-A 現在の版の記録を選ぶ" },
-      "prompt": { "ja": "現在の版は v0.4 です。v0.4 が主要動作を満たしている根拠として使える記録を、すべて選んでください。" },
+      "title": { "ja": "Q05-A 現在の版の記録を選ぶ", "en": "Q05-A Choose the records for the current version" },
+      "prompt": { "ja": "現在の版は v0.4 です。v0.4 が主要動作を満たしている根拠として使える記録を、すべて選んでください。", "en": "The current version is v0.4. Choose all the records that can serve as evidence that v0.4 meets the main actions." },
       "reference": [
         {
           "kind": "text",
-          "title": { "ja": "現在の版" },
+          "title": { "ja": "現在の版", "en": "Current version" },
           "lines": [
-            { "ja": "v0.4：空白題名の拒否を取り込んだ版（今日の作品）" },
-            { "ja": "v0.3：保存を追加した版（昨日の作品）" },
-            { "ja": "主要動作：追加・再読み込み後の保持・空白題名の拒否" }
+            { "ja": "v0.4：空白題名の拒否を取り込んだ版（今日の作品）", "en": "v0.4: the version that includes rejecting blank titles (today's work)" },
+            { "ja": "v0.3：保存を追加した版（昨日の作品）", "en": "v0.3: the version that added saving (yesterday's work)" },
+            { "ja": "主要動作：追加・再読み込み後の保持・空白題名の拒否", "en": "Main actions: adding, keeping after reload, rejecting a blank title" }
           ]
         }
       ],
       "cards": [
-        { "id": "q05a-old", "label": { "ja": "v0.3・全項目・「全部成功」" }, "explain": { "ja": "昨日の版の記録です。v0.4 で変えた部分は検査されていません。" } },
-        { "id": "q05a-add", "label": { "ja": "v0.4・1件追加→一覧に表示された・成功" }, "explain": { "ja": "現在の版で、追加を確かめた記録です。" } },
-        { "id": "q05a-notarget", "label": { "ja": "版の記載なし・「たぶん全部成功」" }, "explain": { "ja": "どの版を検査したのか分からず、何を確かめたのかも書かれていません。" } },
-        { "id": "q05a-reload", "label": { "ja": "v0.4・追加→再読み込み→残っていた・成功" }, "explain": { "ja": "現在の版で、保存を確かめた記録です。" } },
-        { "id": "q05a-assume", "label": { "ja": "「前の版で動いたので、今回も動くはず」というメモ" }, "explain": { "ja": "推測で、検査の記録ではありません。" } },
-        { "id": "q05a-blank", "label": { "ja": "v0.4・題名に半角空白だけ→拒否された・成功" }, "explain": { "ja": "現在の版で、空白題名の拒否を確かめた記録です。" } },
-        { "id": "q05a-normal", "label": { "ja": "v0.4・題名「氷の配達」→登録された・成功" }, "explain": { "ja": "現在の版で、ふつうの題名が通ることを確かめた記録です。加えても加えなくてもかまいません。" } },
-        { "id": "q05a-version", "label": { "ja": "v0.4・画面の隅に版番号「v0.4」が表示されている" }, "explain": { "ja": "現在の版であることは分かりますが、主要動作を確かめた記録ではありません。" } },
-        { "id": "q05a-notrun", "label": { "ja": "v0.4・再読み込み後の保持・未実施" }, "explain": { "ja": "現在の版の記録ですが、検査は行われていません。未実施は、成功ではありません。" } }
+        { "id": "q05a-old", "label": { "ja": "v0.3・全項目・「全部成功」", "en": "v0.3 · all items · \"All passed\"" }, "explain": { "ja": "昨日の版の記録です。v0.4 で変えた部分は検査されていません。", "en": "A record for yesterday's version. The part changed in v0.4 has not been checked." } },
+        { "id": "q05a-add", "label": { "ja": "v0.4・1件追加→一覧に表示された・成功", "en": "v0.4 · added 1 note → shown in the list · success" }, "explain": { "ja": "現在の版で、追加を確かめた記録です。", "en": "A record confirming adding on the current version." } },
+        { "id": "q05a-notarget", "label": { "ja": "版の記載なし・「たぶん全部成功」", "en": "No version noted · \"Probably all passed\"" }, "explain": { "ja": "どの版を検査したのか分からず、何を確かめたのかも書かれていません。", "en": "You cannot tell which version was checked, and it does not say what was checked." } },
+        { "id": "q05a-reload", "label": { "ja": "v0.4・追加→再読み込み→残っていた・成功", "en": "v0.4 · add → reload → it was still there · success" }, "explain": { "ja": "現在の版で、保存を確かめた記録です。", "en": "A record confirming saving on the current version." } },
+        { "id": "q05a-assume", "label": { "ja": "「前の版で動いたので、今回も動くはず」というメモ", "en": "A note saying \"it worked in the previous version, so it should work this time\"" }, "explain": { "ja": "推測で、検査の記録ではありません。", "en": "A guess, not an inspection record." } },
+        { "id": "q05a-blank", "label": { "ja": "v0.4・題名に半角空白だけ→拒否された・成功", "en": "v0.4 · only a half-width space in the title → rejected · success" }, "explain": { "ja": "現在の版で、空白題名の拒否を確かめた記録です。", "en": "A record confirming rejection of a blank title on the current version." } },
+        { "id": "q05a-normal", "label": { "ja": "v0.4・題名「氷の配達」→登録された・成功", "en": "v0.4 · title \"氷の配達\" → registered · success" }, "explain": { "ja": "現在の版で、ふつうの題名が通ることを確かめた記録です。加えても加えなくてもかまいません。", "en": "A record confirming that a normal title goes through on the current version. You may add it or not." } },
+        { "id": "q05a-version", "label": { "ja": "v0.4・画面の隅に版番号「v0.4」が表示されている", "en": "v0.4 · the version number \"v0.4\" is shown in the corner of the screen" }, "explain": { "ja": "現在の版であることは分かりますが、主要動作を確かめた記録ではありません。", "en": "It tells you the version is current, but it is not a record of checking the main actions." } },
+        { "id": "q05a-notrun", "label": { "ja": "v0.4・再読み込み後の保持・未実施", "en": "v0.4 · keeping after reload · not run" }, "explain": { "ja": "現在の版の記録ですが、検査は行われていません。未実施は、成功ではありません。", "en": "A record for the current version, but the check was not done. Not run is not success." } }
       ],
       "grading": {
         "id": "q05-a.rule",
@@ -82,45 +82,45 @@
       },
       "feedbackByOutcome": {
         "correct": {
-          "what": { "ja": "v0.4 の主要動作を、v0.4 を対象にした記録だけで説明できます。" },
-          "why": { "ja": "対象の版・行った検査・結果が、それぞれの記録で対応しています。" },
-          "next": { "ja": "次は、今日の検査結果を仕分けます。" }
+          "what": { "ja": "v0.4 の主要動作を、v0.4 を対象にした記録だけで説明できます。", "en": "You can explain the main actions of v0.4 using only records that target v0.4." },
+          "why": { "ja": "対象の版・行った検査・結果が、それぞれの記録で対応しています。", "en": "In each record, the target version, the check done and the result all match up." },
+          "next": { "ja": "次は、今日の検査結果を仕分けます。", "en": "Next, sort today's inspection results." }
         },
         "old_version": {
-          "what": { "ja": "v0.4 で入れた変更が壊れていても、「全部成功」と判断してしまいます。" },
-          "why": { "ja": "v0.3 の記録は、v0.4 で変えた部分を検査していません。" },
-          "next": { "ja": "v0.3 の札を外しましょう。" }
+          "what": { "ja": "v0.4 で入れた変更が壊れていても、「全部成功」と判断してしまいます。", "en": "Even if the changes made in v0.4 are broken, you would judge \"all passed.\"" },
+          "why": { "ja": "v0.3 の記録は、v0.4 で変えた部分を検査していません。", "en": "The v0.3 records did not check the part changed in v0.4." },
+          "next": { "ja": "v0.3 の札を外しましょう。", "en": "Take out the v0.3 tag." }
         },
         "no_target": {
-          "what": { "ja": "どの版の、どの検査なのか説明できない記録を根拠にしてしまいます。" },
-          "why": { "ja": "対象の版と検査の中身がない記録は、合格の根拠になりません。" },
-          "next": { "ja": "「版の記載なし」の札を外しましょう。" }
+          "what": { "ja": "どの版の、どの検査なのか説明できない記録を根拠にしてしまいます。", "en": "You would rely on a record that cannot explain which check was done on which version." },
+          "why": { "ja": "対象の版と検査の中身がない記録は、合格の根拠になりません。", "en": "A record without the target version and the content of the check is not evidence for passing." },
+          "next": { "ja": "「版の記載なし」の札を外しましょう。", "en": "Take out the \"no version noted\" tag." }
         },
         "assumption": {
-          "what": { "ja": "実際には確かめていないことを、確かめたように扱ってしまいます。" },
-          "why": { "ja": "「動くはず」は推測で、検査の記録ではありません。" },
-          "next": { "ja": "推測のメモを外しましょう。" }
+          "what": { "ja": "実際には確かめていないことを、確かめたように扱ってしまいます。", "en": "You would treat something you have not actually checked as checked." },
+          "why": { "ja": "「動くはず」は推測で、検査の記録ではありません。", "en": "\"It should work\" is a guess, not an inspection record." },
+          "next": { "ja": "推測のメモを外しましょう。", "en": "Take out the note of guesses." }
         },
         "version_only": {
-          "what": { "ja": "版番号が合っているだけで、主要動作が確かめられたことにしてしまいます。" },
-          "why": { "ja": "版の表示は「どの版か」を示すだけで、追加・保持・拒否を検査した結果ではありません。" },
-          "next": { "ja": "版番号だけの札を外し、検査の中身と結果がある記録を選びましょう。" }
+          "what": { "ja": "版番号が合っているだけで、主要動作が確かめられたことにしてしまいます。", "en": "You would treat the main actions as checked just because the version number matches." },
+          "why": { "ja": "版の表示は「どの版か」を示すだけで、追加・保持・拒否を検査した結果ではありません。", "en": "A version display only shows \"which version\"; it is not the result of checking adding, keeping or rejecting." },
+          "next": { "ja": "版番号だけの札を外し、検査の中身と結果がある記録を選びましょう。", "en": "Take out the tag with only the version number, and choose the records that have the content of the check and a result." }
         },
         "not_run": {
-          "what": { "ja": "行っていない検査を、成功として数えてしまいます。" },
-          "why": { "ja": "「未実施」は結果がないという意味で、成功とは別です。v0.4 と書かれていても根拠になりません。" },
-          "next": { "ja": "未実施の札を外し、成功が記録されたものだけを選びましょう。" }
+          "what": { "ja": "行っていない検査を、成功として数えてしまいます。", "en": "You would count a check you did not do as a success." },
+          "why": { "ja": "「未実施」は結果がないという意味で、成功とは別です。v0.4 と書かれていても根拠になりません。", "en": "\"Not run\" means there is no result, which is different from success. Even with v0.4 written on it, it is not evidence." },
+          "next": { "ja": "未実施の札を外し、成功が記録されたものだけを選びましょう。", "en": "Take out the not-run tag and choose only those with a recorded success." }
         },
         "missing_core": {
-          "what": { "ja": "主要動作のうち、まだ根拠のないものがあります。" },
-          "why": { "ja": "追加・再読み込み後の保持・空白題名の拒否の3つに、それぞれ v0.4 の記録が必要です。" },
-          "next": { "ja": "v0.4 の記録を見直して、足りない札を選びましょう。" }
+          "what": { "ja": "主要動作のうち、まだ根拠のないものがあります。", "en": "Some of the main actions still have no evidence." },
+          "why": { "ja": "追加・再読み込み後の保持・空白題名の拒否の3つに、それぞれ v0.4 の記録が必要です。", "en": "Each of adding, keeping after reload and rejecting a blank title needs its own v0.4 record." },
+          "next": { "ja": "v0.4 の記録を見直して、足りない札を選びましょう。", "en": "Review the v0.4 records and choose the missing tags." }
         }
       },
       "hints": [
-        { "id": "q05-a.h1", "text": { "ja": "記録を見るときは、まず「どの版を対象にしたか」を確かめます。" } },
-        { "id": "q05-a.h2", "text": { "ja": "札の先頭の版を見ましょう。ただし v0.4 と書かれていても、検査の中身と「成功」の結果がなければ根拠になりません。" } },
-        { "id": "q05-a.h3", "text": { "ja": "解答例：v0.4 の「追加→表示」「追加→再読み込み→残っていた」「半角空白だけ→拒否」の3枚（「氷の配達→登録」を加えても可）。理由：現在の版を対象に、主要動作をそれぞれ確かめた記録だからです。盤面で札を選んでください。" } }
+        { "id": "q05-a.h1", "text": { "ja": "記録を見るときは、まず「どの版を対象にしたか」を確かめます。", "en": "When looking at records, first check \"which version it targeted.\"" } },
+        { "id": "q05-a.h2", "text": { "ja": "札の先頭の版を見ましょう。ただし v0.4 と書かれていても、検査の中身と「成功」の結果がなければ根拠になりません。", "en": "Look at the version at the head of each tag. But even with v0.4 written, without the content of the check and a \"success\" result it is not evidence." } },
+        { "id": "q05-a.h3", "text": { "ja": "解答例：v0.4 の「追加→表示」「追加→再読み込み→残っていた」「半角空白だけ→拒否」の3枚（「氷の配達→登録」を加えても可）。理由：現在の版を対象に、主要動作をそれぞれ確かめた記録だからです。盤面で札を選んでください。", "en": "Sample answer: three v0.4 tags, \"add → shown,\" \"add → reload → it was still there\" and \"only a half-width space → rejected\" (adding \"氷の配達 → registered\" is also fine). Reason: each is a record that checked a main action on the current version. Choose the tags on the board." } }
       ]
     },
     {
@@ -129,83 +129,83 @@
       "objectiveId": "q05-o2",
       "type": "change_review",
       "required": true,
-      "title": { "ja": "Q05-B 今日の検査結果を仕分ける" },
-      "prompt": { "ja": "コトが v0.4 で検査をしました。タブで記録と画面を見て、5つの項目をそれぞれ「成功」「失敗」「実行エラー（結果なし）」「未実施」に仕分けてください。" },
+      "title": { "ja": "Q05-B 今日の検査結果を仕分ける", "en": "Q05-B Sort today's inspection results" },
+      "prompt": { "ja": "コトが v0.4 で検査をしました。タブで記録と画面を見て、5つの項目をそれぞれ「成功」「失敗」「実行エラー（結果なし）」「未実施」に仕分けてください。", "en": "Koto ran an inspection on v0.4. Look at the records and the screen in the tabs, and sort each of the five items into \"success,\" \"failure,\" \"run error (no result)\" or \"not run.\"" },
       "views": [
         {
           "id": "log",
-          "label": { "ja": "検査記録" },
+          "label": { "ja": "検査記録", "en": "Inspection record" },
           "panels": [
             {
               "kind": "text",
-              "title": { "ja": "v0.4 の検査記録（コト）" },
+              "title": { "ja": "v0.4 の検査記録（コト）", "en": "Inspection record for v0.4 (Koto)" },
               "lines": [
-                { "ja": "① 1件追加→一覧を確認：「氷の配達」が表示された。" },
-                { "ja": "② 追加→再読み込み→一覧を確認：一覧が空になった。" },
-                { "ja": "③ 空白題名の自動確認：開始直後に「確認用のファイルが見つかりません」と出て止まった。結果は出ていない。" },
-                { "ja": "④ 全角空白だけの題名：まだ行っていない。" },
-                { "ja": "⑤ 題名「網の修理」を追加：一覧に表示された。" }
+                { "ja": "① 1件追加→一覧を確認：「氷の配達」が表示された。", "en": "① Add 1 note → check the list: \"氷の配達\" was shown." },
+                { "ja": "② 追加→再読み込み→一覧を確認：一覧が空になった。", "en": "② Add → reload → check the list: the list was empty." },
+                { "ja": "③ 空白題名の自動確認：開始直後に「確認用のファイルが見つかりません」と出て止まった。結果は出ていない。", "en": "③ Automatic check of a blank title: right after starting, \"The file for the check was not found\" appeared and it stopped. No result came out." },
+                { "ja": "④ 全角空白だけの題名：まだ行っていない。", "en": "④ Title of only a full-width space: not done yet." },
+                { "ja": "⑤ 題名「網の修理」を追加：一覧に表示された。", "en": "⑤ Add the title \"網の修理\": it was shown in the list." }
               ]
             }
           ]
         },
         {
           "id": "screen",
-          "label": { "ja": "再読み込み後の画面" },
+          "label": { "ja": "再読み込み後の画面", "en": "Screen after reload" },
           "panels": [
-            { "kind": "preview", "title": { "ja": "② の再読み込み後（練習画面の再現）" }, "items": [], "empty": { "ja": "メモはまだありません" } }
+            { "kind": "preview", "title": { "ja": "② の再読み込み後（練習画面の再現）", "en": "Screen after the reload in ② (a recreation of the practice screen)" }, "items": [], "empty": { "ja": "メモはまだありません", "en": "No notes yet" } }
           ]
         }
       ],
       "questions": [
         {
           "id": "row1",
-          "label": { "ja": "① 追加して一覧に表示" },
+          "label": { "ja": "① 追加して一覧に表示", "en": "① Add and show in the list" },
           "options": [
-            { "id": "success", "label": { "ja": "成功" }, "explain": { "ja": "確かめた結果、期待どおり表示されました。" } },
-            { "id": "fail", "label": { "ja": "失敗" }, "explain": { "ja": "表示されているので、失敗ではありません。" } },
-            { "id": "error", "label": { "ja": "実行エラー（結果なし）" }, "explain": { "ja": "確認は最後まで行われ、結果が出ています。" } },
-            { "id": "notrun", "label": { "ja": "未実施" }, "explain": { "ja": "記録に、行った操作と結果があります。" } }
+            { "id": "success", "label": { "ja": "成功", "en": "Success" }, "explain": { "ja": "確かめた結果、期待どおり表示されました。", "en": "When checked, it was shown as expected." } },
+            { "id": "fail", "label": { "ja": "失敗", "en": "Failure" }, "explain": { "ja": "表示されているので、失敗ではありません。", "en": "It is shown, so it is not a failure." } },
+            { "id": "error", "label": { "ja": "実行エラー（結果なし）", "en": "Run error (no result)" }, "explain": { "ja": "確認は最後まで行われ、結果が出ています。", "en": "The check ran to the end and a result came out." } },
+            { "id": "notrun", "label": { "ja": "未実施", "en": "Not run" }, "explain": { "ja": "記録に、行った操作と結果があります。", "en": "The record has the action taken and the result." } }
           ]
         },
         {
           "id": "row2",
-          "label": { "ja": "② 再読み込み後の保持" },
+          "label": { "ja": "② 再読み込み後の保持", "en": "② Keeping after reload" },
           "options": [
-            { "id": "success", "label": { "ja": "成功" }, "explain": { "ja": "再読み込み後に一覧が空になっています。期待した結果ではありません。" } },
-            { "id": "fail", "label": { "ja": "失敗" }, "explain": { "ja": "確かめた結果、期待（残っている）と実際（空になった）が違いました。" } },
-            { "id": "error", "label": { "ja": "実行エラー（結果なし）" }, "explain": { "ja": "確認は最後まで行われ、「空になった」という結果が出ています。" } },
-            { "id": "notrun", "label": { "ja": "未実施" }, "explain": { "ja": "操作は行われています。" } }
+            { "id": "success", "label": { "ja": "成功", "en": "Success" }, "explain": { "ja": "再読み込み後に一覧が空になっています。期待した結果ではありません。", "en": "After reload the list is empty. That is not the expected result." } },
+            { "id": "fail", "label": { "ja": "失敗", "en": "Failure" }, "explain": { "ja": "確かめた結果、期待（残っている）と実際（空になった）が違いました。", "en": "When checked, the expectation (it remains) and the actual result (it became empty) differed." } },
+            { "id": "error", "label": { "ja": "実行エラー（結果なし）", "en": "Run error (no result)" }, "explain": { "ja": "確認は最後まで行われ、「空になった」という結果が出ています。", "en": "The check ran to the end and the result \"it became empty\" came out." } },
+            { "id": "notrun", "label": { "ja": "未実施", "en": "Not run" }, "explain": { "ja": "操作は行われています。", "en": "The action was done." } }
           ]
         },
         {
           "id": "row3",
-          "label": { "ja": "③ 空白題名の自動確認" },
+          "label": { "ja": "③ 空白題名の自動確認", "en": "③ Automatic check of a blank title" },
           "options": [
-            { "id": "success", "label": { "ja": "成功" }, "explain": { "ja": "結果が出ていないので、成功とは言えません。" } },
-            { "id": "fail", "label": { "ja": "失敗" }, "explain": { "ja": "作品が間違っていたと分かったわけではありません。確認そのものが止まっています。" } },
-            { "id": "error", "label": { "ja": "実行エラー（結果なし）" }, "explain": { "ja": "確認を始めたものの途中で止まり、作品の動きについての結果は出ていません。" } },
-            { "id": "notrun", "label": { "ja": "未実施" }, "explain": { "ja": "確認を始めてはいます。止まった理由（ファイルが見つからない）も記録に残すため、未実施と分けます。" } }
+            { "id": "success", "label": { "ja": "成功", "en": "Success" }, "explain": { "ja": "結果が出ていないので、成功とは言えません。", "en": "No result came out, so you cannot call it a success." } },
+            { "id": "fail", "label": { "ja": "失敗", "en": "Failure" }, "explain": { "ja": "作品が間違っていたと分かったわけではありません。確認そのものが止まっています。", "en": "It does not mean the work was found to be wrong. The check itself stopped." } },
+            { "id": "error", "label": { "ja": "実行エラー（結果なし）", "en": "Run error (no result)" }, "explain": { "ja": "確認を始めたものの途中で止まり、作品の動きについての結果は出ていません。", "en": "The check started but stopped partway, and no result about how the work behaves came out." } },
+            { "id": "notrun", "label": { "ja": "未実施", "en": "Not run" }, "explain": { "ja": "確認を始めてはいます。止まった理由（ファイルが見つからない）も記録に残すため、未実施と分けます。", "en": "The check was started. The reason it stopped (file not found) also stays in the record, so it is kept apart from not run." } }
           ]
         },
         {
           "id": "row4",
-          "label": { "ja": "④ 全角空白だけの題名" },
+          "label": { "ja": "④ 全角空白だけの題名", "en": "④ Title of only a full-width space" },
           "options": [
-            { "id": "success", "label": { "ja": "成功" }, "explain": { "ja": "行っていない検査を成功にしてはいけません。" } },
-            { "id": "fail", "label": { "ja": "失敗" }, "explain": { "ja": "行っていないので、失敗かどうかも分かりません。" } },
-            { "id": "error", "label": { "ja": "実行エラー（結果なし）" }, "explain": { "ja": "始めてもいないので、エラーも起きていません。" } },
-            { "id": "notrun", "label": { "ja": "未実施" }, "explain": { "ja": "まだ行っていない検査です。" } }
+            { "id": "success", "label": { "ja": "成功", "en": "Success" }, "explain": { "ja": "行っていない検査を成功にしてはいけません。", "en": "Do not make a check you did not do into a success." } },
+            { "id": "fail", "label": { "ja": "失敗", "en": "Failure" }, "explain": { "ja": "行っていないので、失敗かどうかも分かりません。", "en": "It was not done, so you cannot even tell whether it fails." } },
+            { "id": "error", "label": { "ja": "実行エラー（結果なし）", "en": "Run error (no result)" }, "explain": { "ja": "始めてもいないので、エラーも起きていません。", "en": "It was not even started, so no error has happened." } },
+            { "id": "notrun", "label": { "ja": "未実施", "en": "Not run" }, "explain": { "ja": "まだ行っていない検査です。", "en": "A check that has not been done yet." } }
           ]
         },
         {
           "id": "row5",
-          "label": { "ja": "⑤ 題名「網の修理」の追加" },
+          "label": { "ja": "⑤ 題名「網の修理」の追加", "en": "⑤ Adding the title \"網の修理\"" },
           "options": [
-            { "id": "success", "label": { "ja": "成功" }, "explain": { "ja": "確かめた結果、期待どおり表示されました。" } },
-            { "id": "fail", "label": { "ja": "失敗" }, "explain": { "ja": "表示されているので、失敗ではありません。" } },
-            { "id": "error", "label": { "ja": "実行エラー（結果なし）" }, "explain": { "ja": "確認は最後まで行われています。" } },
-            { "id": "notrun", "label": { "ja": "未実施" }, "explain": { "ja": "記録に、行った操作と結果があります。" } }
+            { "id": "success", "label": { "ja": "成功", "en": "Success" }, "explain": { "ja": "確かめた結果、期待どおり表示されました。", "en": "When checked, it was shown as expected." } },
+            { "id": "fail", "label": { "ja": "失敗", "en": "Failure" }, "explain": { "ja": "表示されているので、失敗ではありません。", "en": "It is shown, so it is not a failure." } },
+            { "id": "error", "label": { "ja": "実行エラー（結果なし）", "en": "Run error (no result)" }, "explain": { "ja": "確認は最後まで行われています。", "en": "The check ran to the end." } },
+            { "id": "notrun", "label": { "ja": "未実施", "en": "Not run" }, "explain": { "ja": "記録に、行った操作と結果があります。", "en": "The record has the action taken and the result." } }
           ]
         }
       ],
@@ -226,50 +226,50 @@
       },
       "feedbackByOutcome": {
         "correct": {
-          "what": { "ja": "直すべき所（②）、確認をやり直す所（③）、まだの所（④）が、はっきり分かります。" },
-          "why": { "ja": "確かめて期待どおり・確かめて違った・確かめられなかった・まだ、を区別しています。" },
-          "next": { "ja": "次は、検査場に届いた3件の案件を判断します。" }
+          "what": { "ja": "直すべき所（②）、確認をやり直す所（③）、まだの所（④）が、はっきり分かります。", "en": "It is clear what to fix (②), what to redo the check for (③) and what is still pending (④)." },
+          "why": { "ja": "確かめて期待どおり・確かめて違った・確かめられなかった・まだ、を区別しています。", "en": "You tell apart: checked and as expected, checked and different, could not be checked, and not yet." },
+          "next": { "ja": "次は、検査場に届いた3件の案件を判断します。", "en": "Next, you will judge the three cases that arrived at the inspection hall." }
         },
         "untested_as_success": {
-          "what": { "ja": "全角空白の題名が登録されてしまう不具合があっても、気づけません。" },
-          "why": { "ja": "行っていない検査は、成功ではなく「未実施」です。" },
-          "next": { "ja": "④ を見直しましょう。" }
+          "what": { "ja": "全角空白の題名が登録されてしまう不具合があっても、気づけません。", "en": "Even if there were a bug where a title of full-width space gets registered, you would not notice." },
+          "why": { "ja": "行っていない検査は、成功ではなく「未実施」です。", "en": "A check you did not do is \"not run,\" not success." },
+          "next": { "ja": "④ を見直しましょう。", "en": "Review ④." }
         },
         "error_as_success": {
-          "what": { "ja": "空白題名の拒否が本当に動くか分からないまま、動くと判断してしまいます。" },
-          "why": { "ja": "確認が途中で止まり、結果が出ていません。エラーが出なかったわけではありません。" },
-          "next": { "ja": "③ を見直しましょう。" }
+          "what": { "ja": "空白題名の拒否が本当に動くか分からないまま、動くと判断してしまいます。", "en": "You would judge that rejecting blank titles works without knowing whether it really does." },
+          "why": { "ja": "確認が途中で止まり、結果が出ていません。エラーが出なかったわけではありません。", "en": "The check stopped partway and no result came out. It is not that no error occurred." },
+          "next": { "ja": "③ を見直しましょう。", "en": "Review ③." }
         },
         "fail_as_success": {
-          "what": { "ja": "再読み込みでメモが消える不具合を、見逃して引き渡してしまいます。" },
-          "why": { "ja": "② は再読み込み後に一覧が空になっています。「再読み込み後の画面」タブも見てみましょう。" },
-          "next": { "ja": "② を見直しましょう。" }
+          "what": { "ja": "再読み込みでメモが消える不具合を、見逃して引き渡してしまいます。", "en": "You would miss the bug where notes disappear on reload and hand it over." },
+          "why": { "ja": "② は再読み込み後に一覧が空になっています。「再読み込み後の画面」タブも見てみましょう。", "en": "In ②, the list is empty after reload. Look at the \"Screen after reload\" tab too." },
+          "next": { "ja": "② を見直しましょう。", "en": "Review ②." }
         },
         "error_confused": {
-          "what": { "ja": "作品の不具合を探すべきか、確認の手順を直すべきかを取り違えます。" },
-          "why": { "ja": "③ は確認そのものが止まり、作品についての結果が出ていません。失敗や未実施とは直し方が違います。" },
-          "next": { "ja": "③ を見直しましょう。" }
+          "what": { "ja": "作品の不具合を探すべきか、確認の手順を直すべきかを取り違えます。", "en": "You would confuse whether to look for a bug in the work or to fix the steps of the check." },
+          "why": { "ja": "③ は確認そのものが止まり、作品についての結果が出ていません。失敗や未実施とは直し方が違います。", "en": "In ③ the check itself stopped and no result about the work came out. It is fixed differently from failure or not run." },
+          "next": { "ja": "③ を見直しましょう。", "en": "Review ③." }
         },
         "notrun_confused": {
-          "what": { "ja": "まだ行っていない検査を、行ったものとして扱ってしまいます。" },
-          "why": { "ja": "④ は始めてもいません。失敗もエラーも、まだ起きていません。" },
-          "next": { "ja": "④ を見直しましょう。" }
+          "what": { "ja": "まだ行っていない検査を、行ったものとして扱ってしまいます。", "en": "You would treat a check not yet done as done." },
+          "why": { "ja": "④ は始めてもいません。失敗もエラーも、まだ起きていません。", "en": "④ was not even started. Neither a failure nor an error has happened yet." },
+          "next": { "ja": "④ を見直しましょう。", "en": "Review ④." }
         },
         "fail_confused": {
-          "what": { "ja": "② の不具合が「確かめられていないだけ」に見え、直す作業が後回しになります。" },
-          "why": { "ja": "② は最後まで確かめ、期待と違う結果が出ています。" },
-          "next": { "ja": "② を見直しましょう。" }
+          "what": { "ja": "② の不具合が「確かめられていないだけ」に見え、直す作業が後回しになります。", "en": "The bug in ② would look like \"just not checked,\" and fixing it would be put off." },
+          "why": { "ja": "② は最後まで確かめ、期待と違う結果が出ています。", "en": "② was checked to the end and gave a result different from the expectation." },
+          "next": { "ja": "② を見直しましょう。", "en": "Review ②." }
         },
         "success_doubted": {
-          "what": { "ja": "期待どおりに動いた項目まで疑うと、確認がいつまでも終わりません。" },
-          "why": { "ja": "① と ⑤ は、確かめて期待どおりの結果が出ています。成功として扱ってよい項目です。" },
-          "next": { "ja": "① と ⑤ を見直しましょう。" }
+          "what": { "ja": "期待どおりに動いた項目まで疑うと、確認がいつまでも終わりません。", "en": "If you doubt even the items that worked as expected, the checks never finish." },
+          "why": { "ja": "① と ⑤ は、確かめて期待どおりの結果が出ています。成功として扱ってよい項目です。", "en": "① and ⑤ were checked and gave the expected result. They may be treated as success." },
+          "next": { "ja": "① と ⑤ を見直しましょう。", "en": "Review ① and ⑤." }
         }
       },
       "hints": [
-        { "id": "q05-b.h1", "text": { "ja": "4つの違いは「確かめたか」「結果が出たか」「期待どおりか」です。" } },
-        { "id": "q05-b.h2", "text": { "ja": "③ は途中で止まって結果がなく、④ は始めてもいません。② は「再読み込み後の画面」タブも見ましょう。" } },
-        { "id": "q05-b.h3", "text": { "ja": "解答例：①成功、②失敗、③実行エラー（結果なし）、④未実施、⑤成功。理由：確かめた結果・止まった確認・まだの確認を区別すると、次に何をするかが決まるからです。盤面で選んでください。" } }
+        { "id": "q05-b.h1", "text": { "ja": "4つの違いは「確かめたか」「結果が出たか」「期待どおりか」です。", "en": "The four differ by \"was it checked,\" \"did a result come out\" and \"was it as expected.\"" } },
+        { "id": "q05-b.h2", "text": { "ja": "③ は途中で止まって結果がなく、④ は始めてもいません。② は「再読み込み後の画面」タブも見ましょう。", "en": "③ stopped partway with no result, and ④ was not even started. For ②, look at the \"Screen after reload\" tab too." } },
+        { "id": "q05-b.h3", "text": { "ja": "解答例：①成功、②失敗、③実行エラー（結果なし）、④未実施、⑤成功。理由：確かめた結果・止まった確認・まだの確認を区別すると、次に何をするかが決まるからです。盤面で選んでください。", "en": "Sample answer: ① success, ② failure, ③ run error (no result), ④ not run, ⑤ success. Reason: telling apart checked results, a stopped check and a check still pending decides what to do next. Choose on the board." } }
       ]
     },
     {
@@ -278,55 +278,55 @@
       "objectiveId": "q05-o3",
       "type": "triage_decision",
       "required": true,
-      "title": { "ja": "Q05-C 3件の案件を判断する" },
-      "prompt": { "ja": "検査場に3件の案件が届きました。それぞれ判断と理由を選んでください。根拠がそろっていれば、止めずに進めるのも正しい判断です。" },
+      "title": { "ja": "Q05-C 3件の案件を判断する", "en": "Q05-C Judge the three cases" },
+      "prompt": { "ja": "検査場に3件の案件が届きました。それぞれ判断と理由を選んでください。根拠がそろっていれば、止めずに進めるのも正しい判断です。", "en": "Three cases arrived at the inspection hall. Choose a decision and a reason for each. When the evidence is complete, going ahead without stopping is also the right decision." },
       "decisions": [
-        { "id": "proceed", "label": { "ja": "進める" }, "explain": { "ja": "必要な根拠がそろっていて、止める理由がないとき。" } },
-        { "id": "fix_now", "label": { "ja": "今直す" }, "explain": { "ja": "目的に関わる不具合が確かめられたとき。" } },
-        { "id": "verify", "label": { "ja": "確認する" }, "explain": { "ja": "判断に必要な根拠が足りないとき。" } },
-        { "id": "later", "label": { "ja": "後で改善に回す" }, "explain": { "ja": "目的には関わらない、小さな改善点のとき。" } }
+        { "id": "proceed", "label": { "ja": "進める", "en": "Proceed" }, "explain": { "ja": "必要な根拠がそろっていて、止める理由がないとき。", "en": "When the needed evidence is complete and there is no reason to stop." } },
+        { "id": "fix_now", "label": { "ja": "今直す", "en": "Fix now" }, "explain": { "ja": "目的に関わる不具合が確かめられたとき。", "en": "When a bug related to the goal has been confirmed." } },
+        { "id": "verify", "label": { "ja": "確認する", "en": "Check" }, "explain": { "ja": "判断に必要な根拠が足りないとき。", "en": "When the evidence needed to decide is lacking." } },
+        { "id": "later", "label": { "ja": "後で改善に回す", "en": "Leave for later improvement" }, "explain": { "ja": "目的には関わらない、小さな改善点のとき。", "en": "When it is a small improvement not related to the goal." } }
       ],
       "cases": [
         {
           "id": "case1",
-          "title": { "ja": "案件1：港の掲示板" },
+          "title": { "ja": "案件1：港の掲示板", "en": "Case 1: Harbor bulletin board" },
           "evidence": [
-            { "ja": "対象：v0.4（現在の版）" },
-            { "ja": "追加・再読み込み後の保持・空白題名の拒否・通常題名の登録：4項目とも v0.4 で確認し成功" },
-            { "ja": "未実施の検査：なし" }
+            { "ja": "対象：v0.4（現在の版）", "en": "Target: v0.4 (current version)" },
+            { "ja": "追加・再読み込み後の保持・空白題名の拒否・通常題名の登録：4項目とも v0.4 で確認し成功", "en": "Adding, keeping after reload, rejecting a blank title, registering a normal title: all 4 items checked on v0.4 and succeeded" },
+            { "ja": "未実施の検査：なし", "en": "Checks not run: none" }
           ],
           "reasons": [
-            { "id": "c1-enough", "label": { "ja": "現在の版で、主要動作の成功記録がそろっているから" }, "explain": { "ja": "対象の版・検査・結果がそろっています。" } },
-            { "id": "c1-redo", "label": { "ja": "念のため、すべての検査を最初からやり直すべきだから" }, "explain": { "ja": "根拠がそろっているのにやり直す理由がありません。" } },
-            { "id": "c1-feeling", "label": { "ja": "何か見落としがありそうな気がするから" }, "explain": { "ja": "気がするだけでは、止める根拠になりません。" } }
+            { "id": "c1-enough", "label": { "ja": "現在の版で、主要動作の成功記録がそろっているから", "en": "Because the success records for the main actions on the current version are complete" }, "explain": { "ja": "対象の版・検査・結果がそろっています。", "en": "The target version, the checks and the results are all there." } },
+            { "id": "c1-redo", "label": { "ja": "念のため、すべての検査を最初からやり直すべきだから", "en": "Because just in case, all checks should be redone from the beginning" }, "explain": { "ja": "根拠がそろっているのにやり直す理由がありません。", "en": "The evidence is complete, so there is no reason to redo them." } },
+            { "id": "c1-feeling", "label": { "ja": "何か見落としがありそうな気がするから", "en": "Because it feels like something may have been overlooked" }, "explain": { "ja": "気がするだけでは、止める根拠になりません。", "en": "A feeling alone is not grounds for stopping." } }
           ]
         },
         {
           "id": "case2",
-          "title": { "ja": "案件2：漁協の連絡帳" },
+          "title": { "ja": "案件2：漁協の連絡帳", "en": "Case 2: Fishing co-op contact book" },
           "evidence": [
-            { "ja": "対象：v0.3（昨日の版）" },
-            { "ja": "札：「全部成功」" },
-            { "ja": "現在の版は v0.4。v0.4 の検査記録はない" }
+            { "ja": "対象：v0.3（昨日の版）", "en": "Target: v0.3 (yesterday's version)" },
+            { "ja": "札：「全部成功」", "en": "Tag: \"All passed\"" },
+            { "ja": "現在の版は v0.4。v0.4 の検査記録はない", "en": "The current version is v0.4. There is no inspection record for v0.4" }
           ],
           "reasons": [
-            { "id": "c2-version", "label": { "ja": "記録の対象が、現在の版と違うから" }, "explain": { "ja": "v0.4 で変えた部分は、まだ誰も確かめていません。" } },
-            { "id": "c2-broken", "label": { "ja": "古い記録なので、きっと壊れているから" }, "explain": { "ja": "壊れていると確かめたわけではありません。" } },
-            { "id": "c2-label", "label": { "ja": "「全部成功」と書かれているから" }, "explain": { "ja": "札の言葉だけでは、現在の版の根拠になりません。" } }
+            { "id": "c2-version", "label": { "ja": "記録の対象が、現在の版と違うから", "en": "Because the record's target differs from the current version" }, "explain": { "ja": "v0.4 で変えた部分は、まだ誰も確かめていません。", "en": "The part changed in v0.4 has not been checked by anyone yet." } },
+            { "id": "c2-broken", "label": { "ja": "古い記録なので、きっと壊れているから", "en": "Because it is an old record, so it must be broken" }, "explain": { "ja": "壊れていると確かめたわけではありません。", "en": "You have not confirmed that it is broken." } },
+            { "id": "c2-label", "label": { "ja": "「全部成功」と書かれているから", "en": "Because it says \"All passed\"" }, "explain": { "ja": "札の言葉だけでは、現在の版の根拠になりません。", "en": "The words on a tag alone are not evidence for the current version." } }
           ]
         },
         {
           "id": "case3",
-          "title": { "ja": "案件3：灯台守の日誌" },
+          "title": { "ja": "案件3：灯台守の日誌", "en": "Case 3: Lighthouse keeper's log" },
           "evidence": [
-            { "ja": "対象：v0.4（現在の版）" },
-            { "ja": "主要動作4項目：v0.4 で確認し成功" },
-            { "ja": "気づいた点：一覧の行の間隔が、見本より少し広い" }
+            { "ja": "対象：v0.4（現在の版）", "en": "Target: v0.4 (current version)" },
+            { "ja": "主要動作4項目：v0.4 で確認し成功", "en": "4 main actions: checked on v0.4 and succeeded" },
+            { "ja": "気づいた点：一覧の行の間隔が、見本より少し広い", "en": "Noticed: the spacing between rows in the list is slightly wider than the sample" }
           ],
           "reasons": [
-            { "id": "c3-minor", "label": { "ja": "主要動作は確認済みで、残りは見た目の小さな点だから" }, "explain": { "ja": "目的に関わる動作と、見た目の調整を分けて考えています。" } },
-            { "id": "c3-perfect", "label": { "ja": "見本と完全に同じになるまで、先へ進めないから" }, "explain": { "ja": "行の間隔は、メモを残して見返すという目的を妨げていません。" } },
-            { "id": "c3-unknown", "label": { "ja": "主要動作がまだ確かめられていないから" }, "explain": { "ja": "記録を見ると、4項目とも v0.4 で確認済みです。" } }
+            { "id": "c3-minor", "label": { "ja": "主要動作は確認済みで、残りは見た目の小さな点だから", "en": "Because the main actions are checked and the rest is a small point of appearance" }, "explain": { "ja": "目的に関わる動作と、見た目の調整を分けて考えています。", "en": "You separate the actions related to the goal from adjustments of appearance." } },
+            { "id": "c3-perfect", "label": { "ja": "見本と完全に同じになるまで、先へ進めないから", "en": "Because it cannot move on until it is exactly the same as the sample" }, "explain": { "ja": "行の間隔は、メモを残して見返すという目的を妨げていません。", "en": "The row spacing does not get in the way of the goal of leaving notes and looking back at them." } },
+            { "id": "c3-unknown", "label": { "ja": "主要動作がまだ確かめられていないから", "en": "Because the main actions have not been checked yet" }, "explain": { "ja": "記録を見ると、4項目とも v0.4 で確認済みです。", "en": "The record shows that all 4 items were checked on v0.4." } }
           ]
         }
       ],
@@ -358,46 +358,46 @@
       },
       "feedbackByOutcome": {
         "correct": {
-          "what": { "ja": "案件1と3は止まらずに進み、案件2だけが現在の版の確認に回ります。" },
-          "why": { "ja": "根拠がそろっている所は進め、足りない所だけを確かめています。見た目の小さな点は、進めたうえで後で改善に回せます。" },
-          "next": { "ja": "この章はここまで。持ち帰りカードを受け取りましょう。" }
+          "what": { "ja": "案件1と3は止まらずに進み、案件2だけが現在の版の確認に回ります。", "en": "Cases 1 and 3 proceed without stopping, and only case 2 goes to check on the current version." },
+          "why": { "ja": "根拠がそろっている所は進め、足りない所だけを確かめています。見た目の小さな点は、進めたうえで後で改善に回せます。", "en": "You move ahead where the evidence is complete and check only where it is lacking. The small point of appearance can move ahead and be left for later improvement." },
+          "next": { "ja": "この章はここまで。持ち帰りカードを受け取りましょう。", "en": "That is all for this chapter. Let's receive the take-home card." }
         },
         "old_evidence": {
-          "what": { "ja": "v0.4 で入った変更を誰も確かめないまま、案件2が先へ進んでしまいます。" },
-          "why": { "ja": "案件2の「全部成功」は v0.3 の記録です。現在の版の根拠になりません。" },
-          "next": { "ja": "案件2の判断を見直しましょう。" }
+          "what": { "ja": "v0.4 で入った変更を誰も確かめないまま、案件2が先へ進んでしまいます。", "en": "Case 2 would move ahead with nobody checking the changes made in v0.4." },
+          "why": { "ja": "案件2の「全部成功」は v0.3 の記録です。現在の版の根拠になりません。", "en": "The \"All passed\" of case 2 is a v0.3 record. It is not evidence for the current version." },
+          "next": { "ja": "案件2の判断を見直しましょう。", "en": "Review the decision for case 2." }
         },
         "over_cautious": {
-          "what": { "ja": "根拠のそろった案件1が止まり、確認の作業がいつまでも終わりません。" },
-          "why": { "ja": "案件1は、現在の版で主要動作をすべて確かめ、未実施もありません。止める理由がありません。" },
-          "next": { "ja": "案件1の判断と理由を見直しましょう。「進める」も大切な判断です。" }
+          "what": { "ja": "根拠のそろった案件1が止まり、確認の作業がいつまでも終わりません。", "en": "Case 1, whose evidence is complete, would stop, and the checking work would never end." },
+          "why": { "ja": "案件1は、現在の版で主要動作をすべて確かめ、未実施もありません。止める理由がありません。", "en": "For case 1, all main actions were checked on the current version and nothing is not run. There is no reason to stop." },
+          "next": { "ja": "案件1の判断と理由を見直しましょう。「進める」も大切な判断です。", "en": "Review the decision and reason for case 1. \"Proceed\" is also an important decision." }
         },
         "no_evidence_of_bug": {
-          "what": { "ja": "壊れているか分からないのに、直す作業を始めたり、後回しにしたりしてしまいます。" },
-          "why": { "ja": "案件2で分かっているのは「現在の版の記録がない」ことです。まず確かめます。" },
-          "next": { "ja": "案件2の判断と理由を見直しましょう。" }
+          "what": { "ja": "壊れているか分からないのに、直す作業を始めたり、後回しにしたりしてしまいます。", "en": "You would start fixing, or put off, something without knowing whether it is broken." },
+          "why": { "ja": "案件2で分かっているのは「現在の版の記録がない」ことです。まず確かめます。", "en": "What is known in case 2 is that \"there is no record for the current version.\" Check first." },
+          "next": { "ja": "案件2の判断と理由を見直しましょう。", "en": "Review the decision and reason for case 2." }
         },
         "minor_as_blocker": {
-          "what": { "ja": "主要動作が確かめられた案件3が、行の間隔のために止まってしまいます。" },
-          "why": { "ja": "行の間隔は目的を妨げない小さな見た目の点です。主要動作は v0.4 で確認済みです。" },
-          "next": { "ja": "案件3の判断と理由を見直しましょう。" }
+          "what": { "ja": "主要動作が確かめられた案件3が、行の間隔のために止まってしまいます。", "en": "Case 3, whose main actions are confirmed, would stop because of row spacing." },
+          "why": { "ja": "行の間隔は目的を妨げない小さな見た目の点です。主要動作は v0.4 で確認済みです。", "en": "Row spacing is a small point of appearance that does not get in the way of the goal. The main actions are confirmed on v0.4." },
+          "next": { "ja": "案件3の判断と理由を見直しましょう。", "en": "Review the decision and reason for case 3." }
         }
       },
       "hints": [
-        { "id": "q05-c.h1", "text": { "ja": "止めることが、いつも慎重で正しいとは限りません。根拠がそろっているかで判断します。" } },
-        { "id": "q05-c.h2", "text": { "ja": "それぞれの案件の「対象」の版と、未実施の検査があるかを見ましょう。案件3の気づいた点は、目的に関わるでしょうか。" } },
-        { "id": "q05-c.h3", "text": { "ja": "解答例：案件1＝進める（主要動作の成功記録がそろっている）、案件2＝確認する（対象の版が違う）、案件3＝進める または 後で改善に回す（主要動作は確認済みで、残りは見た目の小さな点）。理由：根拠の有無で判断を分けるからです。盤面で選んでください。" } }
+        { "id": "q05-c.h1", "text": { "ja": "止めることが、いつも慎重で正しいとは限りません。根拠がそろっているかで判断します。", "en": "Stopping is not always the careful and right choice. Decide by whether the evidence is complete." } },
+        { "id": "q05-c.h2", "text": { "ja": "それぞれの案件の「対象」の版と、未実施の検査があるかを見ましょう。案件3の気づいた点は、目的に関わるでしょうか。", "en": "Look at each case's \"target\" version and whether any check is not run. Does the point noticed in case 3 relate to the goal?" } },
+        { "id": "q05-c.h3", "text": { "ja": "解答例：案件1＝進める（主要動作の成功記録がそろっている）、案件2＝確認する（対象の版が違う）、案件3＝進める または 後で改善に回す（主要動作は確認済みで、残りは見た目の小さな点）。理由：根拠の有無で判断を分けるからです。盤面で選んでください。", "en": "Sample answer: case 1 = proceed (success records for the main actions are complete), case 2 = check (the target version differs), case 3 = proceed or leave for later improvement (main actions confirmed; the rest is a small point of appearance). Reason: you split the decisions by whether evidence exists. Choose on the board." } }
       ]
     }
   ],
   "takeawayCards": [
-    { "id": "tk-q05-1", "questId": "q05", "title": { "ja": "対象の版" }, "body": { "ja": "検査記録は、まずどの版を確かめたものかを見る。古い版の成功は、今の版の根拠にならない。" } },
-    { "id": "tk-q05-2", "questId": "q05", "title": { "ja": "確認の証拠" }, "body": { "ja": "「何を・どうして・どうなったか」がそろった記録を根拠にする。根拠がそろえば、止めずに進める。" } },
-    { "id": "tk-q05-3", "questId": "q05", "title": { "ja": "未確認の区別" }, "body": { "ja": "成功・失敗・実行エラー（結果なし）・未実施を分ける。行っていない検査を成功にしない。" } }
+    { "id": "tk-q05-1", "questId": "q05", "title": { "ja": "対象の版", "en": "Target version" }, "body": { "ja": "検査記録は、まずどの版を確かめたものかを見る。古い版の成功は、今の版の根拠にならない。", "en": "For an inspection record, first see which version it checked. Success on an old version is not evidence for the current one." } },
+    { "id": "tk-q05-2", "questId": "q05", "title": { "ja": "確認の証拠", "en": "Evidence of checking" }, "body": { "ja": "「何を・どうして・どうなったか」がそろった記録を根拠にする。根拠がそろえば、止めずに進める。", "en": "Rely on records that have \"what, why and what happened.\" When the evidence is complete, go ahead without stopping." } },
+    { "id": "tk-q05-3", "questId": "q05", "title": { "ja": "未確認の区別", "en": "Telling the unchecked apart" }, "body": { "ja": "成功・失敗・実行エラー（結果なし）・未実施を分ける。行っていない検査を成功にしない。", "en": "Separate success, failure, run error (no result) and not run. Do not make a check you did not do into a success." } }
   ],
   "takeawayTemplate": {
-    "title": { "ja": "現在版と検査の短い記録" },
-    "text": { "ja": "対象の版：v0.4\n成功：追加→表示／通常題名の登録\n失敗：再読み込み後の保持（一覧が空になった）\n実行エラー（結果なし）：空白題名の自動確認（確認用ファイルが見つからない）\n未実施：全角空白だけの題名\n次の行動：保持の不具合を直す→止まった確認をやり直す→未実施を行う" }
+    "title": { "ja": "現在版と検査の短い記録", "en": "Short record of the current version and checks" },
+    "text": { "ja": "対象の版：v0.4\n成功：追加→表示／通常題名の登録\n失敗：再読み込み後の保持（一覧が空になった）\n実行エラー（結果なし）：空白題名の自動確認（確認用ファイルが見つからない）\n未実施：全角空白だけの題名\n次の行動：保持の不具合を直す→止まった確認をやり直す→未実施を行う", "en": "Target version: v0.4\nSuccess: add → shown / registering a normal title\nFailure: keeping after reload (the list became empty)\nRun error (no result): automatic check of a blank title (the file for the check was not found)\nNot run: title of only a full-width space\nNext actions: fix the keeping bug → redo the stopped check → run the checks not run" }
   },
   "practiceCardId": "pc-q05",
   "sourceIds": ["S1"],

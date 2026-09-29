@@ -8,6 +8,6 @@
     "status": "draft",
     "sourceIds": ["S3", "S4"],
     "screenshotIds": [],
-    "note": { "ja": "この経路は実機で確認していません。製品名・画面・ボタン名は変わることがあるため、ここでは具体的なボタン名を書いていません。自分の画面が説明と一致しないときは、無理に進めず練習画面へ戻ってください。" }
+    "note": { "ja": "この経路は実機で確認していません。製品名・画面・ボタン名は変わることがあるため、ここでは具体的なボタン名を書いていません。自分の画面が説明と一致しないときは、無理に進めず練習画面へ戻ってください。", "en": "This route has not been checked on a real device. Product names, screens and button names may change, so specific button names are not written here. If your screen does not match the description, do not push on; return to the practice screen." }
   }
 ]

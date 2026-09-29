@@ -6,48 +6,48 @@
       {
         "speaker": "narrator",
         "text": {
-          "ja": "港町ルーメン。昔、ここの灯台は町じゅうの仕事を照らしていた。"
+          "ja": "港町ルーメン。昔、ここの灯台は町じゅうの仕事を照らしていた。", "en": "The harbor town of Lumen. Long ago, the lighthouse here lit the work of the whole town."
         }
       },
       {
         "speaker": "narrator",
         "text": {
-          "ja": "嵐で依頼帳が散らばり、灯台は「完成」と書かれた札だけをたくさん付けて、弱く点滅している。港には小さな霧「モヤ」がかかっていた。"
+          "ja": "嵐で依頼帳が散らばり、灯台は「完成」と書かれた札だけをたくさん付けて、弱く点滅している。港には小さな霧「モヤ」がかかっていた。", "en": "The storm scattered the request book, and the lighthouse blinks weakly, covered in tags that only say \"Done.\" A small mist called \"Moya\" hung over the harbor."
         }
       },
       {
         "speaker": "nagi",
         "expression": "think",
         "text": {
-          "ja": "灯台をもう一度ともすには、町の依頼をひとつずつ片づけるしかない、か。"
+          "ja": "灯台をもう一度ともすには、町の依頼をひとつずつ片づけるしかない、か。", "en": "To light the lighthouse again, I have no choice but to settle the town's requests one by one, huh."
         }
       },
       {
         "speaker": "ritsu",
         "expression": "think",
         "text": {
-          "ja": "直した、とは書いてある。でも、何を直したのかが残っていないんだ。"
+          "ja": "直した、とは書いてある。でも、何を直したのかが残っていないんだ。", "en": "It says it was fixed. But what got fixed was not left on record."
         }
       },
       {
         "speaker": "koto",
         "expression": "normal",
         "text": {
-          "ja": "作業はできます。何ができたら終わりか、教えてください。"
+          "ja": "作業はできます。何ができたら終わりか、教えてください。", "en": "I can do the work. Please tell me what has to be done for it to be finished."
         }
       },
       {
         "speaker": "nagi",
         "expression": "normal",
         "text": {
-          "ja": "まず、町の依頼を一つずつ見えるようにしよう。"
+          "ja": "まず、町の依頼を一つずつ見えるようにしよう。", "en": "First, let's make the town's requests visible one at a time."
         }
       },
       {
         "speaker": "ritsu",
         "expression": "normal",
         "text": {
-          "ja": "ここは練習の工房だ。本物のCodexではないから、何度まちがえても大丈夫。"
+          "ja": "ここは練習の工房だ。本物のCodexではないから、何度まちがえても大丈夫。", "en": "This is a practice workshop. It is not the real Codex, so it is fine to make mistakes as many times as you like."
         }
       }
     ]
@@ -59,40 +59,40 @@
       {
         "speaker": "narrator",
         "text": {
-          "ja": "灯台の窓に、あたたかな光が満ちていく。"
+          "ja": "灯台の窓に、あたたかな光が満ちていく。", "en": "Warm light fills the windows of the lighthouse."
         }
       },
       {
         "speaker": "koto",
         "expression": "normal",
         "text": {
-          "ja": "すべてを完璧にしたわけではありません。"
+          "ja": "すべてを完璧にしたわけではありません。", "en": "I did not make everything perfect."
         }
       },
       {
         "speaker": "nagi",
         "expression": "happy",
         "text": {
-          "ja": "必要なことができるのは確かめた。残ったことも、次の人に渡せる。"
+          "ja": "必要なことができるのは確かめた。残ったことも、次の人に渡せる。", "en": "I checked that what was needed works. What remains can be handed to the next person too."
         }
       },
       {
         "speaker": "ritsu",
         "expression": "happy",
         "text": {
-          "ja": "それを、この町では完成と呼ぶんだ。"
+          "ja": "それを、この町では完成と呼ぶんだ。", "en": "In this town, that is what we call finished."
         }
       },
       {
         "speaker": "narrator",
         "text": {
-          "ja": "灯台がともり、市場・工房・倉庫・橋・検査場・灯台の六つの場所に灯りが戻った。"
+          "ja": "灯台がともり、市場・工房・倉庫・橋・検査場・灯台の六つの場所に灯りが戻った。", "en": "The lighthouse is lit, and lamps returned to six places: the market, workshop, warehouse, bridge, inspection hall and lighthouse."
         }
       },
       {
         "speaker": "narrator",
         "text": {
-          "ja": "町の人は、あなたを「最初の作品を届けたつくり手」と呼んだ。"
+          "ja": "町の人は、あなたを「最初の作品を届けたつくり手」と呼んだ。", "en": "The townspeople called you \"the maker who delivered the first work.\""
         }
       }
     ]
@@ -104,7 +104,7 @@
         "en": "Nagi"
       },
       "role": {
-        "ja": "主人公。町に来たばかりの見習いのつくり手。コードは得意でないが、人の困り事を聞ける。あなたはナギとして参加する。"
+        "ja": "主人公。町に来たばかりの見習いのつくり手。コードは得意でないが、人の困り事を聞ける。あなたはナギとして参加する。", "en": "The protagonist. An apprentice maker who has just come to town. Not good at code, but able to listen to people's troubles. You take part as Nagi."
       }
     },
     "koto": {
@@ -113,7 +113,7 @@
         "en": "Koto"
       },
       "role": {
-        "ja": "工房の補助道具。作業は速いが、依頼の不足や確認漏れが起きることもある。Codexそのものや公式キャラクターではない。"
+        "ja": "工房の補助道具。作業は速いが、依頼の不足や確認漏れが起きることもある。Codexそのものや公式キャラクターではない。", "en": "A workshop helper tool. Fast at work, but it may also miss gaps in a request or forget to check. It is not Codex itself or an official character."
       }
     },
     "ritsu": {
@@ -122,7 +122,7 @@
         "en": "Ritsu"
       },
       "role": {
-        "ja": "工房の管理人。短く具体的なヒントをくれる。"
+        "ja": "工房の管理人。短く具体的なヒントをくれる。", "en": "The workshop's caretaker. Gives short, concrete hints."
       }
     },
     "narrator": {
@@ -131,7 +131,7 @@
         "en": "Narration"
       },
       "role": {
-        "ja": ""
+        "ja": "", "en": ""
       }
     },
     "resident": {
@@ -140,7 +140,7 @@
         "en": "Resident"
       },
       "role": {
-        "ja": ""
+        "ja": "", "en": ""
       }
     }
   },
@@ -196,16 +196,16 @@
   ],
   "futureTopics": [
     {
-      "ja": "工房の約束帳：AGENTS.md で目的と確認方法を共有する"
+      "ja": "工房の約束帳：AGENTS.md で目的と確認方法を共有する", "en": "Workshop rulebook: share the goal and how to check with AGENTS.md"
     },
     {
-      "ja": "ふたつの作業台：作業場所を分けて並行する"
+      "ja": "ふたつの作業台：作業場所を分けて並行する", "en": "Two workbenches: split the working locations and work in parallel"
     },
     {
-      "ja": "忘れない引き継ぎ：中断時の現在地と残件を残す"
+      "ja": "忘れない引き継ぎ：中断時の現在地と残件を残す", "en": "A handover that does not forget: leave the current position and remaining items when interrupted"
     },
     {
-      "ja": "ふたたび灯台へ：実際の利用から改善点を選ぶ"
+      "ja": "ふたたび灯台へ：実際の利用から改善点を選ぶ", "en": "Back to the lighthouse: choose improvements from actual use"
     }
   ]
 }

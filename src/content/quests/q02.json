@@ -2,35 +2,35 @@
   "id": "q02",
   "revision": "1",
   "prerequisite": "q01",
-  "title": { "ja": "はじめて灯る工房" },
-  "place": { "ja": "工房" },
-  "incident": { "ja": "設計図だけが増え、使える道具が一つもない。" },
-  "notesState": { "ja": "メモの追加と一覧表示が動く" },
-  "sample": { "ja": "完成見本：題名と本文を入れて「追加」を押すと、一覧に1件表示される小さな画面。保存はまだメモリ内だけで、再読み込みすると消えることを画面に書いておく。" },
+  "title": { "ja": "はじめて灯る工房", "en": "The Workshop Lights Up for the First Time" },
+  "place": { "ja": "工房", "en": "Workshop" },
+  "incident": { "ja": "設計図だけが増え、使える道具が一つもない。", "en": "Blueprints keep piling up, but there is not a single usable tool." },
+  "notesState": { "ja": "メモの追加と一覧表示が動く", "en": "Adding a note and showing the list works" },
+  "sample": { "ja": "完成見本：題名と本文を入れて「追加」を押すと、一覧に1件表示される小さな画面。保存はまだメモリ内だけで、再読み込みすると消えることを画面に書いておく。", "en": "Worked example: a small screen where entering a title and body and pressing \"Add\" shows one entry in a list. Saving is in memory only for now, and the screen says the entry disappears on reload." },
   "objectives": [
-    { "id": "q02-o1", "text": { "ja": "初版に必要な最小限の機能に絞って依頼できる" } },
-    { "id": "q02-o2", "text": { "ja": "計画の報告と、実際に動く見本を区別できる" } },
-    { "id": "q02-o3", "text": { "ja": "画面の実際の動作を確かめて、完成を判断できる" } }
+    { "id": "q02-o1", "text": { "ja": "初版に必要な最小限の機能に絞って依頼できる", "en": "Ask for only the minimum features the first version needs" } },
+    { "id": "q02-o2", "text": { "ja": "計画の報告と、実際に動く見本を区別できる", "en": "Tell a progress report apart from a sample that actually works" } },
+    { "id": "q02-o3", "text": { "ja": "画面の実際の動作を確かめて、完成を判断できる", "en": "Check the real behavior on screen and judge whether it is done" } }
   ],
   "briefScene": {
     "id": "q02-brief",
     "backgroundAssetId": "BG02",
     "lines": [
-      { "speaker": "narrator", "text": { "ja": "工房の床には、立派な設計図が山のように積まれている。けれど、手に取って使える道具は一つもない。" } },
-      { "speaker": "ritsu", "expression": "think", "text": { "ja": "設計図は十二枚。使える道具はゼロだ。" } },
-      { "speaker": "koto", "expression": "happy", "text": { "ja": "会員登録と決済と同期の設計も済んでいます！" } },
-      { "speaker": "nagi", "expression": "think", "text": { "ja": "まずは、題名と本文を入れて、一覧に一件出す。それだけを頼もう。" } },
-      { "speaker": "ritsu", "expression": "normal", "text": { "ja": "作る場所も決めておこう。空の練習フォルダだ。仕事の棚には触らない。" } }
+      { "speaker": "narrator", "text": { "ja": "工房の床には、立派な設計図が山のように積まれている。けれど、手に取って使える道具は一つもない。", "en": "Blueprints are stacked like mountains on the workshop floor. Yet there is not a single tool you can pick up and use." } },
+      { "speaker": "ritsu", "expression": "think", "text": { "ja": "設計図は十二枚。使える道具はゼロだ。", "en": "There are twelve blueprints. Usable tools: zero." } },
+      { "speaker": "koto", "expression": "happy", "text": { "ja": "会員登録と決済と同期の設計も済んでいます！", "en": "The designs for sign-up, payment and sync are done too!" } },
+      { "speaker": "nagi", "expression": "think", "text": { "ja": "まずは、題名と本文を入れて、一覧に一件出す。それだけを頼もう。", "en": "First, let's ask only this: enter a title and body, and show one entry in a list." } },
+      { "speaker": "ritsu", "expression": "normal", "text": { "ja": "作る場所も決めておこう。空の練習フォルダだ。仕事の棚には触らない。", "en": "Let's also decide where to work: an empty practice folder. We will not touch the work shelves." } }
     ]
   },
   "clearScene": {
     "id": "q02-clear",
     "backgroundAssetId": "BG02",
     "lines": [
-      { "speaker": "narrator", "text": { "ja": "画面に最初の依頼が一件表示された瞬間、工房の窓にあたたかな灯りが入った。" } },
-      { "speaker": "koto", "expression": "happy", "text": { "ja": "「できました」と言う前に、一件追加して見てもらえました。" } },
-      { "speaker": "nagi", "expression": "happy", "text": { "ja": "小さいけど、ちゃんと動いてる。" } },
-      { "speaker": "ritsu", "expression": "normal", "text": { "ja": "ただし、再読み込みすると消える。次の倉庫で、その困り事に向き合おう。" } }
+      { "speaker": "narrator", "text": { "ja": "画面に最初の依頼が一件表示された瞬間、工房の窓にあたたかな灯りが入った。", "en": "The moment the first request appeared on screen, a warm light came on in the workshop window." } },
+      { "speaker": "koto", "expression": "happy", "text": { "ja": "「できました」と言う前に、一件追加して見てもらえました。", "en": "Before saying \"it's done,\" I added one entry and had you look at it." } },
+      { "speaker": "nagi", "expression": "happy", "text": { "ja": "小さいけど、ちゃんと動いてる。", "en": "It's small, but it really works." } },
+      { "speaker": "ritsu", "expression": "normal", "text": { "ja": "ただし、再読み込みすると消える。次の倉庫で、その困り事に向き合おう。", "en": "But it disappears on reload. Let's face that trouble in the next warehouse." } }
     ]
   },
   "activities": [
@@ -40,35 +40,35 @@
       "objectiveId": "q02-o1",
       "type": "prompt_builder",
       "required": true,
-      "title": { "ja": "Q02-A 最初の見本を頼む" },
-      "prompt": { "ja": "灯台メモの最初の見本を作る依頼書を組み立ててください。初版に入れない機能の札は、置かずに残します。" },
+      "title": { "ja": "Q02-A 最初の見本を頼む", "en": "Q02-A Ask for the first sample" },
+      "prompt": { "ja": "灯台メモの最初の見本を作る依頼書を組み立ててください。初版に入れない機能の札は、置かずに残します。", "en": "Build a request for the first sample of the lighthouse notes app. Leave the cards for features that do not belong in the first version unplaced." },
       "reference": [
         {
           "kind": "text",
-          "title": { "ja": "前の章でまとめた仕様" },
+          "title": { "ja": "前の章でまとめた仕様", "en": "The spec from the previous chapter" },
           "lines": [
-            { "ja": "題名と本文を入力し、一覧で見返せる。" },
-            { "ja": "題名は80文字以内、本文は2,000文字以内。" },
-            { "ja": "作業場所：空の練習フォルダ「beacon-notes-practice」" }
+            { "ja": "題名と本文を入力し、一覧で見返せる。", "en": "Enter a title and body and look them over in a list." },
+            { "ja": "題名は80文字以内、本文は2,000文字以内。", "en": "Title up to 80 characters, body up to 2,000 characters." },
+            { "ja": "作業場所：空の練習フォルダ「beacon-notes-practice」", "en": "Work location: the empty practice folder \"beacon-notes-practice\"" }
           ]
         }
       ],
       "slots": [
-        { "id": "purpose", "label": { "ja": "目的" }, "question": { "ja": "何のために、誰が使う？" } },
-        { "id": "context", "label": { "ja": "材料（関連情報）" }, "question": { "ja": "知っておくべき状況は？" } },
-        { "id": "constraints", "label": { "ja": "制約" }, "question": { "ja": "やらないこと・守ることは？" } },
-        { "id": "done", "label": { "ja": "完了条件" }, "question": { "ja": "何を確かめたら終わり？" } }
+        { "id": "purpose", "label": { "ja": "目的", "en": "Goal" }, "question": { "ja": "何のために、誰が使う？", "en": "What is it for, and who will use it?" } },
+        { "id": "context", "label": { "ja": "材料（関連情報）", "en": "Materials (related information)" }, "question": { "ja": "知っておくべき状況は？", "en": "What situation should be known?" } },
+        { "id": "constraints", "label": { "ja": "制約", "en": "Constraints" }, "question": { "ja": "やらないこと・守ることは？", "en": "What will we not do, and what must we keep?" } },
+        { "id": "done", "label": { "ja": "完了条件", "en": "Completion criteria" }, "question": { "ja": "何を確かめたら終わり？", "en": "What do we check to say it is done?" } }
       ],
       "cards": [
-        { "id": "q02a-pay", "label": { "ja": "有料プランの決済を入れる" }, "explain": { "ja": "一人で使うメモに決済は不要です。初版には入れません。" } },
-        { "id": "q02a-done", "label": { "ja": "題名と本文を入れて「追加」を押すと、一覧に表示される" }, "explain": { "ja": "画面で確かめられる終わりの状態です。" } },
-        { "id": "q02a-folder", "label": { "ja": "用意した空の練習フォルダの中だけで作業する" }, "explain": { "ja": "作業場所を限る大事な「制約」です。仕事用の場所を練習に使いません。" } },
-        { "id": "q02a-signup", "label": { "ja": "会員登録とログインを付ける" }, "explain": { "ja": "使うのは一人だけで、初版には不要です。" } },
-        { "id": "q02a-purpose", "label": { "ja": "題名と本文を入れて、一覧に1件出せるメモの見本を作る" }, "explain": { "ja": "最小限の動く見本という「目的」です。" } },
-        { "id": "q02a-spec", "label": { "ja": "前の章でまとめた短い仕様がある（題名80文字・本文2,000文字）" }, "explain": { "ja": "すでにある材料です。上限は制約として置いてもかまいません。" } },
-        { "id": "q02a-memory", "label": { "ja": "保存はまだメモリ内でよい。再読み込みで消えることを画面に書く" }, "explain": { "ja": "今回の範囲を絞る制約です。消えることを隠さない点も大切です。" } },
-        { "id": "q02a-sync", "label": { "ja": "複数の端末で同期する" }, "explain": { "ja": "初版には入れません。まず一台で動くことが先です。" } },
-        { "id": "q02a-howto", "label": { "ja": "起動の方法も一緒に説明する" }, "explain": { "ja": "動く見本を自分で開けるようにするための条件です。制約・完了条件のどちらに置いてもかまいません。" } }
+        { "id": "q02a-pay", "label": { "ja": "有料プランの決済を入れる", "en": "Add payment for a paid plan" }, "explain": { "ja": "一人で使うメモに決済は不要です。初版には入れません。", "en": "A note for one person needs no payment. It is not in the first version." } },
+        { "id": "q02a-done", "label": { "ja": "題名と本文を入れて「追加」を押すと、一覧に表示される", "en": "Entering a title and body and pressing \"Add\" shows it in a list" }, "explain": { "ja": "画面で確かめられる終わりの状態です。", "en": "An end state you can check on screen." } },
+        { "id": "q02a-folder", "label": { "ja": "用意した空の練習フォルダの中だけで作業する", "en": "Work only inside the prepared empty practice folder" }, "explain": { "ja": "作業場所を限る大事な「制約」です。仕事用の場所を練習に使いません。", "en": "An important \"constraint\" that limits the work location. Real work locations are not used for practice." } },
+        { "id": "q02a-signup", "label": { "ja": "会員登録とログインを付ける", "en": "Add sign-up and login" }, "explain": { "ja": "使うのは一人だけで、初版には不要です。", "en": "Only one person uses it, so it is not needed in the first version." } },
+        { "id": "q02a-purpose", "label": { "ja": "題名と本文を入れて、一覧に1件出せるメモの見本を作る", "en": "Build a sample notes app that can show one entry in a list after entering a title and body" }, "explain": { "ja": "最小限の動く見本という「目的」です。", "en": "This is the \"goal\": a minimal working sample." } },
+        { "id": "q02a-spec", "label": { "ja": "前の章でまとめた短い仕様がある（題名80文字・本文2,000文字）", "en": "There is a short spec from the previous chapter (title 80 characters, body 2,000 characters)" }, "explain": { "ja": "すでにある材料です。上限は制約として置いてもかまいません。", "en": "These are existing materials. The limits may also be placed as constraints." } },
+        { "id": "q02a-memory", "label": { "ja": "保存はまだメモリ内でよい。再読み込みで消えることを画面に書く", "en": "Saving in memory is fine for now. Write on screen that it disappears on reload" }, "explain": { "ja": "今回の範囲を絞る制約です。消えることを隠さない点も大切です。", "en": "A constraint that narrows this round's scope. Not hiding that it disappears is also important." } },
+        { "id": "q02a-sync", "label": { "ja": "複数の端末で同期する", "en": "Sync across multiple devices" }, "explain": { "ja": "初版には入れません。まず一台で動くことが先です。", "en": "Not in the first version. Working on one device comes first." } },
+        { "id": "q02a-howto", "label": { "ja": "起動の方法も一緒に説明する", "en": "Also explain how to start it" }, "explain": { "ja": "動く見本を自分で開けるようにするための条件です。制約・完了条件のどちらに置いてもかまいません。", "en": "A condition for being able to open the working sample yourself. It may go under constraints or completion criteria." } }
       ],
       "grading": {
         "id": "q02-a.rule",
@@ -94,45 +94,45 @@
       },
       "feedbackByOutcome": {
         "correct": {
-          "what": { "ja": "コトは練習フォルダの中で、追加と一覧だけが動く小さな見本を作れます。" },
-          "why": { "ja": "初版に必要な機能に絞り、作業場所と確かめ方も伝えています。" },
-          "next": { "ja": "次は、コトの報告を見比べて、本当に動く見本ができたかを確かめます。" }
+          "what": { "ja": "コトは練習フォルダの中で、追加と一覧だけが動く小さな見本を作れます。", "en": "Koto can build a small sample inside the practice folder where only adding and the list work." },
+          "why": { "ja": "初版に必要な機能に絞り、作業場所と確かめ方も伝えています。", "en": "It is narrowed to the features the first version needs, and it also states the work location and how to check." },
+          "next": { "ja": "次は、コトの報告を見比べて、本当に動く見本ができたかを確かめます。", "en": "Next, compare Koto's reports and check whether a truly working sample was made." }
         },
         "too_big": {
-          "what": { "ja": "コトは会員登録や決済、同期の仕組みから作り始め、一件追加できる画面がいつまでもできません。" },
-          "why": { "ja": "一人で使う小さなメモの初版には、これらの機能は必要ありません。" },
-          "next": { "ja": "会員登録・決済・同期の札を欄から外しましょう。後で必要になったら改めて頼めます。" }
+          "what": { "ja": "コトは会員登録や決済、同期の仕組みから作り始め、一件追加できる画面がいつまでもできません。", "en": "Koto starts with sign-up, payment and sync, and the screen that can add one entry is never finished." },
+          "why": { "ja": "一人で使う小さなメモの初版には、これらの機能は必要ありません。", "en": "A first version of a small note for one person does not need these features." },
+          "next": { "ja": "会員登録・決済・同期の札を欄から外しましょう。後で必要になったら改めて頼めます。", "en": "Take the sign-up, payment and sync cards out of the fields. If they become necessary later, you can ask again." }
         },
         "no_workspace": {
-          "what": { "ja": "コトは作業場所が分からず、仕事用の棚に新しいファイルを置いてしまうかもしれません。" },
-          "why": { "ja": "練習は専用の空フォルダで行うのが安全です。その制約が入っていません。" },
-          "next": { "ja": "「空の練習フォルダの中だけで作業する」を制約の欄に置きましょう。" }
+          "what": { "ja": "コトは作業場所が分からず、仕事用の棚に新しいファイルを置いてしまうかもしれません。", "en": "Koto does not know where to work and may put new files on the work shelves." },
+          "why": { "ja": "練習は専用の空フォルダで行うのが安全です。その制約が入っていません。", "en": "Practice is safe in a dedicated empty folder. That constraint is missing." },
+          "next": { "ja": "「空の練習フォルダの中だけで作業する」を制約の欄に置きましょう。", "en": "Place \"Work only inside the empty practice folder\" in the constraints field." }
         },
         "missing_purpose": {
-          "what": { "ja": "コトは何を作るのか分からず、また設計図を増やします。" },
-          "why": { "ja": "目的の欄に「一件出せる見本を作る」ことが入っていません。" },
-          "next": { "ja": "目的の欄を見直しましょう。" }
+          "what": { "ja": "コトは何を作るのか分からず、また設計図を増やします。", "en": "Koto does not know what to build and adds more blueprints." },
+          "why": { "ja": "目的の欄に「一件出せる見本を作る」ことが入っていません。", "en": "The goal field lacks \"build a sample that can show one entry.\"" },
+          "next": { "ja": "目的の欄を見直しましょう。", "en": "Look at the goal field again." }
         },
         "missing_done": {
-          "what": { "ja": "コトは設計の報告だけで「完了」と言うかもしれません。" },
-          "why": { "ja": "画面で確かめられる終わりの状態が完了条件にありません。" },
-          "next": { "ja": "「追加を押すと一覧に表示される」を完了条件に置きましょう。" }
+          "what": { "ja": "コトは設計の報告だけで「完了」と言うかもしれません。", "en": "Koto may say \"done\" after only a design report." },
+          "why": { "ja": "画面で確かめられる終わりの状態が完了条件にありません。", "en": "The completion criteria have no end state you can check on screen." },
+          "next": { "ja": "「追加を押すと一覧に表示される」を完了条件に置きましょう。", "en": "Place \"pressing Add shows it in the list\" as the completion criterion." }
         },
         "missing_context": {
-          "what": { "ja": "コトは前の章の仕様や、保存の扱いを知らないまま作ります。" },
-          "why": { "ja": "材料の欄に、すでにある仕様や前提が入っていません。" },
-          "next": { "ja": "前の章の仕様、または保存の扱いの札を材料の欄に置きましょう。" }
+          "what": { "ja": "コトは前の章の仕様や、保存の扱いを知らないまま作ります。", "en": "Koto builds without knowing the previous chapter's spec or how saving is handled." },
+          "why": { "ja": "材料の欄に、すでにある仕様や前提が入っていません。", "en": "The materials field lacks the existing spec and premises." },
+          "next": { "ja": "前の章の仕様、または保存の扱いの札を材料の欄に置きましょう。", "en": "Place the previous chapter's spec or the card about how saving is handled in the materials field." }
         },
         "misplaced": {
-          "what": { "ja": "必要な札はありますが、欄が違うためコトが読み違えます。" },
-          "why": { "ja": "欄の問いと札の中身が一致していない組み合わせがあります。" },
-          "next": { "ja": "各欄の問いと、札の中身を照らし合わせましょう。" }
+          "what": { "ja": "必要な札はありますが、欄が違うためコトが読み違えます。", "en": "The needed cards are there, but they are in the wrong fields, so Koto misreads them." },
+          "why": { "ja": "欄の問いと札の中身が一致していない組み合わせがあります。", "en": "Some combinations do not match a field's question with the card's content." },
+          "next": { "ja": "各欄の問いと、札の中身を照らし合わせましょう。", "en": "Compare each field's question with the card contents." }
         }
       },
       "hints": [
-        { "id": "q02-a.h1", "text": { "ja": "初版で確かめたいのは「一件入れて、一覧に出る」ことだけです。それに必要のない機能はどれでしょう。" } },
-        { "id": "q02-a.h2", "text": { "ja": "会員登録・決済・同期は置きません。制約の欄には、作業場所を限る札が必要です。" } },
-        { "id": "q02-a.h3", "text": { "ja": "解答例：目的＝「一件出せるメモの見本を作る」、材料＝「前の章の仕様」または「保存はメモリ内でよい」、制約＝「空の練習フォルダだけで作業する」（上限・保存の扱い・起動説明も可）、完了条件＝「追加を押すと一覧に表示される」（起動説明も可）。理由：最小限の動くものに絞り、作業場所を守るためです。盤面で札を置いてください。" } }
+        { "id": "q02-a.h1", "text": { "ja": "初版で確かめたいのは「一件入れて、一覧に出る」ことだけです。それに必要のない機能はどれでしょう。", "en": "For the first version, all you want to check is \"add one and see it in the list.\" Which features are not needed for that?" } },
+        { "id": "q02-a.h2", "text": { "ja": "会員登録・決済・同期は置きません。制約の欄には、作業場所を限る札が必要です。", "en": "Do not place sign-up, payment or sync. The constraints field needs a card that limits the work location." } },
+        { "id": "q02-a.h3", "text": { "ja": "解答例：目的＝「一件出せるメモの見本を作る」、材料＝「前の章の仕様」または「保存はメモリ内でよい」、制約＝「空の練習フォルダだけで作業する」（上限・保存の扱い・起動説明も可）、完了条件＝「追加を押すと一覧に表示される」（起動説明も可）。理由：最小限の動くものに絞り、作業場所を守るためです。盤面で札を置いてください。", "en": "Sample answer: goal = \"build a sample that can show one entry\"; materials = \"the previous chapter's spec\" or \"saving in memory is fine\"; constraints = \"work only in the empty practice folder\" (limits, how saving is handled and startup explanation are also fine); completion criteria = \"pressing Add shows it in the list\" (a startup explanation is also fine). Reason: it narrows to the minimum working thing and protects the work location. Place the cards on the board." } }
       ]
     },
     {
@@ -141,63 +141,63 @@
       "objectiveId": "q02-o2",
       "type": "change_review",
       "required": true,
-      "title": { "ja": "Q02-B 3つの報告を見比べる" },
-      "prompt": { "ja": "コトから3つの報告が届きました。タブで作業場所・変更されたファイル・プレビューを見比べ、下の問いに答えてください。許可した作業場所は「beacon-notes-practice」です。" },
+      "title": { "ja": "Q02-B 3つの報告を見比べる", "en": "Q02-B Compare three reports" },
+      "prompt": { "ja": "コトから3つの報告が届きました。タブで作業場所・変更されたファイル・プレビューを見比べ、下の問いに答えてください。許可した作業場所は「beacon-notes-practice」です。", "en": "Three reports arrived from Koto. Use the tabs to compare the work location, changed files and preview, then answer the questions below. The permitted work location is \"beacon-notes-practice.\"" },
       "views": [
         {
           "id": "report-a",
-          "label": { "ja": "報告A" },
+          "label": { "ja": "報告A", "en": "Report A" },
           "panels": [
-            { "kind": "text", "title": { "ja": "コトの報告" }, "lines": [{ "ja": "「設計が完了しました。画面の構成と今後の機能を整理しました。」" }, { "ja": "作業場所：beacon-notes-practice" }] },
-            { "kind": "files", "title": { "ja": "変更されたファイル" }, "entries": [{ "path": "beacon-notes-practice/docs/plan.md", "status": "added" }] },
-            { "kind": "preview", "title": { "ja": "プレビュー" }, "items": [], "empty": { "ja": "開けるページがありません（設計の文書だけです）" } }
+            { "kind": "text", "title": { "ja": "コトの報告", "en": "Koto's report" }, "lines": [{ "ja": "「設計が完了しました。画面の構成と今後の機能を整理しました。」", "en": "\"The design is complete. I organized the screen layout and future features.\"" }, { "ja": "作業場所：beacon-notes-practice", "en": "Work location: beacon-notes-practice" }] },
+            { "kind": "files", "title": { "ja": "変更されたファイル", "en": "Changed files" }, "entries": [{ "path": "beacon-notes-practice/docs/plan.md", "status": "added" }] },
+            { "kind": "preview", "title": { "ja": "プレビュー", "en": "Preview" }, "items": [], "empty": { "ja": "開けるページがありません（設計の文書だけです）", "en": "There is no page to open (only design documents)" } }
           ]
         },
         {
           "id": "report-b",
-          "label": { "ja": "報告B" },
+          "label": { "ja": "報告B", "en": "Report B" },
           "panels": [
-            { "kind": "text", "title": { "ja": "コトの報告" }, "lines": [{ "ja": "「題名と本文を入れて追加できる画面を作りました。index.html をブラウザで開いてください。」" }, { "ja": "作業場所：beacon-notes-practice" }] },
-            { "kind": "files", "title": { "ja": "変更されたファイル" }, "entries": [{ "path": "beacon-notes-practice/index.html", "status": "added" }, { "path": "beacon-notes-practice/app.js", "status": "added" }, { "path": "beacon-notes-practice/README.md", "status": "added" }] },
-            { "kind": "preview", "title": { "ja": "プレビュー" }, "items": [{ "ja": "［題名の入力欄］［本文の入力欄］［追加］" }, { "ja": "一覧：港の魚市 ― 朝6時に氷を届ける" }, { "ja": "注意：再読み込みすると消えます" }] }
+            { "kind": "text", "title": { "ja": "コトの報告", "en": "Koto's report" }, "lines": [{ "ja": "「題名と本文を入れて追加できる画面を作りました。index.html をブラウザで開いてください。」", "en": "\"I built a screen where you can enter a title and body and add them. Please open index.html in the browser.\"" }, { "ja": "作業場所：beacon-notes-practice", "en": "Work location: beacon-notes-practice" }] },
+            { "kind": "files", "title": { "ja": "変更されたファイル", "en": "Changed files" }, "entries": [{ "path": "beacon-notes-practice/index.html", "status": "added" }, { "path": "beacon-notes-practice/app.js", "status": "added" }, { "path": "beacon-notes-practice/README.md", "status": "added" }] },
+            { "kind": "preview", "title": { "ja": "プレビュー", "en": "Preview" }, "items": [{ "ja": "［題名の入力欄］［本文の入力欄］［追加］", "en": "[Title input] [Body input] [Add]" }, { "ja": "一覧：港の魚市 ― 朝6時に氷を届ける", "en": "List: Harbor fish market - deliver ice at 6 a.m." }, { "ja": "注意：再読み込みすると消えます", "en": "Note: it disappears on reload" }] }
           ]
         },
         {
           "id": "report-c",
-          "label": { "ja": "報告C" },
+          "label": { "ja": "報告C", "en": "Report C" },
           "panels": [
-            { "kind": "text", "title": { "ja": "コトの報告" }, "lines": [{ "ja": "「追加できる画面を作りました。近くにあったフォルダに置きました。」" }, { "ja": "作業場所：shop-accounting（市場の会計用フォルダ）" }] },
-            { "kind": "files", "title": { "ja": "変更されたファイル" }, "entries": [{ "path": "shop-accounting/index.html", "status": "changed" }, { "path": "shop-accounting/notes.js", "status": "added" }] },
-            { "kind": "preview", "title": { "ja": "プレビュー" }, "items": [{ "ja": "［題名の入力欄］［本文の入力欄］［追加］" }, { "ja": "一覧：港の魚市 ― 朝6時に氷を届ける" }] }
+            { "kind": "text", "title": { "ja": "コトの報告", "en": "Koto's report" }, "lines": [{ "ja": "「追加できる画面を作りました。近くにあったフォルダに置きました。」", "en": "\"I built a screen where you can add entries. I put it in a nearby folder.\"" }, { "ja": "作業場所：shop-accounting（市場の会計用フォルダ）", "en": "Work location: shop-accounting (the market's accounting folder)" }] },
+            { "kind": "files", "title": { "ja": "変更されたファイル", "en": "Changed files" }, "entries": [{ "path": "shop-accounting/index.html", "status": "changed" }, { "path": "shop-accounting/notes.js", "status": "added" }] },
+            { "kind": "preview", "title": { "ja": "プレビュー", "en": "Preview" }, "items": [{ "ja": "［題名の入力欄］［本文の入力欄］［追加］", "en": "[Title input] [Body input] [Add]" }, { "ja": "一覧：港の魚市 ― 朝6時に氷を届ける", "en": "List: Harbor fish market - deliver ice at 6 a.m." }] }
           ]
         }
       ],
       "questions": [
         {
           "id": "working",
-          "label": { "ja": "許可した作業場所で、動く見本ができているのはどの報告？" },
+          "label": { "ja": "許可した作業場所で、動く見本ができているのはどの報告？", "en": "Which report has a working sample in the permitted work location?" },
           "options": [
-            { "id": "a", "label": { "ja": "報告A" }, "explain": { "ja": "設計の文書だけで、開けるページがありません。" } },
-            { "id": "c", "label": { "ja": "報告C" }, "explain": { "ja": "動いてはいますが、許可していない会計用フォルダに書き込んでいます。" } },
-            { "id": "b", "label": { "ja": "報告B" }, "explain": { "ja": "練習フォルダの中で、入力・追加・一覧が動くページができています。" } }
+            { "id": "a", "label": { "ja": "報告A", "en": "Report A" }, "explain": { "ja": "設計の文書だけで、開けるページがありません。", "en": "Only design documents; there is no page to open." } },
+            { "id": "c", "label": { "ja": "報告C", "en": "Report C" }, "explain": { "ja": "動いてはいますが、許可していない会計用フォルダに書き込んでいます。", "en": "It works, but it writes into the accounting folder, which was not permitted." } },
+            { "id": "b", "label": { "ja": "報告B", "en": "Report B" }, "explain": { "ja": "練習フォルダの中で、入力・追加・一覧が動くページができています。", "en": "In the practice folder, a page exists where input, adding and the list work." } }
           ]
         },
         {
           "id": "plan",
-          "label": { "ja": "報告Aはどう扱う？" },
+          "label": { "ja": "報告Aはどう扱う？", "en": "How should Report A be handled?" },
           "options": [
-            { "id": "plan-note", "label": { "ja": "設計の報告として受け取り、「まだ動く見本ではない」と記録する" }, "explain": { "ja": "設計は役に立ちますが、画面が動いた証拠ではありません。" } },
-            { "id": "plan-done", "label": { "ja": "「設計が完了」とあるので、完成として受け取る" }, "explain": { "ja": "開けるページがないので、完成とは言えません。" } },
-            { "id": "plan-discard", "label": { "ja": "動かないので失敗として捨てる" }, "explain": { "ja": "設計そのものは次の作業に使えます。捨てる必要はありません。" } }
+            { "id": "plan-note", "label": { "ja": "設計の報告として受け取り、「まだ動く見本ではない」と記録する", "en": "Accept it as a design report and record that it is \"not yet a working sample\"" }, "explain": { "ja": "設計は役に立ちますが、画面が動いた証拠ではありません。", "en": "The design is useful, but it is not evidence that the screen works." } },
+            { "id": "plan-done", "label": { "ja": "「設計が完了」とあるので、完成として受け取る", "en": "It says \"design complete,\" so accept it as finished" }, "explain": { "ja": "開けるページがないので、完成とは言えません。", "en": "There is no page to open, so it cannot be called finished." } },
+            { "id": "plan-discard", "label": { "ja": "動かないので失敗として捨てる", "en": "It does not run, so discard it as a failure" }, "explain": { "ja": "設計そのものは次の作業に使えます。捨てる必要はありません。", "en": "The design itself can be used in the next work. There is no need to discard it." } }
           ]
         },
         {
           "id": "place",
-          "label": { "ja": "報告Cはどう扱う？" },
+          "label": { "ja": "報告Cはどう扱う？", "en": "How should Report C be handled?" },
           "options": [
-            { "id": "place-keep", "label": { "ja": "動くので会計用フォルダに置いたままにし、あとで移す" }, "explain": { "ja": "許可していない場所の変更を残すと、仕事のファイルを壊すおそれがあります。" } },
-            { "id": "place-adopt", "label": { "ja": "動いているので、そのまま完成として採用する" }, "explain": { "ja": "動くかどうかの前に、作業場所が許可した範囲かを確かめる必要があります。" } },
-            { "id": "place-check", "label": { "ja": "採用しない。どこを変えたかをコトに確認し、練習フォルダで作り直してもらう" }, "explain": { "ja": "作業場所が違うときは、書き込みを進めずに対象を確かめ直します。" } }
+            { "id": "place-keep", "label": { "ja": "動くので会計用フォルダに置いたままにし、あとで移す", "en": "It works, so leave it in the accounting folder and move it later" }, "explain": { "ja": "許可していない場所の変更を残すと、仕事のファイルを壊すおそれがあります。", "en": "Leaving changes in a location that was not permitted risks damaging work files." } },
+            { "id": "place-adopt", "label": { "ja": "動いているので、そのまま完成として採用する", "en": "It is working, so adopt it as finished as it is" }, "explain": { "ja": "動くかどうかの前に、作業場所が許可した範囲かを確かめる必要があります。", "en": "Before asking whether it works, you must check that the work location is within the permitted range." } },
+            { "id": "place-check", "label": { "ja": "採用しない。どこを変えたかをコトに確認し、練習フォルダで作り直してもらう", "en": "Do not adopt it. Ask Koto where things were changed and have them rebuild it in the practice folder" }, "explain": { "ja": "作業場所が違うときは、書き込みを進めずに対象を確かめ直します。", "en": "When the work location is wrong, do not let the writing go on; confirm the target again." } }
           ]
         }
       ],
@@ -215,30 +215,30 @@
       },
       "feedbackByOutcome": {
         "correct": {
-          "what": { "ja": "動く見本（報告B）を選び、設計の報告と場所違いの変更をそれぞれ正しく扱えました。" },
-          "why": { "ja": "「完了しました」という言葉ではなく、ファイル・作業場所・プレビューを見て判断しています。" },
-          "next": { "ja": "次は、完成を判断するために自分で行う確認の手順を組み立てます。" }
+          "what": { "ja": "動く見本（報告B）を選び、設計の報告と場所違いの変更をそれぞれ正しく扱えました。", "en": "You chose the working sample (Report B) and handled the design report and the wrong-location change correctly." },
+          "why": { "ja": "「完了しました」という言葉ではなく、ファイル・作業場所・プレビューを見て判断しています。", "en": "You judged by the files, work location and preview, not by the words \"it's done.\"" },
+          "next": { "ja": "次は、完成を判断するために自分で行う確認の手順を組み立てます。", "en": "Next, build the check procedure you carry out yourself to judge completion." }
         },
         "plan_as_product": {
-          "what": { "ja": "開けるページがないまま「完成」と記録され、配達係は何も使えません。" },
-          "why": { "ja": "報告Aは設計の文書だけです。「完了」という言葉は、画面が動いた証拠になりません。" },
-          "next": { "ja": "報告Aのプレビューのタブをもう一度見てみましょう。" }
+          "what": { "ja": "開けるページがないまま「完成」と記録され、配達係は何も使えません。", "en": "It is recorded as \"finished\" with no page to open, and the courier can use nothing." },
+          "why": { "ja": "報告Aは設計の文書だけです。「完了」という言葉は、画面が動いた証拠になりません。", "en": "Report A is only design documents. The word \"done\" is not evidence that the screen works." },
+          "next": { "ja": "報告Aのプレビューのタブをもう一度見てみましょう。", "en": "Look again at the preview tab of Report A." }
         },
         "wrong_place": {
-          "what": { "ja": "市場の会計用フォルダの index.html が書き換わったままになり、仕事のファイルが壊れるおそれがあります。" },
-          "why": { "ja": "動くことより先に、許可した作業場所かどうかを確かめる必要があります。" },
-          "next": { "ja": "報告Cの「作業場所」と「変更されたファイル」を見直しましょう。" }
+          "what": { "ja": "市場の会計用フォルダの index.html が書き換わったままになり、仕事のファイルが壊れるおそれがあります。", "en": "The market accounting folder's index.html stays overwritten, and work files may be damaged." },
+          "why": { "ja": "動くことより先に、許可した作業場所かどうかを確かめる必要があります。", "en": "Before it works, you must check whether it is the permitted work location." },
+          "next": { "ja": "報告Cの「作業場所」と「変更されたファイル」を見直しましょう。", "en": "Review \"work location\" and \"changed files\" in Report C." }
         },
         "discard_plan": {
-          "what": { "ja": "次の作業で使える設計まで失われます。" },
-          "why": { "ja": "設計の報告は失敗ではありません。まだ動く見本ではない、と区別して記録すれば十分です。" },
-          "next": { "ja": "報告Aの扱いを選び直しましょう。" }
+          "what": { "ja": "次の作業で使える設計まで失われます。", "en": "Even the design usable in the next work would be lost." },
+          "why": { "ja": "設計の報告は失敗ではありません。まだ動く見本ではない、と区別して記録すれば十分です。", "en": "A design report is not a failure. It is enough to record that it is not yet a working sample." },
+          "next": { "ja": "報告Aの扱いを選び直しましょう。", "en": "Choose how to handle Report A again." }
         }
       },
       "hints": [
-        { "id": "q02-b.h1", "text": { "ja": "報告の言葉ではなく、「どこに」「何のファイルが」「画面がどう見えるか」で判断しましょう。" } },
-        { "id": "q02-b.h2", "text": { "ja": "各タブのプレビューと作業場所を見比べましょう。報告Aは開けるページがなく、報告Cは作業場所が違います。" } },
-        { "id": "q02-b.h3", "text": { "ja": "解答例：動く見本は報告B。報告Aは「設計の報告として受け取り、まだ動く見本ではないと記録」。報告Cは「採用せず、変更箇所を確認して練習フォルダで作り直してもらう」。理由：動く証拠と、許可した作業場所の両方がそろうのは報告Bだけだからです。盤面に戻って選んでください。" } }
+        { "id": "q02-b.h1", "text": { "ja": "報告の言葉ではなく、「どこに」「何のファイルが」「画面がどう見えるか」で判断しましょう。", "en": "Judge by \"where,\" \"which files,\" and \"how the screen looks,\" not by the words of the report." } },
+        { "id": "q02-b.h2", "text": { "ja": "各タブのプレビューと作業場所を見比べましょう。報告Aは開けるページがなく、報告Cは作業場所が違います。", "en": "Compare each tab's preview and work location. Report A has no page to open, and Report C has the wrong work location." } },
+        { "id": "q02-b.h3", "text": { "ja": "解答例：動く見本は報告B。報告Aは「設計の報告として受け取り、まだ動く見本ではないと記録」。報告Cは「採用せず、変更箇所を確認して練習フォルダで作り直してもらう」。理由：動く証拠と、許可した作業場所の両方がそろうのは報告Bだけだからです。盤面に戻って選んでください。", "en": "Sample answer: the working sample is Report B. Report A: \"accept as a design report and record it as not yet a working sample.\" Report C: \"do not adopt it; confirm the changed places and have it rebuilt in the practice folder.\" Reason: only Report B has both evidence that it works and the permitted work location. Go back to the board and choose." } }
       ]
     },
     {
@@ -248,16 +248,16 @@
       "type": "evidence_board",
       "mode": "order",
       "required": true,
-      "title": { "ja": "Q02-C 完成を確かめる手順" },
-      "prompt": { "ja": "報告Bの見本が本当に動くかを確かめる手順を、札を選んで上から順に並べてください。" },
+      "title": { "ja": "Q02-C 完成を確かめる手順", "en": "Q02-C Steps to confirm it is done" },
+      "prompt": { "ja": "報告Bの見本が本当に動くかを確かめる手順を、札を選んで上から順に並べてください。", "en": "Choose cards and line them up from the top as the steps to check that the sample in Report B really works." },
       "cards": [
-        { "id": "q02c-report", "label": { "ja": "コトの報告に「完成しました」と書いてあるのを読む" }, "explain": { "ja": "報告を読むことは、画面の動作を確かめることではありません。" } },
-        { "id": "q02c-see", "label": { "ja": "一覧に、入れた題名と本文が1件表示されたのを見る" }, "explain": { "ja": "完了条件を満たしたかを、自分の目で確かめる手順です。" } },
-        { "id": "q02c-body", "label": { "ja": "本文に「朝6時に氷を届ける」と入力する" }, "explain": { "ja": "追加の前に行う入力です。題名との順番は入れ替えてもかまいません。" } },
-        { "id": "q02c-files", "label": { "ja": "ファイルが3つ増えたことを数える" }, "explain": { "ja": "ファイルの数は、画面が動く証拠になりません。" } },
-        { "id": "q02c-add", "label": { "ja": "「追加」を押す" }, "explain": { "ja": "入力の後、結果を見る前に行う操作です。" } },
-        { "id": "q02c-reload", "label": { "ja": "ページを再読み込みして、メモが残るかを見る" }, "explain": { "ja": "この段階ではメモリ内保存なので、消えるのが仕様どおりです。次の章の確認です。" } },
-        { "id": "q02c-title", "label": { "ja": "題名に「港の魚市」と入力する" }, "explain": { "ja": "追加の前に行う入力です。" } }
+        { "id": "q02c-report", "label": { "ja": "コトの報告に「完成しました」と書いてあるのを読む", "en": "Read that Koto's report says \"It's done\"" }, "explain": { "ja": "報告を読むことは、画面の動作を確かめることではありません。", "en": "Reading a report is not checking how the screen behaves." } },
+        { "id": "q02c-see", "label": { "ja": "一覧に、入れた題名と本文が1件表示されたのを見る", "en": "See that one entry with the title and body you typed appears in the list" }, "explain": { "ja": "完了条件を満たしたかを、自分の目で確かめる手順です。", "en": "A step to check with your own eyes whether the completion criterion is met." } },
+        { "id": "q02c-body", "label": { "ja": "本文に「朝6時に氷を届ける」と入力する", "en": "Type \"Deliver ice at 6 a.m.\" in the body" }, "explain": { "ja": "追加の前に行う入力です。題名との順番は入れ替えてもかまいません。", "en": "Input done before adding. The order with the title may be swapped." } },
+        { "id": "q02c-files", "label": { "ja": "ファイルが3つ増えたことを数える", "en": "Count that three files were added" }, "explain": { "ja": "ファイルの数は、画面が動く証拠になりません。", "en": "The number of files is not evidence that the screen works." } },
+        { "id": "q02c-add", "label": { "ja": "「追加」を押す", "en": "Press \"Add\"" }, "explain": { "ja": "入力の後、結果を見る前に行う操作です。", "en": "An action done after input and before looking at the result." } },
+        { "id": "q02c-reload", "label": { "ja": "ページを再読み込みして、メモが残るかを見る", "en": "Reload the page and see whether the note stays" }, "explain": { "ja": "この段階ではメモリ内保存なので、消えるのが仕様どおりです。次の章の確認です。", "en": "At this stage saving is in memory, so disappearing is as specified. That is the check for the next chapter." } },
+        { "id": "q02c-title", "label": { "ja": "題名に「港の魚市」と入力する", "en": "Type \"Harbor fish market\" in the title" }, "explain": { "ja": "追加の前に行う入力です。", "en": "Input done before adding." } }
       ],
       "grading": {
         "id": "q02-c.rule",
@@ -276,56 +276,56 @@
       },
       "feedbackByOutcome": {
         "correct": {
-          "what": { "ja": "入力→追加→一覧に表示、を自分で確かめられました。「一件追加できた」と記録できます。" },
-          "why": { "ja": "完成の根拠は、報告の言葉ではなく、画面で起きた実際の動作です。" },
-          "next": { "ja": "この章はここまで。持ち帰りカードを受け取りましょう。" }
+          "what": { "ja": "入力→追加→一覧に表示、を自分で確かめられました。「一件追加できた」と記録できます。", "en": "You confirmed input → add → shown in the list yourself. You can record \"one entry could be added.\"" },
+          "why": { "ja": "完成の根拠は、報告の言葉ではなく、画面で起きた実際の動作です。", "en": "The basis for completion is not the words of a report but the actual behavior on screen." },
+          "next": { "ja": "この章はここまで。持ち帰りカードを受け取りましょう。", "en": "That is all for this chapter. Let's receive the take-home card." }
         },
         "report_only": {
-          "what": { "ja": "報告を読んだだけで、画面が動くかは分からないままです。" },
-          "why": { "ja": "「完成しました」は言葉です。動作の確認にはなりません。" },
-          "next": { "ja": "「報告を読む」の札を手順から外しましょう。" }
+          "what": { "ja": "報告を読んだだけで、画面が動くかは分からないままです。", "en": "Just reading the report leaves you not knowing whether the screen works." },
+          "why": { "ja": "「完成しました」は言葉です。動作の確認にはなりません。", "en": "\"It's done\" is words. It is not a check of behavior." },
+          "next": { "ja": "「報告を読む」の札を手順から外しましょう。", "en": "Take the \"read the report\" card out of the steps." }
         },
         "file_count": {
-          "what": { "ja": "ファイルが増えたことは分かっても、画面が動くかは分かりません。" },
-          "why": { "ja": "ファイルの数は動作の証拠ではありません。" },
-          "next": { "ja": "「ファイルを数える」の札を手順から外しましょう。" }
+          "what": { "ja": "ファイルが増えたことは分かっても、画面が動くかは分かりません。", "en": "You learn that files increased, but not whether the screen works." },
+          "why": { "ja": "ファイルの数は動作の証拠ではありません。", "en": "The number of files is not evidence of behavior." },
+          "next": { "ja": "「ファイルを数える」の札を手順から外しましょう。", "en": "Take the \"count files\" card out of the steps." }
         },
         "out_of_scope": {
-          "what": { "ja": "再読み込みでメモが消え、「壊れている」と誤解するかもしれません。" },
-          "why": { "ja": "この段階はメモリ内保存で、消えることは画面に書いてあります。保存は次の章で扱います。" },
-          "next": { "ja": "「再読み込み」の札を手順から外しましょう。" }
+          "what": { "ja": "再読み込みでメモが消え、「壊れている」と誤解するかもしれません。", "en": "The note disappears on reload, and you may wrongly think \"it's broken.\"" },
+          "why": { "ja": "この段階はメモリ内保存で、消えることは画面に書いてあります。保存は次の章で扱います。", "en": "This stage uses in-memory saving, and the screen says it disappears. Saving is handled in the next chapter." },
+          "next": { "ja": "「再読み込み」の札を手順から外しましょう。", "en": "Take the \"reload\" card out of the steps." }
         },
         "no_observation": {
-          "what": { "ja": "操作はしましたが、結果を見ていないので完成と判断できません。" },
-          "why": { "ja": "確認の最後には、期待した結果が出たかを見る手順が必要です。" },
-          "next": { "ja": "一覧に表示されたのを見る札を、最後に加えましょう。" }
+          "what": { "ja": "操作はしましたが、結果を見ていないので完成と判断できません。", "en": "You acted, but you have not seen the result, so you cannot judge it finished." },
+          "why": { "ja": "確認の最後には、期待した結果が出たかを見る手順が必要です。", "en": "The check needs a final step that looks at whether the expected result appeared." },
+          "next": { "ja": "一覧に表示されたのを見る札を、最後に加えましょう。", "en": "Add the card for seeing it appear in the list at the end." }
         },
         "missing_step": {
-          "what": { "ja": "必要な操作が抜けていて、一覧に1件出るところまで再現できません。" },
-          "why": { "ja": "題名の入力・本文の入力・追加の3つがそろって、初めて結果を確かめられます。" },
-          "next": { "ja": "足りない操作の札を手順に加えましょう。" }
+          "what": { "ja": "必要な操作が抜けていて、一覧に1件出るところまで再現できません。", "en": "A needed action is missing, so you cannot reproduce getting one entry in the list." },
+          "why": { "ja": "題名の入力・本文の入力・追加の3つがそろって、初めて結果を確かめられます。", "en": "Only when typing the title, typing the body and adding are all present can you check the result." },
+          "next": { "ja": "足りない操作の札を手順に加えましょう。", "en": "Add the missing action cards to the steps." }
         },
         "order": {
-          "what": { "ja": "必要な札はそろっていますが、この順番では同じ結果を再現できません。" },
-          "why": { "ja": "入力は追加より前、結果を見るのは最後です。" },
-          "next": { "ja": "「上へ」「下へ」で順番を並べ替えましょう。" }
+          "what": { "ja": "必要な札はそろっていますが、この順番では同じ結果を再現できません。", "en": "The needed cards are all there, but this order cannot reproduce the same result." },
+          "why": { "ja": "入力は追加より前、結果を見るのは最後です。", "en": "Input comes before adding, and seeing the result comes last." },
+          "next": { "ja": "「上へ」「下へ」で順番を並べ替えましょう。", "en": "Use \"Up\" and \"Down\" to reorder." }
         }
       },
       "hints": [
-        { "id": "q02-c.h1", "text": { "ja": "完成を判断する根拠は、報告やファイルではなく「画面で起きたこと」です。" } },
-        { "id": "q02-c.h2", "text": { "ja": "入力する札が2枚、押す札が1枚、見る札が1枚あります。再読み込みはこの章では確かめません。" } },
-        { "id": "q02-c.h3", "text": { "ja": "解答例：題名を入力→本文を入力→「追加」を押す→一覧に1件表示されたのを見る（題名と本文の順は入れ替え可）。理由：完了条件の「追加すると一覧に出る」を、自分の操作で確かめる手順だからです。盤面で札を並べてください。" } }
+        { "id": "q02-c.h1", "text": { "ja": "完成を判断する根拠は、報告やファイルではなく「画面で起きたこと」です。", "en": "The basis for judging completion is not a report or files but \"what happened on screen.\"" } },
+        { "id": "q02-c.h2", "text": { "ja": "入力する札が2枚、押す札が1枚、見る札が1枚あります。再読み込みはこの章では確かめません。", "en": "There are two input cards, one press card and one look card. Reloading is not checked in this chapter." } },
+        { "id": "q02-c.h3", "text": { "ja": "解答例：題名を入力→本文を入力→「追加」を押す→一覧に1件表示されたのを見る（題名と本文の順は入れ替え可）。理由：完了条件の「追加すると一覧に出る」を、自分の操作で確かめる手順だからです。盤面で札を並べてください。", "en": "Sample answer: type the title → type the body → press \"Add\" → see one entry appear in the list (title and body may be swapped). Reason: these are steps to confirm, by your own actions, the completion criterion \"adding makes it appear in the list.\" Line up the cards on the board." } }
       ]
     }
   ],
   "takeawayCards": [
-    { "id": "tk-q02-1", "questId": "q02", "title": { "ja": "小さく作る" }, "body": { "ja": "最初は「一件入れて一覧に出る」まで。会員登録や同期は、必要になってから頼む。" } },
-    { "id": "tk-q02-2", "questId": "q02", "title": { "ja": "作業場所" }, "body": { "ja": "練習は専用の空フォルダで。動いていても、許可していない場所の変更は採用しない。" } },
-    { "id": "tk-q02-3", "questId": "q02", "title": { "ja": "動く見本" }, "body": { "ja": "「できました」ではなく「一件追加できた」を記録する。設計の報告と動く見本を分ける。" } }
+    { "id": "tk-q02-1", "questId": "q02", "title": { "ja": "小さく作る", "en": "Build small" }, "body": { "ja": "最初は「一件入れて一覧に出る」まで。会員登録や同期は、必要になってから頼む。", "en": "At first only up to \"add one and it shows in the list.\" Ask for sign-up and sync once they are needed." } },
+    { "id": "tk-q02-2", "questId": "q02", "title": { "ja": "作業場所", "en": "Work location" }, "body": { "ja": "練習は専用の空フォルダで。動いていても、許可していない場所の変更は採用しない。", "en": "Practice in a dedicated empty folder. Even if it works, do not adopt changes in a location that was not permitted." } },
+    { "id": "tk-q02-3", "questId": "q02", "title": { "ja": "動く見本", "en": "A working sample" }, "body": { "ja": "「できました」ではなく「一件追加できた」を記録する。設計の報告と動く見本を分ける。", "en": "Record \"one entry could be added,\" not \"it's done.\" Keep design reports and working samples apart." } }
   ],
   "takeawayTemplate": {
-    "title": { "ja": "動作確認の記録" },
-    "text": { "ja": "確かめた版：\n操作：題名を入力 → 本文を入力 → 追加\n期待：一覧に1件表示される\n実際：\n作業場所：" }
+    "title": { "ja": "動作確認の記録", "en": "Behavior check record" },
+    "text": { "ja": "確かめた版：\n操作：題名を入力 → 本文を入力 → 追加\n期待：一覧に1件表示される\n実際：\n作業場所：", "en": "Version checked:\nSteps: type title → type body → Add\nExpected: one entry appears in the list\nActual:\nWork location:" }
   },
   "practiceCardId": "pc-q02",
   "sourceIds": ["S1", "S3", "S4"],

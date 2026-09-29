@@ -7,7 +7,7 @@
     "supportsClaimIds": ["q01", "q02", "q03", "q04", "q05", "q06"],
     "checkedAt": null,
     "status": "unchecked",
-    "note": { "ja": "目的・関連情報・制約・完了条件を持つ依頼、実行・検査・レビューの考え方。仕様書では 2026-09-29 に取得と記録されているが、この実装では到達確認をしていない。元URLは developers.openai.com/codex/... から転送されたと仕様書にあるが、正確なパスは未記載のため null。" }
+    "note": { "ja": "目的・関連情報・制約・完了条件を持つ依頼、実行・検査・レビューの考え方。仕様書では 2026-09-29 に取得と記録されているが、この実装では到達確認をしていない。元URLは developers.openai.com/codex/... から転送されたと仕様書にあるが、正確なパスは未記載のため null。", "en": "How to think about requests that have a goal, related information, constraints and completion criteria, and about running, checking and reviewing. The spec records it as retrieved on 2026-09-29, but this implementation has not confirmed that it is reachable. The spec says the original URL was redirected from developers.openai.com/codex/..., but the exact path is not stated, so it is null." }
   },
   {
     "id": "S2",
@@ -17,7 +17,7 @@
     "supportsClaimIds": ["glossary.agents-md"],
     "checkedAt": null,
     "status": "unchecked",
-    "note": { "ja": "Codex が AGENTS.md からプロジェクト指示を読み込むこと。上級編A01の根拠。この実装では到達確認をしていない。" }
+    "note": { "ja": "Codex が AGENTS.md からプロジェクト指示を読み込むこと。上級編A01の根拠。この実装では到達確認をしていない。", "en": "Codex reading project instructions from AGENTS.md. The basis for advanced A01. This implementation has not confirmed that it is reachable." }
   },
   {
     "id": "S3",
@@ -27,7 +27,7 @@
     "supportsClaimIds": ["route.desktop_windows_codex", "q02"],
     "checkedAt": null,
     "status": "unchecked",
-    "note": { "ja": "Windows 上の公式デスクトップ環境の案内。画面名称を古い文書名で固定しない根拠。この実装では到達確認も実機確認もしていない。" }
+    "note": { "ja": "Windows 上の公式デスクトップ環境の案内。画面名称を古い文書名で固定しない根拠。この実装では到達確認も実機確認もしていない。", "en": "A guide to the official desktop environment on Windows. The basis for not fixing screen names to old document names. This implementation has confirmed neither reachability nor behavior on a real device." }
   },
   {
     "id": "S4",
@@ -37,7 +37,7 @@
     "supportsClaimIds": ["route.desktop_windows_codex", "q02"],
     "checkedAt": null,
     "status": "unchecked",
-    "note": { "ja": "公式の導入経路。ゲーム内から認証情報を集めず、公式環境を利用者自身が使う設計の参照。この実装では到達確認をしていない。" }
+    "note": { "ja": "公式の導入経路。ゲーム内から認証情報を集めず、公式環境を利用者自身が使う設計の参照。この実装では到達確認をしていない。", "en": "The official way to get started. A reference for a design in which the game does not collect credentials and the user uses the official environment themselves. This implementation has not confirmed that it is reachable." }
   },
   {
     "id": "S5",
@@ -47,7 +47,7 @@
     "supportsClaimIds": ["project.context"],
     "checkedAt": null,
     "status": "unchecked",
-    "note": { "ja": "制作背景の参考資料。採択や審査の結果を保証するものではない。教材の内容の根拠には使っていない。" }
+    "note": { "ja": "制作背景の参考資料。採択や審査の結果を保証するものではない。教材の内容の根拠には使っていない。", "en": "A reference on the background of the production. It does not guarantee the result of any selection or review. It is not used as a basis for the teaching content." }
   },
   {
     "id": "S6",
@@ -57,6 +57,6 @@
     "supportsClaimIds": ["app.naming"],
     "checkedAt": null,
     "status": "unchecked",
-    "note": { "ja": "名称・ロゴ等の扱いと誤認回避の参考。個別の名称使用許可を得たという意味ではない。本作は OpenAI のロゴを使っていない。" }
+    "note": { "ja": "名称・ロゴ等の扱いと誤認回避の参考。個別の名称使用許可を得たという意味ではない。本作は OpenAI のロゴを使っていない。", "en": "A reference on the handling of names, logos and so on, and on avoiding misunderstanding. It does not mean permission to use any specific name was obtained. This work does not use OpenAI's logo." }
   }
 ]

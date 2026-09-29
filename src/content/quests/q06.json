@@ -2,35 +2,35 @@
   "id": "q06",
   "revision": "1",
   "prerequisite": "q05",
-  "title": { "ja": "灯台へ届ける日" },
-  "place": { "ja": "灯台" },
-  "incident": { "ja": "番人が完了報告を盲信したり、軽微な装飾で止めたりする。" },
-  "notesState": { "ja": "完成見本・README・確認記録をまとめる" },
-  "sample": { "ja": "完成見本：灯台メモと一緒に、目的・起動と使い方・確認済みと未確認・残件を書いた引き渡しパックがある。秘密情報や作業ログの全文は入っていない。" },
+  "title": { "ja": "灯台へ届ける日", "en": "The Day We Deliver to the Lighthouse" },
+  "place": { "ja": "灯台", "en": "Lighthouse" },
+  "incident": { "ja": "番人が完了報告を盲信したり、軽微な装飾で止めたりする。", "en": "The keeper blindly trusts a completion report, or stops the work over a minor decoration." },
+  "notesState": { "ja": "完成見本・README・確認記録をまとめる", "en": "Put together the sample answer, README and check record" },
+  "sample": { "ja": "完成見本：灯台メモと一緒に、目的・起動と使い方・確認済みと未確認・残件を書いた引き渡しパックがある。秘密情報や作業ログの全文は入っていない。", "en": "Sample answer: a handover pack that comes with the lighthouse notes and contains the goal, how to start and use it, what is checked and unchecked, and what remains. It does not include secrets or the full text of the work log." },
   "objectives": [
-    { "id": "q06-o1", "text": { "ja": "目的に関わる不具合と、後でよい小さな改善を分けられる" } },
-    { "id": "q06-o2", "text": { "ja": "起動方法・確認記録・残件をまとめて、他の人へ渡せる" } },
-    { "id": "q06-o3", "text": { "ja": "報告の言葉だけでも、装飾の細部だけでもなく、根拠で届けるかを決められる" } }
+    { "id": "q06-o1", "text": { "ja": "目的に関わる不具合と、後でよい小さな改善を分けられる", "en": "You can separate bugs related to the goal from small improvements that can wait" } },
+    { "id": "q06-o2", "text": { "ja": "起動方法・確認記録・残件をまとめて、他の人へ渡せる", "en": "You can hand over how to start it, the check record and what remains as one set to another person" } },
+    { "id": "q06-o3", "text": { "ja": "報告の言葉だけでも、装飾の細部だけでもなく、根拠で届けるかを決められる", "en": "You decide whether to deliver based on evidence, not just the words of a report or the details of decoration" } }
   ],
   "briefScene": {
     "id": "q06-brief",
     "backgroundAssetId": "BG06",
     "lines": [
-      { "speaker": "narrator", "text": { "ja": "灯台の入口には、古い確認装置「完了印の番人」が立っている。" } },
-      { "speaker": "resident", "name": { "ja": "完了印の番人（灯台の確認装置）" }, "text": { "ja": "報告書ニ「完了」ト アリ。通過ヲ 許可。……ボタンノ 角ガ 丸クナイ。通過ヲ 拒否。" } },
-      { "speaker": "ritsu", "expression": "think", "text": { "ja": "言葉だけで通して、角の丸みで止める。どちらも、確かめる所がずれている。" } },
-      { "speaker": "koto", "expression": "normal", "text": { "ja": "何が必須で、何が後でよいのか。確認記録と一緒に渡せば、番人も判断できます。" } },
-      { "speaker": "nagi", "expression": "think", "text": { "ja": "灯台メモを、次の人にちゃんと渡せる形にしよう。" } }
+      { "speaker": "narrator", "text": { "ja": "灯台の入口には、古い確認装置「完了印の番人」が立っている。", "en": "At the entrance of the lighthouse stands an old checking device, the \"Seal Keeper.\"" } },
+      { "speaker": "resident", "name": { "ja": "完了印の番人（灯台の確認装置）", "en": "Seal Keeper (the lighthouse's checking device)" }, "text": { "ja": "報告書ニ「完了」ト アリ。通過ヲ 許可。……ボタンノ 角ガ 丸クナイ。通過ヲ 拒否。", "en": "REPORT SAYS \"DONE.\" PASSAGE: GRANTED. ...BUTTON CORNERS ARE NOT ROUND. PASSAGE: DENIED." } },
+      { "speaker": "ritsu", "expression": "think", "text": { "ja": "言葉だけで通して、角の丸みで止める。どちらも、確かめる所がずれている。", "en": "Passing on words alone and stopping over rounded corners. Both look at the wrong place." } },
+      { "speaker": "koto", "expression": "normal", "text": { "ja": "何が必須で、何が後でよいのか。確認記録と一緒に渡せば、番人も判断できます。", "en": "What is required and what can wait? If you hand it over with the check record, the keeper can decide too." } },
+      { "speaker": "nagi", "expression": "think", "text": { "ja": "灯台メモを、次の人にちゃんと渡せる形にしよう。", "en": "Let's put the lighthouse notes into a form we can properly hand to the next person." } }
     ]
   },
   "clearScene": {
     "id": "q06-clear",
     "backgroundAssetId": "BG06",
     "lines": [
-      { "speaker": "narrator", "text": { "ja": "番人の目盛りが、ゆっくりと正しい位置に戻っていく。" } },
-      { "speaker": "resident", "name": { "ja": "完了印の番人（灯台の確認装置）" }, "text": { "ja": "必須条件ヲ 確認。残件ヲ 記録。……引キ渡シヲ 受理。" } },
-      { "speaker": "koto", "expression": "happy", "text": { "ja": "確かめたことと、まだのことを、分けて渡せました。" } },
-      { "speaker": "nagi", "expression": "happy", "text": { "ja": "灯台の上へ行こう。灯りをともす時間だ。" } }
+      { "speaker": "narrator", "text": { "ja": "番人の目盛りが、ゆっくりと正しい位置に戻っていく。", "en": "The keeper's dial slowly returns to the right position." } },
+      { "speaker": "resident", "name": { "ja": "完了印の番人（灯台の確認装置）", "en": "Seal Keeper (the lighthouse's checking device)" }, "text": { "ja": "必須条件ヲ 確認。残件ヲ 記録。……引キ渡シヲ 受理。", "en": "REQUIRED CONDITIONS: CONFIRMED. REMAINING ITEMS: RECORDED. ...HANDOVER: ACCEPTED." } },
+      { "speaker": "koto", "expression": "happy", "text": { "ja": "確かめたことと、まだのことを、分けて渡せました。", "en": "You handed over what was checked and what is still pending, separately." } },
+      { "speaker": "nagi", "expression": "happy", "text": { "ja": "灯台の上へ行こう。灯りをともす時間だ。", "en": "Let's go up the lighthouse. It is time to light the lamp." } }
     ]
   },
   "activities": [
@@ -40,53 +40,53 @@
       "objectiveId": "q06-o1",
       "type": "triage_decision",
       "required": true,
-      "title": { "ja": "Q06-A 必須と軽微を仕分ける" },
-      "prompt": { "ja": "番人の前に4件の項目があります。それぞれ「進める」「今直す」「確認する」「後で改善に回す」のどれにするかと、その理由を選んでください。" },
+      "title": { "ja": "Q06-A 必須と軽微を仕分ける", "en": "Q06-A Sort required from minor" },
+      "prompt": { "ja": "番人の前に4件の項目があります。それぞれ「進める」「今直す」「確認する」「後で改善に回す」のどれにするかと、その理由を選んでください。", "en": "Four items stand before the keeper. For each, choose whether to \"Proceed,\" \"Fix now,\" \"Check\" or \"Leave for later improvement,\" and choose the reason." },
       "decisions": [
-        { "id": "proceed", "label": { "ja": "進める" }, "explain": { "ja": "必要な根拠がそろっていて、止める理由がないとき。" } },
-        { "id": "fix_now", "label": { "ja": "今直す" }, "explain": { "ja": "目的に関わる不具合が確かめられたとき。" } },
-        { "id": "verify", "label": { "ja": "確認する" }, "explain": { "ja": "判断に必要な根拠が足りないとき。" } },
-        { "id": "later", "label": { "ja": "後で改善に回す" }, "explain": { "ja": "目的には関わらない、小さな改善点のとき。" } }
+        { "id": "proceed", "label": { "ja": "進める", "en": "Proceed" }, "explain": { "ja": "必要な根拠がそろっていて、止める理由がないとき。", "en": "When the needed evidence is complete and there is no reason to stop." } },
+        { "id": "fix_now", "label": { "ja": "今直す", "en": "Fix now" }, "explain": { "ja": "目的に関わる不具合が確かめられたとき。", "en": "When a bug related to the goal has been confirmed." } },
+        { "id": "verify", "label": { "ja": "確認する", "en": "Check" }, "explain": { "ja": "判断に必要な根拠が足りないとき。", "en": "When the evidence needed to decide is lacking." } },
+        { "id": "later", "label": { "ja": "後で改善に回す", "en": "Leave for later improvement" }, "explain": { "ja": "目的には関わらない、小さな改善点のとき。", "en": "When it is a small improvement not related to the goal." } }
       ],
       "cases": [
         {
           "id": "i1",
-          "title": { "ja": "項目1：再読み込みでメモが消える" },
-          "evidence": [{ "ja": "現在の版で、追加→再読み込み→一覧が空になる。2回試して2回とも同じ。" }],
+          "title": { "ja": "項目1：再読み込みでメモが消える", "en": "Item 1: Notes disappear on reload" },
+          "evidence": [{ "ja": "現在の版で、追加→再読み込み→一覧が空になる。2回試して2回とも同じ。", "en": "On the current version, add → reload → the list is empty. Tried twice, the same both times." }],
           "reasons": [
-            { "id": "i1-core", "label": { "ja": "メモが残らず、目的に関わる不具合で、2回再現しているから" }, "explain": { "ja": "記録は残すためのものです。再現もしていて、根拠は十分です。" } },
-            { "id": "i1-later", "label": { "ja": "追加はできるので、保存は後の版でよいから" }, "explain": { "ja": "保存できないメモ帳は、目的を果たせません。" } },
-            { "id": "i1-more", "label": { "ja": "まだ確かめ方が足りないから" }, "explain": { "ja": "2回再現していて、確かめる段階はもう終わっています。" } }
+            { "id": "i1-core", "label": { "ja": "メモが残らず、目的に関わる不具合で、2回再現しているから", "en": "Because notes are not kept, it is a bug related to the goal, and it reproduces twice" }, "explain": { "ja": "記録は残すためのものです。再現もしていて、根拠は十分です。", "en": "A record is meant to be kept. It also reproduces, so the evidence is enough." } },
+            { "id": "i1-later", "label": { "ja": "追加はできるので、保存は後の版でよいから", "en": "Because adding works, so saving can wait for a later version" }, "explain": { "ja": "保存できないメモ帳は、目的を果たせません。", "en": "A notepad that cannot save notes does not fulfill its goal." } },
+            { "id": "i1-more", "label": { "ja": "まだ確かめ方が足りないから", "en": "Because the way of checking is still insufficient" }, "explain": { "ja": "2回再現していて、確かめる段階はもう終わっています。", "en": "It reproduces twice, and the checking stage is already over." } }
           ]
         },
         {
           "id": "i2",
-          "title": { "ja": "項目2：ボタンの角が丸くない" },
-          "evidence": [{ "ja": "見本ではボタンの角が丸い。押すと追加は正しく動く。" }],
+          "title": { "ja": "項目2：ボタンの角が丸くない", "en": "Item 2: The button corners are not round" },
+          "evidence": [{ "ja": "見本ではボタンの角が丸い。押すと追加は正しく動く。", "en": "In the sample the button corners are round. Pressing it adds correctly." }],
           "reasons": [
-            { "id": "i2-minor", "label": { "ja": "目的に関わらない見た目の点で、動作は正しいから" }, "explain": { "ja": "押すと追加は正しく動きます。目的は妨げられていません。" } },
-            { "id": "i2-block", "label": { "ja": "見本と違うので、直すまで先へ進めないから" }, "explain": { "ja": "見た目の小さな違いで、動く作品を止めてはいけません。" } },
-            { "id": "i2-forget", "label": { "ja": "小さな点なので、記録せずに忘れてよいから" }, "explain": { "ja": "小さな点も、残件として記録すれば次の人に伝わります。" } }
+            { "id": "i2-minor", "label": { "ja": "目的に関わらない見た目の点で、動作は正しいから", "en": "Because it is a point of appearance not related to the goal, and the behavior is correct" }, "explain": { "ja": "押すと追加は正しく動きます。目的は妨げられていません。", "en": "Pressing it adds correctly. The goal is not hindered." } },
+            { "id": "i2-block", "label": { "ja": "見本と違うので、直すまで先へ進めないから", "en": "Because it differs from the sample, so it cannot move on until fixed" }, "explain": { "ja": "見た目の小さな違いで、動く作品を止めてはいけません。", "en": "You must not stop a working piece of work over a small difference in appearance." } },
+            { "id": "i2-forget", "label": { "ja": "小さな点なので、記録せずに忘れてよいから", "en": "Because it is a small point, so it can be forgotten without recording" }, "explain": { "ja": "小さな点も、残件として記録すれば次の人に伝わります。", "en": "Even a small point reaches the next person if you record it as a remaining item." } }
           ]
         },
         {
           "id": "i3",
-          "title": { "ja": "項目3：追加と空白題名の拒否" },
-          "evidence": [{ "ja": "現在の版で、追加・空白題名の拒否・通常題名の登録を確認し、すべて成功。" }],
+          "title": { "ja": "項目3：追加と空白題名の拒否", "en": "Item 3: Adding and rejecting blank titles" },
+          "evidence": [{ "ja": "現在の版で、追加・空白題名の拒否・通常題名の登録を確認し、すべて成功。", "en": "On the current version, adding, rejecting a blank title and registering a normal title were checked, and all succeeded." }],
           "reasons": [
-            { "id": "i3-evidence", "label": { "ja": "現在の版で、必要な動作をすべて確かめて成功しているから" }, "explain": { "ja": "対象の版・検査・結果がそろっています。" } },
-            { "id": "i3-recheck", "label": { "ja": "念のため、もう一度全部確かめ直したいから" }, "explain": { "ja": "確かめ終わった動作を、止める理由なく繰り返すことになります。" } },
-            { "id": "i3-wait", "label": { "ja": "何か問題が見つかるまで、止めておくべきだから" }, "explain": { "ja": "問題が見つかっていないのに止めても、根拠になりません。" } }
+            { "id": "i3-evidence", "label": { "ja": "現在の版で、必要な動作をすべて確かめて成功しているから", "en": "Because all the needed actions were checked and succeeded on the current version" }, "explain": { "ja": "対象の版・検査・結果がそろっています。", "en": "The target version, the checks and the results are all there." } },
+            { "id": "i3-recheck", "label": { "ja": "念のため、もう一度全部確かめ直したいから", "en": "Because just in case, I want to check everything once more" }, "explain": { "ja": "確かめ終わった動作を、止める理由なく繰り返すことになります。", "en": "You would repeat actions already checked, with no reason to stop." } },
+            { "id": "i3-wait", "label": { "ja": "何か問題が見つかるまで、止めておくべきだから", "en": "Because it should be held until some problem is found" }, "explain": { "ja": "問題が見つかっていないのに止めても、根拠になりません。", "en": "Stopping when no problem has been found is not grounds." } }
           ]
         },
         {
           "id": "i4",
-          "title": { "ja": "項目4：「全部完了」の報告" },
-          "evidence": [{ "ja": "報告書に「全部完了しました」とある。どの版で何を確かめたかの記録はない。" }],
+          "title": { "ja": "項目4：「全部完了」の報告", "en": "Item 4: The report \"All done\"" },
+          "evidence": [{ "ja": "報告書に「全部完了しました」とある。どの版で何を確かめたかの記録はない。", "en": "The report says \"Everything is done.\" There is no record of which version was checked for what." }],
           "reasons": [
-            { "id": "i4-evidence", "label": { "ja": "どの版で何を確かめたかの記録がなく、判断できないから" }, "explain": { "ja": "根拠がないので、まず確かめます。" } },
-            { "id": "i4-trust", "label": { "ja": "「全部完了しました」と書かれているから" }, "explain": { "ja": "言葉だけを信じると、壊れた作品も通ってしまいます。" } },
-            { "id": "i4-broken", "label": { "ja": "記録がないので、壊れているものとして直し始めるから" }, "explain": { "ja": "壊れていると確かめたわけでもありません。" } }
+            { "id": "i4-evidence", "label": { "ja": "どの版で何を確かめたかの記録がなく、判断できないから", "en": "Because there is no record of what was checked on which version, so it cannot be judged" }, "explain": { "ja": "根拠がないので、まず確かめます。", "en": "There is no evidence, so check first." } },
+            { "id": "i4-trust", "label": { "ja": "「全部完了しました」と書かれているから", "en": "Because it says \"Everything is done\"" }, "explain": { "ja": "言葉だけを信じると、壊れた作品も通ってしまいます。", "en": "If you trust only words, even broken work gets through." } },
+            { "id": "i4-broken", "label": { "ja": "記録がないので、壊れているものとして直し始めるから", "en": "Because there is no record, so it will be treated as broken and fixing starts" }, "explain": { "ja": "壊れていると確かめたわけでもありません。", "en": "You have not confirmed that it is broken either." } }
           ]
         }
       ],
@@ -122,50 +122,50 @@
       },
       "feedbackByOutcome": {
         "correct": {
-          "what": { "ja": "保存の不具合は今直り、角の丸みは残件として記録され、確認済みの動作は先へ進み、根拠のない報告は確かめられます。" },
-          "why": { "ja": "目的に関わるか、根拠があるかの2つで仕分けています。" },
-          "next": { "ja": "次は、引き渡しパックをまとめます。" }
+          "what": { "ja": "保存の不具合は今直り、角の丸みは残件として記録され、確認済みの動作は先へ進み、根拠のない報告は確かめられます。", "en": "The saving bug is fixed now, the round corners are recorded as a remaining item, checked actions move ahead, and the report without evidence gets checked." },
+          "why": { "ja": "目的に関わるか、根拠があるかの2つで仕分けています。", "en": "You sort by two questions: does it relate to the goal, and is there evidence." },
+          "next": { "ja": "次は、引き渡しパックをまとめます。", "en": "Next, put together the handover pack." }
         },
         "blocker_ignored": {
-          "what": { "ja": "受け取った人のメモが、再読み込みのたびに消えてしまいます。" },
-          "why": { "ja": "メモを残すことは灯台メモの目的そのものです。2回とも再現しています。" },
-          "next": { "ja": "項目1の判断と理由を見直しましょう。" }
+          "what": { "ja": "受け取った人のメモが、再読み込みのたびに消えてしまいます。", "en": "The recipient's notes would disappear on every reload." },
+          "why": { "ja": "メモを残すことは灯台メモの目的そのものです。2回とも再現しています。", "en": "Keeping notes is the very goal of the lighthouse notes. It reproduces both times." },
+          "next": { "ja": "項目1の判断と理由を見直しましょう。", "en": "Review the decision and reason for item 1." }
         },
         "report_trusted": {
-          "what": { "ja": "壊れた作品でも「完了」と書いてあれば通ってしまいます。番人の誤りと同じです。" },
-          "why": { "ja": "項目4には、どの版で何を確かめたかの記録がありません。" },
-          "next": { "ja": "項目4の判断と理由を見直しましょう。" }
+          "what": { "ja": "壊れた作品でも「完了」と書いてあれば通ってしまいます。番人の誤りと同じです。", "en": "Even broken work would pass if it says \"done.\" That is the same mistake as the keeper's." },
+          "why": { "ja": "項目4には、どの版で何を確かめたかの記録がありません。", "en": "Item 4 has no record of what was checked on which version." },
+          "next": { "ja": "項目4の判断と理由を見直しましょう。", "en": "Review the decision and reason for item 4." }
         },
         "minor_as_blocker": {
-          "what": { "ja": "正しく動く作品が、角の丸みのために届けられません。番人のもう一つの誤りと同じです。" },
-          "why": { "ja": "角の丸みは目的に関わらない見た目の点で、押すと正しく動くことも分かっています。" },
-          "next": { "ja": "項目2の判断と理由を見直しましょう。" }
+          "what": { "ja": "正しく動く作品が、角の丸みのために届けられません。番人のもう一つの誤りと同じです。", "en": "Working work could not be delivered because of round corners. That is the keeper's other mistake." },
+          "why": { "ja": "角の丸みは目的に関わらない見た目の点で、押すと正しく動くことも分かっています。", "en": "Round corners are a point of appearance not related to the goal, and it is also known that it works correctly when pressed." },
+          "next": { "ja": "項目2の判断と理由を見直しましょう。", "en": "Review the decision and reason for item 2." }
         },
         "over_cautious": {
-          "what": { "ja": "確かめ終わった動作が止まり、作業が先へ進みません。" },
-          "why": { "ja": "項目3は、現在の版ですべて成功しています。止める理由がありません。" },
-          "next": { "ja": "項目3の判断と理由を見直しましょう。" }
+          "what": { "ja": "確かめ終わった動作が止まり、作業が先へ進みません。", "en": "Actions already checked would stop and the work would not move forward." },
+          "why": { "ja": "項目3は、現在の版ですべて成功しています。止める理由がありません。", "en": "Item 3 succeeded fully on the current version. There is no reason to stop." },
+          "next": { "ja": "項目3の判断と理由を見直しましょう。", "en": "Review the decision and reason for item 3." }
         },
         "already_confirmed": {
-          "what": { "ja": "すでに2回再現できた不具合を、また確かめるだけで直す作業が始まりません。" },
-          "why": { "ja": "項目1は根拠がそろっています。今必要なのは直すことです。" },
-          "next": { "ja": "項目1の判断と理由を見直しましょう。" }
+          "what": { "ja": "すでに2回再現できた不具合を、また確かめるだけで直す作業が始まりません。", "en": "You would only check a bug that has already reproduced twice, and the fixing work would not begin." },
+          "why": { "ja": "項目1は根拠がそろっています。今必要なのは直すことです。", "en": "Item 1 has the evidence it needs. What is needed now is to fix it." },
+          "next": { "ja": "項目1の判断と理由を見直しましょう。", "en": "Review the decision and reason for item 1." }
         },
         "note_remaining": {
-          "what": { "ja": "角の丸みが記録に残らず、次の人が気づかないまま忘れられます。" },
-          "why": { "ja": "小さな改善点は、止めずに「後で改善に回す」として残件に残します。" },
-          "next": { "ja": "項目2の判断と理由を見直しましょう。" }
+          "what": { "ja": "角の丸みが記録に残らず、次の人が気づかないまま忘れられます。", "en": "The round corners would not stay in the record, and would be forgotten without the next person noticing." },
+          "why": { "ja": "小さな改善点は、止めずに「後で改善に回す」として残件に残します。", "en": "A small improvement point does not stop the work; leave it as a remaining item under \"leave for later improvement.\"" },
+          "next": { "ja": "項目2の判断と理由を見直しましょう。", "en": "Review the decision and reason for item 2." }
         },
         "no_evidence": {
-          "what": { "ja": "根拠がない報告のまま、直す・後回しにするを決めてしまいます。" },
-          "why": { "ja": "項目4で分かっているのは「記録がない」ことだけです。まず確かめます。" },
-          "next": { "ja": "項目4の判断と理由を見直しましょう。" }
+          "what": { "ja": "根拠がない報告のまま、直す・後回しにするを決めてしまいます。", "en": "You would decide to fix or postpone based on a report with no evidence." },
+          "why": { "ja": "項目4で分かっているのは「記録がない」ことだけです。まず確かめます。", "en": "All that is known about item 4 is that \"there is no record.\" Check first." },
+          "next": { "ja": "項目4の判断と理由を見直しましょう。", "en": "Review the decision and reason for item 4." }
         }
       },
       "hints": [
-        { "id": "q06-a.h1", "text": { "ja": "2つの問いで仕分けます。「目的に関わるか」「確かめた根拠があるか」。" } },
-        { "id": "q06-a.h2", "text": { "ja": "メモを残すのが目的です。項目1と2のうち、目的を妨げるのはどちらでしょう。項目4は、記録があるでしょうか。理由も、その項目の事実に合うものを選びます。" } },
-        { "id": "q06-a.h3", "text": { "ja": "解答例：項目1＝今直す（メモが残らず、目的に関わる不具合）、項目2＝後で改善に回す（目的に関わらない見た目の点）、項目3＝進める（現在の版で確認済み）、項目4＝確認する（版と検査の記録がない）。盤面で選んでください。" } }
+        { "id": "q06-a.h1", "text": { "ja": "2つの問いで仕分けます。「目的に関わるか」「確かめた根拠があるか」。", "en": "You sort with two questions: \"does it relate to the goal\" and \"is there checked evidence.\"" } },
+        { "id": "q06-a.h2", "text": { "ja": "メモを残すのが目的です。項目1と2のうち、目的を妨げるのはどちらでしょう。項目4は、記録があるでしょうか。理由も、その項目の事実に合うものを選びます。", "en": "The goal is to keep notes. Of items 1 and 2, which one hinders the goal? For item 4, is there a record? Choose the reason that also fits the facts of that item." } },
+        { "id": "q06-a.h3", "text": { "ja": "解答例：項目1＝今直す（メモが残らず、目的に関わる不具合）、項目2＝後で改善に回す（目的に関わらない見た目の点）、項目3＝進める（現在の版で確認済み）、項目4＝確認する（版と検査の記録がない）。盤面で選んでください。", "en": "Sample answer: item 1 = fix now (notes are not kept, a bug related to the goal), item 2 = leave for later improvement (a point of appearance not related to the goal), item 3 = proceed (checked on the current version), item 4 = check (no record of version and checks). Choose on the board." } }
       ]
     },
     {
@@ -174,24 +174,24 @@
       "objectiveId": "q06-o2",
       "type": "prompt_builder",
       "required": true,
-      "title": { "ja": "Q06-B 引き渡しパックをまとめる" },
-      "prompt": { "ja": "灯台メモを次の人へ渡すための引き渡しパックを組み立ててください。入れてはいけない札は置かずに残します。" },
+      "title": { "ja": "Q06-B 引き渡しパックをまとめる", "en": "Q06-B Put together the handover pack" },
+      "prompt": { "ja": "灯台メモを次の人へ渡すための引き渡しパックを組み立ててください。入れてはいけない札は置かずに残します。", "en": "Build the handover pack for handing the lighthouse notes to the next person. Leave the cards that must not go in unplaced." },
       "slots": [
-        { "id": "purpose", "label": { "ja": "目的" }, "question": { "ja": "これは何のためのもの？" } },
-        { "id": "run", "label": { "ja": "起動と使い方" }, "question": { "ja": "どう開いて、どう使う？" } },
-        { "id": "checked", "label": { "ja": "確認済み・未確認" }, "question": { "ja": "何を確かめて、何がまだ？" } },
-        { "id": "remaining", "label": { "ja": "残件" }, "question": { "ja": "後でやることは？" } }
+        { "id": "purpose", "label": { "ja": "目的", "en": "Goal" }, "question": { "ja": "これは何のためのもの？", "en": "What is it for?" } },
+        { "id": "run", "label": { "ja": "起動と使い方", "en": "How to start and use" }, "question": { "ja": "どう開いて、どう使う？", "en": "How do you open it and use it?" } },
+        { "id": "checked", "label": { "ja": "確認済み・未確認", "en": "Checked and unchecked" }, "question": { "ja": "何を確かめて、何がまだ？", "en": "What was checked, and what is still pending?" } },
+        { "id": "remaining", "label": { "ja": "残件", "en": "Remaining items" }, "question": { "ja": "後でやることは？", "en": "What is left to do later?" } }
       ],
       "cards": [
-        { "id": "q06b-unchecked", "label": { "ja": "未確認：スマートフォンの画面幅での表示" }, "explain": { "ja": "まだ確かめていないことを、正直に書きます。" } },
-        { "id": "q06b-secret", "label": { "ja": "作業に使ったアカウントのパスワードとAPIキー" }, "explain": { "ja": "秘密情報は、引き渡しパックに絶対に入れません。" } },
-        { "id": "q06b-purpose", "label": { "ja": "港町の依頼を題名と本文で残し、一覧で見返すための小さなメモ帳" }, "explain": { "ja": "受け取った人が、何のためのものか分かります。" } },
-        { "id": "q06b-run", "label": { "ja": "index.html をブラウザで開く。題名と本文を入れて「追加」を押す" }, "explain": { "ja": "受け取った人が、自分で動かせます。" } },
-        { "id": "q06b-log", "label": { "ja": "作業中のやり取りとログの全文" }, "explain": { "ja": "長すぎて要点が伝わらず、個人情報が混ざるおそれもあります。要点だけをまとめます。" } },
-        { "id": "q06b-checked", "label": { "ja": "確認済み（v0.4）：追加・再読み込み後の保持・空白題名の拒否・通常題名の登録" }, "explain": { "ja": "どの版で何を確かめたかが分かります。" } },
-        { "id": "q06b-overclaim", "label": { "ja": "すべて完璧に動作します。未確認の点はありません" }, "explain": { "ja": "確かめていないことまで確かめたことにしてしまいます。" } },
-        { "id": "q06b-remaining", "label": { "ja": "残件：ボタンの角の丸み。削除と編集は未実装" }, "explain": { "ja": "後でやることを、隠さずに渡します。" } },
-        { "id": "q06b-storage", "label": { "ja": "保存はこのブラウザの中だけ。別のブラウザでは別の保存場所になる" }, "explain": { "ja": "使い方の注意として役立ちます。起動と使い方の欄に加えてもかまいません。" } }
+        { "id": "q06b-unchecked", "label": { "ja": "未確認：スマートフォンの画面幅での表示", "en": "Unchecked: how it looks on a smartphone screen width" }, "explain": { "ja": "まだ確かめていないことを、正直に書きます。", "en": "Write honestly what has not yet been checked." } },
+        { "id": "q06b-secret", "label": { "ja": "作業に使ったアカウントのパスワードとAPIキー", "en": "The password and API key of the account used for the work" }, "explain": { "ja": "秘密情報は、引き渡しパックに絶対に入れません。", "en": "Secrets never go into a handover pack." } },
+        { "id": "q06b-purpose", "label": { "ja": "港町の依頼を題名と本文で残し、一覧で見返すための小さなメモ帳", "en": "A small notepad for keeping harbor-town requests as a title and body and looking back at them in a list" }, "explain": { "ja": "受け取った人が、何のためのものか分かります。", "en": "The recipient can tell what it is for." } },
+        { "id": "q06b-run", "label": { "ja": "index.html をブラウザで開く。題名と本文を入れて「追加」を押す", "en": "Open index.html in a browser. Enter a title and body and press \"Add\"" }, "explain": { "ja": "受け取った人が、自分で動かせます。", "en": "The recipient can run it themselves." } },
+        { "id": "q06b-log", "label": { "ja": "作業中のやり取りとログの全文", "en": "The full text of the exchanges and logs during the work" }, "explain": { "ja": "長すぎて要点が伝わらず、個人情報が混ざるおそれもあります。要点だけをまとめます。", "en": "It is too long to convey the key points, and personal information might be mixed in. Summarize only the key points." } },
+        { "id": "q06b-checked", "label": { "ja": "確認済み（v0.4）：追加・再読み込み後の保持・空白題名の拒否・通常題名の登録", "en": "Checked (v0.4): adding, keeping after reload, rejecting a blank title, registering a normal title" }, "explain": { "ja": "どの版で何を確かめたかが分かります。", "en": "You can tell what was checked on which version." } },
+        { "id": "q06b-overclaim", "label": { "ja": "すべて完璧に動作します。未確認の点はありません", "en": "Everything works perfectly. There are no unchecked points" }, "explain": { "ja": "確かめていないことまで確かめたことにしてしまいます。", "en": "You would treat what you did not check as checked." } },
+        { "id": "q06b-remaining", "label": { "ja": "残件：ボタンの角の丸み。削除と編集は未実装", "en": "Remaining: the round button corners. Delete and edit are not implemented" }, "explain": { "ja": "後でやることを、隠さずに渡します。", "en": "You hand over what is left to do later without hiding it." } },
+        { "id": "q06b-storage", "label": { "ja": "保存はこのブラウザの中だけ。別のブラウザでは別の保存場所になる", "en": "Saving happens only inside this browser. A different browser has a different place for saved data" }, "explain": { "ja": "使い方の注意として役立ちます。起動と使い方の欄に加えてもかまいません。", "en": "Useful as a usage note. It may also be added to the start-and-use field." } }
       ],
       "grading": {
         "id": "q06-b.rule",
@@ -220,60 +220,60 @@
       },
       "feedbackByOutcome": {
         "correct": {
-          "what": { "ja": "受け取った人は、何のためのものかを知り、自分で動かし、確かめた範囲と残りを把握できます。" },
-          "why": { "ja": "目的・起動・確認済みと未確認・残件がそろい、秘密情報やログの全文は入っていません。" },
-          "next": { "ja": "最後に、灯台に届いた3件の案件を判断します。" }
+          "what": { "ja": "受け取った人は、何のためのものかを知り、自分で動かし、確かめた範囲と残りを把握できます。", "en": "The recipient knows what it is for, can run it themselves, and understands the range that was checked and what remains." },
+          "why": { "ja": "目的・起動・確認済みと未確認・残件がそろい、秘密情報やログの全文は入っていません。", "en": "The goal, how to start, checked and unchecked, and remaining items are all there, and no secrets or full logs are included." },
+          "next": { "ja": "最後に、灯台に届いた3件の案件を判断します。", "en": "Finally, you will judge the three cases that arrived at the lighthouse." }
         },
         "secret": {
-          "what": { "ja": "受け取った人や、パックを見た誰もがアカウントを使えてしまいます。" },
-          "why": { "ja": "パスワードやAPIキーは、引き渡しに必要ありません。絶対に入れません。" },
-          "next": { "ja": "秘密情報の札を外しましょう。" }
+          "what": { "ja": "受け取った人や、パックを見た誰もがアカウントを使えてしまいます。", "en": "The recipient, or anyone who sees the pack, could use the account." },
+          "why": { "ja": "パスワードやAPIキーは、引き渡しに必要ありません。絶対に入れません。", "en": "Passwords and API keys are not needed for a handover. Never include them." },
+          "next": { "ja": "秘密情報の札を外しましょう。", "en": "Take out the secrets card." }
         },
         "raw_log": {
-          "what": { "ja": "受け取った人は大量の文章から要点を探すことになり、個人情報も一緒に渡ってしまうかもしれません。" },
-          "why": { "ja": "引き渡しに必要なのは、確かめた結果と残件の要点です。" },
-          "next": { "ja": "ログ全文の札を外しましょう。" }
+          "what": { "ja": "受け取った人は大量の文章から要点を探すことになり、個人情報も一緒に渡ってしまうかもしれません。", "en": "The recipient would have to search a large amount of text for the key points, and personal information might be passed along too." },
+          "why": { "ja": "引き渡しに必要なのは、確かめた結果と残件の要点です。", "en": "What a handover needs is the checked results and the key points of what remains." },
+          "next": { "ja": "ログ全文の札を外しましょう。", "en": "Take out the full-log card." }
         },
         "overclaim": {
-          "what": { "ja": "スマートフォンでの表示に問題があっても、受け取った人は確かめずに使ってしまいます。" },
-          "why": { "ja": "確かめていないことを「未確認はない」と書くと、次の人が判断を誤ります。" },
-          "next": { "ja": "「すべて完璧」の札を外し、未確認の札を置きましょう。" }
+          "what": { "ja": "スマートフォンでの表示に問題があっても、受け取った人は確かめずに使ってしまいます。", "en": "Even if there is a problem with how it looks on a smartphone, the recipient would use it without checking." },
+          "why": { "ja": "確かめていないことを「未確認はない」と書くと、次の人が判断を誤ります。", "en": "If you write \"nothing unchecked\" about something you did not check, the next person will misjudge." },
+          "next": { "ja": "「すべて完璧」の札を外し、未確認の札を置きましょう。", "en": "Take out the \"everything is perfect\" card and place the unchecked card." }
         },
         "missing_unchecked": {
-          "what": { "ja": "受け取った人は、スマートフォンでも確かめ済みだと思い込むかもしれません。" },
-          "why": { "ja": "確認済みと一緒に、未確認も書いて渡します。" },
-          "next": { "ja": "未確認の札を「確認済み・未確認」の欄に置きましょう。" }
+          "what": { "ja": "受け取った人は、スマートフォンでも確かめ済みだと思い込むかもしれません。", "en": "The recipient may assume it was checked on a smartphone too." },
+          "why": { "ja": "確認済みと一緒に、未確認も書いて渡します。", "en": "Hand over the unchecked along with the checked." },
+          "next": { "ja": "未確認の札を「確認済み・未確認」の欄に置きましょう。", "en": "Place the unchecked card in the \"Checked and unchecked\" field." }
         },
         "missing_checked": {
-          "what": { "ja": "受け取った人は、何が確かめられているのか分かりません。" },
-          "why": { "ja": "どの版で何を確かめたかの記録がありません。" },
-          "next": { "ja": "確認済みの札を「確認済み・未確認」の欄に置きましょう。" }
+          "what": { "ja": "受け取った人は、何が確かめられているのか分かりません。", "en": "The recipient does not know what has been checked." },
+          "why": { "ja": "どの版で何を確かめたかの記録がありません。", "en": "There is no record of what was checked on which version." },
+          "next": { "ja": "確認済みの札を「確認済み・未確認」の欄に置きましょう。", "en": "Place the checked card in the \"Checked and unchecked\" field." }
         },
         "missing_run": {
-          "what": { "ja": "受け取った人は、灯台メモの開き方や使い方が分かりません。" },
-          "why": { "ja": "起動方法と基本の使い方がありません。" },
-          "next": { "ja": "起動の札を「起動と使い方」の欄に置きましょう。" }
+          "what": { "ja": "受け取った人は、灯台メモの開き方や使い方が分かりません。", "en": "The recipient does not know how to open or use the lighthouse notes." },
+          "why": { "ja": "起動方法と基本の使い方がありません。", "en": "The way to start it and the basic usage are missing." },
+          "next": { "ja": "起動の札を「起動と使い方」の欄に置きましょう。", "en": "Place the start card in the \"How to start and use\" field." }
         },
         "missing_remaining": {
-          "what": { "ja": "角の丸みや未実装の機能が、誰にも引き継がれずに忘れられます。" },
-          "why": { "ja": "後でやることを、残件として渡していません。" },
-          "next": { "ja": "残件の札を「残件」の欄に置きましょう。" }
+          "what": { "ja": "角の丸みや未実装の機能が、誰にも引き継がれずに忘れられます。", "en": "The round corners and the unimplemented features would be forgotten with nobody taking them over." },
+          "why": { "ja": "後でやることを、残件として渡していません。", "en": "What is left to do later has not been handed over as remaining items." },
+          "next": { "ja": "残件の札を「残件」の欄に置きましょう。", "en": "Place the remaining-items card in the \"Remaining items\" field." }
         },
         "missing_purpose": {
-          "what": { "ja": "受け取った人は、何のためのものか分からないまま使い始めます。" },
-          "why": { "ja": "目的の欄が空か、別の札が入っています。" },
-          "next": { "ja": "目的の札を「目的」の欄に置きましょう。" }
+          "what": { "ja": "受け取った人は、何のためのものか分からないまま使い始めます。", "en": "The recipient would start using it without knowing what it is for." },
+          "why": { "ja": "目的の欄が空か、別の札が入っています。", "en": "The goal field is empty or has a different card in it." },
+          "next": { "ja": "目的の札を「目的」の欄に置きましょう。", "en": "Place the goal card in the \"Goal\" field." }
         },
         "misplaced": {
-          "what": { "ja": "必要な札はありますが、欄が違うため受け取った人が読み違えます。" },
-          "why": { "ja": "各欄の問いと、札の中身が一致していない組み合わせがあります。" },
-          "next": { "ja": "各欄の問いと、札の中身を照らし合わせましょう。" }
+          "what": { "ja": "必要な札はありますが、欄が違うため受け取った人が読み違えます。", "en": "The needed cards are there, but they are in the wrong fields, so the recipient misreads them." },
+          "why": { "ja": "各欄の問いと、札の中身が一致していない組み合わせがあります。", "en": "Some combinations do not match a field's question with the card's content." },
+          "next": { "ja": "各欄の問いと、札の中身を照らし合わせましょう。", "en": "Compare each field's question with the card's content." }
         }
       },
       "hints": [
-        { "id": "q06-b.h1", "text": { "ja": "受け取った人が、自分で動かし、どこまで確かめたかを知り、次に何をするか分かるパックにします。" } },
-        { "id": "q06-b.h2", "text": { "ja": "「確認済み・未確認」の欄には2枚が必要です。秘密情報・ログ全文・「すべて完璧」の札は置きません。" } },
-        { "id": "q06-b.h3", "text": { "ja": "解答例：目的＝「依頼を残して見返すメモ帳」、起動と使い方＝「index.html を開く…」（保存はこのブラウザの中だけ、も可）、確認済み・未確認＝「確認済み（v0.4）…」「未確認：スマートフォン」、残件＝「角の丸み・削除と編集は未実装」。理由：次の人が判断できる情報だけをそろえるからです。盤面で札を置いてください。" } }
+        { "id": "q06-b.h1", "text": { "ja": "受け取った人が、自分で動かし、どこまで確かめたかを知り、次に何をするか分かるパックにします。", "en": "Make a pack that lets the recipient run it themselves, know how far it was checked and know what to do next." } },
+        { "id": "q06-b.h2", "text": { "ja": "「確認済み・未確認」の欄には2枚が必要です。秘密情報・ログ全文・「すべて完璧」の札は置きません。", "en": "The \"Checked and unchecked\" field needs two cards. Do not place the secrets, full-log or \"everything is perfect\" cards." } },
+        { "id": "q06-b.h3", "text": { "ja": "解答例：目的＝「依頼を残して見返すメモ帳」、起動と使い方＝「index.html を開く…」（保存はこのブラウザの中だけ、も可）、確認済み・未確認＝「確認済み（v0.4）…」「未確認：スマートフォン」、残件＝「角の丸み・削除と編集は未実装」。理由：次の人が判断できる情報だけをそろえるからです。盤面で札を置いてください。", "en": "Sample answer: goal = \"a notepad for keeping requests and looking back,\" how to start and use = \"open index.html...\" (saving only inside this browser is fine too), checked and unchecked = \"Checked (v0.4)...\" and \"Unchecked: smartphone,\" remaining = \"round corners; delete and edit not implemented.\" Reason: you gather only the information the next person can decide with. Place the cards on the board." } }
       ]
     },
     {
@@ -282,54 +282,54 @@
       "objectiveId": "q06-o3",
       "type": "triage_decision",
       "required": true,
-      "title": { "ja": "Q06-C 最後の3件を判断する" },
-      "prompt": { "ja": "灯台に、条件の違う3件の最終案件が届きました。それぞれ判断と理由を選んでください。根拠がそろっていれば、提出してよい案件もあります。" },
+      "title": { "ja": "Q06-C 最後の3件を判断する", "en": "Q06-C Judge the last three cases" },
+      "prompt": { "ja": "灯台に、条件の違う3件の最終案件が届きました。それぞれ判断と理由を選んでください。根拠がそろっていれば、提出してよい案件もあります。", "en": "Three final cases with different conditions arrived at the lighthouse. Choose a decision and a reason for each. When the evidence is complete, some cases may be submitted." },
       "decisions": [
-        { "id": "proceed", "label": { "ja": "進める（提出する）" }, "explain": { "ja": "必須条件を確かめ、止める理由がないとき。" } },
-        { "id": "fix_now", "label": { "ja": "今直す" }, "explain": { "ja": "目的に関わる不具合が確かめられたとき。" } },
-        { "id": "verify", "label": { "ja": "確認する" }, "explain": { "ja": "判断に必要な根拠が足りないとき。" } },
-        { "id": "later", "label": { "ja": "後で改善に回す" }, "explain": { "ja": "目的には関わらない、小さな改善点のとき。提出と組み合わせられます。" } }
+        { "id": "proceed", "label": { "ja": "進める（提出する）", "en": "Proceed (submit)" }, "explain": { "ja": "必須条件を確かめ、止める理由がないとき。", "en": "When the required conditions are checked and there is no reason to stop." } },
+        { "id": "fix_now", "label": { "ja": "今直す", "en": "Fix now" }, "explain": { "ja": "目的に関わる不具合が確かめられたとき。", "en": "When a bug related to the goal has been confirmed." } },
+        { "id": "verify", "label": { "ja": "確認する", "en": "Check" }, "explain": { "ja": "判断に必要な根拠が足りないとき。", "en": "When the evidence needed to decide is lacking." } },
+        { "id": "later", "label": { "ja": "後で改善に回す", "en": "Leave for later improvement" }, "explain": { "ja": "目的には関わらない、小さな改善点のとき。提出と組み合わせられます。", "en": "When it is a small improvement not related to the goal. It can be combined with submitting." } }
       ],
       "cases": [
         {
           "id": "f1",
-          "title": { "ja": "案件①：市場の依頼帳" },
+          "title": { "ja": "案件①：市場の依頼帳", "en": "Case ①: Market request book" },
           "evidence": [
-            { "ja": "報告：「完成しました。問題ありません」" },
-            { "ja": "確認記録：なし" },
-            { "ja": "起動方法：書かれていない" }
+            { "ja": "報告：「完成しました。問題ありません」", "en": "Report: \"It is finished. No problems.\"" },
+            { "ja": "確認記録：なし", "en": "Check record: none" },
+            { "ja": "起動方法：書かれていない", "en": "How to start: not written" }
           ],
           "reasons": [
-            { "id": "f1-evidence", "label": { "ja": "動くことを確かめた記録がないから" }, "explain": { "ja": "報告の言葉だけでは、動くかどうか分かりません。" } },
-            { "id": "f1-trust", "label": { "ja": "「問題ありません」と書かれているから" }, "explain": { "ja": "番人の誤りと同じく、言葉だけを信じています。" } },
-            { "id": "f1-broken", "label": { "ja": "記録がないので、きっと壊れているから" }, "explain": { "ja": "壊れていると確かめたわけでもありません。" } }
+            { "id": "f1-evidence", "label": { "ja": "動くことを確かめた記録がないから", "en": "Because there is no record confirming that it works" }, "explain": { "ja": "報告の言葉だけでは、動くかどうか分かりません。", "en": "The words of a report alone do not tell you whether it works." } },
+            { "id": "f1-trust", "label": { "ja": "「問題ありません」と書かれているから", "en": "Because it says \"No problems\"" }, "explain": { "ja": "番人の誤りと同じく、言葉だけを信じています。", "en": "Like the keeper's mistake, it trusts words alone." } },
+            { "id": "f1-broken", "label": { "ja": "記録がないので、きっと壊れているから", "en": "Because there is no record, so it must be broken" }, "explain": { "ja": "壊れていると確かめたわけでもありません。", "en": "You have not confirmed that it is broken either." } }
           ]
         },
         {
           "id": "f2",
-          "title": { "ja": "案件②：倉庫の在庫メモ" },
+          "title": { "ja": "案件②：倉庫の在庫メモ", "en": "Case ②: Warehouse stock notes" },
           "evidence": [
-            { "ja": "確認記録（現在の版）：追加は成功。再読み込みすると一覧が空になる（2回再現）" },
-            { "ja": "起動方法と残件：書かれている" }
+            { "ja": "確認記録（現在の版）：追加は成功。再読み込みすると一覧が空になる（2回再現）", "en": "Check record (current version): adding succeeds. After reload the list is empty (reproduced twice)" },
+            { "ja": "起動方法と残件：書かれている", "en": "How to start and remaining items: written" }
           ],
           "reasons": [
-            { "id": "f2-core", "label": { "ja": "メモが残らず、目的に関わる必須の不具合だから" }, "explain": { "ja": "記録は残すためのものです。再現もしています。" } },
-            { "id": "f2-later", "label": { "ja": "追加はできるので、保存は次の版で十分だから" }, "explain": { "ja": "保存できないメモ帳は、目的を果たせません。" } },
-            { "id": "f2-more", "label": { "ja": "まだ確かめ方が足りないから" }, "explain": { "ja": "2回再現していて、根拠は十分です。" } }
+            { "id": "f2-core", "label": { "ja": "メモが残らず、目的に関わる必須の不具合だから", "en": "Because notes are not kept, so it is a required bug related to the goal" }, "explain": { "ja": "記録は残すためのものです。再現もしています。", "en": "A record is meant to be kept. It also reproduces." } },
+            { "id": "f2-later", "label": { "ja": "追加はできるので、保存は次の版で十分だから", "en": "Because adding works, so saving is fine in the next version" }, "explain": { "ja": "保存できないメモ帳は、目的を果たせません。", "en": "A notepad that cannot save notes does not fulfill its goal." } },
+            { "id": "f2-more", "label": { "ja": "まだ確かめ方が足りないから", "en": "Because the way of checking is still insufficient" }, "explain": { "ja": "2回再現していて、根拠は十分です。", "en": "It reproduces twice, and the evidence is enough." } }
           ]
         },
         {
           "id": "f3",
-          "title": { "ja": "案件③：灯台メモ（あなたの作品）" },
+          "title": { "ja": "案件③：灯台メモ（あなたの作品）", "en": "Case ③: Lighthouse notes (your work)" },
           "evidence": [
-            { "ja": "確認記録（v0.4）：追加・再読み込み後の保持・空白題名の拒否・通常題名の登録、すべて成功" },
-            { "ja": "未確認：スマートフォンの画面幅。引き渡しパックに記載済み" },
-            { "ja": "気づいた点：ボタンの角が見本ほど丸くない" }
+            { "ja": "確認記録（v0.4）：追加・再読み込み後の保持・空白題名の拒否・通常題名の登録、すべて成功", "en": "Check record (v0.4): adding, keeping after reload, rejecting a blank title, registering a normal title, all succeeded" },
+            { "ja": "未確認：スマートフォンの画面幅。引き渡しパックに記載済み", "en": "Unchecked: smartphone screen width. Already written in the handover pack" },
+            { "ja": "気づいた点：ボタンの角が見本ほど丸くない", "en": "Noticed: the button corners are less round than the sample" }
           ],
           "reasons": [
-            { "id": "f3-ready", "label": { "ja": "必須条件は確認済みで、残りは見た目の小さな点として記録したから" }, "explain": { "ja": "目的に関わる動作と、後でよい改善を分けています。" } },
-            { "id": "f3-perfect", "label": { "ja": "角が丸くなるまでは、未完成だから" }, "explain": { "ja": "角の丸みは、メモを残して見返すという目的を妨げていません。" } },
-            { "id": "f3-publish", "label": { "ja": "提出するなら、先に外部へ公開まで済ませる必要があるから" }, "explain": { "ja": "提出と公開は別のことです。公開は、別の明示的な判断で行います。" } }
+            { "id": "f3-ready", "label": { "ja": "必須条件は確認済みで、残りは見た目の小さな点として記録したから", "en": "Because the required conditions are checked and the rest is recorded as a small point of appearance" }, "explain": { "ja": "目的に関わる動作と、後でよい改善を分けています。", "en": "You separate the actions related to the goal from improvements that can wait." } },
+            { "id": "f3-perfect", "label": { "ja": "角が丸くなるまでは、未完成だから", "en": "Because it is unfinished until the corners are round" }, "explain": { "ja": "角の丸みは、メモを残して見返すという目的を妨げていません。", "en": "Round corners do not hinder the goal of leaving notes and looking back at them." } },
+            { "id": "f3-publish", "label": { "ja": "提出するなら、先に外部へ公開まで済ませる必要があるから", "en": "Because to submit, you must first publish it externally" }, "explain": { "ja": "提出と公開は別のことです。公開は、別の明示的な判断で行います。", "en": "Submitting and publishing are different things. Publishing is done with a separate, explicit decision." } }
           ]
         }
       ],
@@ -363,56 +363,56 @@
       },
       "feedbackByOutcome": {
         "correct": {
-          "what": { "ja": "案件①は確かめに、案件②は修正に回り、あなたの灯台メモは残件と一緒に提出されます。" },
-          "why": { "ja": "報告の言葉でも装飾の細部でもなく、確かめた根拠と目的への影響で判断しています。" },
-          "next": { "ja": "灯台の上へ。持ち帰りカードを受け取りましょう。" }
+          "what": { "ja": "案件①は確かめに、案件②は修正に回り、あなたの灯台メモは残件と一緒に提出されます。", "en": "Case ① goes to checking, case ② goes to fixing, and your lighthouse notes are submitted together with the remaining items." },
+          "why": { "ja": "報告の言葉でも装飾の細部でもなく、確かめた根拠と目的への影響で判断しています。", "en": "You judge not by the words of a report or the details of decoration, but by the checked evidence and the effect on the goal." },
+          "next": { "ja": "灯台の上へ。持ち帰りカードを受け取りましょう。", "en": "Up the lighthouse. Let's receive the take-home card." }
         },
         "report_trusted": {
-          "what": { "ja": "動くか分からない作品が、「問題ありません」の一言で届いてしまいます。" },
-          "why": { "ja": "案件①には、動くことを確かめた記録がありません。" },
-          "next": { "ja": "案件①の判断と理由を見直しましょう。" }
+          "what": { "ja": "動くか分からない作品が、「問題ありません」の一言で届いてしまいます。", "en": "Work that may not work would be delivered on the word \"No problems.\"" },
+          "why": { "ja": "案件①には、動くことを確かめた記録がありません。", "en": "Case ① has no record confirming that it works." },
+          "next": { "ja": "案件①の判断と理由を見直しましょう。", "en": "Review the decision and reason for case ①." }
         },
         "blocker_ignored": {
-          "what": { "ja": "受け取った人のメモが、再読み込みのたびに消えてしまいます。" },
-          "why": { "ja": "案件②の保存の不具合は、目的に関わる必須の問題です。" },
-          "next": { "ja": "案件②の判断と理由を見直しましょう。" }
+          "what": { "ja": "受け取った人のメモが、再読み込みのたびに消えてしまいます。", "en": "The recipient's notes would disappear on every reload." },
+          "why": { "ja": "案件②の保存の不具合は、目的に関わる必須の問題です。", "en": "The saving bug in case ② is a required problem related to the goal." },
+          "next": { "ja": "案件②の判断と理由を見直しましょう。", "en": "Review the decision and reason for case ②." }
         },
         "submit_vs_publish": {
-          "what": { "ja": "提出のために、頼まれていない外部公開まで行ってしまいます。" },
-          "why": { "ja": "提出（相手に渡す）と公開（誰でも見られるようにする）は別のことです。公開は別の明示的な判断で行います。" },
-          "next": { "ja": "案件③の理由を見直しましょう。" }
+          "what": { "ja": "提出のために、頼まれていない外部公開まで行ってしまいます。", "en": "For submitting, you would even do an external publication nobody asked for." },
+          "why": { "ja": "提出（相手に渡す）と公開（誰でも見られるようにする）は別のことです。公開は別の明示的な判断で行います。", "en": "Submitting (handing to the other person) and publishing (making it visible to anyone) are different things. Publishing is done with a separate, explicit decision." },
+          "next": { "ja": "案件③の理由を見直しましょう。", "en": "Review the reason for case ③." }
         },
         "minor_as_blocker": {
-          "what": { "ja": "必須条件を確かめた作品が、角の丸みのために届けられません。" },
-          "why": { "ja": "案件③の気づいた点は見た目の小さな点で、残件として記録されています。未確認の点も引き渡しパックに書かれています。" },
-          "next": { "ja": "案件③の判断と理由を見直しましょう。「進める」も大切な判断です。" }
+          "what": { "ja": "必須条件を確かめた作品が、角の丸みのために届けられません。", "en": "Work whose required conditions are checked could not be delivered because of round corners." },
+          "why": { "ja": "案件③の気づいた点は見た目の小さな点で、残件として記録されています。未確認の点も引き渡しパックに書かれています。", "en": "The point noticed in case ③ is a small point of appearance and is recorded as a remaining item. The unchecked point is also written in the handover pack." },
+          "next": { "ja": "案件③の判断と理由を見直しましょう。「進める」も大切な判断です。", "en": "Review the decision and reason for case ③. \"Proceed\" is also an important decision." }
         },
         "already_confirmed": {
-          "what": { "ja": "すでに再現できた不具合を、また確かめるだけで直す作業が始まりません。" },
-          "why": { "ja": "案件②は2回再現していて、根拠がそろっています。" },
-          "next": { "ja": "案件②の判断と理由を見直しましょう。" }
+          "what": { "ja": "すでに再現できた不具合を、また確かめるだけで直す作業が始まりません。", "en": "You would only check a bug that has already reproduced, and the fixing work would not begin." },
+          "why": { "ja": "案件②は2回再現していて、根拠がそろっています。", "en": "Case ② reproduced twice, and the evidence is complete." },
+          "next": { "ja": "案件②の判断と理由を見直しましょう。", "en": "Review the decision and reason for case ②." }
         },
         "no_evidence": {
-          "what": { "ja": "根拠のない案件①について、確かめる前に結論を出してしまいます。" },
-          "why": { "ja": "案件①で分かっているのは「記録がない」ことだけです。壊れているとも、動くとも言えません。" },
-          "next": { "ja": "案件①の判断と理由を見直しましょう。" }
+          "what": { "ja": "根拠のない案件①について、確かめる前に結論を出してしまいます。", "en": "For case ①, which has no evidence, you would reach a conclusion before checking." },
+          "why": { "ja": "案件①で分かっているのは「記録がない」ことだけです。壊れているとも、動くとも言えません。", "en": "All that is known about case ① is that \"there is no record.\" You can say neither that it is broken nor that it works." },
+          "next": { "ja": "案件①の判断と理由を見直しましょう。", "en": "Review the decision and reason for case ①." }
         }
       },
       "hints": [
-        { "id": "q06-c.h1", "text": { "ja": "3件とも違う判断になります。「根拠はあるか」「目的に関わる問題か」の順に考えます。" } },
-        { "id": "q06-c.h2", "text": { "ja": "案件①は確認記録、案件②は不具合の中身、案件③は気づいた点が目的に関わるかを見ましょう。提出と公開は別のことです。" } },
-        { "id": "q06-c.h3", "text": { "ja": "解答例：案件①＝確認する（確かめた記録がない）、案件②＝今直す（目的に関わる必須の不具合）、案件③＝進める または 後で改善に回す（必須条件は確認済みで、残りは小さな点として記録）。理由：根拠と目的への影響で判断を分けるからです。盤面で選んでください。" } }
+        { "id": "q06-c.h1", "text": { "ja": "3件とも違う判断になります。「根拠はあるか」「目的に関わる問題か」の順に考えます。", "en": "The three cases get three different decisions. Think in this order: \"is there evidence\" and \"is it a problem related to the goal.\"" } },
+        { "id": "q06-c.h2", "text": { "ja": "案件①は確認記録、案件②は不具合の中身、案件③は気づいた点が目的に関わるかを見ましょう。提出と公開は別のことです。", "en": "Look at the check record for case ①, the content of the bug for case ②, and whether the noticed point relates to the goal for case ③. Submitting and publishing are different things." } },
+        { "id": "q06-c.h3", "text": { "ja": "解答例：案件①＝確認する（確かめた記録がない）、案件②＝今直す（目的に関わる必須の不具合）、案件③＝進める または 後で改善に回す（必須条件は確認済みで、残りは小さな点として記録）。理由：根拠と目的への影響で判断を分けるからです。盤面で選んでください。", "en": "Sample answer: case ① = check (no record of checking), case ② = fix now (a required bug related to the goal), case ③ = proceed or leave for later improvement (required conditions checked; the rest recorded as a small point). Reason: you split the decisions by evidence and the effect on the goal. Choose on the board." } }
       ]
     }
   ],
   "takeawayCards": [
-    { "id": "tk-q06-1", "questId": "q06", "title": { "ja": "重大と軽微" }, "body": { "ja": "目的を妨げる不具合は今直す。目的に関わらない見た目の点は、止めずに残件として後で改善に回す。" } },
-    { "id": "tk-q06-2", "questId": "q06", "title": { "ja": "引き渡し" }, "body": { "ja": "目的・起動と使い方・確認済みと未確認・残件をまとめて渡す。秘密情報とログの全文は入れない。" } },
-    { "id": "tk-q06-3", "questId": "q06", "title": { "ja": "次の改善" }, "body": { "ja": "提出は相手に渡すこと、公開は誰でも見られるようにすること。公開や取り込みは、別の明示的な判断で行う。" } }
+    { "id": "tk-q06-1", "questId": "q06", "title": { "ja": "重大と軽微", "en": "Serious and minor" }, "body": { "ja": "目的を妨げる不具合は今直す。目的に関わらない見た目の点は、止めずに残件として後で改善に回す。", "en": "Fix now a bug that hinders the goal. A point of appearance not related to the goal does not stop the work; leave it as a remaining item for later improvement." } },
+    { "id": "tk-q06-2", "questId": "q06", "title": { "ja": "引き渡し", "en": "Handover" }, "body": { "ja": "目的・起動と使い方・確認済みと未確認・残件をまとめて渡す。秘密情報とログの全文は入れない。", "en": "Hand over the goal, how to start and use, checked and unchecked, and remaining items together. Do not include secrets or the full text of logs." } },
+    { "id": "tk-q06-3", "questId": "q06", "title": { "ja": "次の改善", "en": "Next improvement" }, "body": { "ja": "提出は相手に渡すこと、公開は誰でも見られるようにすること。公開や取り込みは、別の明示的な判断で行う。", "en": "Submitting is handing it to someone; publishing is making it visible to anyone. Publishing or merging is done with a separate, explicit decision." } }
   ],
   "takeawayTemplate": {
-    "title": { "ja": "引き渡し用チェックリスト" },
-    "text": { "ja": "□ 目的：何のためのものか\n□ 起動と使い方：開き方と基本の操作\n□ 確認済み：どの版で何を確かめたか\n□ 未確認：まだ確かめていないこと\n□ 残件：後でやること\n□ 入れないもの：パスワード・APIキー・ログの全文" }
+    "title": { "ja": "引き渡し用チェックリスト", "en": "Handover checklist" },
+    "text": { "ja": "□ 目的：何のためのものか\n□ 起動と使い方：開き方と基本の操作\n□ 確認済み：どの版で何を確かめたか\n□ 未確認：まだ確かめていないこと\n□ 残件：後でやること\n□ 入れないもの：パスワード・APIキー・ログの全文", "en": "□ Goal: what it is for\n□ How to start and use: how to open it and the basic operations\n□ Checked: what was checked on which version\n□ Unchecked: what has not yet been checked\n□ Remaining items: what is left to do later\n□ Do not include: passwords, API keys, the full text of logs" }
   },
   "practiceCardId": "pc-q06",
   "sourceIds": ["S1"],

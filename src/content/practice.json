@@ -3,124 +3,124 @@
     "id": "pc-q01",
     "questId": "q01",
     "routeId": "desktop_windows_codex",
-    "objective": { "ja": "灯台メモの短い仕様と、3つの完了条件をCodexに整理してもらう。まだファイルは作らせない。" },
+    "objective": { "ja": "灯台メモの短い仕様と、3つの完了条件をCodexに整理してもらう。まだファイルは作らせない。", "en": "Have Codex organize a short spec for the lighthouse notes and three completion criteria. Do not have it create files yet." },
     "requiredState": [
-      { "ja": "Windows で、公式のデスクトップ環境から Codex を使える状態（利用枠があること）" },
-      { "ja": "練習専用の空のフォルダ（例：beacon-notes-practice）。仕事用のフォルダは使わない" }
+      { "ja": "Windows で、公式のデスクトップ環境から Codex を使える状態（利用枠があること）", "en": "Windows, with Codex usable from the official desktop environment (with usage allowance available)" },
+      { "ja": "練習専用の空のフォルダ（例：beacon-notes-practice）。仕事用のフォルダは使わない", "en": "An empty folder just for practice (for example: beacon-notes-practice). Do not use a work folder" }
     ],
-    "whereToAct": { "ja": "Codex に依頼を書く入力欄。ターミナル（コマンドを打つ画面）ではない。画面の名前や位置は版によって変わるため、ここでは特定しない。" },
-    "instruction": { "ja": "港町の依頼を題名と本文で残し、一覧で見返せる小さなメモ帳「灯台メモ」を作る予定です。\n今は設計の整理だけをお願いします。ファイルの作成や変更はしないでください。\n次の3つをまとめてください。\n1. 目的と使う人（1〜2文）\n2. 入れる機能と、初版では入れない機能\n3. 目で確かめられる完了条件を3つ" },
-    "expectedResult": { "ja": "Codex が文章で仕様と完了条件を返す。ファイルは作られない。" },
-    "successExample": { "ja": "「題名と本文を入れて追加すると一覧に1件出る」のように、画面で確かめられる完了条件が3つ並んでいる。会員登録や決済が初版に入っていない。" },
+    "whereToAct": { "ja": "Codex に依頼を書く入力欄。ターミナル（コマンドを打つ画面）ではない。画面の名前や位置は版によって変わるため、ここでは特定しない。", "en": "The input box where you write a request to Codex. It is not a terminal (a screen for typing commands). Screen names and positions change by version, so they are not specified here." },
+    "instruction": { "ja": "港町の依頼を題名と本文で残し、一覧で見返せる小さなメモ帳「灯台メモ」を作る予定です。\n今は設計の整理だけをお願いします。ファイルの作成や変更はしないでください。\n次の3つをまとめてください。\n1. 目的と使う人（1〜2文）\n2. 入れる機能と、初版では入れない機能\n3. 目で確かめられる完了条件を3つ", "en": "I plan to build a small notepad called \"Lighthouse Notes\" that keeps harbor-town requests as a title and body and lets me look back at them in a list.\nFor now, I only want help organizing the design. Please do not create or change any files.\nPlease summarize the following three things.\n1. The goal and who will use it (1–2 sentences)\n2. The features to include, and the features not to include in the first version\n3. Three completion criteria that can be checked by eye" },
+    "expectedResult": { "ja": "Codex が文章で仕様と完了条件を返す。ファイルは作られない。", "en": "Codex returns the spec and completion criteria as text. No files are created." },
+    "successExample": { "ja": "「題名と本文を入れて追加すると一覧に1件出る」のように、画面で確かめられる完了条件が3つ並んでいる。会員登録や決済が初版に入っていない。", "en": "Three completion criteria that can be checked on screen are listed, such as \"enter a title and body, press Add, and one item appears in the list.\" Membership sign-up and payment are not in the first version." },
     "failureRecovery": [
-      { "situation": { "ja": "ファイルを作り始めた・作ろうとしている" }, "action": { "ja": "止めてもらい、今は整理だけだと伝え直す。" }, "instruction": { "ja": "今は設計の整理だけです。ファイルの作成や変更は行わず、文章でまとめてください。" } },
-      { "situation": { "ja": "完了条件があいまい（「使いやすい」など）" }, "action": { "ja": "画面で確かめられる形に言い換えてもらう。" }, "instruction": { "ja": "完了条件を、画面で操作して確かめられる形に書き直してください。" } },
-      { "situation": { "ja": "利用枠がない・画面が説明と違う" }, "action": { "ja": "実習を「今は実行不可」にして、練習画面へ戻る。別アカウントや有料APIには切り替えない。" } }
+      { "situation": { "ja": "ファイルを作り始めた・作ろうとしている", "en": "It started, or is about to start, creating files" }, "action": { "ja": "止めてもらい、今は整理だけだと伝え直す。", "en": "Have it stop, and tell it again that for now this is only organizing." }, "instruction": { "ja": "今は設計の整理だけです。ファイルの作成や変更は行わず、文章でまとめてください。", "en": "For now this is only organizing the design. Do not create or change any files; please summarize in text." } },
+      { "situation": { "ja": "完了条件があいまい（「使いやすい」など）", "en": "The completion criteria are vague (such as \"easy to use\")" }, "action": { "ja": "画面で確かめられる形に言い換えてもらう。", "en": "Have it reword them into a form that can be checked by operating the screen." }, "instruction": { "ja": "完了条件を、画面で操作して確かめられる形に書き直してください。", "en": "Please rewrite the completion criteria in a form I can check by operating the screen." } },
+      { "situation": { "ja": "利用枠がない・画面が説明と違う", "en": "No usage allowance, or the screen differs from the description" }, "action": { "ja": "実習を「今は実行不可」にして、練習画面へ戻る。別アカウントや有料APIには切り替えない。", "en": "Mark the practice \"cannot run now\" and return to the practice screen. Do not switch to another account or a paid API." } }
     ],
     "status": "draft",
-    "verification": { "verifiedAt": null, "testedProductVersion": null, "contentVersion": "0.1.0", "note": { "ja": "未検証の下書き。実機では確認していません。" } },
+    "verification": { "verifiedAt": null, "testedProductVersion": null, "contentVersion": "0.1.0", "note": { "ja": "未検証の下書き。実機では確認していません。", "en": "Unverified draft. Not checked on a real device." } },
     "sourceIds": ["S1", "S3", "S4"]
   },
   {
     "id": "pc-q02",
     "questId": "q02",
     "routeId": "desktop_windows_codex",
-    "objective": { "ja": "練習フォルダに、題名と本文を追加して一覧に出す静的なメモアプリを作ってもらい、自分で1件追加して確かめる。" },
+    "objective": { "ja": "練習フォルダに、題名と本文を追加して一覧に出す静的なメモアプリを作ってもらい、自分で1件追加して確かめる。", "en": "Have it build, in the practice folder, a static notepad app that adds a title and body and shows them in a list, then add one item yourself to check." },
     "requiredState": [
-      { "ja": "Q01 の実習でまとめた仕様" },
-      { "ja": "練習専用の空のフォルダを、Codex の作業場所として選んでいること" }
+      { "ja": "Q01 の実習でまとめた仕様", "en": "The spec summarized in the Q01 practice" },
+      { "ja": "練習専用の空のフォルダを、Codex の作業場所として選んでいること", "en": "You have chosen the empty practice folder as Codex's working location" }
     ],
-    "whereToAct": { "ja": "練習フォルダを作業場所にした Codex の依頼入力欄。" },
-    "instruction": { "ja": "このフォルダに、静的なメモアプリ「灯台メモ」の最初の見本を作ってください。\n・題名（80文字以内）と本文（2,000文字以内）を入れて「追加」を押すと、一覧に表示される\n・保存はまだメモリ内だけでよい。再読み込みすると消えることを画面に書く\n・会員登録・決済・同期は作らない\n・このフォルダの外のファイルには触らない\n最後に、ブラウザでの開き方を説明してください。" },
-    "expectedResult": { "ja": "練習フォルダに index.html などのファイルが作られ、開き方の説明が返る。" },
-    "successExample": { "ja": "説明どおりにブラウザで開き、題名「氷の配達」と本文を入れて追加すると、一覧に1件表示される。" },
+    "whereToAct": { "ja": "練習フォルダを作業場所にした Codex の依頼入力欄。", "en": "The request input box of Codex with the practice folder as the working location." },
+    "instruction": { "ja": "このフォルダに、静的なメモアプリ「灯台メモ」の最初の見本を作ってください。\n・題名（80文字以内）と本文（2,000文字以内）を入れて「追加」を押すと、一覧に表示される\n・保存はまだメモリ内だけでよい。再読み込みすると消えることを画面に書く\n・会員登録・決済・同期は作らない\n・このフォルダの外のファイルには触らない\n最後に、ブラウザでの開き方を説明してください。", "en": "In this folder, please build a first sample of a static notepad app, \"Lighthouse Notes.\"\n- Enter a title (up to 80 characters) and a body (up to 2,000 characters) and press \"Add\" to show it in a list\n- Saving can be in memory only for now. Write on the screen that it disappears on reload\n- Do not build membership sign-up, payment or sync\n- Do not touch any files outside this folder\nAt the end, explain how to open it in a browser." },
+    "expectedResult": { "ja": "練習フォルダに index.html などのファイルが作られ、開き方の説明が返る。", "en": "Files such as index.html are created in the practice folder, and an explanation of how to open it comes back." },
+    "successExample": { "ja": "説明どおりにブラウザで開き、題名「氷の配達」と本文を入れて追加すると、一覧に1件表示される。", "en": "Open it in a browser as explained, enter the title \"氷の配達\" and a body, add it, and one item appears in the list." },
     "failureRecovery": [
-      { "situation": { "ja": "作業場所が練習フォルダではない" }, "action": { "ja": "そのまま書き込ませず、作業場所を確認する依頼に戻る。" }, "instruction": { "ja": "作業を止めてください。今の作業場所のフォルダ名を教えてください。練習フォルダ以外には書き込まないでください。" } },
-      { "situation": { "ja": "計画の説明だけで、ファイルがない" }, "action": { "ja": "動く見本を作るよう、もう一度頼む。" }, "instruction": { "ja": "計画は分かりました。練習フォルダに、実際に開いて動かせるファイルを作ってください。" } },
-      { "situation": { "ja": "開いても追加が動かない" }, "action": { "ja": "行った操作・期待・実際だけを伝える。ログ全体は貼らない。" }, "instruction": { "ja": "題名と本文を入れて「追加」を押しましたが、一覧に表示されません。期待は1件表示されることです。原因を調べて直してください。" } }
+      { "situation": { "ja": "作業場所が練習フォルダではない", "en": "The working location is not the practice folder" }, "action": { "ja": "そのまま書き込ませず、作業場所を確認する依頼に戻る。", "en": "Do not let it write as is; return to a request that confirms the working location." }, "instruction": { "ja": "作業を止めてください。今の作業場所のフォルダ名を教えてください。練習フォルダ以外には書き込まないでください。", "en": "Please stop working. Tell me the folder name of the current working location. Do not write to anything other than the practice folder." } },
+      { "situation": { "ja": "計画の説明だけで、ファイルがない", "en": "Only an explanation of a plan, and there are no files" }, "action": { "ja": "動く見本を作るよう、もう一度頼む。", "en": "Ask again to build a working sample." }, "instruction": { "ja": "計画は分かりました。練習フォルダに、実際に開いて動かせるファイルを作ってください。", "en": "I understand the plan. Please create files in the practice folder that I can actually open and run." } },
+      { "situation": { "ja": "開いても追加が動かない", "en": "Adding does not work when opened" }, "action": { "ja": "行った操作・期待・実際だけを伝える。ログ全体は貼らない。", "en": "Tell it only the action taken, the expectation and the actual result. Do not paste the whole log." }, "instruction": { "ja": "題名と本文を入れて「追加」を押しましたが、一覧に表示されません。期待は1件表示されることです。原因を調べて直してください。", "en": "I entered a title and body and pressed \"Add,\" but nothing appears in the list. I expected one item to appear. Please investigate the cause and fix it." } }
     ],
     "status": "draft",
-    "verification": { "verifiedAt": null, "testedProductVersion": null, "contentVersion": "0.1.0", "note": { "ja": "未検証の下書き。配布用の検証済み見本はまだありません。" } },
+    "verification": { "verifiedAt": null, "testedProductVersion": null, "contentVersion": "0.1.0", "note": { "ja": "未検証の下書き。配布用の検証済み見本はまだありません。", "en": "Unverified draft. There is no verified sample for distribution yet." } },
     "sourceIds": ["S1", "S3", "S4"]
   },
   {
     "id": "pc-q03",
     "questId": "q03",
     "routeId": "desktop_windows_codex",
-    "objective": { "ja": "この端末のブラウザ内（localStorage）への保存だけを足してもらい、追加と一覧が壊れていないことも確かめる。" },
-    "requiredState": [{ "ja": "Q02 の実習で作った、追加と一覧が動く灯台メモ" }],
-    "whereToAct": { "ja": "練習フォルダを作業場所にした Codex の依頼入力欄。" },
-    "instruction": { "ja": "灯台メモに、ページを閉じたり再読み込みしたりしてもメモが残る機能を足してください。\n・保存はこの端末のブラウザ内（localStorage）だけ。外部には送らない\n・追加と一覧の今の動きと見た目は変えない\n・保存できないときは、黙って成功扱いにせず画面で知らせる\n変更したファイルと、変更の要点を教えてください。" },
-    "expectedResult": { "ja": "保存と読み込みの処理が足され、変更したファイルの説明が返る。" },
-    "successExample": { "ja": "1件追加→再読み込み→同じメモが残っている。続けてもう1件追加でき、2件とも表示される。" },
+    "objective": { "ja": "この端末のブラウザ内（localStorage）への保存だけを足してもらい、追加と一覧が壊れていないことも確かめる。", "en": "Have it add only saving into this device's browser (localStorage), and also check that adding and the list are not broken." },
+    "requiredState": [{ "ja": "Q02 の実習で作った、追加と一覧が動く灯台メモ", "en": "The lighthouse notes built in the Q02 practice, where adding and the list work" }],
+    "whereToAct": { "ja": "練習フォルダを作業場所にした Codex の依頼入力欄。", "en": "The request input box of Codex with the practice folder as the working location." },
+    "instruction": { "ja": "灯台メモに、ページを閉じたり再読み込みしたりしてもメモが残る機能を足してください。\n・保存はこの端末のブラウザ内（localStorage）だけ。外部には送らない\n・追加と一覧の今の動きと見た目は変えない\n・保存できないときは、黙って成功扱いにせず画面で知らせる\n変更したファイルと、変更の要点を教えてください。", "en": "Please add to the lighthouse notes a feature so that notes remain even after closing the page or reloading.\n- Save only inside this device's browser (localStorage). Do not send anything outside\n- Do not change the current behavior or look of adding and the list\n- If it cannot save, tell me on the screen instead of silently treating it as a success\nPlease tell me the files you changed and the key points of the change." },
+    "expectedResult": { "ja": "保存と読み込みの処理が足され、変更したファイルの説明が返る。", "en": "Saving and loading are added, and an explanation of the changed files comes back." },
+    "successExample": { "ja": "1件追加→再読み込み→同じメモが残っている。続けてもう1件追加でき、2件とも表示される。", "en": "Add 1 note → reload → the same note remains. You can add another right after, and both are shown." },
     "failureRecovery": [
-      { "situation": { "ja": "全面的な作り直しや、外部送信が提案された" }, "action": { "ja": "範囲を保存だけに絞るよう伝え直す。" }, "instruction": { "ja": "今回は保存を足すだけにしてください。追加と一覧の処理、見た目は変えず、外部にも送らないでください。" } },
-      { "situation": { "ja": "別のブラウザで開くと残っていない" }, "action": { "ja": "ブラウザごとに保存場所が別なので、これは正常。同じブラウザで確かめる。" } },
-      { "situation": { "ja": "再読み込みすると消える" }, "action": { "ja": "行った操作・期待・実際を伝える。" }, "instruction": { "ja": "1件追加してから再読み込みすると、一覧が空になります。期待は同じメモが残ることです。原因を調べて直してください。" } }
+      { "situation": { "ja": "全面的な作り直しや、外部送信が提案された", "en": "A full rebuild or sending outside was proposed" }, "action": { "ja": "範囲を保存だけに絞るよう伝え直す。", "en": "Tell it again to narrow the scope to saving only." }, "instruction": { "ja": "今回は保存を足すだけにしてください。追加と一覧の処理、見た目は変えず、外部にも送らないでください。", "en": "This time, only add saving. Do not change the adding and list processing or the look, and do not send anything outside." } },
+      { "situation": { "ja": "別のブラウザで開くと残っていない", "en": "It does not remain when opened in a different browser" }, "action": { "ja": "ブラウザごとに保存場所が別なので、これは正常。同じブラウザで確かめる。", "en": "Each browser has its own place for saved data, so this is normal. Check in the same browser." } },
+      { "situation": { "ja": "再読み込みすると消える", "en": "It disappears on reload" }, "action": { "ja": "行った操作・期待・実際を伝える。", "en": "Tell it the action taken, the expectation and the actual result." }, "instruction": { "ja": "1件追加してから再読み込みすると、一覧が空になります。期待は同じメモが残ることです。原因を調べて直してください。", "en": "After adding 1 note and reloading, the list becomes empty. I expected the same note to remain. Please investigate the cause and fix it." } }
     ],
     "status": "draft",
-    "verification": { "verifiedAt": null, "testedProductVersion": null, "contentVersion": "0.1.0", "note": { "ja": "未検証の下書き。実機では確認していません。" } },
+    "verification": { "verifiedAt": null, "testedProductVersion": null, "contentVersion": "0.1.0", "note": { "ja": "未検証の下書き。実機では確認していません。", "en": "Unverified draft. Not checked on a real device." } },
     "sourceIds": ["S1"]
   },
   {
     "id": "pc-q04",
     "questId": "q04",
     "routeId": "desktop_windows_codex",
-    "objective": { "ja": "空白だけの題名が登録される不具合を、同じ手順で再現し、期待と実際を分けて直してもらい、同じ手順で確かめ直す。" },
+    "objective": { "ja": "空白だけの題名が登録される不具合を、同じ手順で再現し、期待と実際を分けて直してもらい、同じ手順で確かめ直す。", "en": "Reproduce, with the same steps, the bug where a whitespace-only title gets registered, have it fixed with expected and actual results separated, and check again with the same steps." },
     "requiredState": [
-      { "ja": "Q03 の実習で作った灯台メモ" },
-      { "ja": "自分の作品に同じ不具合がない場合もある。そのときは正しいコードをわざと壊さない" }
+      { "ja": "Q03 の実習で作った灯台メモ", "en": "The lighthouse notes built in the Q03 practice" },
+      { "ja": "自分の作品に同じ不具合がない場合もある。そのときは正しいコードをわざと壊さない", "en": "Your own work may not have the same bug. In that case, do not deliberately break correct code" }
     ],
-    "whereToAct": { "ja": "練習フォルダを作業場所にした Codex の依頼入力欄。" },
-    "instruction": { "ja": "灯台メモの不具合を報告します。\n再現手順：画面を開く→題名に半角空白を1つだけ入れる→本文に「朝の配達」→「追加」を押す\n期待した結果：追加されず「題名を入力してください」と表示される\n実際の結果：題名が空白のメモが1件登録された\n依頼の範囲：題名が空・空白だけ（半角・全角）のときの拒否だけを直してください。保存済みのメモは消さないでください。通常の題名は今までどおり登録できるようにしてください。" },
-    "expectedResult": { "ja": "題名の確認処理だけが直され、変更の要点が返る。" },
-    "successExample": { "ja": "空・半角空白だけ・全角空白だけの題名は拒否され理由が出る。「氷の配達」は登録される。保存済みのメモは残っている。" },
+    "whereToAct": { "ja": "練習フォルダを作業場所にした Codex の依頼入力欄。", "en": "The request input box of Codex with the practice folder as the working location." },
+    "instruction": { "ja": "灯台メモの不具合を報告します。\n再現手順：画面を開く→題名に半角空白を1つだけ入れる→本文に「朝の配達」→「追加」を押す\n期待した結果：追加されず「題名を入力してください」と表示される\n実際の結果：題名が空白のメモが1件登録された\n依頼の範囲：題名が空・空白だけ（半角・全角）のときの拒否だけを直してください。保存済みのメモは消さないでください。通常の題名は今までどおり登録できるようにしてください。", "en": "I am reporting a bug in the lighthouse notes.\nReproduction steps: open the screen → enter just one half-width space in the title → \"朝の配達\" in the body → press \"Add\"\nExpected result: it is not added and \"Please enter a title\" is shown\nActual result: one note with a whitespace title was registered\nScope of the request: fix only the rejection when the title is empty or only whitespace (half-width or full-width). Do not delete saved notes. Keep normal titles registrable as before." },
+    "expectedResult": { "ja": "題名の確認処理だけが直され、変更の要点が返る。", "en": "Only the title check is fixed, and the key points of the change come back." },
+    "successExample": { "ja": "空・半角空白だけ・全角空白だけの題名は拒否され理由が出る。「氷の配達」は登録される。保存済みのメモは残っている。", "en": "Titles that are empty, only a half-width space or only a full-width space are rejected with a reason shown. \"氷の配達\" is registered. Saved notes remain." },
     "failureRecovery": [
-      { "situation": { "ja": "自分の作品では不具合が起きない" }, "action": { "ja": "自分の作品が正しい可能性が高い。不具合があると決めつけたり、わざと壊したりしない。必要なら、隔離された「壊れた練習用見本」（public/practice/q04-broken-sample。別の保存キー）をコピーして使う。" } },
-      { "situation": { "ja": "保存済みのメモを消す変更が提案された" }, "action": { "ja": "範囲を確認処理だけに絞るよう伝え直す。" }, "instruction": { "ja": "保存済みのメモは消さないでください。題名の確認処理だけを直してください。" } },
-      { "situation": { "ja": "直した後、ふつうの題名も登録できない" }, "action": { "ja": "直しすぎを伝える。" }, "instruction": { "ja": "修正後、題名「氷の配達」も登録できなくなりました。空白だけの題名だけを拒否するように直してください。" } }
+      { "situation": { "ja": "自分の作品では不具合が起きない", "en": "The bug does not occur in your own work" }, "action": { "ja": "自分の作品が正しい可能性が高い。不具合があると決めつけたり、わざと壊したりしない。必要なら、隔離された「壊れた練習用見本」（public/practice/q04-broken-sample。別の保存キー）をコピーして使う。", "en": "Your work is probably correct. Do not assume there is a bug or deliberately break it. If needed, copy and use the isolated \"broken practice sample\" (public/practice/q04-broken-sample; a separate storage key)." } },
+      { "situation": { "ja": "保存済みのメモを消す変更が提案された", "en": "A change that deletes saved notes was proposed" }, "action": { "ja": "範囲を確認処理だけに絞るよう伝え直す。", "en": "Tell it again to narrow the scope to the check processing only." }, "instruction": { "ja": "保存済みのメモは消さないでください。題名の確認処理だけを直してください。", "en": "Do not delete saved notes. Fix only the title check." } },
+      { "situation": { "ja": "直した後、ふつうの題名も登録できない", "en": "After the fix, even a normal title cannot be registered" }, "action": { "ja": "直しすぎを伝える。", "en": "Tell it that it fixed too much." }, "instruction": { "ja": "修正後、題名「氷の配達」も登録できなくなりました。空白だけの題名だけを拒否するように直してください。", "en": "After the fix, even the title \"氷の配達\" can no longer be registered. Please fix it so that only whitespace-only titles are rejected." } }
     ],
     "status": "draft",
-    "verification": { "verifiedAt": null, "testedProductVersion": null, "contentVersion": "0.1.0", "note": { "ja": "未検証の下書き。Q04 用の壊れた練習用見本は用意済み（自動テストで不具合の再現と修正後の確認を検査）。ただし実際の Codex での実習は未検証です。" } },
+    "verification": { "verifiedAt": null, "testedProductVersion": null, "contentVersion": "0.1.0", "note": { "ja": "未検証の下書き。Q04 用の壊れた練習用見本は用意済み（自動テストで不具合の再現と修正後の確認を検査）。ただし実際の Codex での実習は未検証です。", "en": "Unverified draft. The broken practice sample for Q04 is prepared (automated tests check reproducing the bug and checking after the fix). However, practice with real Codex is unverified." } },
     "sourceIds": ["S1"]
   },
   {
     "id": "pc-q05",
     "questId": "q05",
     "routeId": "desktop_windows_codex",
-    "objective": { "ja": "現在のファイルで主要動作を確かめ、行った検査と未実施を分けて報告してもらう。" },
-    "requiredState": [{ "ja": "Q04 の実習の後の灯台メモ（現在の版）" }],
-    "whereToAct": { "ja": "練習フォルダを作業場所にした Codex の依頼入力欄と、自分のブラウザ。" },
-    "instruction": { "ja": "現在の灯台メモのファイルを対象に、次の確認の手順を示してください。可能なら確認も行い、結果を報告してください。\n1. 追加して一覧に表示される\n2. 追加→再読み込み→残っている\n3. 空・空白だけの題名は拒否される\n4. 通常の日本語題名は登録される\n報告は「成功」「失敗」「実行エラー（結果なし）」「未実施」に分け、確認していないものを成功と書かないでください。" },
-    "expectedResult": { "ja": "4項目それぞれについて、行った確認と結果、または未実施であることが返る。" },
-    "successExample": { "ja": "自分でも同じ4項目をブラウザで確かめ、報告と一致している。" },
+    "objective": { "ja": "現在のファイルで主要動作を確かめ、行った検査と未実施を分けて報告してもらう。", "en": "Have it check the main actions on the current files and report the checks done and those not run separately." },
+    "requiredState": [{ "ja": "Q04 の実習の後の灯台メモ（現在の版）", "en": "The lighthouse notes after the Q04 practice (current version)" }],
+    "whereToAct": { "ja": "練習フォルダを作業場所にした Codex の依頼入力欄と、自分のブラウザ。", "en": "The request input box of Codex with the practice folder as the working location, and your own browser." },
+    "instruction": { "ja": "現在の灯台メモのファイルを対象に、次の確認の手順を示してください。可能なら確認も行い、結果を報告してください。\n1. 追加して一覧に表示される\n2. 追加→再読み込み→残っている\n3. 空・空白だけの題名は拒否される\n4. 通常の日本語題名は登録される\n報告は「成功」「失敗」「実行エラー（結果なし）」「未実施」に分け、確認していないものを成功と書かないでください。", "en": "For the current lighthouse notes files, show the steps for the following checks. If possible, also run the checks and report the results.\n1. Add and it appears in the list\n2. Add → reload → it remains\n3. Empty or whitespace-only titles are rejected\n4. Normal Japanese titles are registered\nSeparate the report into \"success,\" \"failure,\" \"run error (no result)\" and \"not run,\" and do not write something unchecked as a success." },
+    "expectedResult": { "ja": "4項目それぞれについて、行った確認と結果、または未実施であることが返る。", "en": "For each of the 4 items, the check done and the result, or that it was not run, comes back." },
+    "successExample": { "ja": "自分でも同じ4項目をブラウザで確かめ、報告と一致している。", "en": "You check the same 4 items in the browser yourself, and they match the report." },
     "failureRecovery": [
-      { "situation": { "ja": "「全部成功」とだけ返ってきた" }, "action": { "ja": "項目ごとに、何をしてどうなったかを分けてもらう。" }, "instruction": { "ja": "4項目それぞれについて、行った操作と結果を分けて書いてください。行っていないものは未実施と書いてください。" } },
-      { "situation": { "ja": "確認が途中で止まった" }, "action": { "ja": "失敗とは分けて、止まった理由だけを整理する。ログ全体は公開しない。" } }
+      { "situation": { "ja": "「全部成功」とだけ返ってきた", "en": "Only \"All succeeded\" came back" }, "action": { "ja": "項目ごとに、何をしてどうなったかを分けてもらう。", "en": "Have it separate, item by item, what was done and what happened." }, "instruction": { "ja": "4項目それぞれについて、行った操作と結果を分けて書いてください。行っていないものは未実施と書いてください。", "en": "For each of the 4 items, write the action taken and the result separately. Write \"not run\" for anything not done." } },
+      { "situation": { "ja": "確認が途中で止まった", "en": "The check stopped partway" }, "action": { "ja": "失敗とは分けて、止まった理由だけを整理する。ログ全体は公開しない。", "en": "Separate it from failure and organize only the reason it stopped. Do not publish the whole log." } }
     ],
     "status": "draft",
-    "verification": { "verifiedAt": null, "testedProductVersion": null, "contentVersion": "0.1.0", "note": { "ja": "未検証の下書き。このアプリは実際のログを読み込まず、自己確認の記録だけを残します。" } },
+    "verification": { "verifiedAt": null, "testedProductVersion": null, "contentVersion": "0.1.0", "note": { "ja": "未検証の下書き。このアプリは実際のログを読み込まず、自己確認の記録だけを残します。", "en": "Unverified draft. This app does not load real logs and keeps only a record of self-checks." } },
     "sourceIds": ["S1"]
   },
   {
     "id": "pc-q06",
     "questId": "q06",
     "routeId": "desktop_windows_codex",
-    "objective": { "ja": "灯台メモの README（目的・起動と使い方・確認済みと未確認・残件）をまとめ、他の人へ渡せる状態にする。" },
+    "objective": { "ja": "灯台メモの README（目的・起動と使い方・確認済みと未確認・残件）をまとめ、他の人へ渡せる状態にする。", "en": "Put together the README of the lighthouse notes (goal, how to start and use, checked and unchecked, remaining items) so it is ready to hand to others." },
     "requiredState": [
-      { "ja": "Q05 の実習で確かめた記録" },
-      { "ja": "GitHub アカウントの作成、外部公開、main への取り込みは必須ではない" }
+      { "ja": "Q05 の実習で確かめた記録", "en": "The record checked in the Q05 practice" },
+      { "ja": "GitHub アカウントの作成、外部公開、main への取り込みは必須ではない", "en": "Creating a GitHub account, publishing externally and merging into main are not required" }
     ],
-    "whereToAct": { "ja": "練習フォルダを作業場所にした Codex の依頼入力欄。" },
-    "instruction": { "ja": "灯台メモを他の人へ渡すための README.md を、このフォルダに作ってください。\n・目的\n・起動と使い方（ブラウザでの開き方、追加の方法、保存はこのブラウザの中だけであること）\n・確認済み（どの版で何を確かめたか）と未確認\n・残件（後でやること）\nパスワード、APIキー、作業ログの全文は入れないでください。公開や外部への送信はしないでください。" },
-    "expectedResult": { "ja": "練習フォルダに README.md が作られる。公開や送信は行われない。" },
-    "successExample": { "ja": "README を読んだ別の人が、灯台メモを開いて1件追加でき、確かめた範囲と残件が分かる。" },
+    "whereToAct": { "ja": "練習フォルダを作業場所にした Codex の依頼入力欄。", "en": "The request input box of Codex with the practice folder as the working location." },
+    "instruction": { "ja": "灯台メモを他の人へ渡すための README.md を、このフォルダに作ってください。\n・目的\n・起動と使い方（ブラウザでの開き方、追加の方法、保存はこのブラウザの中だけであること）\n・確認済み（どの版で何を確かめたか）と未確認\n・残件（後でやること）\nパスワード、APIキー、作業ログの全文は入れないでください。公開や外部への送信はしないでください。", "en": "Please create a README.md in this folder for handing the lighthouse notes to other people.\n- Goal\n- How to start and use (how to open it in a browser, how to add, and that saving is only inside this browser)\n- Checked (what was checked on which version) and unchecked\n- Remaining items (things to do later)\nDo not include passwords, API keys or the full text of the work log. Do not publish or send anything outside." },
+    "expectedResult": { "ja": "練習フォルダに README.md が作られる。公開や送信は行われない。", "en": "README.md is created in the practice folder. Nothing is published or sent." },
+    "successExample": { "ja": "README を読んだ別の人が、灯台メモを開いて1件追加でき、確かめた範囲と残件が分かる。", "en": "Another person who reads the README can open the lighthouse notes and add one item, and understands the range checked and what remains." },
     "failureRecovery": [
-      { "situation": { "ja": "「すべて完璧」のように未確認が書かれていない" }, "action": { "ja": "未確認と残件を分けて書くよう頼む。" }, "instruction": { "ja": "確かめていないことは「未確認」として書き、後でやることは「残件」に分けてください。" } },
-      { "situation": { "ja": "公開や外部への送信を提案された" }, "action": { "ja": "今回は行わない。公開は別の明示的な判断で行う。" }, "instruction": { "ja": "今回は公開や外部への送信は行いません。README の作成だけにしてください。" } }
+      { "situation": { "ja": "「すべて完璧」のように未確認が書かれていない", "en": "The unchecked is not written, as in \"all perfect\"" }, "action": { "ja": "未確認と残件を分けて書くよう頼む。", "en": "Ask it to write the unchecked and the remaining items separately." }, "instruction": { "ja": "確かめていないことは「未確認」として書き、後でやることは「残件」に分けてください。", "en": "Write what has not been checked as \"unchecked,\" and separate what is to be done later as \"remaining items.\"" } },
+      { "situation": { "ja": "公開や外部への送信を提案された", "en": "Publishing or sending outside was proposed" }, "action": { "ja": "今回は行わない。公開は別の明示的な判断で行う。", "en": "Do not do it this time. Publishing is done with a separate, explicit decision." }, "instruction": { "ja": "今回は公開や外部への送信は行いません。README の作成だけにしてください。", "en": "This time, do not publish or send anything outside. Only create the README." } }
     ],
     "status": "draft",
-    "verification": { "verifiedAt": null, "testedProductVersion": null, "contentVersion": "0.1.0", "note": { "ja": "未検証の下書き。実機では確認していません。" } },
+    "verification": { "verifiedAt": null, "testedProductVersion": null, "contentVersion": "0.1.0", "note": { "ja": "未検証の下書き。実機では確認していません。", "en": "Unverified draft. Not checked on a real device." } },
     "sourceIds": ["S1"]
   }
 ]

@@ -130,3 +130,22 @@ describe('validator catches broken content', () => {
     );
   });
 });
+
+describe('English content coverage (AC18)', () => {
+  const missing: string[] = [];
+  const walk = (o: unknown, path: string): void => {
+    if (Array.isArray(o)) return o.forEach((v, i) => walk(v, `${path}[${i}]`));
+    if (o && typeof o === 'object') {
+      const r = o as Record<string, unknown>;
+      if (typeof r.ja === 'string' && Object.keys(r).every((k) => k === 'ja' || k === 'en')) {
+        if (typeof r.en !== 'string' || (r.ja !== '' && r.en === '')) missing.push(path);
+        return;
+      }
+      for (const [k, v] of Object.entries(r)) walk(v, `${path}/${k}`);
+    }
+  };
+  it('every LocalizedText has an English text', () => {
+    walk(RAW_CONTENT, 'content');
+    expect(missing).toEqual([]);
+  });
+});

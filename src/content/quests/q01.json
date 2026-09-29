@@ -2,36 +2,36 @@
   "id": "q01",
   "revision": "1",
   "prerequisite": null,
-  "title": { "ja": "依頼市場の白い地図" },
-  "place": { "ja": "依頼市場" },
-  "incident": { "ja": "「便利なものを作って」だけでは、全員が別の完成形を想像している。" },
-  "notesState": { "ja": "灯台メモの短い仕様ができる" },
-  "sample": { "ja": "完成見本：「題名と本文を入力し、一覧で見返せる。まずは仕様の整理だけ。完了条件は3つ。」という短い依頼書。" },
+  "title": { "ja": "依頼市場の白い地図", "en": "The Blank Map of the Request Market" },
+  "place": { "ja": "依頼市場", "en": "Request Market" },
+  "incident": { "ja": "「便利なものを作って」だけでは、全員が別の完成形を想像している。", "en": "\"Make something useful\" is not enough: everyone pictures a different finished product." },
+  "notesState": { "ja": "灯台メモの短い仕様ができる", "en": "Produce a short spec for the lighthouse notes app" },
+  "sample": { "ja": "完成見本：「題名と本文を入力し、一覧で見返せる。まずは仕様の整理だけ。完了条件は3つ。」という短い依頼書。", "en": "Worked example: a short request that says, \"Let me enter a title and body and look them over in a list. For now, just organize the spec. There are three completion criteria.\"" },
   "objectives": [
-    { "id": "q01-o1", "text": { "ja": "依頼の「目的」と「材料（関連情報）」を分けて書ける" } },
-    { "id": "q01-o2", "text": { "ja": "「制約」と「完了条件」を依頼に入れられる" } },
-    { "id": "q01-o3", "text": { "ja": "言葉が変わっても、同じ4つの要素で依頼を組み立て直せる" } }
+    { "id": "q01-o1", "text": { "ja": "依頼の「目的」と「材料（関連情報）」を分けて書ける", "en": "Write a request with its \"goal\" and its \"materials (related information)\" kept apart" } },
+    { "id": "q01-o2", "text": { "ja": "「制約」と「完了条件」を依頼に入れられる", "en": "Put \"constraints\" and \"completion criteria\" into a request" } },
+    { "id": "q01-o3", "text": { "ja": "言葉が変わっても、同じ4つの要素で依頼を組み立て直せる", "en": "Rebuild a request from the same four elements even when the wording changes" } }
   ],
   "briefScene": {
     "id": "q01-brief",
     "backgroundAssetId": "BG01",
     "lines": [
-      { "speaker": "narrator", "text": { "ja": "依頼市場の机には、真っ白な地図が一枚。どの工房へ向かえばいいのか、道が一本も描かれていない。" } },
-      { "speaker": "resident", "name": { "ja": "市場の配達係" }, "text": { "ja": "すごく便利な道具を作ってほしいんだ。とにかく便利なやつ！" } },
-      { "speaker": "koto", "expression": "think", "text": { "ja": "了解です。鐘を作ります。……棚も作ります。地図も……" } },
-      { "speaker": "ritsu", "expression": "think", "text": { "ja": "待って、コト。三人とも、別々の「便利」を思い浮かべていないかい。" } },
-      { "speaker": "nagi", "expression": "think", "text": { "ja": "誰が、何を、どう使うのか。先にそこをまとめよう。" } },
-      { "speaker": "ritsu", "expression": "normal", "text": { "ja": "依頼書には4つの欄がある。目的、材料、制約、完了条件。札を並べて、配達係の依頼を形にしてみよう。" } }
+      { "speaker": "narrator", "text": { "ja": "依頼市場の机には、真っ白な地図が一枚。どの工房へ向かえばいいのか、道が一本も描かれていない。", "en": "On the desk in the Request Market lies a completely blank map. Not a single road is drawn to any workshop." } },
+      { "speaker": "resident", "name": { "ja": "市場の配達係", "en": "Market courier" }, "text": { "ja": "すごく便利な道具を作ってほしいんだ。とにかく便利なやつ！", "en": "I want you to make a really useful tool. Just something useful, you know!" } },
+      { "speaker": "koto", "expression": "think", "text": { "ja": "了解です。鐘を作ります。……棚も作ります。地図も……", "en": "Understood. I'll build a bell. ...And a shelf. And a map..." } },
+      { "speaker": "ritsu", "expression": "think", "text": { "ja": "待って、コト。三人とも、別々の「便利」を思い浮かべていないかい。", "en": "Wait, Koto. Aren't the three of you imagining three different kinds of \"useful\"?" } },
+      { "speaker": "nagi", "expression": "think", "text": { "ja": "誰が、何を、どう使うのか。先にそこをまとめよう。", "en": "Who will use what, and how? Let's pin that down first." } },
+      { "speaker": "ritsu", "expression": "normal", "text": { "ja": "依頼書には4つの欄がある。目的、材料、制約、完了条件。札を並べて、配達係の依頼を形にしてみよう。", "en": "A request form has four fields: goal, materials, constraints, completion criteria. Let's lay out the cards and shape the courier's request." } }
     ]
   },
   "clearScene": {
     "id": "q01-clear",
     "backgroundAssetId": "BG01",
     "lines": [
-      { "speaker": "narrator", "text": { "ja": "4つの欄が埋まると、白かった地図に細い線が浮かび、最初の工房への道が現れた。" } },
-      { "speaker": "koto", "expression": "happy", "text": { "ja": "何ができたら終わりか、分かりました。次は、この仕様で作れます。" } },
-      { "speaker": "resident", "name": { "ja": "市場の配達係" }, "text": { "ja": "おれが欲しかったのは、忘れないための帳面だったんだな。" } },
-      { "speaker": "ritsu", "expression": "happy", "text": { "ja": "地図に道が出た。次は工房で、小さく一つ作ってみよう。" } }
+      { "speaker": "narrator", "text": { "ja": "4つの欄が埋まると、白かった地図に細い線が浮かび、最初の工房への道が現れた。", "en": "When the four fields were filled, thin lines rose across the blank map, and a road to the first workshop appeared." } },
+      { "speaker": "koto", "expression": "happy", "text": { "ja": "何ができたら終わりか、分かりました。次は、この仕様で作れます。", "en": "Now I know what \"done\" looks like. Next, I can build from this spec." } },
+      { "speaker": "resident", "name": { "ja": "市場の配達係", "en": "Market courier" }, "text": { "ja": "おれが欲しかったのは、忘れないための帳面だったんだな。", "en": "What I wanted was a notebook so I wouldn't forget." } },
+      { "speaker": "ritsu", "expression": "happy", "text": { "ja": "地図に道が出た。次は工房で、小さく一つ作ってみよう。", "en": "A road appeared on the map. Next, let's build one small thing in the workshop." } }
     ]
   },
   "activities": [
@@ -41,35 +41,35 @@
       "objectiveId": "q01-o1",
       "type": "prompt_builder",
       "required": true,
-      "title": { "ja": "Q01-A 配達係の依頼書を組み立てる" },
-      "prompt": { "ja": "札を選び、依頼書の4つの欄へ置いてください。どの欄にも答えない札は、置かずに残してかまいません。" },
+      "title": { "ja": "Q01-A 配達係の依頼書を組み立てる", "en": "Q01-A Build the courier's request form" },
+      "prompt": { "ja": "札を選び、依頼書の4つの欄へ置いてください。どの欄にも答えない札は、置かずに残してかまいません。", "en": "Choose cards and place them in the four fields of the request form. Cards that answer none of the fields may stay unplaced." },
       "reference": [
         {
           "kind": "text",
-          "title": { "ja": "配達係の話" },
+          "title": { "ja": "配達係の話", "en": "The courier's story" },
           "lines": [
-            { "ja": "「朝に受けた配達の依頼を、昼には忘れてしまうんだ。」" },
-            { "ja": "「依頼は、いつも題名と中身をひとことずつメモしてる。」" },
-            { "ja": "「使うのはおれひとり。店のPCのブラウザで開ければいい。」" },
-            { "ja": "「今日は、何を作るかの相談だけにしたい。」" }
+            { "ja": "「朝に受けた配達の依頼を、昼には忘れてしまうんだ。」", "en": "\"I take a delivery request in the morning and forget it by noon.\"" },
+            { "ja": "「依頼は、いつも題名と中身をひとことずつメモしてる。」", "en": "\"I always jot down each request as a title and a line of content.\"" },
+            { "ja": "「使うのはおれひとり。店のPCのブラウザで開ければいい。」", "en": "\"Only I will use it. It just has to open in the browser on the shop PC.\"" },
+            { "ja": "「今日は、何を作るかの相談だけにしたい。」", "en": "\"Today I only want to talk about what to build.\"" }
           ]
         }
       ],
       "slots": [
-        { "id": "purpose", "label": { "ja": "目的" }, "question": { "ja": "何のために、誰が使う？" } },
-        { "id": "context", "label": { "ja": "材料（関連情報）" }, "question": { "ja": "知っておくべき状況は？" } },
-        { "id": "constraints", "label": { "ja": "制約" }, "question": { "ja": "やらないこと・守ることは？" } },
-        { "id": "done", "label": { "ja": "完了条件" }, "question": { "ja": "何を確かめたら終わり？" } }
+        { "id": "purpose", "label": { "ja": "目的", "en": "Goal" }, "question": { "ja": "何のために、誰が使う？", "en": "What is it for, and who will use it?" } },
+        { "id": "context", "label": { "ja": "材料（関連情報）", "en": "Materials (related information)" }, "question": { "ja": "知っておくべき状況は？", "en": "What situation should be known?" } },
+        { "id": "constraints", "label": { "ja": "制約", "en": "Constraints" }, "question": { "ja": "やらないこと・守ることは？", "en": "What will we not do, and what must we keep?" } },
+        { "id": "done", "label": { "ja": "完了条件", "en": "Completion criteria" }, "question": { "ja": "何を確かめたら終わり？", "en": "What do we check to say it is done?" } }
       ],
       "cards": [
-        { "id": "q01a-scope", "label": { "ja": "今回は仕様の整理だけ。まだファイルは作らない" }, "explain": { "ja": "作業の境界を決める「制約」です。今日は相談だけ、という配達係の希望に合います。" } },
-        { "id": "q01a-bell", "label": { "ja": "依頼が届いたら、町中に鐘を鳴らす機能も付ける" }, "explain": { "ja": "配達係は鐘を求めていません。頼まれていない機能を足すと、完成が遠のきます。" } },
-        { "id": "q01a-user", "label": { "ja": "使うのは配達係ひとり。店のPCのブラウザで開く" }, "explain": { "ja": "誰がどこで使うかという「材料（関連情報）」です。" } },
-        { "id": "q01a-purpose", "label": { "ja": "受けた配達の依頼を書き留めて、あとで一覧で見返せるようにしたい" }, "explain": { "ja": "何のために作るかを表す「目的」です。" } },
-        { "id": "q01a-best", "label": { "ja": "とにかく一番便利にする" }, "explain": { "ja": "人によって想像する完成形が変わる言葉です。どの欄にも入れず、具体的な目的に言い換えます。" } },
-        { "id": "q01a-fields", "label": { "ja": "依頼はいつも「題名」と「中身」をひとことずつメモしている" }, "explain": { "ja": "今のやり方という「材料（関連情報）」です。守る形として制約に置く考え方もあります。" } },
-        { "id": "q01a-done", "label": { "ja": "仕様に「追加」「一覧表示」「文字数の上限」の3つの完了条件が書かれている" }, "explain": { "ja": "確かめられる終わりの状態、つまり「完了条件」です。" } },
-        { "id": "q01a-small", "label": { "ja": "最初は題名と本文の2項目だけ。ほかの項目は足さない" }, "explain": { "ja": "範囲を絞る「制約」です。" } }
+        { "id": "q01a-scope", "label": { "ja": "今回は仕様の整理だけ。まだファイルは作らない", "en": "This time only organize the spec. Do not create files yet" }, "explain": { "ja": "作業の境界を決める「制約」です。今日は相談だけ、という配達係の希望に合います。", "en": "This is a \"constraint\" that sets the boundary of the work. It fits the courier's wish to only talk today." } },
+        { "id": "q01a-bell", "label": { "ja": "依頼が届いたら、町中に鐘を鳴らす機能も付ける", "en": "Also add a feature that rings a bell across town when a request arrives" }, "explain": { "ja": "配達係は鐘を求めていません。頼まれていない機能を足すと、完成が遠のきます。", "en": "The courier did not ask for a bell. Adding features nobody asked for pushes completion further away." } },
+        { "id": "q01a-user", "label": { "ja": "使うのは配達係ひとり。店のPCのブラウザで開く", "en": "Only the courier will use it. Open it in the browser on the shop PC" }, "explain": { "ja": "誰がどこで使うかという「材料（関連情報）」です。", "en": "This is \"materials (related information)\": who uses it and where." } },
+        { "id": "q01a-purpose", "label": { "ja": "受けた配達の依頼を書き留めて、あとで一覧で見返せるようにしたい", "en": "I want to write down the delivery requests I receive and look them over later in a list" }, "explain": { "ja": "何のために作るかを表す「目的」です。", "en": "This is the \"goal\": it says what it is being built for." } },
+        { "id": "q01a-best", "label": { "ja": "とにかく一番便利にする", "en": "Just make it as useful as possible" }, "explain": { "ja": "人によって想像する完成形が変わる言葉です。どの欄にも入れず、具体的な目的に言い換えます。", "en": "The finished picture changes from person to person. Put it in no field; rephrase it as a concrete goal." } },
+        { "id": "q01a-fields", "label": { "ja": "依頼はいつも「題名」と「中身」をひとことずつメモしている", "en": "I always jot down each request as a \"title\" and a line of \"content\"" }, "explain": { "ja": "今のやり方という「材料（関連情報）」です。守る形として制約に置く考え方もあります。", "en": "This is \"materials (related information)\": how things are done now. It can also be treated as a constraint, a form to preserve." } },
+        { "id": "q01a-done", "label": { "ja": "仕様に「追加」「一覧表示」「文字数の上限」の3つの完了条件が書かれている", "en": "The spec lists three completion criteria: \"add\", \"list view\", and \"character limit\"" }, "explain": { "ja": "確かめられる終わりの状態、つまり「完了条件」です。", "en": "This is an end state you can verify: a \"completion criterion\"." } },
+        { "id": "q01a-small", "label": { "ja": "最初は題名と本文の2項目だけ。ほかの項目は足さない", "en": "At first only two items: title and body. Do not add other items" }, "explain": { "ja": "範囲を絞る「制約」です。", "en": "This is a \"constraint\" that narrows the scope." } }
       ],
       "grading": {
         "id": "q01-a.rule",
@@ -96,58 +96,58 @@
       },
       "feedbackByOutcome": {
         "correct": {
-          "what": { "ja": "コトが「何を、誰のために、どこまで作るか」を一度で理解できる依頼書になりました。" },
-          "why": { "ja": "目的・材料・制約・完了条件がそれぞれの欄に入り、頼まれていない機能は入っていません。" },
-          "next": { "ja": "次は、配達係の話から本当に必要な使い方だけを拾います。" }
+          "what": { "ja": "コトが「何を、誰のために、どこまで作るか」を一度で理解できる依頼書になりました。", "en": "Koto now has a request form that makes clear in one reading what to build, for whom, and how far." },
+          "why": { "ja": "目的・材料・制約・完了条件がそれぞれの欄に入り、頼まれていない機能は入っていません。", "en": "Goal, materials, constraints and completion criteria are in their own fields, and no feature nobody asked for is included." },
+          "next": { "ja": "次は、配達係の話から本当に必要な使い方だけを拾います。", "en": "Next, pick only the uses that are really needed from the courier's story." }
         },
         "extra_feature": {
-          "what": { "ja": "コトは鐘の仕組みから作り始め、メモの機能が後回しになります。" },
-          "why": { "ja": "鐘は配達係の話に出てきません。頼まれていない機能は、完成の範囲を広げてしまいます。" },
-          "next": { "ja": "「鐘」の札を欄から外して、札置き場に戻しましょう。" }
+          "what": { "ja": "コトは鐘の仕組みから作り始め、メモの機能が後回しになります。", "en": "Koto starts with the bell mechanism, and the notes feature is put off." },
+          "why": { "ja": "鐘は配達係の話に出てきません。頼まれていない機能は、完成の範囲を広げてしまいます。", "en": "The bell never appears in the courier's story. A feature nobody asked for widens the scope of what counts as finished." },
+          "next": { "ja": "「鐘」の札を欄から外して、札置き場に戻しましょう。", "en": "Take the \"bell\" card out of the field and return it to the card tray." }
         },
         "vague_goal": {
-          "what": { "ja": "コトは「一番便利」を自分なりに解釈し、配達係の想像と違うものを作ります。" },
-          "why": { "ja": "「一番便利」は人によって意味が変わり、確かめようがありません。" },
-          "next": { "ja": "「一番便利」の札を外し、具体的な目的の札を目的の欄に置きましょう。" },
+          "what": { "ja": "コトは「一番便利」を自分なりに解釈し、配達係の想像と違うものを作ります。", "en": "Koto interprets \"the most useful\" in their own way and builds something different from what the courier imagined." },
+          "why": { "ja": "「一番便利」は人によって意味が変わり、確かめようがありません。", "en": "\"The most useful\" means different things to different people and cannot be checked." },
+          "next": { "ja": "「一番便利」の札を外し、具体的な目的の札を目的の欄に置きましょう。", "en": "Remove the \"the most useful\" card and place a concrete goal card in the goal field." },
           "examples": [
-            { "label": { "ja": "コトの完成例A" }, "text": { "ja": "町中に届く大きな鐘。配達係は依頼を覚えていられない。" } },
-            { "label": { "ja": "コトの完成例B" }, "text": { "ja": "色分けできる大きな棚。でも、依頼の中身は書けない。" } }
+            { "label": { "ja": "コトの完成例A", "en": "Koto's finished example A" }, "text": { "ja": "町中に届く大きな鐘。配達係は依頼を覚えていられない。", "en": "A big bell heard across town. The courier still cannot remember requests." } },
+            { "label": { "ja": "コトの完成例B", "en": "Koto's finished example B" }, "text": { "ja": "色分けできる大きな棚。でも、依頼の中身は書けない。", "en": "A big shelf with color coding. But you cannot write what a request says." } }
           ]
         },
         "missing_purpose": {
-          "what": { "ja": "コトは何のために作るのか分からず、形だけを先に作り始めます。" },
-          "why": { "ja": "目的の欄に「依頼を書き留めて見返したい」という理由が入っていません。" },
-          "next": { "ja": "目的の欄を見直しましょう。「何のために、誰が使うか」に答える札はどれでしょう。" }
+          "what": { "ja": "コトは何のために作るのか分からず、形だけを先に作り始めます。", "en": "Koto does not know what this is being built for and starts building only the outward form." },
+          "why": { "ja": "目的の欄に「依頼を書き留めて見返したい」という理由が入っていません。", "en": "The goal field lacks a reason such as \"I want to write requests down and look them over.\"" },
+          "next": { "ja": "目的の欄を見直しましょう。「何のために、誰が使うか」に答える札はどれでしょう。", "en": "Look at the goal field again. Which card answers \"what is it for, and who uses it?\"" }
         },
         "missing_done": {
-          "what": { "ja": "コトはいつ終えればいいか分からず、途中で止めるか、いつまでも作り続けます。" },
-          "why": { "ja": "完了条件がないと、同じ依頼から全く違う完成が生まれます。" },
-          "next": { "ja": "完了条件の欄に、確かめられる終わりの状態を書いた札を置きましょう。" },
+          "what": { "ja": "コトはいつ終えればいいか分からず、途中で止めるか、いつまでも作り続けます。", "en": "Koto does not know when to finish, and either stops midway or keeps building forever." },
+          "why": { "ja": "完了条件がないと、同じ依頼から全く違う完成が生まれます。", "en": "Without a completion criterion, the same request produces completely different results." },
+          "next": { "ja": "完了条件の欄に、確かめられる終わりの状態を書いた札を置きましょう。", "en": "Place in the completion criteria field a card that states an end state you can verify." },
           "examples": [
-            { "label": { "ja": "コトの完成例A" }, "text": { "ja": "一覧だけ作って「完了しました」。依頼を追加できない。" } },
-            { "label": { "ja": "コトの完成例B" }, "text": { "ja": "検索・色分け・通知まで作り続け、今日の相談が終わらない。" } }
+            { "label": { "ja": "コトの完成例A", "en": "Koto's finished example A" }, "text": { "ja": "一覧だけ作って「完了しました」。依頼を追加できない。", "en": "Only the list is built and reported \"done.\" Requests cannot be added." } },
+            { "label": { "ja": "コトの完成例B", "en": "Koto's finished example B" }, "text": { "ja": "検索・色分け・通知まで作り続け、今日の相談が終わらない。", "en": "Search, color coding and notifications keep being built, and today's discussion never ends." } }
           ]
         },
         "missing_constraint": {
-          "what": { "ja": "コトは相談のつもりの今日、ファイルを作り始めたり項目を増やしたりします。" },
-          "why": { "ja": "制約の欄に「やらないこと・守ること」が入っていません。" },
-          "next": { "ja": "「今日は仕様の整理だけ」または「2項目だけ」の札を制約の欄に置きましょう。" }
+          "what": { "ja": "コトは相談のつもりの今日、ファイルを作り始めたり項目を増やしたりします。", "en": "Today was meant to be a discussion, but Koto starts creating files and adding items." },
+          "why": { "ja": "制約の欄に「やらないこと・守ること」が入っていません。", "en": "The constraints field lacks \"what we will not do and what we must keep.\"" },
+          "next": { "ja": "「今日は仕様の整理だけ」または「2項目だけ」の札を制約の欄に置きましょう。", "en": "Place the \"today only organize the spec\" or \"only two items\" card in the constraints field." }
         },
         "missing_context": {
-          "what": { "ja": "コトは誰がどこで使うのか知らないまま、使う人に合わない形で作ります。" },
-          "why": { "ja": "材料の欄に、使う人や今のやり方が入っていません。" },
-          "next": { "ja": "配達係の話から、使う人や今のメモの取り方を示す札を材料の欄に置きましょう。" }
+          "what": { "ja": "コトは誰がどこで使うのか知らないまま、使う人に合わない形で作ります。", "en": "Koto does not know who will use it or where, and builds something that does not suit the user." },
+          "why": { "ja": "材料の欄に、使う人や今のやり方が入っていません。", "en": "The materials field lacks who will use it and how things are done now." },
+          "next": { "ja": "配達係の話から、使う人や今のメモの取り方を示す札を材料の欄に置きましょう。", "en": "Place a card showing the user and the current way of taking notes in the materials field, based on the courier's story." }
         },
         "misplaced": {
-          "what": { "ja": "必要な札はそろっていますが、欄が違うため、コトが読み違えます。" },
-          "why": { "ja": "たとえば完了条件の札が目的の欄にあると、何を確かめるのかが伝わりません。" },
-          "next": { "ja": "各欄の問い（何のため・状況・やらないこと・確かめ方）と札を照らし合わせましょう。" }
+          "what": { "ja": "必要な札はそろっていますが、欄が違うため、コトが読み違えます。", "en": "The needed cards are all there, but they are in the wrong fields, so Koto misreads them." },
+          "why": { "ja": "たとえば完了条件の札が目的の欄にあると、何を確かめるのかが伝わりません。", "en": "For example, if a completion criterion card sits in the goal field, it is unclear what to check." },
+          "next": { "ja": "各欄の問い（何のため・状況・やらないこと・確かめ方）と札を照らし合わせましょう。", "en": "Compare each field's question (what for, situation, what not to do, how to check) with the cards." }
         }
       },
       "hints": [
-        { "id": "q01-a.h1", "text": { "ja": "4つの欄は「何のため？」「知っておく状況は？」「やらないことは？」「何を確かめたら終わり？」という問いに対応しています。" } },
-        { "id": "q01-a.h2", "text": { "ja": "「鐘」と「一番便利」の札は、どの問いにも答えていません。完了条件の欄には、あとで確かめられる状態を書いた札が入ります。" } },
-        { "id": "q01-a.h3", "text": { "ja": "解答例：目的＝「配達の依頼を書き留めて一覧で見返したい」、材料＝「配達係ひとり・店のPC」「題名と中身をメモしている」、制約＝「今回は仕様の整理だけ」「2項目だけ」、完了条件＝「3つの完了条件が書かれている」。鐘と「一番便利」は置きません。理由：配達係の話に合い、確かめられる終わりがあるからです。盤面に戻って札を置いてください。" } }
+        { "id": "q01-a.h1", "text": { "ja": "4つの欄は「何のため？」「知っておく状況は？」「やらないことは？」「何を確かめたら終わり？」という問いに対応しています。", "en": "The four fields answer the questions \"What is it for?\", \"What situation should be known?\", \"What will we not do?\" and \"What do we check to say it is done?\"" } },
+        { "id": "q01-a.h2", "text": { "ja": "「鐘」と「一番便利」の札は、どの問いにも答えていません。完了条件の欄には、あとで確かめられる状態を書いた札が入ります。", "en": "The \"bell\" and \"the most useful\" cards answer none of the questions. The completion criteria field takes a card stating a state that can be checked later." } },
+        { "id": "q01-a.h3", "text": { "ja": "解答例：目的＝「配達の依頼を書き留めて一覧で見返したい」、材料＝「配達係ひとり・店のPC」「題名と中身をメモしている」、制約＝「今回は仕様の整理だけ」「2項目だけ」、完了条件＝「3つの完了条件が書かれている」。鐘と「一番便利」は置きません。理由：配達係の話に合い、確かめられる終わりがあるからです。盤面に戻って札を置いてください。", "en": "Sample answer: goal = \"write down delivery requests and look them over in a list\"; materials = \"only the courier, shop PC\" and \"notes a title and a line of content\"; constraints = \"this time only organize the spec\" and \"only two items\"; completion criteria = \"three completion criteria are written.\" Do not place the bell or \"the most useful.\" Reason: it matches the courier's story and has an end you can check. Go back to the board and place the cards." } }
       ]
     },
     {
@@ -157,28 +157,28 @@
       "type": "evidence_board",
       "mode": "select",
       "required": true,
-      "title": { "ja": "Q01-B 必要な使い方を拾う" },
-      "prompt": { "ja": "配達係の話から、今回の依頼で「必須」にする使い方の札を選んでください。見た目の好みやうわさは、必須にしなくてかまいません。" },
+      "title": { "ja": "Q01-B 必要な使い方を拾う", "en": "Q01-B Pick out the necessary uses" },
+      "prompt": { "ja": "配達係の話から、今回の依頼で「必須」にする使い方の札を選んでください。見た目の好みやうわさは、必須にしなくてかまいません。", "en": "From the courier's story, choose the cards for the uses that are \"required\" in this request. Matters of taste and rumors need not be required." },
       "reference": [
         {
           "kind": "text",
-          "title": { "ja": "配達係の話（続き）" },
+          "title": { "ja": "配達係の話（続き）", "en": "The courier's story (continued)" },
           "lines": [
-            { "ja": "「題名と中身を打ち込んで、一覧でまとめて見たいんだ。」" },
-            { "ja": "「ボタンは港の色の青だとうれしいな。まあ、何色でもいいけど。」" },
-            { "ja": "「文字は筆文字っぽいと格好いいかもね。」" },
-            { "ja": "「隣町では、予約の仕組みまであるらしいよ。」" },
-            { "ja": "「使うのはおれだけ。朝のうちに忘れるのが一番困る。」" }
+            { "ja": "「題名と中身を打ち込んで、一覧でまとめて見たいんだ。」", "en": "\"I want to type in a title and content and see them all together in a list.\"" },
+            { "ja": "「ボタンは港の色の青だとうれしいな。まあ、何色でもいいけど。」", "en": "\"I'd be happy if the buttons were harbor blue. Well, any color is fine.\"" },
+            { "ja": "「文字は筆文字っぽいと格好いいかもね。」", "en": "\"Handwritten-brush lettering might look cool.\"" },
+            { "ja": "「隣町では、予約の仕組みまであるらしいよ。」", "en": "\"I hear the next town even has a reservation system.\"" },
+            { "ja": "「使うのはおれだけ。朝のうちに忘れるのが一番困る。」", "en": "\"Only I will use it. Forgetting things in the morning is what bothers me most.\"" }
           ]
         }
       ],
       "cards": [
-        { "id": "q01b-color", "label": { "ja": "ボタンを港の色の青にする" }, "explain": { "ja": "配達係自身が「何色でもいい」と言っています。あとで検討する好みで、必須ではありません。" } },
-        { "id": "q01b-input", "label": { "ja": "題名と本文を入力し、一覧で見られる" }, "explain": { "ja": "配達係が一番困っていることを解決する、中心の使い方です。" } },
-        { "id": "q01b-rumor", "label": { "ja": "隣町のような予約の仕組みを持つ" }, "explain": { "ja": "うわさ話で、配達係の困り事とは関係がありません。" } },
-        { "id": "q01b-one", "label": { "ja": "使うのは配達係ひとり" }, "explain": { "ja": "利用状況として役に立つ事実です。選んでも選ばなくてもかまいません。" } },
-        { "id": "q01b-font", "label": { "ja": "文字を筆文字風にする" }, "explain": { "ja": "「かもね」という好みです。必須にすると、本当に必要な機能より先に手間がかかります。" } },
-        { "id": "q01b-forget", "label": { "ja": "朝に受けた依頼を忘れないようにしたい" }, "explain": { "ja": "作る理由になる困り事です。選んでも選ばなくてもかまいません。" } }
+        { "id": "q01b-color", "label": { "ja": "ボタンを港の色の青にする", "en": "Make the buttons harbor blue" }, "explain": { "ja": "配達係自身が「何色でもいい」と言っています。あとで検討する好みで、必須ではありません。", "en": "The courier said \"any color is fine.\" It is a matter of taste to consider later, not a requirement." } },
+        { "id": "q01b-input", "label": { "ja": "題名と本文を入力し、一覧で見られる", "en": "Enter a title and body and view them in a list" }, "explain": { "ja": "配達係が一番困っていることを解決する、中心の使い方です。", "en": "This is the core use that solves what troubles the courier most." } },
+        { "id": "q01b-rumor", "label": { "ja": "隣町のような予約の仕組みを持つ", "en": "Have a reservation system like the next town" }, "explain": { "ja": "うわさ話で、配達係の困り事とは関係がありません。", "en": "It is a rumor and has nothing to do with the courier's trouble." } },
+        { "id": "q01b-one", "label": { "ja": "使うのは配達係ひとり", "en": "Only the courier uses it" }, "explain": { "ja": "利用状況として役に立つ事実です。選んでも選ばなくてもかまいません。", "en": "A fact useful as usage context. You may choose it or not." } },
+        { "id": "q01b-font", "label": { "ja": "文字を筆文字風にする", "en": "Make the lettering look like brush writing" }, "explain": { "ja": "「かもね」という好みです。必須にすると、本当に必要な機能より先に手間がかかります。", "en": "It is a \"might be\" preference. Making it required means effort goes there before the truly needed feature." } },
+        { "id": "q01b-forget", "label": { "ja": "朝に受けた依頼を忘れないようにしたい", "en": "I want not to forget the requests I took in the morning" }, "explain": { "ja": "作る理由になる困り事です。選んでも選ばなくてもかまいません。", "en": "A trouble that gives a reason to build. You may choose it or not." } }
       ],
       "grading": {
         "id": "q01-b.rule",
@@ -194,30 +194,30 @@
       },
       "feedbackByOutcome": {
         "correct": {
-          "what": { "ja": "コトは「題名と本文を入れ、一覧で見る」ことを中心に作れます。" },
-          "why": { "ja": "配達係の困り事に直接つながる使い方だけを必須にしました。見た目の好みは、あとで検討できます。" },
-          "next": { "ja": "次は、別の依頼でも同じ4つの要素を組み立てられるか試します。" }
+          "what": { "ja": "コトは「題名と本文を入れ、一覧で見る」ことを中心に作れます。", "en": "Koto can build around \"enter a title and body, and view them in a list.\"" },
+          "why": { "ja": "配達係の困り事に直接つながる使い方だけを必須にしました。見た目の好みは、あとで検討できます。", "en": "Only the uses directly tied to the courier's trouble are required. Matters of appearance can be considered later." },
+          "next": { "ja": "次は、別の依頼でも同じ4つの要素を組み立てられるか試します。", "en": "Next, test whether the same four elements can be assembled for a different request." }
         },
         "missing_core": {
-          "what": { "ja": "コトは、配達係が一番必要としている「入力して一覧で見る」使い方を知らないまま作ります。" },
-          "why": { "ja": "中心となる使い方が必須に入っていません。" },
-          "next": { "ja": "配達係の話の1行目を読み直し、その使い方の札を選びましょう。" }
+          "what": { "ja": "コトは、配達係が一番必要としている「入力して一覧で見る」使い方を知らないまま作ります。", "en": "Koto builds without knowing the use the courier needs most: \"enter and view in a list.\"" },
+          "why": { "ja": "中心となる使い方が必須に入っていません。", "en": "The core use is not among the required ones." },
+          "next": { "ja": "配達係の話の1行目を読み直し、その使い方の札を選びましょう。", "en": "Reread the first line of the courier's story and choose the card for that use." }
         },
         "decoration_required": {
-          "what": { "ja": "色や文字の形を整えるまで完成にならず、必要な機能が遅れます。" },
-          "why": { "ja": "見た目の好みは「何色でもいい」「かもね」と言われています。今回の必須条件ではありません。" },
-          "next": { "ja": "見た目の札の選択を外しましょう。あとで改善する候補として残せます。" }
+          "what": { "ja": "色や文字の形を整えるまで完成にならず、必要な機能が遅れます。", "en": "Nothing counts as done until colors and lettering are polished, and the needed feature is delayed." },
+          "why": { "ja": "見た目の好みは「何色でもいい」「かもね」と言われています。今回の必須条件ではありません。", "en": "Appearance was described as \"any color is fine\" and \"might be.\" It is not a requirement this time." },
+          "next": { "ja": "見た目の札の選択を外しましょう。あとで改善する候補として残せます。", "en": "Deselect the appearance card. It can stay as a candidate for later improvement." }
         },
         "hearsay": {
-          "what": { "ja": "コトは予約の仕組みまで作ろうとし、依頼が大きくなります。" },
-          "why": { "ja": "隣町のうわさは、配達係の困り事ではありません。" },
-          "next": { "ja": "予約の札の選択を外しましょう。" }
+          "what": { "ja": "コトは予約の仕組みまで作ろうとし、依頼が大きくなります。", "en": "Koto tries to build even a reservation system, and the request grows large." },
+          "why": { "ja": "隣町のうわさは、配達係の困り事ではありません。", "en": "The rumor about the next town is not the courier's trouble." },
+          "next": { "ja": "予約の札の選択を外しましょう。", "en": "Deselect the reservation card." }
         }
       },
       "hints": [
-        { "id": "q01-b.h1", "text": { "ja": "配達係が「一番困る」と言っていることを解決するのに、欠かせない使い方はどれでしょう。" } },
-        { "id": "q01-b.h2", "text": { "ja": "話の中の「まあ、何色でもいい」「かもね」「らしいよ」に注目しましょう。必須かどうかの手がかりです。" } },
-        { "id": "q01-b.h3", "text": { "ja": "解答例：「題名と本文を入力し、一覧で見られる」を選びます。「配達係ひとり」「忘れないようにしたい」は選んでも構いません。色・筆文字・予約は選びません。理由：困り事に直接つながるのは入力と一覧で、ほかは好みやうわさだからです。盤面で札を選んでください。" } }
+        { "id": "q01-b.h1", "text": { "ja": "配達係が「一番困る」と言っていることを解決するのに、欠かせない使い方はどれでしょう。", "en": "Which use is indispensable for solving what the courier says bothers them most?" } },
+        { "id": "q01-b.h2", "text": { "ja": "話の中の「まあ、何色でもいい」「かもね」「らしいよ」に注目しましょう。必須かどうかの手がかりです。", "en": "Look at \"well, any color is fine,\" \"might\" and \"I hear\" in the story. They are clues to whether something is required." } },
+        { "id": "q01-b.h3", "text": { "ja": "解答例：「題名と本文を入力し、一覧で見られる」を選びます。「配達係ひとり」「忘れないようにしたい」は選んでも構いません。色・筆文字・予約は選びません。理由：困り事に直接つながるのは入力と一覧で、ほかは好みやうわさだからです。盤面で札を選んでください。", "en": "Sample answer: choose \"enter a title and body and view them in a list.\" Choosing \"only the courier\" and \"want not to forget\" is optional. Do not choose color, brush lettering or reservation. Reason: entering and listing connect directly to the trouble; the rest are tastes and rumors. Choose cards on the board." } }
       ]
     },
     {
@@ -226,35 +226,35 @@
       "objectiveId": "q01-o3",
       "type": "prompt_builder",
       "required": true,
-      "title": { "ja": "Q01-C 別の依頼：持ち物チェック表" },
-      "prompt": { "ja": "今度は漁師から別の依頼です。言葉は違っても、同じ4つの欄で依頼書を組み立ててください。" },
+      "title": { "ja": "Q01-C 別の依頼：持ち物チェック表", "en": "Q01-C A different request: a packing checklist" },
+      "prompt": { "ja": "今度は漁師から別の依頼です。言葉は違っても、同じ4つの欄で依頼書を組み立ててください。", "en": "Now a fisher has a different request. The words differ, but build the request form with the same four fields." },
       "reference": [
         {
           "kind": "text",
-          "title": { "ja": "港の漁師の話" },
+          "title": { "ja": "港の漁師の話", "en": "The harbor fisher's story" },
           "lines": [
-            { "ja": "「漁に出る前、持ち物をひとつ忘れるだけで一日が台無しでね。」" },
-            { "ja": "「網、水筒、雨具……毎朝だいたい同じ10個くらいを確かめる。」" },
-            { "ja": "「船の上ではスマートフォンしか持っていない。」" },
-            { "ja": "「今回は見て確かめられれば十分。仲間と共有するのはまた今度。」" }
+            { "ja": "「漁に出る前、持ち物をひとつ忘れるだけで一日が台無しでね。」", "en": "\"Forgetting a single item before heading out can ruin the whole day.\"" },
+            { "ja": "「網、水筒、雨具……毎朝だいたい同じ10個くらいを確かめる。」", "en": "\"Nets, a water bottle, rain gear... I check about the same ten things every morning.\"" },
+            { "ja": "「船の上ではスマートフォンしか持っていない。」", "en": "\"On the boat I only have a smartphone.\"" },
+            { "ja": "「今回は見て確かめられれば十分。仲間と共有するのはまた今度。」", "en": "\"This time it's enough to just look and check. Sharing with the crew can wait.\"" }
           ]
         }
       ],
       "slots": [
-        { "id": "purpose", "label": { "ja": "目的" }, "question": { "ja": "何のために、誰が使う？" } },
-        { "id": "context", "label": { "ja": "材料（関連情報）" }, "question": { "ja": "知っておくべき状況は？" } },
-        { "id": "constraints", "label": { "ja": "制約" }, "question": { "ja": "やらないこと・守ることは？" } },
-        { "id": "done", "label": { "ja": "完了条件" }, "question": { "ja": "何を確かめたら終わり？" } }
+        { "id": "purpose", "label": { "ja": "目的", "en": "Goal" }, "question": { "ja": "何のために、誰が使う？", "en": "What is it for, and who will use it?" } },
+        { "id": "context", "label": { "ja": "材料（関連情報）", "en": "Materials (related information)" }, "question": { "ja": "知っておくべき状況は？", "en": "What situation should be known?" } },
+        { "id": "constraints", "label": { "ja": "制約", "en": "Constraints" }, "question": { "ja": "やらないこと・守ることは？", "en": "What will we not do, and what must we keep?" } },
+        { "id": "done", "label": { "ja": "完了条件", "en": "Completion criteria" }, "question": { "ja": "何を確かめたら終わり？", "en": "What do we check to say it is done?" } }
       ],
       "cards": [
-        { "id": "q01c-alarm", "label": { "ja": "天気予報と連動して、毎朝アラームを鳴らす" }, "explain": { "ja": "漁師は求めていません。頼まれていない機能です。" } },
-        { "id": "q01c-items", "label": { "ja": "持ち物は網・水筒・雨具など約10個。毎朝ほぼ同じ" }, "explain": { "ja": "作るものの前提になる「材料（関連情報）」です。" } },
-        { "id": "q01c-done-vague", "label": { "ja": "いい感じになったら完了" }, "explain": { "ja": "何を見れば終わりか分からないため、完了条件として確かめられません。" } },
-        { "id": "q01c-purpose", "label": { "ja": "出発前に持ち物を一つずつ確かめ、忘れ物を防ぎたい" }, "explain": { "ja": "作る理由と使う場面を表す「目的」です。" } },
-        { "id": "q01c-phone", "label": { "ja": "使うのは漁師本人。スマートフォンで開く" }, "explain": { "ja": "誰がどこで使うかという「材料（関連情報）」です。" } },
-        { "id": "q01c-scope", "label": { "ja": "今回は表示とチェックだけ。共有や通知は作らない" }, "explain": { "ja": "範囲を決める「制約」です。" } },
-        { "id": "q01c-done", "label": { "ja": "10個が表示され、チェック済みと未チェックが見分けられる" }, "explain": { "ja": "画面で確かめられる終わりの状態、つまり「完了条件」です。" } },
-        { "id": "q01c-cool", "label": { "ja": "今までで一番かっこいいチェック表にする" }, "explain": { "ja": "人によって想像が変わる言葉で、目的としては確かめられません。" } }
+        { "id": "q01c-alarm", "label": { "ja": "天気予報と連動して、毎朝アラームを鳴らす", "en": "Sound an alarm every morning linked to the weather forecast" }, "explain": { "ja": "漁師は求めていません。頼まれていない機能です。", "en": "The fisher did not ask for it. It is a feature nobody requested." } },
+        { "id": "q01c-items", "label": { "ja": "持ち物は網・水筒・雨具など約10個。毎朝ほぼ同じ", "en": "About ten items: nets, a water bottle, rain gear and so on. Almost the same every morning" }, "explain": { "ja": "作るものの前提になる「材料（関連情報）」です。", "en": "These are \"materials (related information)\" that form the premise of what is built." } },
+        { "id": "q01c-done-vague", "label": { "ja": "いい感じになったら完了", "en": "Done when it feels good" }, "explain": { "ja": "何を見れば終わりか分からないため、完了条件として確かめられません。", "en": "You cannot tell what to look at to know it is finished, so it cannot be checked as a completion criterion." } },
+        { "id": "q01c-purpose", "label": { "ja": "出発前に持ち物を一つずつ確かめ、忘れ物を防ぎたい", "en": "Check items one by one before departure and prevent forgotten things" }, "explain": { "ja": "作る理由と使う場面を表す「目的」です。", "en": "This is the \"goal\": the reason for building and the situation of use." } },
+        { "id": "q01c-phone", "label": { "ja": "使うのは漁師本人。スマートフォンで開く", "en": "Used by the fisher alone. Opened on a smartphone" }, "explain": { "ja": "誰がどこで使うかという「材料（関連情報）」です。", "en": "These are \"materials (related information)\": who uses it and where." } },
+        { "id": "q01c-scope", "label": { "ja": "今回は表示とチェックだけ。共有や通知は作らない", "en": "This time only display and checking. Do not build sharing or notifications" }, "explain": { "ja": "範囲を決める「制約」です。", "en": "This is a \"constraint\" that sets the scope." } },
+        { "id": "q01c-done", "label": { "ja": "10個が表示され、チェック済みと未チェックが見分けられる", "en": "Ten items are shown, and checked and unchecked ones can be told apart" }, "explain": { "ja": "画面で確かめられる終わりの状態、つまり「完了条件」です。", "en": "An end state you can confirm on screen: a \"completion criterion.\"" } },
+        { "id": "q01c-cool", "label": { "ja": "今までで一番かっこいいチェック表にする", "en": "Make it the coolest checklist ever" }, "explain": { "ja": "人によって想像が変わる言葉で、目的としては確かめられません。", "en": "The finished picture changes with each person, so it cannot be checked as a goal." } }
       ],
       "grading": {
         "id": "q01-c.rule",
@@ -282,70 +282,70 @@
       },
       "feedbackByOutcome": {
         "correct": {
-          "what": { "ja": "話題が変わっても、4つの欄がそろった依頼書になりました。" },
-          "why": { "ja": "目的・材料・制約・完了条件はどんな依頼にも使える形です。確かめられる完了条件も入っています。" },
-          "next": { "ja": "この章はここまで。持ち帰りカードを受け取りましょう。" }
+          "what": { "ja": "話題が変わっても、4つの欄がそろった依頼書になりました。", "en": "Even though the topic changed, the request form has all four fields." },
+          "why": { "ja": "目的・材料・制約・完了条件はどんな依頼にも使える形です。確かめられる完了条件も入っています。", "en": "Goal, materials, constraints and completion criteria form a shape usable for any request. It includes a completion criterion you can check." },
+          "next": { "ja": "この章はここまで。持ち帰りカードを受け取りましょう。", "en": "That is all for this chapter. Let's receive the take-home card." }
         },
         "extra_feature": {
-          "what": { "ja": "コトは天気予報との連携から作り始め、チェック表が後回しになります。" },
-          "why": { "ja": "アラームは漁師の話にありません。「共有や通知は今度」とも言っています。" },
-          "next": { "ja": "アラームの札を欄から外しましょう。" }
+          "what": { "ja": "コトは天気予報との連携から作り始め、チェック表が後回しになります。", "en": "Koto starts with weather-forecast integration, and the checklist is put off." },
+          "why": { "ja": "アラームは漁師の話にありません。「共有や通知は今度」とも言っています。", "en": "The alarm is not in the fisher's story. The fisher also said sharing and notifications can wait." },
+          "next": { "ja": "アラームの札を欄から外しましょう。", "en": "Take the alarm card out of the field." }
         },
         "vague_goal": {
-          "what": { "ja": "コトは「かっこいい」を自分なりに解釈し、見た目の作り込みから始めます。" },
-          "why": { "ja": "「かっこいい」は確かめようがなく、忘れ物を防ぐ目的ともずれています。" },
-          "next": { "ja": "「一番かっこいい」の札を外し、忘れ物を防ぐ目的の札を置きましょう。" }
+          "what": { "ja": "コトは「かっこいい」を自分なりに解釈し、見た目の作り込みから始めます。", "en": "Koto interprets \"cool\" in their own way and starts by polishing the look." },
+          "why": { "ja": "「かっこいい」は確かめようがなく、忘れ物を防ぐ目的ともずれています。", "en": "\"Cool\" cannot be checked and is also off from the goal of preventing forgotten items." },
+          "next": { "ja": "「一番かっこいい」の札を外し、忘れ物を防ぐ目的の札を置きましょう。", "en": "Remove the \"coolest\" card and place the card for preventing forgotten items as the goal." }
         },
         "unverifiable_done": {
-          "what": { "ja": "いつ終わったのか誰にも判断できず、コトは報告の時期を決められません。" },
-          "why": { "ja": "「いい感じ」は見て確かめる方法がありません。" },
-          "next": { "ja": "「いい感じ」の札を外し、画面で確かめられる状態の札を完了条件に置きましょう。" },
+          "what": { "ja": "いつ終わったのか誰にも判断できず、コトは報告の時期を決められません。", "en": "No one can tell when it is finished, so Koto cannot decide when to report." },
+          "why": { "ja": "「いい感じ」は見て確かめる方法がありません。", "en": "\"Feels good\" has no way of being checked by looking." },
+          "next": { "ja": "「いい感じ」の札を外し、画面で確かめられる状態の札を完了条件に置きましょう。", "en": "Remove the \"feels good\" card and place a card for a state checkable on screen as the completion criterion." },
           "examples": [
-            { "label": { "ja": "コトの完成例A" }, "text": { "ja": "10個が並ぶが、チェックを入れても見た目が変わらない。" } },
-            { "label": { "ja": "コトの完成例B" }, "text": { "ja": "チェックはできるが、持ち物を3個しか登録できない。" } }
+            { "label": { "ja": "コトの完成例A", "en": "Koto's finished example A" }, "text": { "ja": "10個が並ぶが、チェックを入れても見た目が変わらない。", "en": "Ten items line up, but checking them changes nothing visually." } },
+            { "label": { "ja": "コトの完成例B", "en": "Koto's finished example B" }, "text": { "ja": "チェックはできるが、持ち物を3個しか登録できない。", "en": "You can check items, but only three items can be registered." } }
           ]
         },
         "missing_purpose": {
-          "what": { "ja": "コトは何のためのチェック表か分からず、形だけを作ります。" },
-          "why": { "ja": "目的の欄に「忘れ物を防ぎたい」という理由が入っていません。" },
-          "next": { "ja": "目的の欄に、何のために使うのかを表す札を置きましょう。" }
+          "what": { "ja": "コトは何のためのチェック表か分からず、形だけを作ります。", "en": "Koto does not know what the checklist is for and builds only its outward form." },
+          "why": { "ja": "目的の欄に「忘れ物を防ぎたい」という理由が入っていません。", "en": "The goal field lacks the reason \"I want to prevent forgotten items.\"" },
+          "next": { "ja": "目的の欄に、何のために使うのかを表す札を置きましょう。", "en": "Place in the goal field a card saying what it will be used for." }
         },
         "missing_done": {
-          "what": { "ja": "終わりの状態が決まっていないため、完成の判断ができません。" },
-          "why": { "ja": "完了条件の欄に、確かめられる状態の札がありません。" },
-          "next": { "ja": "「10個が表示され、チェック済みと未チェックが見分けられる」を完了条件に置きましょう。" }
+          "what": { "ja": "終わりの状態が決まっていないため、完成の判断ができません。", "en": "The end state is not set, so it is impossible to judge completion." },
+          "why": { "ja": "完了条件の欄に、確かめられる状態の札がありません。", "en": "The completion criteria field has no card with a checkable state." },
+          "next": { "ja": "「10個が表示され、チェック済みと未チェックが見分けられる」を完了条件に置きましょう。", "en": "Place \"ten items are shown, and checked and unchecked ones can be told apart\" as the completion criterion." }
         },
         "missing_constraint": {
-          "what": { "ja": "コトは共有や通知まで作り始めるかもしれません。" },
-          "why": { "ja": "制約の欄に「今回は作らないもの」が入っていません。" },
-          "next": { "ja": "範囲を決める札を制約の欄に置きましょう。" }
+          "what": { "ja": "コトは共有や通知まで作り始めるかもしれません。", "en": "Koto may even start building sharing or notifications." },
+          "why": { "ja": "制約の欄に「今回は作らないもの」が入っていません。", "en": "The constraints field lacks \"what we will not build this time.\"" },
+          "next": { "ja": "範囲を決める札を制約の欄に置きましょう。", "en": "Place a card that sets the scope in the constraints field." }
         },
         "missing_context": {
-          "what": { "ja": "コトは持ち物の数や使う端末を知らないまま作ります。" },
-          "why": { "ja": "材料の欄に、漁師の状況が入っていません。" },
-          "next": { "ja": "持ち物の数や、スマートフォンで使うことを示す札を材料の欄に置きましょう。" }
+          "what": { "ja": "コトは持ち物の数や使う端末を知らないまま作ります。", "en": "Koto builds without knowing the number of items or the device used." },
+          "why": { "ja": "材料の欄に、漁師の状況が入っていません。", "en": "The materials field lacks the fisher's situation." },
+          "next": { "ja": "持ち物の数や、スマートフォンで使うことを示す札を材料の欄に置きましょう。", "en": "Place a card showing the number of items or use on a smartphone in the materials field." }
         },
         "misplaced": {
-          "what": { "ja": "必要な札はそろっていますが、欄が違うためコトが読み違えます。" },
-          "why": { "ja": "欄の問いと札の中身が一致していない組み合わせがあります。" },
-          "next": { "ja": "Q01-Aと同じように、各欄の問いと札を照らし合わせましょう。" }
+          "what": { "ja": "必要な札はそろっていますが、欄が違うためコトが読み違えます。", "en": "The needed cards are all there, but they are in the wrong fields, so Koto misreads them." },
+          "why": { "ja": "欄の問いと札の中身が一致していない組み合わせがあります。", "en": "Some combinations do not match a field's question with the card's content." },
+          "next": { "ja": "Q01-Aと同じように、各欄の問いと札を照らし合わせましょう。", "en": "As in Q01-A, compare each field's question with the cards." }
         }
       },
       "hints": [
-        { "id": "q01-c.h1", "text": { "ja": "Q01-Aと同じ4つの問いを使います。話題が「配達」から「持ち物」に変わっただけです。" } },
-        { "id": "q01-c.h2", "text": { "ja": "「いい感じ」「一番かっこいい」「アラーム」の札は、確かめられないか、頼まれていないものです。" } },
-        { "id": "q01-c.h3", "text": { "ja": "解答例：目的＝「持ち物を確かめ忘れ物を防ぎたい」、材料＝「約10個・毎朝ほぼ同じ」「漁師本人・スマートフォン」、制約＝「表示とチェックだけ。共有や通知は作らない」、完了条件＝「10個が表示され、チェック済みと未チェックが見分けられる」。理由：4つの問いに一つずつ答えているからです。盤面で札を置いてください。" } }
+        { "id": "q01-c.h1", "text": { "ja": "Q01-Aと同じ4つの問いを使います。話題が「配達」から「持ち物」に変わっただけです。", "en": "The same four questions as in Q01-A are used. Only the topic changed from \"deliveries\" to \"packing.\"" } },
+        { "id": "q01-c.h2", "text": { "ja": "「いい感じ」「一番かっこいい」「アラーム」の札は、確かめられないか、頼まれていないものです。", "en": "The \"feels good,\" \"coolest\" and \"alarm\" cards are either uncheckable or not requested." } },
+        { "id": "q01-c.h3", "text": { "ja": "解答例：目的＝「持ち物を確かめ忘れ物を防ぎたい」、材料＝「約10個・毎朝ほぼ同じ」「漁師本人・スマートフォン」、制約＝「表示とチェックだけ。共有や通知は作らない」、完了条件＝「10個が表示され、チェック済みと未チェックが見分けられる」。理由：4つの問いに一つずつ答えているからです。盤面で札を置いてください。", "en": "Sample answer: goal = \"check my items and prevent forgetting\"; materials = \"about ten items, almost the same every morning\" and \"the fisher alone, smartphone\"; constraints = \"display and checking only; no sharing or notifications\"; completion criteria = \"ten items are shown, and checked and unchecked ones can be told apart.\" Reason: each of the four questions gets one answer. Place the cards on the board." } }
       ]
     }
   ],
   "takeawayCards": [
-    { "id": "tk-q01-1", "questId": "q01", "title": { "ja": "目的" }, "body": { "ja": "「何のために、誰が使うか」を一文で書く。「便利なもの」ではなく、困り事から書き始める。" } },
-    { "id": "tk-q01-2", "questId": "q01", "title": { "ja": "材料（関連情報）" }, "body": { "ja": "使う人、使う場所、今のやり方。相手が知らない状況を先に渡すと、読み違いが減る。" } },
-    { "id": "tk-q01-3", "questId": "q01", "title": { "ja": "制約・完了条件" }, "body": { "ja": "「今回はやらないこと」と「何を確かめたら終わりか」を書く。完了条件は、見て確かめられる形にする。" } }
+    { "id": "tk-q01-1", "questId": "q01", "title": { "ja": "目的", "en": "Goal" }, "body": { "ja": "「何のために、誰が使うか」を一文で書く。「便利なもの」ではなく、困り事から書き始める。", "en": "Write \"what it is for and who uses it\" in one sentence. Start from the trouble, not from \"something useful.\"" } },
+    { "id": "tk-q01-2", "questId": "q01", "title": { "ja": "材料（関連情報）", "en": "Materials (related information)" }, "body": { "ja": "使う人、使う場所、今のやり方。相手が知らない状況を先に渡すと、読み違いが減る。", "en": "Who uses it, where, and how things are done now. Handing over the situation the other side does not know first reduces misreadings." } },
+    { "id": "tk-q01-3", "questId": "q01", "title": { "ja": "制約・完了条件", "en": "Constraints and completion criteria" }, "body": { "ja": "「今回はやらないこと」と「何を確かめたら終わりか」を書く。完了条件は、見て確かめられる形にする。", "en": "Write \"what we will not do this time\" and \"what we check to say it is done.\" Make the completion criteria something you can check by looking." } }
   ],
   "takeawayTemplate": {
-    "title": { "ja": "4要素の依頼テンプレート" },
-    "text": { "ja": "目的：\n材料（関連情報）：\n制約（今回はやらないこと・守ること）：\n完了条件（何を確かめたら終わりか）：" }
+    "title": { "ja": "4要素の依頼テンプレート", "en": "Four-element request template" },
+    "text": { "ja": "目的：\n材料（関連情報）：\n制約（今回はやらないこと・守ること）：\n完了条件（何を確かめたら終わりか）：", "en": "Goal:\nMaterials (related information):\nConstraints (what we will not do this time, what we must keep):\nCompletion criteria (what we check to say it is done):" }
   },
   "practiceCardId": "pc-q01",
   "sourceIds": ["S1"],
