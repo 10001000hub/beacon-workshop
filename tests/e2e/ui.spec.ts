@@ -115,7 +115,8 @@ test('practice cards show truthful draft status and a working copy fallback', as
   await expect(page.getByTestId('card-status')).toContainText('下書き');
   await expect(page.getByTestId('route-status')).toContainText('下書き');
   await expect(page.locator('body')).not.toContainText('実機で確認済み');
-  await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+  // Clipboard permissions exist only in Chromium; the app's fallback message must appear either way.
+  await context.grantPermissions(['clipboard-read', 'clipboard-write']).catch(() => undefined);
   await page.getByTestId('copy').click();
   await expect(page.locator('main')).toContainText(/コピー/);
 });
