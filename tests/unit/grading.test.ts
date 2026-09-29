@@ -120,3 +120,58 @@ describe('rule engine', () => {
     expect(grade(a, withText)).toEqual(grade(a, answerFrom(a)));
   });
 });
+
+describe('learning integrity: no shortcut through the decision or the version prefix', () => {
+  const byId = (id: string) => activities.find((a) => a.id === id)!;
+
+  it('Q06-A cannot be passed by a permutation of decisions with mismatched reasons', () => {
+    const a = byId('q06-a') as TriageDecisionActivity;
+    const cases = a.cases;
+    const decisions = a.decisions.map((d) => d.id);
+    const cartesian = <T,>(lists: T[][]): T[][] => lists.reduce<T[][]>((acc, l) => acc.flatMap((p) => l.map((x) => [...p, x])), [[]]);
+    const decisionCombos = cartesian(cases.map(() => decisions));
+    const reasonCombos = cartesian(cases.map((c) => (c.reasons ?? []).map((r) => r.id)));
+    expect(cases.every((c) => (c.reasons?.length ?? 0) >= 3)).toBe(true);
+    let correct = 0;
+    for (const d of decisionCombos) {
+      for (const r of reasonCombos) {
+        const picks: Record<string, string> = {};
+        cases.forEach((c, i) => {
+          picks[c.id] = d[i]!;
+          picks[`${c.id}:reason`] = r[i]!;
+        });
+        if (grade(a, { picks }).correct) correct++;
+      }
+    }
+    expect(correct).toBe(1);
+  });
+
+  it('Q06-A: a right decision with a wrong reason is wrong and gets item-specific feedback', () => {
+    const a = byId('q06-a') as TriageDecisionActivity;
+    const good = answerFrom(a).picks!;
+    for (const c of a.cases) {
+      for (const r of c.reasons!) {
+        if (good[`${c.id}:reason`] === r.id) continue;
+        const answer = { picks: { ...good, [`${c.id}:reason`]: r.id } };
+        const res = grade(a, answer);
+        expect(res.correct, `${c.id}/${r.id}`).toBe(false);
+        expect(a.grading.diagnostics.some((d) => evaluateCondition(answer, d.when)), `${c.id}/${r.id} should match a diagnostic`).toBe(true);
+        expect(a.feedbackByOutcome[res.outcome]?.next.ja).toContain(c.id.replace('i', '項目'));
+      }
+    }
+  });
+
+  it('Q05-A: v0.4 records that are not evidence of the required behaviour do not pass', () => {
+    const a = byId('q05-a');
+    const core = ['q05a-add', 'q05a-reload', 'q05a-blank'];
+    expect(grade(a, { sequence: core })).toEqual({ correct: true, outcome: 'correct' });
+    expect(grade(a, { sequence: [...core, 'q05a-version'] })).toEqual({ correct: false, outcome: 'version_only' });
+    expect(grade(a, { sequence: [...core, 'q05a-notrun'] })).toEqual({ correct: false, outcome: 'not_run' });
+    // Every v0.4-prefixed card that is neither required nor explicitly allowed must be rejected.
+    const v04 = (a as { cards: { id: string; label: { ja: string } }[] }).cards.filter((c) => c.label.ja.startsWith('v0.4'));
+    const rule = a.grading.accepted[0]!;
+    const okIds = new Set(rule.kind === 'sequence' && !rule.ordered ? [...rule.required, ...(rule.allowed ?? [])] : []);
+    expect(v04.some((c) => !okIds.has(c.id))).toBe(true);
+    for (const c of v04.filter((c) => !okIds.has(c.id))) expect(grade(a, { sequence: [...core, c.id] }).correct).toBe(false);
+  });
+});

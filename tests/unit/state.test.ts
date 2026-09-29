@@ -87,6 +87,16 @@ describe('hints', () => {
     expect(s.completedActivities['q01-a']!.maxHintLevel).toBe(3);
     expect(xp(s, cat)).toBe(20);
   });
+  it('completing after level 3 keeps maxHintLevel, and repeating the activity never adds XP', () => {
+    let s = reduce(createInitialSave('0.1.0', T), { type: 'USE_HINT', activityId: 'q01-a', level: 3, at: T });
+    s = attempt(s, 'q01-a', true);
+    expect(xp(s, cat)).toBe(20);
+    for (let i = 0; i < 3; i++) s = attempt(s, 'q01-a', true);
+    s = attempt(s, 'q01-a', false);
+    expect(xp(s, cat)).toBe(20);
+    expect(s.completedActivities['q01-a']!.maxHintLevel).toBe(3);
+    expect(s.completedActivities['q01-a']!.attempts).toBe(1);
+  });
   it('seeing the level-3 example does not complete the activity', () => {
     const s = reduce(createInitialSave('0.1.0', T), { type: 'USE_HINT', activityId: 'q01-a', level: 3, at: T });
     expect(completedActivityCount(s, cat)).toBe(0);

@@ -14,7 +14,10 @@ test('progress persists across reload and other localStorage keys are untouched'
   await expect(page.getByTestId('header-progress')).toContainText('1/18');
   expect(await page.evaluate(() => localStorage.getItem('someone-else'))).toBe('keep');
   const keys = await page.evaluate(() => Object.keys(localStorage).sort());
-  expect(keys).toEqual([BACKUP_KEY, SAVE_KEY, 'someone-else'].sort());
+  // Navigation no longer writes, so the backup exists only after a second real write; never any other key.
+  expect(keys).toContain(SAVE_KEY);
+  expect(keys).toContain('someone-else');
+  expect(keys.filter((k) => k !== SAVE_KEY && k !== BACKUP_KEY)).toEqual(['someone-else']);
 });
 
 test('a corrupt save is kept, and the learner can restore the backup', async ({ page }) => {

@@ -5,8 +5,10 @@
 import { reduce, createInitialSave, type GameEvent } from './state';
 import {
   forceWrite,
+  hasForeignValue,
   loadSave,
   persistSave,
+  snapshotBackup,
   storedRevision,
   type LoadResult,
   type StorageLike,
@@ -29,6 +31,8 @@ export class Session {
   save: SaveData;
   status: SaveStatus;
   private knownRevision = 0;
+  /** After a reset / import the pre-operation snapshot in the backup key is kept, not rotated away. */
+  private holdBackup = false;
   private listeners = new Set<Listener>();
 
   constructor(
@@ -67,6 +71,7 @@ export class Session {
   }
 
   dispatch(event: GameEvent): void {
+    if (event.type === 'RESET') this.protectRecoveryPoint();
     const next = reduce(this.save, event);
     if (next === this.save) return;
     this.save = next;
@@ -78,16 +83,38 @@ export class Session {
     if (!this.storage) return;
     if (this.status.kind === 'blocked' || this.status.kind === 'conflict') return;
     if (this.status.kind === 'memory' && this.status.reason === 'unavailable') return;
-    const res = persistSave(this.storage, this.save, this.knownRevision);
+    const res = persistSave(this.storage, this.save, this.knownRevision, this.holdBackup);
     if (res.ok) {
       this.knownRevision = res.revision;
       this.save = res.save;
       this.status = { kind: 'saved' };
     } else if (res.reason === 'conflict') {
       this.status = { kind: 'conflict', storedRevision: res.storedRevision };
+    } else if (res.reason === 'foreign_value') {
+      this.blockOnForeignValue();
     } else {
       this.status = { kind: 'memory', reason: 'write_failed' };
     }
+  }
+
+  /**
+   * Another tab or build put a corrupt / unsupported value in our key. Keep it untouched, keep the
+   * in-memory progress playable, and point the learner to the recovery screen (AC10).
+   */
+  private blockOnForeignValue(): void {
+    const load = loadSave(this.storage);
+    if (load.kind === 'corrupt' || load.kind === 'unsupported') {
+      this.status = { kind: 'blocked', load, deferred: true };
+    } else {
+      this.status = { kind: 'memory', reason: 'write_failed' };
+    }
+  }
+
+  /** Snapshot the last valid stored save before a destructive, learner-confirmed operation. */
+  private protectRecoveryPoint(): void {
+    if (!this.storage) return;
+    snapshotBackup(this.storage);
+    this.holdBackup = true;
   }
 
   /** Called when another tab changed our key. */
@@ -95,6 +122,11 @@ export class Session {
     if (!this.storage || this.status.kind === 'blocked') return;
     let rev: number | null;
     try {
+      if (hasForeignValue(this.storage)) {
+        this.blockOnForeignValue();
+        this.emit();
+        return;
+      }
       rev = storedRevision(this.storage);
     } catch {
       return;
@@ -111,9 +143,19 @@ export class Session {
     if (res.kind !== 'ok') return false;
     this.save = res.save;
     this.knownRevision = res.save.revision;
+    this.holdBackup = false;
     this.status = { kind: 'saved' };
     this.emit();
     return true;
+  }
+
+  /**
+   * Remember where the learner is for resume, without persisting. Navigation alone must not write
+   * (it would bump the revision and make other open tabs report a conflict); the position is
+   * saved together with the next real progress change.
+   */
+  noteResume(questId: SaveData['currentQuestId'], activityId: string | null): void {
+    this.save = reduce(this.save, { type: 'SET_CURRENT', questId, activityId, at: this.save.updatedAt });
   }
 
   /** Retry after a failed write (e.g. storage was full). */
@@ -127,6 +169,7 @@ export class Session {
 
   /** Apply a validated, learner-confirmed import. Replaces a blocked (corrupt / newer) value too. */
   importSave(imported: SaveData): void {
+    this.protectRecoveryPoint();
     this.save = reduce(this.save, { type: 'REPLACE_SAVE', save: imported, at: this.now() });
     if (this.status.kind === 'blocked' && this.storage) {
       const res = forceWrite(this.storage, this.save);
@@ -151,6 +194,7 @@ export class Session {
     const backup = this.status.load.backup;
     const res = forceWrite(this.storage, backup);
     this.save = backup;
+    this.holdBackup = false;
     this.knownRevision = backup.revision;
     this.status = res.ok ? { kind: 'saved' } : { kind: 'memory', reason: 'write_failed' };
     this.emit();
@@ -162,6 +206,7 @@ export class Session {
     const fresh = createInitialSave(this.contentVersion, this.now(), this.save.locale);
     const res = forceWrite(this.storage, fresh);
     this.save = fresh;
+    this.holdBackup = false;
     this.knownRevision = fresh.revision;
     this.status = res.ok ? { kind: 'saved' } : { kind: 'memory', reason: 'write_failed' };
     this.emit();

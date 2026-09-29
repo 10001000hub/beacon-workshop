@@ -41,7 +41,7 @@
       "type": "triage_decision",
       "required": true,
       "title": { "ja": "Q06-A 必須と軽微を仕分ける" },
-      "prompt": { "ja": "番人の前に4件の項目があります。それぞれ「進める」「今直す」「確認する」「後で改善に回す」のどれにするか選んでください。" },
+      "prompt": { "ja": "番人の前に4件の項目があります。それぞれ「進める」「今直す」「確認する」「後で改善に回す」のどれにするかと、その理由を選んでください。" },
       "decisions": [
         { "id": "proceed", "label": { "ja": "進める" }, "explain": { "ja": "必要な根拠がそろっていて、止める理由がないとき。" } },
         { "id": "fix_now", "label": { "ja": "今直す" }, "explain": { "ja": "目的に関わる不具合が確かめられたとき。" } },
@@ -52,34 +52,71 @@
         {
           "id": "i1",
           "title": { "ja": "項目1：再読み込みでメモが消える" },
-          "evidence": [{ "ja": "現在の版で、追加→再読み込み→一覧が空になる。2回試して2回とも同じ。" }]
+          "evidence": [{ "ja": "現在の版で、追加→再読み込み→一覧が空になる。2回試して2回とも同じ。" }],
+          "reasons": [
+            { "id": "i1-core", "label": { "ja": "メモが残らず、目的に関わる不具合で、2回再現しているから" }, "explain": { "ja": "記録は残すためのものです。再現もしていて、根拠は十分です。" } },
+            { "id": "i1-later", "label": { "ja": "追加はできるので、保存は後の版でよいから" }, "explain": { "ja": "保存できないメモ帳は、目的を果たせません。" } },
+            { "id": "i1-more", "label": { "ja": "まだ確かめ方が足りないから" }, "explain": { "ja": "2回再現していて、確かめる段階はもう終わっています。" } }
+          ]
         },
         {
           "id": "i2",
           "title": { "ja": "項目2：ボタンの角が丸くない" },
-          "evidence": [{ "ja": "見本ではボタンの角が丸い。押すと追加は正しく動く。" }]
+          "evidence": [{ "ja": "見本ではボタンの角が丸い。押すと追加は正しく動く。" }],
+          "reasons": [
+            { "id": "i2-minor", "label": { "ja": "目的に関わらない見た目の点で、動作は正しいから" }, "explain": { "ja": "押すと追加は正しく動きます。目的は妨げられていません。" } },
+            { "id": "i2-block", "label": { "ja": "見本と違うので、直すまで先へ進めないから" }, "explain": { "ja": "見た目の小さな違いで、動く作品を止めてはいけません。" } },
+            { "id": "i2-forget", "label": { "ja": "小さな点なので、記録せずに忘れてよいから" }, "explain": { "ja": "小さな点も、残件として記録すれば次の人に伝わります。" } }
+          ]
         },
         {
           "id": "i3",
           "title": { "ja": "項目3：追加と空白題名の拒否" },
-          "evidence": [{ "ja": "現在の版で、追加・空白題名の拒否・通常題名の登録を確認し、すべて成功。" }]
+          "evidence": [{ "ja": "現在の版で、追加・空白題名の拒否・通常題名の登録を確認し、すべて成功。" }],
+          "reasons": [
+            { "id": "i3-evidence", "label": { "ja": "現在の版で、必要な動作をすべて確かめて成功しているから" }, "explain": { "ja": "対象の版・検査・結果がそろっています。" } },
+            { "id": "i3-recheck", "label": { "ja": "念のため、もう一度全部確かめ直したいから" }, "explain": { "ja": "確かめ終わった動作を、止める理由なく繰り返すことになります。" } },
+            { "id": "i3-wait", "label": { "ja": "何か問題が見つかるまで、止めておくべきだから" }, "explain": { "ja": "問題が見つかっていないのに止めても、根拠になりません。" } }
+          ]
         },
         {
           "id": "i4",
           "title": { "ja": "項目4：「全部完了」の報告" },
-          "evidence": [{ "ja": "報告書に「全部完了しました」とある。どの版で何を確かめたかの記録はない。" }]
+          "evidence": [{ "ja": "報告書に「全部完了しました」とある。どの版で何を確かめたかの記録はない。" }],
+          "reasons": [
+            { "id": "i4-evidence", "label": { "ja": "どの版で何を確かめたかの記録がなく、判断できないから" }, "explain": { "ja": "根拠がないので、まず確かめます。" } },
+            { "id": "i4-trust", "label": { "ja": "「全部完了しました」と書かれているから" }, "explain": { "ja": "言葉だけを信じると、壊れた作品も通ってしまいます。" } },
+            { "id": "i4-broken", "label": { "ja": "記録がないので、壊れているものとして直し始めるから" }, "explain": { "ja": "壊れていると確かめたわけでもありません。" } }
+          ]
         }
       ],
       "grading": {
         "id": "q06-a.rule",
-        "accepted": [{ "kind": "picks", "picks": { "i1": ["fix_now"], "i2": ["later"], "i3": ["proceed"], "i4": ["verify"] } }],
+        "accepted": [
+          {
+            "kind": "picks",
+            "picks": {
+              "i1": ["fix_now"], "i1:reason": ["i1-core"],
+              "i2": ["later"], "i2:reason": ["i2-minor"],
+              "i3": ["proceed"], "i3:reason": ["i3-evidence"],
+              "i4": ["verify"], "i4:reason": ["i4-evidence"]
+            }
+          }
+        ],
         "diagnostics": [
           { "when": { "type": "pick", "item": "i1", "options": ["proceed", "later"] }, "outcome": "blocker_ignored" },
           { "when": { "type": "pick", "item": "i4", "options": ["proceed"] }, "outcome": "report_trusted" },
           { "when": { "type": "pick", "item": "i2", "options": ["fix_now", "verify"] }, "outcome": "minor_as_blocker" },
           { "when": { "type": "pick", "item": "i3", "options": ["fix_now", "verify", "later"] }, "outcome": "over_cautious" },
           { "when": { "type": "pick", "item": "i1", "options": ["verify"] }, "outcome": "already_confirmed" },
-          { "when": { "type": "pick", "item": "i2", "options": ["proceed"] }, "outcome": "note_remaining" }
+          { "when": { "type": "pick", "item": "i2", "options": ["proceed"] }, "outcome": "note_remaining" },
+          { "when": { "type": "pick", "item": "i1:reason", "options": ["i1-later"] }, "outcome": "blocker_ignored" },
+          { "when": { "type": "pick", "item": "i4:reason", "options": ["i4-trust"] }, "outcome": "report_trusted" },
+          { "when": { "type": "pick", "item": "i2:reason", "options": ["i2-block"] }, "outcome": "minor_as_blocker" },
+          { "when": { "type": "pick", "item": "i3:reason", "options": ["i3-recheck", "i3-wait"] }, "outcome": "over_cautious" },
+          { "when": { "type": "pick", "item": "i1:reason", "options": ["i1-more"] }, "outcome": "already_confirmed" },
+          { "when": { "type": "pick", "item": "i2:reason", "options": ["i2-forget"] }, "outcome": "note_remaining" },
+          { "when": { "type": "pick", "item": "i4:reason", "options": ["i4-broken"] }, "outcome": "no_evidence" }
         ],
         "fallbackOutcome": "no_evidence"
       },
@@ -92,43 +129,43 @@
         "blocker_ignored": {
           "what": { "ja": "受け取った人のメモが、再読み込みのたびに消えてしまいます。" },
           "why": { "ja": "メモを残すことは灯台メモの目的そのものです。2回とも再現しています。" },
-          "next": { "ja": "項目1の判断を見直しましょう。" }
+          "next": { "ja": "項目1の判断と理由を見直しましょう。" }
         },
         "report_trusted": {
           "what": { "ja": "壊れた作品でも「完了」と書いてあれば通ってしまいます。番人の誤りと同じです。" },
           "why": { "ja": "項目4には、どの版で何を確かめたかの記録がありません。" },
-          "next": { "ja": "項目4の判断を見直しましょう。" }
+          "next": { "ja": "項目4の判断と理由を見直しましょう。" }
         },
         "minor_as_blocker": {
           "what": { "ja": "正しく動く作品が、角の丸みのために届けられません。番人のもう一つの誤りと同じです。" },
           "why": { "ja": "角の丸みは目的に関わらない見た目の点で、押すと正しく動くことも分かっています。" },
-          "next": { "ja": "項目2の判断を見直しましょう。" }
+          "next": { "ja": "項目2の判断と理由を見直しましょう。" }
         },
         "over_cautious": {
           "what": { "ja": "確かめ終わった動作が止まり、作業が先へ進みません。" },
           "why": { "ja": "項目3は、現在の版ですべて成功しています。止める理由がありません。" },
-          "next": { "ja": "項目3の判断を見直しましょう。" }
+          "next": { "ja": "項目3の判断と理由を見直しましょう。" }
         },
         "already_confirmed": {
           "what": { "ja": "すでに2回再現できた不具合を、また確かめるだけで直す作業が始まりません。" },
           "why": { "ja": "項目1は根拠がそろっています。今必要なのは直すことです。" },
-          "next": { "ja": "項目1の判断を見直しましょう。" }
+          "next": { "ja": "項目1の判断と理由を見直しましょう。" }
         },
         "note_remaining": {
           "what": { "ja": "角の丸みが記録に残らず、次の人が気づかないまま忘れられます。" },
           "why": { "ja": "小さな改善点は、止めずに「後で改善に回す」として残件に残します。" },
-          "next": { "ja": "項目2の判断を見直しましょう。" }
+          "next": { "ja": "項目2の判断と理由を見直しましょう。" }
         },
         "no_evidence": {
           "what": { "ja": "根拠がない報告のまま、直す・後回しにするを決めてしまいます。" },
           "why": { "ja": "項目4で分かっているのは「記録がない」ことだけです。まず確かめます。" },
-          "next": { "ja": "項目4の判断を見直しましょう。" }
+          "next": { "ja": "項目4の判断と理由を見直しましょう。" }
         }
       },
       "hints": [
         { "id": "q06-a.h1", "text": { "ja": "2つの問いで仕分けます。「目的に関わるか」「確かめた根拠があるか」。" } },
-        { "id": "q06-a.h2", "text": { "ja": "メモを残すのが目的です。項目1と2のうち、目的を妨げるのはどちらでしょう。項目4は、記録があるでしょうか。" } },
-        { "id": "q06-a.h3", "text": { "ja": "解答例：項目1＝今直す、項目2＝後で改善に回す、項目3＝進める、項目4＝確認する。理由：目的への影響と根拠の有無で分けるからです。盤面で選んでください。" } }
+        { "id": "q06-a.h2", "text": { "ja": "メモを残すのが目的です。項目1と2のうち、目的を妨げるのはどちらでしょう。項目4は、記録があるでしょうか。理由も、その項目の事実に合うものを選びます。" } },
+        { "id": "q06-a.h3", "text": { "ja": "解答例：項目1＝今直す（メモが残らず、目的に関わる不具合）、項目2＝後で改善に回す（目的に関わらない見た目の点）、項目3＝進める（現在の版で確認済み）、項目4＝確認する（版と検査の記録がない）。盤面で選んでください。" } }
       ]
     },
     {

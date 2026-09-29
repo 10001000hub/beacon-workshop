@@ -129,3 +129,43 @@ test('reading mode shows answers without completing activities', async ({ page }
   await expect(page.locator('[data-progress="read"]')).toContainText('1/6');
   await expect(page.locator('[data-progress="xp"]')).toContainText('0/600');
 });
+
+// AC15: on narrow phones the primary control of representative screens is present, can be scrolled
+// to, is not clipped by the viewport width, and is not covered by another element (e.g. a sticky header).
+for (const w of [320, 390]) {
+  test(`primary controls are reachable and not covered at ${w}px`, async ({ page }) => {
+    await page.setViewportSize({ width: w, height: 700 });
+    await freshStart(page);
+    const act = QUESTS[0]!.activities[0]!;
+    const checks: [string, string][] = [
+      ['#/quest/q01', 'a[href="#/quest/q01/a/q01-a"]'],
+      [`#/quest/q01/a/${act.id}`, '[data-testid="submit"]'],
+      [`#/quest/q01/a/${act.id}`, '[data-testid="hint-button"]'],
+      [`#/quest/q01/a/${act.id}`, '[data-card]'],
+      ['#/settings', '[data-testid="reset"]'],
+      ['#/settings', '[data-testid="export"]'],
+      ['#/map', 'a[href^="#/quest/q01"]'],
+    ];
+    for (const [hash, selector] of checks) {
+      await page.goto(hash);
+      await expect(page.locator('h1')).toBeVisible();
+      const target = page.locator(selector).first();
+      await expect(target, `${hash} ${selector}`).toBeVisible();
+      await target.scrollIntoViewIfNeeded();
+      const box = await target.boundingBox();
+      expect(box, `${hash} ${selector} has a box`).not.toBeNull();
+      expect(box!.x, `${hash} ${selector} left edge`).toBeGreaterThanOrEqual(0);
+      expect(box!.x + box!.width, `${hash} ${selector} right edge`).toBeLessThanOrEqual(w + 0.5);
+      const covered = await target.evaluate((el) => {
+        const r = el.getBoundingClientRect();
+        const hit = document.elementFromPoint(r.left + r.width / 2, Math.min(r.top + r.height / 2, window.innerHeight - 1));
+        return !(hit && (el === hit || el.contains(hit) || hit.contains(el)));
+      });
+      expect(covered, `${hash} ${selector} must not be covered`).toBe(false);
+      await noHorizontalScroll(page);
+    }
+    // An activity can actually be completed at phone width.
+    await page.goto(`#/quest/q01/a/${act.id}`);
+    await solveActivity(page, act);
+  });
+}

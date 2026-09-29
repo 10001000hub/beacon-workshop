@@ -24,6 +24,8 @@ export type LoadResult =
 export type PersistResult =
   | { ok: true; revision: number; save: SaveData }
   | { ok: false; reason: 'conflict'; storedRevision: number }
+  /** The stored value is corrupt or from an unsupported version. It is left exactly as it is. */
+  | { ok: false; reason: 'foreign_value' }
   | { ok: false; reason: 'write_failed'; error: string };
 
 /** Returns the browser's localStorage, or null if access itself throws (privacy modes, blocked storage). */
@@ -82,23 +84,43 @@ export function storedRevision(storage: StorageLike): number | null {
   return res.ok ? res.save.revision : null;
 }
 
+/** True when the save key holds something that is not a valid, supported save (corrupt or newer). */
+export function hasForeignValue(storage: StorageLike): boolean {
+  const raw = storage.getItem(SAVE_KEY);
+  return raw !== null && !parseText(raw).ok;
+}
+
+/**
+ * Copy the currently stored save to the backup key, but only if it is valid.
+ * Used right before a learner-confirmed destructive operation (reset / import).
+ */
+export function snapshotBackup(storage: StorageLike): boolean {
+  try {
+    const raw = storage.getItem(SAVE_KEY);
+    if (raw === null || !parseText(raw).ok) return false;
+    storage.setItem(BACKUP_KEY, raw);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 /**
  * Write the save if nobody else has written since `knownRevision`.
- * The previous valid save is copied to the backup key first.
+ * The previous valid save is copied to the backup key first, unless `keepBackup` is set
+ * (a snapshot taken before a reset / import must survive the writes that follow).
+ * A corrupt or unsupported stored value is never overwritten: the caller must let the learner decide.
  */
-export function persistSave(storage: StorageLike, save: SaveData, knownRevision: number): PersistResult {
+export function persistSave(storage: StorageLike, save: SaveData, knownRevision: number, keepBackup = false): PersistResult {
   try {
     const prevRaw = storage.getItem(SAVE_KEY);
     if (prevRaw !== null) {
       const prev = parseText(prevRaw);
-      if (prev.ok) {
-        if (prev.save.revision !== knownRevision) {
-          return { ok: false, reason: 'conflict', storedRevision: prev.save.revision };
-        }
-        storage.setItem(BACKUP_KEY, prevRaw);
+      if (!prev.ok) return { ok: false, reason: 'foreign_value' };
+      if (prev.save.revision !== knownRevision) {
+        return { ok: false, reason: 'conflict', storedRevision: prev.save.revision };
       }
-      // An invalid stored value is never overwritten here: the app blocks writes until the
-      // learner chooses a recovery option (see app/save controller).
+      if (!keepBackup) storage.setItem(BACKUP_KEY, prevRaw);
     }
     const next: SaveData = { ...save, revision: knownRevision + 1 };
     storage.setItem(SAVE_KEY, JSON.stringify(next));

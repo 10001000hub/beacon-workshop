@@ -75,6 +75,7 @@
   "quest.objectives": "今回の学習目標",
   "quest.activities": "工房での課題",
   "quest.state.done": "完了",
+  "quest.assisted": "解答例を見て完了",
   "quest.state.open": "挑戦できます",
   "quest.state.locked": "前の課題を終えると開きます",
   "quest.stale": "旧教材版で完了",

@@ -26,12 +26,15 @@ function activityList(ctx: Ctx, quest: QuestDefinition): HTMLElement {
       const done = isActivityComplete(save, a.id);
       const open = isActivityUnlocked(save, quest, a.id);
       const state = done ? t('quest.state.done') : open ? t('quest.state.open') : t('quest.state.locked');
+      // Neutral reflection marker only: it never changes XP or the completion itself.
+      const assisted = done && save.completedActivities[a.id]?.maxHintLevel === 3;
       return h(
         'li',
         { class: done ? 'is-done' : open ? 'is-open' : 'is-locked', 'data-activity': a.id },
         open || done ? h('a', { href: href({ name: 'activity', questId: quest.id, activityId: a.id }) }, lt(a.title)) : h('span', {}, lt(a.title)),
         ' ',
         h('span', { class: 'tag' }, done ? '✓ ' : '', state),
+        assisted ? h('span', { class: 'tag', 'data-testid': 'assisted-tag' }, t('quest.assisted')) : null,
         isStaleCompletion(save, quest, a.id) ? h('span', { class: 'tag tag-warn' }, t('quest.stale')) : null,
       );
     }),
@@ -111,7 +114,9 @@ export function questClear(ctx: Ctx, quest: QuestDefinition): HTMLElement {
             'li',
             {},
             h('strong', {}, lt(obj?.text)),
-            rec ? h('p', { class: 'help' }, t('clear.attempts', { n: rec.attempts }), ' · ', hintSummary(rec.maxHintLevel)) : null,
+            rec
+              ? h('p', { class: 'help', 'data-testid': 'clear-hint-summary', 'data-hint-level': rec.maxHintLevel }, t('clear.attempts', { n: rec.attempts }), ' · ', hintSummary(rec.maxHintLevel))
+              : null,
           );
         }),
       ),

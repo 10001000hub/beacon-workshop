@@ -130,7 +130,7 @@ export function saveManagement(ctx: Ctx): HTMLElement {
   });
 
   const resetArea = h('div', { class: 'reset-area' });
-  function renderReset(confirming: boolean) {
+  function renderReset(confirming: boolean, restoreFocus = false) {
     resetArea.replaceChildren(
       confirming
         ? h(
@@ -152,11 +152,13 @@ export function saveManagement(ctx: Ctx): HTMLElement {
               },
               t('save.resetYes'),
             ),
-            h('button', { type: 'button', class: 'btn btn-secondary', onclick: () => renderReset(false) }, t('common.cancel')),
+            h('button', { type: 'button', class: 'btn btn-secondary', 'data-testid': 'reset-cancel', onclick: () => renderReset(false, true) }, t('common.cancel')),
           )
         : h('button', { type: 'button', class: 'btn btn-secondary', 'data-testid': 'reset', onclick: () => renderReset(true) }, t('save.reset')),
     );
-    if (confirming) resetArea.querySelector<HTMLElement>('button')?.focus();
+    // Land on the safe choice (Cancel) when confirming; after cancelling, return to the trigger.
+    if (confirming) resetArea.querySelector<HTMLElement>('[data-testid="reset-cancel"]')?.focus();
+    else if (restoreFocus) resetArea.querySelector<HTMLElement>('[data-testid="reset"]')?.focus();
   }
   renderReset(false);
 

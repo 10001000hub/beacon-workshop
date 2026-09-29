@@ -75,6 +75,7 @@
   "quest.objectives": "Learning goals",
   "quest.activities": "Workshop exercises",
   "quest.state.done": "Done",
+  "quest.assisted": "Completed after viewing the worked example",
   "quest.state.open": "Available",
   "quest.state.locked": "Opens after the previous exercise",
   "quest.stale": "Completed on an older lesson version",

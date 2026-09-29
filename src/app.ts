@@ -13,6 +13,7 @@ import { parseHash, type Route } from './router';
 import { clear, h } from './ui/dom';
 import { lt, setLocale, t } from './ui/i18n';
 import { notice } from './ui/components';
+import { markJapaneseFallback, watchJapaneseFallback } from './ui/langMark';
 import type { Ctx } from './ui/context';
 import { activityScreen } from './ui/screens/activity';
 import { questBrief, questClear, readIndex, readQuest } from './ui/screens/quest';
@@ -155,7 +156,7 @@ function screenFor(route: Route): HTMLElement {
         return mapScreen(ctx);
       }
       if (route.name === 'quest') {
-        session.dispatch({ type: 'SET_CURRENT', questId: quest.id, activityId: save.currentQuestId === quest.id ? save.currentActivityId : null, at: new Date().toISOString() });
+        session.noteResume(quest.id, save.currentQuestId === quest.id ? save.currentActivityId : null);
         return questBrief(ctx, quest);
       }
       if (route.name === 'clear') {
@@ -174,7 +175,7 @@ function screenFor(route: Route): HTMLElement {
         pendingFlash.push(t('guard.activityLocked'));
         return questBrief(ctx, quest);
       }
-      session.dispatch({ type: 'SET_CURRENT', questId: quest.id, activityId: activity.id, at: new Date().toISOString() });
+      session.noteResume(quest.id, activity.id);
       return activityScreen(ctx, quest, activity);
     }
     case 'read':
@@ -215,6 +216,7 @@ function render(): void {
   // Move focus to the new screen's heading so keyboard and screen-reader users land in context.
   (title as HTMLElement | null)?.focus({ preventScroll: false });
   window.scrollTo(0, 0);
+  markJapaneseFallback(root);
 }
 
 session.subscribe(() => {
@@ -229,3 +231,4 @@ window.addEventListener('storage', (e) => {
 });
 
 render();
+watchJapaneseFallback(root);

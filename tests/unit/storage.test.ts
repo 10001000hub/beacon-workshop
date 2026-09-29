@@ -201,3 +201,117 @@ describe('Session', () => {
     expect(new Session(st, '0.1.0').save.completedActivities['q01-a']).toBeDefined();
   });
 });
+
+describe('B1: a corrupt or unsupported value that appears while the app is open', () => {
+  const foreign: Array<[string, string]> = [
+    ['unsupported schema', JSON.stringify({ schemaVersion: 2, future: { shape: true } })],
+    ['corrupt JSON', '{"schemaVersion":1,"trunc'],
+  ];
+  for (const [name, raw] of foreign) {
+    it(`persistSave never overwrites ${name}`, () => {
+      const st = new MemoryStorage();
+      st.setItem(SAVE_KEY, raw);
+      const r = persistSave(st, complete(), 0);
+      expect(r).toEqual({ ok: false, reason: 'foreign_value' });
+      expect(st.getItem(SAVE_KEY)).toBe(raw);
+      expect(st.getItem(BACKUP_KEY)).toBeNull();
+    });
+    it(`Session keeps ${name} byte-for-byte, warns, and recovery stays explicit`, () => {
+      const st = new MemoryStorage();
+      const s = new Session(st, '0.1.0', () => T);
+      s.dispatch({ type: 'MARK_INTRO_SEEN', at: T });
+      const validRaw = st.getItem(SAVE_KEY)!;
+      // "tab B / newer build" writes something this build cannot read.
+      st.setItem(SAVE_KEY, raw);
+      s.externalChange();
+      expect(s.status).toMatchObject({ kind: 'blocked', deferred: true });
+      s.dispatch({ type: 'MARK_READ', sectionId: 'q01.story', at: T });
+      expect(st.getItem(SAVE_KEY)).toBe(raw);
+      expect(s.save.readSections['q01.story']).toBeDefined(); // still playable in memory
+      // The last valid save is still the recovery point, and only an explicit action replaces the value.
+      expect(st.getItem(BACKUP_KEY) === null || st.getItem(BACKUP_KEY) === validRaw).toBe(true);
+      expect(st.getItem(SAVE_KEY)).toBe(raw);
+      expect(s.startOver()).toBe(true);
+      expect(loadSave(st).kind).toBe('ok');
+    });
+    it(`Session detects ${name} on its next write even without a storage event`, () => {
+      const st = new MemoryStorage();
+      const s = new Session(st, '0.1.0', () => T);
+      s.dispatch({ type: 'MARK_INTRO_SEEN', at: T });
+      st.setItem(SAVE_KEY, raw);
+      s.dispatch({ type: 'SET_LOCALE', locale: 'en', at: T });
+      expect(st.getItem(SAVE_KEY)).toBe(raw);
+      expect(s.status).toMatchObject({ kind: 'blocked', deferred: true });
+    });
+  }
+});
+
+describe('I1: reset / import keep a recovery point', () => {
+  const done = (ids: string[]) => {
+    let s = fresh();
+    for (const id of ids) s = reduce(s, { type: 'ATTEMPT_ACTIVITY', activityId: id, questId: 'q01', questRevision: 'r1', correct: true, at: T });
+    return s;
+  };
+  const backupCount = (st: MemoryStorage) => Object.keys(JSON.parse(st.getItem(BACKUP_KEY)!).completedActivities).length;
+
+  it('the pre-reset save survives later ordinary writes and can be restored', () => {
+    const st = new MemoryStorage();
+    const s = new Session(st, '0.1.0', () => T);
+    s.importSave(done(['q01-a', 'q01-b', 'q01-c']));
+    s.dispatch({ type: 'MARK_INTRO_SEEN', at: T });
+    s.dispatch({ type: 'RESET', contentVersion: '0.1.0', at: T });
+    expect(Object.keys(s.save.completedActivities)).toHaveLength(0);
+    for (const sec of ['a', 'b', 'c']) s.dispatch({ type: 'MARK_READ', sectionId: `q01.${sec}`, at: T });
+    s.dispatch({ type: 'SET_LOCALE', locale: 'en', at: T });
+    expect(backupCount(st)).toBe(3);
+    // Restoring goes through the explicit recovery flow.
+    st.setItem(SAVE_KEY, '{broken');
+    const after = new Session(st, '0.1.0', () => T);
+    expect(after.status.kind).toBe('blocked');
+    expect(after.restoreBackup()).toBe(true);
+    expect(Object.keys(after.save.completedActivities)).toHaveLength(3);
+  });
+  it('an import replacement keeps the pre-import save recoverable', () => {
+    const st = new MemoryStorage();
+    const s = new Session(st, '0.1.0', () => T);
+    s.importSave(done(['q01-a', 'q01-b']));
+    s.dispatch({ type: 'MARK_INTRO_SEEN', at: T });
+    s.importSave(done(['q01-a']));
+    s.dispatch({ type: 'MARK_READ', sectionId: 'q01.a', at: T });
+    s.dispatch({ type: 'SET_LOCALE', locale: 'en', at: T });
+    expect(backupCount(st)).toBe(2);
+  });
+  it('ordinary writes still rotate the backup when no reset / import happened', () => {
+    const st = new MemoryStorage();
+    const s = new Session(st, '0.1.0', () => T);
+    s.dispatch({ type: 'MARK_INTRO_SEEN', at: T });
+    s.dispatch({ type: 'SET_LOCALE', locale: 'en', at: T });
+    expect(JSON.parse(st.getItem(BACKUP_KEY)!).locale).toBe('ja');
+  });
+});
+
+describe('I8: navigation alone does not write', () => {
+  it('noteResume changes the in-memory position but not the stored revision', () => {
+    const st = new MemoryStorage();
+    const s = new Session(st, '0.1.0', () => T);
+    s.dispatch({ type: 'MARK_INTRO_SEEN', at: T });
+    const before = st.getItem(SAVE_KEY);
+    s.noteResume('q02', 'q02-a');
+    expect(st.getItem(SAVE_KEY)).toBe(before);
+    expect(s.save.currentQuestId).toBe('q02');
+    // The position is saved together with the next real change.
+    s.dispatch({ type: 'MARK_READ', sectionId: 'q02.story', at: T });
+    expect(JSON.parse(st.getItem(SAVE_KEY)!).currentActivityId).toBe('q02-a');
+  });
+  it('a second session does not see a conflict after the first only navigates', () => {
+    const st = new MemoryStorage();
+    const a = new Session(st, '0.1.0', () => T);
+    a.dispatch({ type: 'MARK_INTRO_SEEN', at: T });
+    const b = new Session(st, '0.1.0', () => T);
+    a.noteResume('q01', 'q01-a');
+    a.noteResume('q01', null);
+    b.externalChange();
+    expect(b.status.kind).toBe('saved');
+  });
+});
+
