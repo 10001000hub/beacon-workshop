@@ -13,7 +13,7 @@
 
 ## 現在の状態
 
-**Working MVP + pre-RC 修正**（ブランチ `feat/working-mvp`）。リポジトリは公開されていますが、**アプリはデプロイされていません**（公開ページはありません）。導入 → Q01〜Q06（必須課題18）→ 終幕までを日本語で一周できます。英語は UI 文字列のみで、教材本文は日本語で表示されます。英語教材、最終アート、実習の実機検証は Release Candidate の範囲です。詳細は [docs/VERIFY.md](docs/VERIFY.md) と [docs/HANDOFF.md](docs/HANDOFF.md) を参照してください。
+**Release Candidate（この環境で自動検証できる範囲）**（ブランチ `feat/working-mvp`）。リポジトリは公開されていますが、**アプリはデプロイされていません**（公開ページはありません）。導入 → Q01〜Q06（必須課題18）→ 終幕までを日本語で一周できます。日英の教材があります（英訳は母語話者の校閲を受けていない初訳です）。最終アートと実習の実機検証は未完了です。詳細は [docs/VERIFY.md](docs/VERIFY.md) と [docs/HANDOFF.md](docs/HANDOFF.md) を参照してください。
 
 ## コマンド
 
@@ -34,8 +34,8 @@ npm run check                       # 上記すべて
 
 ## 既知の制限
 
-- 英語は UI 文字列のみで、教材本文は日本語で表示されます（英語 UI では日本語部分に `lang="ja"` を付けています）。
-- 検証は Chromium の自動テストのみです。WebKit・iPhone Safari・Windows・スクリーンリーダー・実際の Codex での確認は未実施です。
+- 英訳は初訳で、母語話者の校閲を受けていません。英訳のない部分は日本語で表示され、`lang="ja"` を付けます。
+- 検証は Chromium の自動テスト（axe-core を含む）のみです。WebKit（CI ジョブは用意済み・未実行）・iPhone Safari・Windows・スクリーンリーダー・実際の Codex での確認は未実施です。画像は仮素材のままです。
 - リセット／インポート前のバックアップ保護は、ページを再読み込みするまでの間の保持です。大事な進捗は設定画面のエクスポートで控えてください。
 - CI: `.github/workflows/ci.yml`（GitHub Actions）。結果は各コミットごとに確認してください。
 

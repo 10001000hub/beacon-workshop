@@ -5,6 +5,7 @@ Canonical spec: `docs/PRODUCT_SPEC.md` (do not edit, do not redesign). State of 
 ## Commands
 - `npm ci` / `npx playwright install chromium`
 - `npm run check` = typecheck → `npm test` (Vitest) → `validate:content` → `build` → `test:e2e` (Playwright, chromium)
+- WebKit (optional, needs OS libs): `PW_WEBKIT=1 npm run test:e2e:webkit`; run in CI only after push
 - E2E reuses a server on :4173 outside CI. If a stale preview is running, kill it by PID (`ss -ltnp | grep 4173`); `pkill -f "vite preview"` kills your own shell.
 
 ## Layout

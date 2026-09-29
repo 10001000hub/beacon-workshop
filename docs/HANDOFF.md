@@ -1,7 +1,7 @@
 # HANDOFF — Beacon Workshop
 
 ## Current state
-Working MVP complete. Japanese learners can play from the introduction through Q01–Q06 (18 activities) to the lighthouse ending, using placeholder art. All checks pass locally and on GitHub Actions (Chromium). The repository is published (public, https://github.com/10001000hub/beacon-workshop, pushed with owner authorization on 2026-09-29). The application is **not deployed**, and there is no main branch or merge. The pre-RC defect fixes below were pushed with owner authorization (2026-09-29).
+Working MVP complete. Japanese learners can play from the introduction through Q01–Q06 (18 activities) to the lighthouse ending, using placeholder art. Release Candidate 実装（この環境で自動検証できる範囲）まで完了。Chromium の全検査はローカルで成功、最新コミットの CI は未観測（未 push）。The repository is published (public, https://github.com/10001000hub/beacon-workshop, pushed with owner authorization on 2026-09-29). The application is **not deployed**, and there is no main branch or merge. The pre-RC defect fixes below were pushed with owner authorization (2026-09-29).
 
 ## Completed WPs
 | WP | Result | Commit |
@@ -18,22 +18,21 @@ Working MVP complete. Japanese learners can play from the introduction through Q
 ## Branch / last commit
 - Branch: `feat/working-mvp` → `origin` (public; currently the default branch because there is no `main`)
 - Baseline (published): `a3c8c13`
-- Implementation commit (pre-RC fixes, tested): `aebbef8`. HEAD = this docs commit on top of it (docs only)
+- pre-RC 修正: `aebbef8`。RC 作業: `91a9efe`（AC22）、`a8dd34b`（axe・WebKit 設定）、`662c482`（英語教材・AC18）。HEAD = その上の docs のみのコミット。**origin へ push 済みなのは `f7f14bf` まで**（以降は未 push）
 
 ## Files being changed
 None. The working tree is clean after the docs commit.
 
-## Tests last run (2026-09-29, WSL2, Node 22.23.1, on `aebbef8`)
-- `npm run check`: PASS (exit 0) = typecheck, `npm test` (7 files, 138 tests), `validate:content` (6 quests, 18 activities), build, `test:e2e` (30 tests, Chromium)
-- GitHub Actions: run 36576369888 succeeded on `e82d2bb` (docs-only commit on top of `aebbef8`; pushed together, no separate run for `aebbef8`). Run 36498603515 belongs to `c4d44a9` and is not evidence for the fixes.
-- Clean-clone reproduction after the fixes: NOT RUN
-- NOT RUN: Playwright WebKit, iPhone Safari, Windows, screen reader, real Codex
+## Tests last run (2026-09-30, WSL2, Node 22.23.1, on `662c482`)
+- `npm run check`: PASS (exit 0) = typecheck, `npm test` (8 files, 143 tests), `validate:content` (6 quests, 18 activities), build, `test:e2e` (34 tests, Chromium)
+- GitHub Actions: `662c482` 以降は未実行（未 push）。過去の run は古いコミットのもので、現在の HEAD の証拠にならない
+- NOT RUN: Playwright WebKit（ローカルは OS ライブラリ不足、CI ジョブは追加済み・未実行）、iPhone Safari、Windows、スクリーンリーダー、200% 拡大、実 Codex、クリーン clone 再現
 
 ## PASS / FAIL / NOT RUN (AC01–AC30; details in `docs/VERIFY.md`)
-- PASS: AC01–AC16, AC19, AC23–AC26, AC28–AC30 (AC10/13/15/16 re-established with new evidence on `aebbef8`)
+- PASS: AC01–AC16、AC18（機械検査の範囲）、AC19、AC22（見本の範囲）、AC23–AC26、AC28、AC30（AC30 は再走査していない旨を VERIFY に記載）
 - FAIL: none
-- NOT RUN: AC17 (manual screen reader / zoom)
-- DEFERRED TO RELEASE CANDIDATE: AC18, AC20 (device part), AC21, AC22, AC27 (final art)
+- NOT RUN: AC17（手動）、AC29（クリーン clone）
+- DEFERRED: AC20（実機部分）、AC21、AC27（最終アート）
 
 ## pre-RC fixes (review findings)
 - B1: a corrupt/unsupported value in `beacon-workshop.save.v1` is never overwritten by ordinary writes; the session becomes blocked (banner + recovery link), recovery stays explicit.
@@ -47,7 +46,7 @@ None. The working tree is clean after the docs commit.
 - `Session` (in `src/core/session.ts`) owns the save status: saved / memory / blocked (corrupt or newer, with a deferred "continue without saving" mode) / conflict.
 - Activity drafts are held in memory only. They are not saved.
 - Reading mode shows answers but never completes activities or awards XP.
-- English: all UI keys exist. Content falls back to Japanese until RC.
+- English: UI と全教材に英語あり（初訳、母語話者の校閲なし）。`lt()` の日本語フォールバックと `lang` 付与は残してある。
 - Asset manifest is at `src/content/asset-manifest.json`. All entries are `placeholder`.
 - Sources are `unchecked` and practice cards are `draft`. Nothing is `device_verified`.
 - License: MIT (owner decision, 2026-09-29). `LICENSE`, `package.json` and the About text (`about.license`) reflect it.
@@ -55,13 +54,13 @@ None. The working tree is clean after the docs commit.
 ## Blockers
 None.
 
-## Deferred to Release Candidate
-- English content and practice text (AC18)
-- Final art replacing the 20 placeholders, with origin and usage terms (AC27)
-- Device verification of the 6 practice cards and the Windows route, recording date and product version (AC20, AC21)
-- Q04 broken-sample repository/fixture and its check (AC22)
-- WebKit and real iPhone Safari runs (§17.3)
+## Deferred / NOT RUN
+- Final art replacing the 20 placeholders, with origin and usage terms (AC27). 画像制作手段がなく、第三者素材は使えないため据え置き
+- Device verification of the 6 practice cards and the Windows route (AC20, AC21)
+- WebKit（CI ジョブは `ci.yml`、`PW_WEBKIT=1 npm run test:e2e:webkit`）と実機 iPhone Safari
 - Manual screen-reader and 200% zoom checks (AC17)
+- 英語の母語話者校閲
+- 既知の制限: バックアップの保持（`holdBackup`）は再読み込みまで
 
 ## Exact next action
-RC work, starting with the Q04 broken-sample fixture and its check (AC22). Then English content (AC18), final art (AC27), and device verification of the practice cards (AC20/AC21).
+オーナー判断: (1) `a8dd34b..` の push 承認 → CI（Chromium + WebKit ジョブ）の結果を記録、(2) 実機・Windows での実習検証、(3) 最終アートの提供または承認。
