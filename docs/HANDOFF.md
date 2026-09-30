@@ -26,13 +26,15 @@ None. The working tree is clean after the docs commit.
 ## Tests last run (2026-09-30; ローカルは `662c482` のコード、CI は `db85a3d`)
 - `npm run check`: PASS (exit 0) = typecheck, `npm test` (8 files, 143 tests), `validate:content` (6 quests, 18 activities), build, `test:e2e` (34 tests, Chromium)
 - GitHub Actions run 36622604662 on `db85a3d`: success（`check` = 143 unit + Chromium E2E 34、`webkit` = E2E 34）。run 36621920030（`dd298db`）は webkit のクリップボード権限テストで failure → 修正済み。docs のみの後続コミットの run は追跡しない
-- Playwright WebKit: ローカル NOT RUN、CI PASS。NOT RUN: iPhone Safari、Windows、スクリーンリーダー、200% 拡大、実 Codex、クリーン clone 再現
+- Playwright WebKit: CI PASS。ローカルは OS ライブラリ導入に sudo が必要なため実行不可（EXTERNAL_TOOL_ONLY、CI が代替）。HUMAN_ONLY（未実施）: iPhone Safari、Windows、スクリーンリーダー、200% 拡大、実 Codex。クリーン clone 再現は PASS（2026-10-01、`092cd77`、VERIFY の AC29）
 
-## PASS / FAIL / NOT RUN (AC01–AC30; details in `docs/VERIFY.md`)
-- PASS: AC01–AC16、AC18（機械検査の範囲）、AC19、AC22（見本の範囲）、AC23–AC26、AC28、AC30（AC30 は再走査していない旨を VERIFY に記載）
+## PASS / FAIL / HUMAN_ONLY / EXTERNAL_TOOL_ONLY (AC01–AC30; details in `docs/VERIFY.md`)
+- PASS: AC01–AC16、AC19、AC23–AC26、AC28–AC30（AC29 は fresh clone、AC30 は 2026-10-01 に再走査）
+- PASS（自動部分）+ HUMAN_ONLY: AC17、AC18、AC20、AC22
 - FAIL: none
-- NOT RUN: AC17（手動）、AC29（クリーン clone）
-- DEFERRED: AC20（実機部分）、AC21、AC27（最終アート）
+- NOT RUN（自動で実行可能な未実施）: なし
+- HUMAN_ONLY: AC21、および上記の手動・実機部分
+- EXTERNAL_TOOL_ONLY: AC27（最終アート）
 
 ## pre-RC fixes (review findings)
 - B1: a corrupt/unsupported value in `beacon-workshop.save.v1` is never overwritten by ordinary writes; the session becomes blocked (banner + recovery link), recovery stays explicit.
@@ -54,7 +56,7 @@ None. The working tree is clean after the docs commit.
 ## Blockers
 None.
 
-## Deferred / NOT RUN
+## HUMAN_ONLY / EXTERNAL_TOOL_ONLY（自動では完了できない残り）
 - Final art replacing the 20 placeholders, with origin and usage terms (AC27). 画像制作手段がなく、第三者素材は使えないため据え置き
 - Device verification of the 6 practice cards and the Windows route (AC20, AC21)
 - 実機 iPhone Safari（WebKit エンジンは CI で PASS 済み）

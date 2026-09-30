@@ -35,7 +35,7 @@ npm run check                       # 上記すべて
 ## 既知の制限
 
 - 英訳は初訳で、母語話者の校閲を受けていません。英訳のない部分は日本語で表示され、`lang="ja"` を付けます。
-- 検証は Chromium の自動テスト（axe-core を含む）のみです。iPhone Safari（WebKit エンジンは CI で確認済み）・ローカル WebKit・Windows・スクリーンリーダー・実際の Codex での確認は未実施です。画像は仮素材のままです。
+- 検証は Chromium の自動テスト（axe-core を含む）のみです。実機 iPhone Safari（WebKit エンジンは CI で確認済み）・Windows・スクリーンリーダー・実際の Codex での確認は未実施です。画像は仮素材のままです。
 - リセット／インポート前のバックアップ保護は、ページを再読み込みするまでの間の保持です。大事な進捗は設定画面のエクスポートで控えてください。
 - CI: `.github/workflows/ci.yml`（GitHub Actions）。結果は各コミットごとに確認してください。
 
