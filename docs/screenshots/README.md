@@ -14,3 +14,18 @@ The review used the real controls to complete all six quests, 18 activities and 
 - [Ending](ending-desktop.png)
 
 The art candidates and their editable sources are documented in [art provenance](../../art/README.md). Remaining manual and device checks are in [VERIFY](../VERIFY.md).
+
+## Follow-up inspection and native Windows zoom
+
+The root AI actually inspected all 20 assets and all six quest screens. Source-asset contact sheets are separate from app screen captures. Browser 200% zoom on native Windows Chrome was measured and the full course completed; these viewport captures avoid the browser-zoom full-page capture limitation. They do not claim a human review, real Codex execution or screen-reader speech. Details: [feasible review](../FEASIBLE_REVIEW.md).
+
+- [art-backgrounds.png](art-backgrounds.png)
+- [art-characters.png](art-characters.png)
+- [art-vectors-mist.png](art-vectors-mist.png)
+- [art-map.png](art-map.png)
+- [viewport-zoom200-title.png](viewport-zoom200-title.png)
+- [viewport-zoom200-settings-en.png](viewport-zoom200-settings-en.png)
+- [viewport-zoom200-prompt-builder-controls.png](viewport-zoom200-prompt-builder-controls.png)
+- [viewport-zoom200-evidence-board-controls.png](viewport-zoom200-evidence-board-controls.png)
+- [viewport-zoom200-change-review-controls.png](viewport-zoom200-change-review-controls.png)
+- [viewport-zoom200-triage-decision-controls.png](viewport-zoom200-triage-decision-controls.png)

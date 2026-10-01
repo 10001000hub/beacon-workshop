@@ -13,7 +13,7 @@
 
 ## 現在の状態
 
-**Release Candidate（この環境で自動検証できる範囲）**。公開リポジトリの既定ブランチは `feat/working-mvp` のままで、その画像は仮素材です。**オリジナルのアート候補 20 点を含むこのコードはブランチ `feat/claude-finish-20261001`**（ベース `354d937`）にあり、レビュー待ちです（承認済みではありません）。アプリはデプロイされていません（公開ページはありません）。アートはオリジナルの候補版（オーナーの目視確認待ち）、実習の実機検証は未完了、英訳は母語話者の校閲を受けていない初訳です。詳細は [docs/VERIFY.md](docs/VERIFY.md) と [docs/HANDOFF.md](docs/HANDOFF.md)、アートの来歴は [art/README.md](art/README.md)、OSS 申請の下書き（未提出）は [docs/OSS_APPLICATION.md](docs/OSS_APPLICATION.md) を参照してください。
+**磨き込み済みのプレイ可能な候補（Working MVP：オリジナルのアートと日英の教材を備える）。完全な Release Candidate は、実際の練習（Windows の実 Codex）での検証待ちです。** 仕様 §17.1 の Release Candidate には Windows 実機の経路検証が必要で、未実施です。詳細は [docs/RELEASE_READINESS.md](docs/RELEASE_READINESS.md)。公開リポジトリの既定ブランチは `feat/working-mvp` のままで、その画像は仮素材です。**オリジナルのアート候補 20 点を含むこのコードはブランチ `feat/claude-finish-20261001`**（ベース `354d937`）にあり、レビュー待ちです（承認済みではありません）。アプリはデプロイされていません（公開ページはありません）。アートはオリジナルの候補版（オーナーの目視確認待ち）、実習の実機検証は未完了、英訳は母語話者の校閲を受けていない初訳です。詳細は [docs/VERIFY.md](docs/VERIFY.md) と [docs/HANDOFF.md](docs/HANDOFF.md)、アートの来歴は [art/README.md](art/README.md)、OSS 申請の下書き（未提出）は [docs/OSS_APPLICATION.md](docs/OSS_APPLICATION.md) を参照してください。
 
 ## コースの概要
 
@@ -52,7 +52,7 @@ npx tsx scripts/render-art.ts       # 原稿を Chromium で public/assets/art/ 
 ## 既知の制限
 
 - 英訳は初訳で、母語話者の校閲を受けていません。英訳のない部分は日本語で表示され、`lang="ja"` を付けます。
-- 検証は Chromium の自動テスト（axe-core を含む）のみです。実機 iPhone Safari（WebKit エンジンは CI で確認済み）・Windows・スクリーンリーダー・実際の Codex での確認は未実施です。アートのオーナー目視確認も未了です。
+- Chromium／WebKit の自動テストに加え、Windows のインストール済み Chrome で実ブラウザ200%拡大の全18課題を確認しました。全20点のアートと全6章の実画面はAIが目視確認済みです。実機 iPhone Safari、Windows の実 Codex 実習、スクリーンリーダー音声、人手の拡大操作、英語母語話者の校閲は未確認です。オーナーの美的承認は取得していません。詳細は [環境内の確認](docs/FEASIBLE_REVIEW.md)。
 - リセット／インポート前のバックアップ保護は、ページを再読み込みするまでの間の保持です。大事な進捗は設定画面のエクスポートで控えてください。
 - CI: `.github/workflows/ci.yml`（GitHub Actions）。結果は各コミットごとに確認してください。
 

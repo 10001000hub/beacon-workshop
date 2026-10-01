@@ -178,7 +178,7 @@
         { "id": "q01b-rumor", "label": { "ja": "隣町のような予約の仕組みを持つ", "en": "Have a reservation system like the next town" }, "explain": { "ja": "うわさ話で、配達係の困り事とは関係がありません。", "en": "It is a rumor and has nothing to do with the courier's trouble." } },
         { "id": "q01b-one", "label": { "ja": "使うのは配達係ひとり", "en": "Only the courier uses it" }, "explain": { "ja": "利用状況として役に立つ事実です。選んでも選ばなくてもかまいません。", "en": "A fact useful as usage context. You may choose it or not." } },
         { "id": "q01b-font", "label": { "ja": "文字を筆文字風にする", "en": "Make the lettering look like brush writing" }, "explain": { "ja": "「かもね」という好みです。必須にすると、本当に必要な機能より先に手間がかかります。", "en": "It is a \"might be\" preference. Making it required means effort goes there before the truly needed feature." } },
-        { "id": "q01b-forget", "label": { "ja": "朝に受けた依頼を忘れないようにしたい", "en": "I want not to forget the requests I took in the morning" }, "explain": { "ja": "作る理由になる困り事です。選んでも選ばなくてもかまいません。", "en": "A trouble that gives a reason to build. You may choose it or not." } }
+        { "id": "q01b-forget", "label": { "ja": "朝に受けた依頼を忘れないようにしたい", "en": "I don't want to forget the requests I took in the morning" }, "explain": { "ja": "作る理由になる困り事です。選んでも選ばなくてもかまいません。", "en": "A trouble that gives a reason to build. You may choose it or not." } }
       ],
       "grading": {
         "id": "q01-b.rule",

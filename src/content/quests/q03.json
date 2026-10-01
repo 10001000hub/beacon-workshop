@@ -212,7 +212,7 @@
             { "id": "more-lines", "label": { "ja": "変更された行が多い方が、丁寧な仕事だから", "en": "Because more changed lines mean more careful work" }, "explain": { "ja": "行数の多さは正しさの根拠になりません。", "en": "The number of lines is not evidence of correctness." } },
             { "id": "server", "label": { "ja": "サーバーに送れば、絶対に消えないから", "en": "Because sending to a server means it never disappears" }, "explain": { "ja": "外部送信は頼まれておらず、「絶対に消えない」とも言えません。", "en": "Sending outside was not requested, and it cannot be said that it \"never disappears.\"" } },
             { "id": "scope", "label": { "ja": "保存に必要な部分だけが変わり、追加・一覧の処理と見た目はそのままだから", "en": "Because only the part needed for saving changes, and adding, the list and the look stay as they are" }, "explain": { "ja": "頼んだ範囲に収まっていることを差分で確かめた理由です。", "en": "This is the reason you checked in the diff that it stays within the requested scope." } },
-            { "id": "newer", "label": { "ja": "新しい仕組みの方が、将来的に安心だから", "en": "Because a newer mechanism is safer in the future" }, "explain": { "ja": "「新しいから正しい」とは限りません。今回の目的との関係で判断します。", "en": "\"New\" does not always mean \"right.\" Judge by the relation to this goal." } }
+            { "id": "newer", "label": { "ja": "新しい仕組みの方が、将来的に安心だから", "en": "Because a newer mechanism is safer in the future" }, "explain": { "ja": "「新しいから正しい」とは限りません。今回の目的との関係で判断します。", "en": "\"New\" does not always mean \"right.\" Judge by how well it fits this goal." } }
           ]
         }
       ],
@@ -323,7 +323,7 @@
         },
         "no_persistence_check": {
           "what": { "ja": "「閉じても残る」という新しい機能を確かめられていません。", "en": "You have not checked the new feature \"it stays even when closed.\"" },
-          "why": { "ja": "追加→再読み込み→残っている、の3つがそろって初めて保存を確かめられます。", "en": "Only when add → reload → still there are all present can saving be checked." },
+          "why": { "ja": "追加→再読み込み→残っている、の3つがそろって初めて保存を確かめられます。", "en": "You can check saving only when add → reload → still there are all included." },
           "next": { "ja": "足りない札を手順に加えましょう。", "en": "Add the missing cards to the steps." }
         },
         "no_regression": {

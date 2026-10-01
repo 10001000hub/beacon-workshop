@@ -62,7 +62,7 @@
       "cards": [
         { "id": "q02a-pay", "label": { "ja": "有料プランの決済を入れる", "en": "Add payment for a paid plan" }, "explain": { "ja": "一人で使うメモに決済は不要です。初版には入れません。", "en": "A note for one person needs no payment. It is not in the first version." } },
         { "id": "q02a-done", "label": { "ja": "題名と本文を入れて「追加」を押すと、一覧に表示される", "en": "Entering a title and body and pressing \"Add\" shows it in a list" }, "explain": { "ja": "画面で確かめられる終わりの状態です。", "en": "An end state you can check on screen." } },
-        { "id": "q02a-folder", "label": { "ja": "用意した空の練習フォルダの中だけで作業する", "en": "Work only inside the prepared empty practice folder" }, "explain": { "ja": "作業場所を限る大事な「制約」です。仕事用の場所を練習に使いません。", "en": "An important \"constraint\" that limits the work location. Real work locations are not used for practice." } },
+        { "id": "q02a-folder", "label": { "ja": "用意した空の練習フォルダの中だけで作業する", "en": "Work only inside the prepared empty practice folder" }, "explain": { "ja": "作業場所を限る大事な「制約」です。仕事用の場所を練習に使いません。", "en": "An important \"constraint\" that limits the work location. Your work folders are not used for practice." } },
         { "id": "q02a-signup", "label": { "ja": "会員登録とログインを付ける", "en": "Add sign-up and login" }, "explain": { "ja": "使うのは一人だけで、初版には不要です。", "en": "Only one person uses it, so it is not needed in the first version." } },
         { "id": "q02a-purpose", "label": { "ja": "題名と本文を入れて、一覧に1件出せるメモの見本を作る", "en": "Build a sample notes app that can show one entry in a list after entering a title and body" }, "explain": { "ja": "最小限の動く見本という「目的」です。", "en": "This is the \"goal\": a minimal working sample." } },
         { "id": "q02a-spec", "label": { "ja": "前の章でまとめた短い仕様がある（題名80文字・本文2,000文字）", "en": "There is a short spec from the previous chapter (title 80 characters, body 2,000 characters)" }, "explain": { "ja": "すでにある材料です。上限は制約として置いてもかまいません。", "en": "These are existing materials. The limits may also be placed as constraints." } },
@@ -302,7 +302,7 @@
         },
         "missing_step": {
           "what": { "ja": "必要な操作が抜けていて、一覧に1件出るところまで再現できません。", "en": "A needed action is missing, so you cannot reproduce getting one entry in the list." },
-          "why": { "ja": "題名の入力・本文の入力・追加の3つがそろって、初めて結果を確かめられます。", "en": "Only when typing the title, typing the body and adding are all present can you check the result." },
+          "why": { "ja": "題名の入力・本文の入力・追加の3つがそろって、初めて結果を確かめられます。", "en": "You can check the result only when typing the title, typing the body and adding are all included." },
           "next": { "ja": "足りない操作の札を手順に加えましょう。", "en": "Add the missing action cards to the steps." }
         },
         "order": {

@@ -47,7 +47,7 @@
     "supportsClaimIds": ["project.context"],
     "checkedAt": null,
     "status": "unchecked",
-    "note": { "ja": "制作背景の参考資料。採択や審査の結果を保証するものではない。教材の内容の根拠には使っていない。", "en": "A reference on the background of the production. It does not guarantee the result of any selection or review. It is not used as a basis for the teaching content." }
+    "note": { "ja": "制作背景の参考資料。採択や審査の結果を保証するものではない。教材の内容の根拠には使っていない。", "en": "A reference on the project's background. It does not guarantee the result of any selection or review. It is not used as a basis for the teaching content." }
   },
   {
     "id": "S6",
@@ -57,6 +57,6 @@
     "supportsClaimIds": ["app.naming"],
     "checkedAt": null,
     "status": "unchecked",
-    "note": { "ja": "名称・ロゴ等の扱いと誤認回避の参考。個別の名称使用許可を得たという意味ではない。本作は OpenAI のロゴを使っていない。", "en": "A reference on the handling of names, logos and so on, and on avoiding misunderstanding. It does not mean permission to use any specific name was obtained. This work does not use OpenAI's logo." }
+    "note": { "ja": "名称・ロゴ等の扱いと誤認回避の参考。個別の名称使用許可を得たという意味ではない。本作は OpenAI のロゴを使っていない。", "en": "A reference on the handling of names, logos and so on, and on avoiding being mistaken for an official product. It does not mean permission to use any specific name was obtained. This work does not use OpenAI's logo." }
   }
 ]

@@ -1,7 +1,7 @@
 # HANDOFF — Beacon Workshop
 
 ## Current state
-Working MVP complete. Japanese learners can play from the introduction through Q01–Q06 (18 activities) to the lighthouse ending, with original candidate art (owner visual review pending; see "Art finish"). Release Candidate 実装（この環境で自動検証できる範囲）まで完了。Chromium の全検査はローカルで成功。旧ベースラインの CI（Chromium・WebKit）は success、現在の候補の CI は push 後に確認する。The repository is published (public, https://github.com/10001000hub/beacon-workshop, pushed with owner authorization on 2026-09-29). The application is **not deployed**, and there is no main branch or merge. The pre-RC defect fixes below were pushed with owner authorization (2026-09-29).
+Working MVP complete. Japanese learners can play from the introduction through Q01–Q06 (18 activities) to the lighthouse ending, with original candidate art (owner visual review pending; see "Art finish"). Current state: polished playable candidate / Working MVP with original art and bilingual (ja/en) content. A full Release Candidate (spec §17.1) is pending real-practice verification (desktop_windows_codex route and 6 cards), which is not done; see `docs/RELEASE_READINESS.md`. Chromium の全検査はローカルで成功。CI: 最新コミット `18bd254` は push run 36837057863 と PR run 36837148985 がともに success（check 146 tests / Chromium 34 / WebKit 34）。これは英語編集前の履歴であり、英語編集後の追従 CI は pending。The repository is published (public, https://github.com/10001000hub/beacon-workshop, pushed with owner authorization on 2026-09-29). The application is **not deployed**, and there is no main branch or merge. The pre-RC defect fixes below were pushed with owner authorization (2026-09-29).
 
 ## Completed WPs
 | WP | Result | Commit |
@@ -32,18 +32,18 @@ The art/UI/docs candidate is isolated on `feat/claude-finish-20261001`; the orig
 ## Tests last run
 - 2026-10-01 (this branch / current candidate): the root verified every `npm run check` stage with actual exit 0 (completed 08:16:44 UTC, 1 worker): typecheck, 146 unit/content tests, validate:content (6 quests, 18 activities), build, 34 Chromium E2E. The root also completed 6 quests / 18 activities / four board types / 600 XP / ending with real controls (reload, 0 external requests, 0 page errors) and captured 15 automated screenshots (automated Chromium, not human/device verification).
 - That full run is BEFORE a CSS-only portrait fix (`.portrait` top -4px → -22px). After it: build OK, the 15 screenshots regenerated (faces fit in the 64px circles), and `ui.spec.ts` + `a11y.spec.ts` run alone with 1 worker without piping: 16 passed. The full suite was not re-run after the fix.
-- CI for this branch: pending until the root verifies the current head after push (no CI run or PR ID is recorded here). Historical baseline CI: run 36782230473 on `354d937`.
+- CI: commit `18bd254` — push run 36837057863 and PR run 36837148985 both green (check 146 tests, Chromium 34, WebKit 34). That is history relative to the English edits (`docs/ENGLISH_REVIEW.md`); the CI for the follow-up commit is pending. Older baseline CI: run 36782230473 on `354d937`.
 - Historical (old placeholder-art code, not this branch): 2026-09-30 `662c482` 143 unit / 34 E2E; AC29: the original reproduction at `092cd77` is history; the current candidate was built from a fresh isolated clone of `354d937` with a fresh `npm ci`, and its full stages passed with real exit 0 (before the portrait fix; ui/a11y 16 passed after). AC30: pre-commit pattern scan done by the root (144 text files + 17 WebP + 8 metadata-free automated screen PNGs; a pattern scan, not a security guarantee).
 - GitHub Actions run 36622604662 on `db85a3d`: success（`check` = 143 unit + Chromium E2E 34、`webkit` = E2E 34）。run 36621920030（`dd298db`）は webkit のクリップボード権限テストで failure → 修正済み。docs のみの後続コミットの run は追跡しない
-- Playwright WebKit: CI PASS。ローカルは OS ライブラリ導入に sudo が必要なため実行不可（EXTERNAL_TOOL_ONLY、CI が代替）。HUMAN_ONLY（未実施）: iPhone Safari、Windows、スクリーンリーダー、200% 拡大、実 Codex。クリーン clone 再現は PASS（2026-10-01、`092cd77`、VERIFY の AC29）
+- Playwright WebKit: CI PASS。ローカルは OS ライブラリ導入に sudo が必要なため実行不可（EXTERNAL_TOOL_ONLY、CI が代替）。HUMAN_ONLY（未実施）: iPhone Safari、Windowsの実Codex実習、スクリーンリーダー音声、人手の200%操作確認。Windowsのブラウザ200%計測は追従確認済み。クリーン clone 再現は PASS（2026-10-01、`092cd77`、VERIFY の AC29）
 
 ## PASS / FAIL / HUMAN_ONLY / EXTERNAL_TOOL_ONLY (AC01–AC30; details in `docs/VERIFY.md`)
-- PASS: AC01–AC16、AC19、AC23–AC26、AC28–AC30（AC29 は fresh clone、AC30 は 2026-10-01 に再走査）
+- PASS: AC01–AC16、AC19、AC23–AC30（AC29 は fresh clone、AC30 は 2026-10-01 に再走査）
 - PASS（自動部分）+ HUMAN_ONLY: AC17、AC18、AC20、AC22
 - FAIL: none
 - NOT RUN（自動で実行可能な未実施）: なし
 - HUMAN_ONLY: AC21、および上記の手動・実機部分
-- AC27: PASS（自動部分: 20件・WebP寸法・容量・スクリプト/外部参照/埋め込み文字なし・alt・フォールバック）+ HUMAN_ONLY（オーナーの目視確認。署名・承認は未取得）
+- AC27: PASS（台帳/由来/利用条件/代替表示、自動検査 + 全20点のAI目視）。候補のオーナー美的承認は未取得で、追加の必須ゲートではない。
 
 ## pre-RC fixes (review findings)
 - B1: a corrupt/unsupported value in `beacon-workshop.save.v1` is never overwritten by ordinary writes; the session becomes blocked (banner + recovery link), recovery stays explicit.
@@ -57,7 +57,7 @@ The art/UI/docs candidate is isolated on `feat/claude-finish-20261001`; the orig
 - `Session` (in `src/core/session.ts`) owns the save status: saved / memory / blocked (corrupt or newer, with a deferred "continue without saving" mode) / conflict.
 - Activity drafts are held in memory only. They are not saved.
 - Reading mode shows answers but never completes activities or awards XP.
-- English: UI と全教材に英語あり（初訳、母語話者の校閲なし）。`lt()` の日本語フォールバックと `lang` 付与は残してある。
+- English: UI と全教材に英語あり（初訳＋AI による編集レビュー済み、母語話者の校閲なし）。AI レビューの範囲と修正は `docs/ENGLISH_REVIEW.md`。`lt()` の日本語フォールバックと `lang` 付与は残してある。
 - Asset manifest is at `src/content/asset-manifest.json`. All entries are `candidate` (original art, owner visual review pending). Regenerate with `npx tsx scripts/generate-art.ts && npx tsx scripts/render-art.ts`.
 - Sources are `unchecked` and practice cards are `draft`. Nothing is `device_verified`.
 - License: MIT (owner decision, 2026-09-29). `LICENSE`, `package.json` and the About text (`about.license`) reflect it.
@@ -66,7 +66,7 @@ The art/UI/docs candidate is isolated on `feat/claude-finish-20261001`; the orig
 None.
 
 ## HUMAN_ONLY / EXTERNAL_TOOL_ONLY（自動では完了できない残り）
-- オーナーによるアートの目視確認（AC27 の人手部分。参考情報であり、PR をブロックする必須ゲートではない。署名・承認は取得していない）。候補版は実装済み。実機での見え方（iPhone・低帯域）も未確認
+- オーナーによるアート候補の採用判断（好み・改善の確認で、AC27の追加ゲートではない。署名・承認は取得していない）。候補版は実装済み。実機での見え方（iPhone・低帯域）も未確認
 - Device verification of the 6 practice cards and the Windows route (AC20, AC21)
 - 実機 iPhone Safari（WebKit エンジンは CI で PASS 済み）
 - Manual screen-reader and 200% zoom checks (AC17)
@@ -75,3 +75,7 @@ None.
 
 ## Exact next action
 オーナー判断: (1) 実機・Windows での実習検証、(2) アート候補の目視確認と差し替え要否、`docs/OSS_APPLICATION.md` の確認（申請はオーナー本人）、(3) main の作成・deploy などの公開判断（未実施・未承認）。
+
+## Feasible follow-up complete
+
+English AI review corrected 17 strings (all IDs/JA/grading unchanged). Root actually inspected every20 asset and every quest screen, and completed the native Windows Chrome browser200% course (18 activities,600XP,reload,26 screen checks,18 axe scans with0 violations, all20 assets loaded). AX semantics passed; human reader speech remains unchecked. See [FEASIBLE_REVIEW](FEASIBLE_REVIEW.md), [ENGLISH_REVIEW](ENGLISH_REVIEW.md) and [RELEASE_READINESS](RELEASE_READINESS.md). Acceptance25/30 FULL PASS,4 partial,1 human-only; no new implementation blocker. Full RC requires real-practice/device evidence; current product is a polished playable Working MVP. Merge/deploy/application are separate owner decisions and were not done.
