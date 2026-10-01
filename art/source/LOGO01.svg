@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Beacon Workshop mark">
+<circle cx="32" cy="14" r="12" fill="#E5B85A" opacity="0.28"/>
+<path d="M23 54 L27 22 H37 L41 54 Z" fill="#F5F0E6" stroke="#202830" stroke-width="2" stroke-linejoin="round"/>
+<path d="M25.4 40 L26.3 32 H37.7 L38.6 40 Z" fill="#A73D42" opacity="0.9"/>
+<rect x="24" y="15" width="16" height="8" rx="1.5" fill="#E5B85A" stroke="#202830" stroke-width="2" stroke-linejoin="round"/>
+<path d="M23 15 L32 6 L41 15 Z" fill="#203F49" stroke="#202830" stroke-width="2" stroke-linejoin="round"/>
+<path d="M6 54 H58 V59 Q32 63 6 59 Z" fill="#203F49" stroke="#202830" stroke-width="2" stroke-linejoin="round"/>
+<path d="M10 54 L10 46 Q20 44 29 47 V54 Z M54 54 V46 Q44 44 35 47 V54 Z" fill="#F5F0E6" stroke="#202830" stroke-width="2" stroke-linejoin="round"/>
+</svg>

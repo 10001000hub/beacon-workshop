@@ -299,7 +299,7 @@ export function validateContent(raw: RawContent): string[] {
   for (const id of REQUIRED_ASSET_IDS) if (!assetIds.has(id)) errs.push(`assets: missing ${id}`);
   if (assets.length !== REQUIRED_ASSET_IDS.length) errs.push(`assets: expected ${REQUIRED_ASSET_IDS.length}, got ${assets.length}`);
   for (const a of assets) {
-    if (!/^assets\/[a-z]+\/[A-Z0-9]+\.svg$/.test(a.path)) errs.push(`asset ${a.id}: unexpected path ${a.path}`);
+    if (!/^assets\/[a-z]+\/[A-Z0-9]+\.(svg|webp)$/.test(a.path)) errs.push(`asset ${a.id}: unexpected path ${a.path}`);
     if (!isObj(a.alt) || !hasJa(a.alt)) errs.push(`asset ${a.id}: alt needs ja`);
   }
 

@@ -300,7 +300,7 @@
   "save.resetDone": "Progress was reset.",
   "about.title": "About",
   "about.noNetwork": "No learning data is sent anywhere. No ads, analytics or external AI calls.",
-  "about.art": "Images are placeholders and will be replaced later.",
+  "about.art": "Illustrations are original paper-diorama art drawn in code for this project. They are candidates awaiting the owner's visual review.",
   "about.license": "Released under the MIT License.",
   "about.version": "Lesson version {v}",
   "rc.title": "Save recovery",

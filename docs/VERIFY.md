@@ -1,10 +1,22 @@
 # VERIFY — Working MVP 検証報告
 
-- 対象: ブランチ `feat/working-mvp`、検証済みの実装 SHA **`db85a3d`**（`662c482` のコードに、WebKit で失敗した E2E 1 件のクリップボード権限の扱いを直すテスト修正を加えたもの）。その後の docs のみのコミットは、この検証の対象コードを変えない。リポジトリは公開済み（https://github.com/10001000hub/beacon-workshop ）だが、**アプリはデプロイしていない**
+- **最新の作業ブランチ（主証拠）**: `feat/claude-finish-20261001`（ベースは `354d937`。以下「この候補」）。**このブランチは画像 20 点（`public/assets/art`、`art/source`）・UI・テスト・docs を変更しており、下の履歴証拠の対象コードとは異なる。** リポジトリは公開済み（https://github.com/10001000hub/beacon-workshop ）だが、**アプリはデプロイしていない**
+- **最新（この候補）**: ルートが実際の終了コード 0 で全段階を検証済み（2026-10-01 08:16:44 UTC 完了、1 ワーカー）: typecheck、146 unit/content tests、validate:content（6 quests, 18 activities）、build、Chromium E2E 34 件。これは**下記の肖像オフセット修正より前**の実行。ルートは実コントロールで 6 章・18 課題・4 種類のボード・600 XP・終幕を完走し、再読み込み、外部リクエスト 0、pageerror 0 を確認し、自動化 Chromium のスクリーンショット 15 枚（`summary.json` 付き）を取得した（機器・人手の検証ではない）。
+- 肖像の CSS のみの修正（`.portrait` の `top` を -4px → -22px。Koto は別指定のまま）後: `npm run build` 成功、同じ手順でスクリーンショット 15 枚を再生成（errors 0、外部リクエスト 0、6 章 18 課題 600 XP）。q01-mobile と q06-desktop で Nagi/Ritsu の顔が丸の中に全部収まることを目視。その後 `npx playwright test --project=chromium tests/e2e/ui.spec.ts tests/e2e/a11y.spec.ts --workers=1` を単独実行（パイプなし）: 16 passed。**フルスイートは修正後には再実行していない。**
+- 以前の作業者の実測（参考）: `npm run check -- --workers=2` は出力を `tail`/`grep` 経由で見ており、`--workers=2` が反映されたとは言えない（4 ワーカーを観測）。1 回目に `playthrough.spec.ts` が 60s タイムアウトし、単独 19.5s で成功、再実行で 34 passed。
+- 作業ブランチの CI: **未確認（push 後の現行 head について、ルートが確認するまで pending。CI run / PR の ID はここに記載していない）**。既知の旧ベースライン `354d937` の CI run 36782230473 は履歴としてのみ記録する（このブランチのコードの証拠ではない）
+- 環境: WSL2 Linux, Node 22.23.1, Playwright 1.61.0 Chromium（キャッシュ済みを再利用。WebKit はこの環境に OS ライブラリがなく起動できない）
+- 実機（iPhone Safari、Windows、実際の Codex、VoiceOver/NVDA、200% 拡大、英語の母語話者校閲）での確認は一切していない。自動テストと作業者・ルートの画面目視は、オーナーの承認や実機検証の代わりにならない
+
+- 受け入れ項目は **30 項目中 24 項目が FULL PASS（80%）**、5 項目が自動部分 PASS + HUMAN_ONLY、1 項目が HUMAN_ONLY。これは受け入れ項目の充足率で、製品全体の完成率ではない。
+- 最新画面のレビュー資料: [docs/screenshots/README.md](screenshots/README.md)。15 枚のうち地図・全6章・終幕の8枚を同梱。
+
+## 履歴ベースライン（`feat/working-mvp` / `db85a3d` 時点。画像が仮 SVG だった旧コードの証拠であり、現在の作業ブランチには当てはまらない）
+- 対象: ブランチ `feat/working-mvp`、検証済み実装 SHA `db85a3d`（`662c482` のコードに、WebKit で失敗した E2E 1 件のクリップボード権限の扱いを直すテスト修正を加えたもの）
 - CI: **GitHub Actions run 36622604662 が `db85a3d` で success**（2026-09-30 観測）。job `check`（Chromium: typecheck、143 unit tests、validate:content、build、E2E 34 passed）と job `webkit`（E2E 34 passed）がともに success。直前の run 36621920030（`dd298db`）は `check` success / `webkit` **failure**（`ui.spec.ts` の practice cards テストが WebKit にない `clipboard-write` 権限を付与しようとして失敗。アプリの不具合ではなくテストの問題。33/34 は成功）で、上記の修正で解消した。それ以前の run は古いコミットの証拠であり使わない。この docs コミット自体の run は追跡しない
-- 実行日: 2026-09-30 / 環境: WSL2 Linux, Node 22.23.1, npm 10.9.8, Playwright 1.61.0 Chromium（WebKit ブラウザは取得できたが、この環境に必要な OS ライブラリがなく sudo も使えないため起動できない）
-- 実行結果（`662c482` のコードで `npm run check`、終了コード 0）: typecheck 成功 / `npm test` 8 files, 143 tests passed / `npm run validate:content` OK（6 quests, 18 activities）/ `npm run build` 成功 / `npm run test:e2e` 34 passed (chromium)
-- クリーン clone での再現（AC29）: **PASS**（2026-10-01、`092cd77`。下表 AC29）
+- （履歴）実行日: 2026-09-30 / 環境: WSL2 Linux, Node 22.23.1, npm 10.9.8, Playwright 1.61.0 Chromium（WebKit ブラウザは取得できたが、この環境に必要な OS ライブラリがなく sudo も使えないため起動できない）
+- （履歴）実行結果（`662c482` のコードで `npm run check`、終了コード 0）: typecheck 成功 / `npm test` 8 files, 143 tests passed / `npm run validate:content` OK（6 quests, 18 activities）/ `npm run build` 成功 / `npm run test:e2e` 34 passed (chromium)
+- クリーン clone での再現（AC29）: **履歴 PASS**（2026-10-01、`092cd77`＝画像が仮 SVG の旧コード。現在の候補の再現は下表 AC29 の通り別に記録）
 - 状態の意味: **PASS** = 記載の方法で実際に確認した / **FAIL** = 確認して不合格 / **NOT RUN** = 自動で実行できるのに実行していない / **DEFERRED** = 実行可能だが意図して後回し / **HUMAN_ONLY** = 人手・実機でしか確認できない / **EXTERNAL_TOOL_ONLY** = 外部の制作ツール・素材が必要。自動部分と人手部分が混在する項目は「PASS（自動部分）+ HUMAN_ONLY（…）」のように分けて書く。現在、自動で実行可能なのに NOT RUN / DEFERRED の項目は **ない**
 - 実機（iPhone Safari、Windows、実際の Codex）での確認は一切していない。自動テストは実機検証の代わりにならない
 
@@ -36,10 +48,10 @@
 | AC24 | 必須 | PASS | セキュリティテスト | `save.spec.ts`: HTML を含むノートを import しても実行・要素化されない（`__pwned` なし、img なし）。描画は textContent のみ、CSP meta | |
 | AC25 | 必須 | PASS | ネットワーク / コード | E2E の外部リクエスト 0 件。`src` に fetch / XMLHttpRequest / sendBeacon / WebSocket / password 入力なし（grep） | |
 | AC26 | 必須 | PASS | CI 設定 / 実行 | `.github/workflows/ci.yml`（npm ci → Chromium → typecheck/test/validate/build/e2e、失敗時のみトレース保存、AI・有料 API・secret なし）。GitHub Actions run 36622604662 が `db85a3d` で success（`check` と `webkit` の両 job）。旧 run 36498603515 は `c4d44a9`（MVP 時点） | 初回 run 36498169680 は skip link の遷移待ち不足で e2e 1件 FAIL → テストを修正して解消 |
-| AC27 | RC 条件（最終素材） | EXTERNAL_TOOL_ONLY | 台帳 / 表示 | `asset-manifest.json` に20件（MAP01, BG01–06, CH01–09, FX01, LOGO01, ICONS01, BADGES01）、全ファイル存在、alt あり、`status: placeholder`、SVG にスクリプト・外部参照なし | 最終アートは画像制作手段（または提供素材）が必要。自動では完了扱いにしない。台帳と代替表示は確認済み |
+| AC27 | RC 条件（最終素材） | PASS（自動部分）+ HUMAN_ONLY | 台帳 / 表示 / テスト | 2026-10-01、`feat/claude-finish-20261001`（この候補）。`asset-manifest.json` に20件（MAP01, BG01–06, CH01–09, FX01, LOGO01, ICONS01, BADGES01）、`status: candidate`、ja/en alt あり。`tests/content` が: 全ファイル存在、WebP 寸法（MAP 2048×1536 / BG 1920×1080 / CH 768×1024 / FX 768×768）、合計 ≤8MB（実測 1.67 MiB）、初画面分 ≤1.5MB、SVG に script/外部参照/埋め込み文字なし・XML 整形式、「仮素材/placeholder」文言なし を検査。画像失敗時の代替表示は既存の `image()` フォールバック。Chromium スクリーンショットで 320/360/1280px を作業者が目視（ルートの AI 目視確認も、オーナーの署名とは別物）。実寸は MAP 2048×1536、BG 1920×1080、CH 768×1024、FX 768×768、合計 1.67 MiB、生成コードと `art/source` を同梱。制作手段・日付・利用条件は `art/README.md` | 以前の外部素材待ちというブロッカーは、オリジナル候補 20 点の作成で解消。**オーナーの目視確認は未実施（HUMAN_ONLY）。承認・署名はない。** 実機での見え方も未確認。権利面は「オリジナルのコード描画・リポジトリと同じ MIT」までで、第三者権利の不存在の保証ではない |
 | AC28 | 必須 | PASS | 報告照合 | 本表。未実施項目を PASS と書いていない | |
-| AC29 | 必須 | PASS | clean environment | 2026-10-01、公開 repo https://github.com/10001000hub/beacon-workshop.git を新規 scratch ディレクトリへ `git clone`、`feat/working-mvp` の `092cd77` をチェックアウト。既存の node_modules・dist・Playwright 設定は持ち込まず、`npm ci`（0 vulnerabilities）→ `npx playwright install chromium` → `npm run check`（typecheck → 143 unit tests → validate:content「6 quests, 18 activities」→ build → Chromium E2E 34 passed）が exit 0 | 制限: Playwright のブラウザキャッシュ（`~/.cache/ms-playwright`）はローカルと共用（`install chromium` は既存キャッシュを再利用）。同じマシン・同じ OS であり、別マシン・Windows での再現ではない。docs のみの後続コミットでこの結果は変わらない |
-| AC30 | 公開前 | PASS | 差分 / grep | 2026-10-01 に `db85a3d` 以降の追跡ファイル108件を再走査: API キー・トークン・秘密鍵・パスワード代入、個人メール、ローカル絶対パスのパターンなし。画像・ログ・スクリーンショットは追跡されていない（`public/assets` は仮 SVG 20件）。`src` に fetch / XHR / sendBeacon / WebSocket / password 入力 / `localStorage.clear()` / innerHTML の使用なし（コメントでの言及のみ） | 公開済み |
+| AC29 | 必須 | PASS（現在の候補 + 履歴 `092cd77`） | clean environment | 2026-10-01、公開 repo https://github.com/10001000hub/beacon-workshop.git を新規 scratch ディレクトリへ `git clone`、`feat/working-mvp` の `092cd77` をチェックアウト。既存の node_modules・dist・Playwright 設定は持ち込まず、`npm ci`（0 vulnerabilities）→ `npx playwright install chromium` → `npm run check`（typecheck → 143 unit tests → validate:content「6 quests, 18 activities」→ build → Chromium E2E 34 passed）が exit 0 | 制限: Playwright のブラウザキャッシュ（`~/.cache/ms-playwright`）はローカルと共用（`install chromium` は既存キャッシュを再利用）。同じマシン・同じ OS であり、別マシン・Windows での再現ではない。上記は旧コード（`092cd77`）の履歴で、現在の候補の証拠ではない。**現在の候補**: ブランチは公開 repo のベース `354d937` の新規・隔離 GitHub clone から作り、node_modules・dist・設定は持ち込まず新規 `npm ci` を行った。そのコードで typecheck → 146 unit/content tests → validate:content（6 quests, 18 activities）→ build → Chromium E2E 34 の全段階が実際の終了コード 0（2026-10-01 08:16:44 UTC、肖像の小修正より前）、修正後は ui/a11y 16 件を単独実行して成功。同じマシン・同じ WSL OS・共用 Playwright ブラウザキャッシュという制限あり（別マシン・Windows ではない）。修正後のフル再実行は行っていない |
+| AC30 | 公開前 | PASS（現在の候補。下記の限界あり） | 差分 / grep | **現在の候補（コミット前、ルート実施）**: 追跡予定・未追跡の意図したテキスト 144 件（UTF-8）と生成 WebP 17 件・自動撮影 PNG 8 件（バイナリ）を走査し、個人のローカルパス、セッション ID、資格情報パターン、個人メール・パスワード・トークン代入パターンはなし。`src` にネットワーク API なし。正本仕様・`src/core`・CI workflow は変更なし。アートはオリジナルの SVG/WebP（`art/README.md` 記載）。レビュー用に実画面の PNG 8 枚を `docs/screenshots/` に同梱（画像チャンクのみ、EXIF 等のメタデータなし。自動化した模擬演習で、実 Codex・ユーザー記録ではない）。ログ・セッションデータ・学習者の保存データは追跡しない。`git diff --check` は終了コード 0。限界: パターン走査であり、セキュリティの保証ではない。**履歴（旧ツリー）**: `db85a3d` 以降の追跡ファイル108件を走査: API キー・トークン・秘密鍵・パスワード代入、個人メール、ローカル絶対パスのパターンなし。当時は画像・ログ・スクリーンショットは追跡されておらず `public/assets` は仮 SVG 20件だった。現在の候補は WebP/SVG のアート 20 点と `art/source` を含むため、この旧記述は当てはまらない。`src` に fetch / XHR / sendBeacon / WebSocket / password 入力 / `localStorage.clear()` / innerHTML の使用なし（コメントでの言及のみ） | 現在の候補は上記、旧ツリーは履歴 |
 
 ## 未実施のブラウザ確認（§17.3）
 - Playwright WebKit: ローカルは OS ライブラリ導入に sudo が必要で実行不可（EXTERNAL_TOOL_ONLY。CI が代替）。**CI（ubuntu-latest）では `db85a3d` で 34 passed（run 36622604662）= PASS**。WebKit エンジンの自動テストであり、実機 iPhone Safari の代わりにはならない
@@ -52,7 +64,7 @@
 - I3: `state.test.ts`（レベル3ヒント後も XP は通常、再回答で二重付与なし、maxHintLevel 保持）、`prerc.spec.ts`（「解答例を見て完了」表示）
 - I5: `prerc.spec.ts`（リセット確認は Cancel にフォーカス、キャンセルでトリガーに戻る）
 - I6: `langMark.test.ts`、`prerc.spec.ts`（英語 UI で日本語本文に `lang="ja"`、英語 UI の文字は対象外）。制限: `aria-label` などの属性と `document.title` には言語を付けられない
-- 未確認のまま（HUMAN_ONLY）: iPhone Safari 実機 / Windows 実 Codex / スクリーンリーダー / 200% 拡大 / 母語話者の英語校閲。EXTERNAL_TOOL_ONLY: 最終アート
+- 未確認のまま（HUMAN_ONLY）: iPhone Safari 実機 / Windows 実 Codex / スクリーンリーダー / 200% 拡大 / 母語話者の英語校閲。最終アートは AC27 参照（候補 20 点を作成済み、オーナー目視は HUMAN_ONLY）
 
 ## RC 作業で追加した確認（`a8dd34b`、`662c482`）
 - アクセシビリティ（自動）: `a11y.spec.ts`（axe-core 4.13.0 を node_modules から注入）。修正した違反: region、color-contrast、heading-order、landmark-unique（`--control-line` 追加、`.pin.locked` 色、バナーに `role=region` と `aria-label`）。ja / en 各 1 本 + 結果・復旧画面

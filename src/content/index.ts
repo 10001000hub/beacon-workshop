@@ -34,7 +34,8 @@ export interface AssetEntry {
   path: string;
   alt: LocalizedText;
   finalSpec: string;
-  status: 'placeholder';
+  /** `candidate` = original code-drawn art, owner visual review pending (never "final" without sign-off). */
+  status: 'candidate';
 }
 
 export interface Story {

@@ -17,8 +17,8 @@ import {
 } from '../core/selectors';
 import type { MessageKey } from './i18n';
 
-export const ICONS = 'assets/placeholders/ICONS01.svg';
-export const BADGES = 'assets/placeholders/BADGES01.svg';
+export const ICONS = 'assets/art/ICONS01.svg';
+export const BADGES = 'assets/art/BADGES01.svg';
 
 export function assetSrc(ctx: Ctx, id: string): { src: string; alt: string } | null {
   const a = ctx.content.assets.find((x) => x.id === id);
@@ -44,7 +44,8 @@ function portrait(ctx: Ctx, line: DialogueLine): HTMLElement | null {
   const asset = assetSrc(ctx, set[idx]);
   if (!asset) return null;
   // The speaker name is printed next to the portrait, so the image itself is decorative here.
-  return image(asset.src, '', 'portrait', speakerName(ctx, line).slice(0, 2));
+  // The wrapper crops the full-body art to the face; the fallback tile fills it.
+  return h('span', { class: `portrait-wrap portrait-${line.speaker}` }, image(asset.src, '', 'portrait', speakerName(ctx, line).slice(0, 2)));
 }
 
 export function dialogue(ctx: Ctx, lines: DialogueLine[]): HTMLElement {
