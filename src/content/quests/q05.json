@@ -6,7 +6,7 @@
   "place": { "ja": "検査場", "en": "Inspection Hall" },
   "incident": { "ja": "「検査済み」の札が、別の古い版の結果だった。", "en": "The \"inspected\" tag turned out to be the result of another, older version." },
   "notesState": { "ja": "現在の版の主要動作を確かめる", "en": "Check the main actions of the current version" },
-  "sample": { "ja": "完成見本：現在の版（v0.4）で、追加・再読み込み後の保持・空白題名の拒否・通常題名の登録を確かめた記録。行った検査・結果・まだ行っていない検査が分けて書かれている。", "en": "Sample answer: a record for the current version (v0.4) confirming adding, keeping after reload, rejecting a blank title and registering a normal title. It separates the checks done, the results and the checks not yet done." },
+  "sample": { "ja": "完成見本：現在の版（v0.4）で、追加・再読み込み後の保持・空白題名の拒否・通常題名の登録を確かめた記録。行った検査・結果・まだ行っていない検査が分けて書かれている。", "en": "Worked example: a record for the current version (v0.4) confirming adding, keeping after reload, rejecting a blank title and registering a normal title. It separates the checks done, the results and the checks not yet done." },
   "objectives": [
     { "id": "q05-o1", "text": { "ja": "検査記録が、どの版を対象にしたものかを確かめられる", "en": "You can tell which version an inspection record is about" } },
     { "id": "q05-o2", "text": { "ja": "成功・失敗・実行エラー・未実施を区別できる", "en": "You can tell success, failure, run error and not run apart" } },
@@ -298,7 +298,7 @@
           "reasons": [
             { "id": "c1-enough", "label": { "ja": "現在の版で、主要動作の成功記録がそろっているから", "en": "Because the success records for the main actions on the current version are complete" }, "explain": { "ja": "対象の版・検査・結果がそろっています。", "en": "The target version, the checks and the results are all there." } },
             { "id": "c1-redo", "label": { "ja": "念のため、すべての検査を最初からやり直すべきだから", "en": "Because just in case, all checks should be redone from the beginning" }, "explain": { "ja": "根拠がそろっているのにやり直す理由がありません。", "en": "The evidence is complete, so there is no reason to redo them." } },
-            { "id": "c1-feeling", "label": { "ja": "何か見落としがありそうな気がするから", "en": "Because it feels like something may have been overlooked" }, "explain": { "ja": "気がするだけでは、止める根拠になりません。", "en": "A feeling alone is not grounds for stopping." } }
+            { "id": "c1-feeling", "label": { "ja": "何か見落としがありそうな気がするから", "en": "Because it feels like something may have been overlooked" }, "explain": { "ja": "気がするだけでは、止める根拠になりません。", "en": "A feeling alone is not a valid reason to stop." } }
           ]
         },
         {

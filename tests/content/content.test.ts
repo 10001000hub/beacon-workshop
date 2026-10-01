@@ -1,4 +1,6 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
+// @ts-expect-error jsdom ships no type declarations; only used here as a strict XML parser.
+import { JSDOM } from 'jsdom';
 import { describe, expect, it } from 'vitest';
 import { loadContent, RAW_CONTENT } from '../../src/content/index';
 import { REQUIRED_ASSET_IDS, totalRequiredActivities, validateContent } from '../../src/content/validate';
@@ -95,10 +97,54 @@ describe('assets (§12)', () => {
       expect(a.alt.ja, a.id).toBeTruthy();
     }
   });
-  it('placeholders are marked as placeholders and contain no scripts or external references', () => {
-    for (const f of readdirSync('public/assets/placeholders')) {
+  it('art SVGs (public and editable sources) contain no scripts, external references or embedded text', () => {
+    for (const dir of ['public/assets/art', 'art/source']) {
+      for (const f of readdirSync(dir).filter((n) => n.endsWith('.svg'))) {
+        const svg = readFileSync(`${dir}/${f}`, 'utf8');
+        expect(svg, `${dir}/${f}`).not.toMatch(/<script|<foreignObject|<image|<text|\son\w+=|href=|https?:\/\/(?!www\.w3\.org)/i);
+        // Strict XML parse: duplicate attributes or unclosed tags make the browser drop the whole SVG.
+        expect(() => new JSDOM(svg, { contentType: 'image/svg+xml' }), `${dir}/${f} is well-formed`).not.toThrow();
+      }
+    }
+  });
+  it('legacy placeholder SVGs (unused, kept as history) still contain no scripts or external references', () => {
+    // Original signed-off check, unchanged. They are not in the manifest and may still hold their "PLACEHOLDER" label.
+    const files = readdirSync('public/assets/placeholders').filter((n) => n.endsWith('.svg'));
+    expect(files.length).toBeGreaterThan(0);
+    for (const f of files) {
       const svg = readFileSync(`public/assets/placeholders/${f}`, 'utf8');
       expect(svg, f).not.toMatch(/<script|on\w+=|https?:\/\/(?!www\.w3\.org)/i);
+    }
+  });
+  it('raster art is WebP at the specified size and the whole set stays within the 8MB budget', () => {
+    const size = (buf: Buffer): [number, number] => {
+      expect(buf.toString('ascii', 0, 4)).toBe('RIFF');
+      expect(buf.toString('ascii', 8, 12)).toBe('WEBP');
+      const kind = buf.toString('ascii', 12, 16);
+      if (kind === 'VP8X') return [1 + buf.readUIntLE(24, 3), 1 + buf.readUIntLE(27, 3)];
+      if (kind === 'VP8 ') return [buf.readUInt16LE(26) & 0x3fff, buf.readUInt16LE(28) & 0x3fff];
+      const bits = buf.readUInt32LE(21);
+      return [(bits & 0x3fff) + 1, ((bits >> 14) & 0x3fff) + 1];
+    };
+    const want = (id: string): [number, number] =>
+      id === 'MAP01' ? [2048, 1536] : id.startsWith('BG') ? [1920, 1080] : id.startsWith('CH') ? [768, 1024] : [768, 768];
+    let total = 0;
+    for (const a of content.assets) {
+      const buf = readFileSync(`public/${a.path}`);
+      total += buf.length;
+      if (a.path.endsWith('.webp')) expect(size(buf), a.id).toEqual(want(a.id));
+      else expect(a.path, a.id).toMatch(/\.svg$/);
+    }
+    expect(total).toBeLessThanOrEqual(8 * 1024 * 1024);
+    const firstScreen = ['MAP01', 'LOGO01', 'ICONS01', 'BADGES01'].reduce((n, id) => n + readFileSync(`public/${content.assets.find((a) => a.id === id)!.path}`).length, 0);
+    expect(firstScreen).toBeLessThanOrEqual(1.5 * 1024 * 1024);
+  });
+  it('every asset has ja and en alt text, no placeholder wording, and is only a candidate (no claimed sign-off)', () => {
+    for (const a of content.assets) {
+      expect(a.alt.ja, a.id).toBeTruthy();
+      expect(a.alt.en, a.id).toBeTruthy();
+      expect(`${a.alt.ja}${a.alt.en}`, a.id).not.toMatch(/仮素材|placeholder/i);
+      expect(a.status, a.id).toBe('candidate');
     }
   });
 });

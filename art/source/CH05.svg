@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 1024" width="768" height="1024">
+<title>Koto (think)</title>
+<defs>
+<filter id="piece" x="-6%" y="-6%" width="112%" height="112%" color-interpolation-filters="sRGB">
+  <feTurbulence type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="7" result="warp"/>
+  <feDisplacementMap in="SourceGraphic" in2="warp" scale="5" xChannelSelector="R" yChannelSelector="G" result="shape"/>
+  <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" seed="2" result="fibre"/>
+  <feDiffuseLighting in="fibre" surfaceScale="0.8" lighting-color="#ffffff" result="lit"><feDistantLight azimuth="225" elevation="70"/></feDiffuseLighting>
+  <feComposite in="shape" in2="lit" operator="arithmetic" k1="1.1" k2="0" k3="0" k4="0" result="tex"/>
+  <feComposite in="tex" in2="shape" operator="in" result="body"/>
+  <feDropShadow in="body" dx="5" dy="8" stdDeviation="4.5" flood-color="#14262c" flood-opacity="0.34"/>
+</filter>
+<filter id="pieceSoft" x="-6%" y="-6%" width="112%" height="112%" color-interpolation-filters="sRGB">
+  <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="11" result="warp"/>
+  <feDisplacementMap in="SourceGraphic" in2="warp" scale="7" xChannelSelector="R" yChannelSelector="G" result="shape"/>
+  <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="3" seed="5" result="fibre"/>
+  <feDiffuseLighting in="fibre" surfaceScale="0.7" lighting-color="#ffffff" result="lit"><feDistantLight azimuth="225" elevation="72"/></feDiffuseLighting>
+  <feComposite in="shape" in2="lit" operator="arithmetic" k1="1.08" k2="0" k3="0" k4="0" result="tex"/>
+  <feComposite in="tex" in2="shape" operator="in" result="body"/>
+  <feDropShadow in="body" dx="8" dy="12" stdDeviation="9" flood-color="#14262c" flood-opacity="0.28"/>
+</filter>
+<filter id="pieceFlat" x="-4%" y="-4%" width="108%" height="108%" color-interpolation-filters="sRGB">
+  <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="4" result="warp"/>
+  <feDisplacementMap in="SourceGraphic" in2="warp" scale="3" xChannelSelector="R" yChannelSelector="G" result="shape"/>
+  <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" seed="9" result="fibre"/>
+  <feDiffuseLighting in="fibre" surfaceScale="0.7" lighting-color="#ffffff" result="lit"><feDistantLight azimuth="225" elevation="72"/></feDiffuseLighting>
+  <feComposite in="shape" in2="lit" operator="arithmetic" k1="1.08" k2="0" k3="0" k4="0" result="tex"/>
+  <feComposite in="tex" in2="shape" operator="in"/>
+</filter>
+<filter id="blur8" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="8"/></filter>
+<filter id="blur20" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="20"/></filter>
+<filter id="blur40" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter><radialGradient id="kglow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFE9A8" stop-opacity="0.33249999999999996"/><stop offset="1" stop-color="#E5B85A" stop-opacity="0"/></radialGradient><linearGradient id="kbody" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D9B764"/><stop offset="1" stop-color="#A67F34"/></linearGradient></defs>
+<ellipse cx="394" cy="700" rx="140" ry="22" fill="#14262c" opacity="0.22" filter="url(#blur20)"/>
+<circle cx="384" cy="210" r="154.5" fill="url(#kglow)"/>
+<g filter="url(#piece)" ><g transform="rotate(16 214 400)"><path d="M214 380L90 330Q70 380 96 440L214 430Z" fill="#F5F0E6" stroke="#2a373d" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M200 384L110 356M200 404L108 392" fill="none" stroke="#d8cfb8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></g><g transform="rotate(-6 554 400)"><path d="M554 380L678 330Q698 380 672 440L554 430Z" fill="#F5F0E6" stroke="#2a373d" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M568 384L658 356M568 404L660 392" fill="none" stroke="#d8cfb8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></g></g>
+<g filter="url(#piece)" ><path d="M260 244H508Q562 244 562 298V490Q562 544 508 544H260Q206 544 206 490V298Q206 244 260 244Z" fill="url(#kbody)" stroke="#2a373d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M270 272H498Q536 272 536 310V478Q536 516 498 516H270Q232 516 232 478V310Q232 272 270 272Z" fill="#F1E3BD" stroke="#2a373d" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M336 244Q336 206 384 206Q432 206 432 244" fill="none" stroke="#8c6a28" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/><path d="M378 176H390Q396 176 396 182V204Q396 210 390 210H378Q372 210 372 204V182Q372 176 378 176Z" fill="#8c6a28" stroke="#2a373d" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M206 300L206 298L260 244L236 244Z" fill="#DDB765" stroke="none" opacity="0"/><path d="M364 506H404Q412 506 412 514V532Q412 540 404 540H364Q356 540 356 532V514Q356 506 364 506Z" fill="#8c6a28" stroke="#2a373d" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M377 523A7 7 0 1 0 391 523A7 7 0 1 0 377 523Z" fill="#DDB765" stroke="#2a373d" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M228 514A8 8 0 1 0 244 514A8 8 0 1 0 228 514Z" fill="#DDB765" stroke="#2a373d" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M524 514A8 8 0 1 0 540 514A8 8 0 1 0 524 514Z" fill="#DDB765" stroke="#2a373d" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M228 274A8 8 0 1 0 244 274A8 8 0 1 0 228 274Z" fill="#DDB765" stroke="#2a373d" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M524 274A8 8 0 1 0 540 274A8 8 0 1 0 524 274Z" fill="#DDB765" stroke="#2a373d" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M298 322H470Q500 322 500 352V440Q500 470 470 470H298Q268 470 268 440V352Q268 322 298 322Z" fill="#26363D" stroke="#2a373d" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><path d="M284 340Q300 330 330 330L270 400Z" fill="#ffffff" stroke="none" opacity="0.07"/></g>
+<circle cx="384" cy="160" r="30.9" fill="#FFE9A8" opacity="0.49" filter="url(#blur8)"/>
+<g filter="url(#pieceFlat)" ><path d="M362 162A22 24 0 1 0 406 162A22 24 0 1 0 362 162Z" fill="#d8bd78" stroke="#2a373d" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/></g>
+<ellipse cx="327" cy="388" rx="15" ry="19" fill="#FFE08A" opacity="0.9"/><circle cx="322" cy="380" r="5" fill="#fff"/><path d="M420 392H454" fill="none" stroke="#FFE08A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><circle cx="490" cy="356" r="0" fill="none"/><path d="M368 438Q386 432 404 440" fill="none" stroke="#FFE08A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+<g filter="url(#pieceFlat)" ><path d="M550 150A10 10 0 1 0 570 150A10 10 0 1 0 550 150Z" fill="#F5F0E6" stroke="#2a373d" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M581 112A15 15 0 1 0 611 112A15 15 0 1 0 581 112Z" fill="#F5F0E6" stroke="#2a373d" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M626 70A24 22 0 1 0 674 70A24 22 0 1 0 626 70Z" fill="#F5F0E6" stroke="#2a373d" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></g>
+</svg>

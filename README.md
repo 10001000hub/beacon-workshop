@@ -9,11 +9,26 @@
 - 採点はブラウザ内で決まった規則により行います。自由記述は採点しません。
 - **進捗はこのブラウザの localStorage（`beacon-workshop.save.v1` / `beacon-workshop.backup.v1`）にだけ保存されます。** 外部送信・解析・広告・ログインはありません。
 - 実習カード（本物の Codex で試す手順）は**下書き**で、実機では未検証です。
-- 画像はすべて仮素材です。
+- 絵はこのプロジェクト用にコードで描いたオリジナル（紙工作風）の**候補版**で、オーナーの目視確認は未了です。制作手順と利用条件は [art/README.md](art/README.md)。
 
 ## 現在の状態
 
-**Release Candidate（この環境で自動検証できる範囲）**（ブランチ `feat/working-mvp`）。リポジトリは公開されていますが、**アプリはデプロイされていません**（公開ページはありません）。導入 → Q01〜Q06（必須課題18）→ 終幕までを日本語で一周できます。日英の教材があります（英訳は母語話者の校閲を受けていない初訳です）。最終アートと実習の実機検証は未完了です。詳細は [docs/VERIFY.md](docs/VERIFY.md) と [docs/HANDOFF.md](docs/HANDOFF.md) を参照してください。
+**磨き込み済みのプレイ可能な候補（Working MVP：オリジナルのアートと日英の教材を備える）。完全な Release Candidate は、実際の練習（Windows の実 Codex）での検証待ちです。** 仕様 §17.1 の Release Candidate には Windows 実機の経路検証が必要で、未実施です。詳細は [docs/RELEASE_READINESS.md](docs/RELEASE_READINESS.md)。公開リポジトリの既定ブランチは `feat/working-mvp` のままで、その画像は仮素材です。**オリジナルのアート候補 20 点を含むこのコードはブランチ `feat/claude-finish-20261001`**（ベース `354d937`）にあり、レビュー待ちです（承認済みではありません）。アプリはデプロイされていません（公開ページはありません）。アートはオリジナルの候補版（オーナーの目視確認待ち）、実習の実機検証は未完了、英訳は母語話者の校閲を受けていない初訳です。詳細は [docs/VERIFY.md](docs/VERIFY.md) と [docs/HANDOFF.md](docs/HANDOFF.md)、アートの来歴は [art/README.md](art/README.md)、OSS 申請の下書き（未提出）は [docs/OSS_APPLICATION.md](docs/OSS_APPLICATION.md) を参照してください。
+
+## コースの概要
+
+- 導入 → Q01〜Q06（6 章・必須課題 18）→ 終幕。1 章に課題が 3 つあり、終えると地区の灯りがともります。全部で 600 XP（課題の初回完了 18×20 + 章クリア 6×40）です。実機実習は XP に加算せず、独立した記録です。
+- 課題は 4 種類です: 依頼を組み立てる（prompt_builder）、根拠を集める（evidence_board）、変更を見直す（change_review）、進めるか止めるかの判断（triage_decision）。
+- 採点はブラウザ内の決まった規則（決定的）で、自由記述は採点しません。選択ごとにフィードバックとヒント 3 段階があります。
+- 日本語が基本で、英語の教材・UI も選べます。
+
+## このブランチの取得
+
+```sh
+git clone https://github.com/10001000hub/beacon-workshop.git
+cd beacon-workshop
+git checkout feat/claude-finish-20261001   # アート候補を含むブランチ（レビュー待ち）
+```
 
 ## コマンド
 
@@ -28,6 +43,8 @@ npm run validate:content            # 教材データの検証
 npm run build                       # 型検査 + 本番ビルド（dist/）
 npm run test:e2e                    # Playwright E2E（ビルドして 127.0.0.1:4173 で preview）
 npm run check                       # 上記すべて
+npx tsx scripts/generate-art.ts     # アートの SVG 原稿（art/source/）と素材台帳を再生成
+npx tsx scripts/render-art.ts       # 原稿を Chromium で public/assets/art/ へ書き出し（WebP/SVG）
 ```
 
 `dist/` は静的ファイルのみです。静的サーバー（例: `npm run preview`）で配信して開いてください。`index.html` をダブルクリックして開く方法（`file://`）は確認していないため、対応をうたっていません。
@@ -35,7 +52,7 @@ npm run check                       # 上記すべて
 ## 既知の制限
 
 - 英訳は初訳で、母語話者の校閲を受けていません。英訳のない部分は日本語で表示され、`lang="ja"` を付けます。
-- 検証は Chromium の自動テスト（axe-core を含む）のみです。実機 iPhone Safari（WebKit エンジンは CI で確認済み）・Windows・スクリーンリーダー・実際の Codex での確認は未実施です。画像は仮素材のままです。
+- Chromium／WebKit の自動テストに加え、Windows のインストール済み Chrome で実ブラウザ200%拡大の全18課題を確認しました。全20点のアートと全6章の実画面はAIが目視確認済みです。実機 iPhone Safari、Windows の実 Codex 実習、スクリーンリーダー音声、人手の拡大操作、英語母語話者の校閲は未確認です。オーナーの美的承認は取得していません。詳細は [環境内の確認](docs/FEASIBLE_REVIEW.md)。
 - リセット／インポート前のバックアップ保護は、ページを再読み込みするまでの間の保持です。大事な進捗は設定画面のエクスポートで控えてください。
 - CI: `.github/workflows/ci.yml`（GitHub Actions）。結果は各コミットごとに確認してください。
 

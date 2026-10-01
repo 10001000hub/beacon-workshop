@@ -131,6 +131,20 @@ export function mapScreen(ctx: Ctx): HTMLElement {
     }),
   );
 
+  // Decorative mist (FX01) over places that are still locked; static, hidden from assistive tech.
+  const fx = assetSrc(ctx, 'FX01');
+  const mist = h(
+    'div',
+    { class: 'map-mist', 'aria-hidden': 'true' },
+    ...(fx
+      ? ctx.content.quests.flatMap((q, i) => {
+          if (isQuestUnlocked(save, cat, q.id)) return [];
+          const [x, y] = PIN_POS[i] ?? [50, 50];
+          return [h('img', { class: 'mist', src: fx.src, alt: '', style: `left:${x}%;top:${y}%`, loading: 'lazy' })];
+        })
+      : []),
+  );
+
   const primary = resume
     ? linkButton(
         t('map.next'),
@@ -148,7 +162,7 @@ export function mapScreen(ctx: Ctx): HTMLElement {
     screenHeading(t('map.title'), t('map.sub')),
     progressSummary(ctx),
     h('div', { class: 'actions primary-actions' }, primary),
-    h('div', { class: 'map-frame' }, map ? image(map.src, map.alt, 'map-img', map.alt) : null, pins),
+    h('div', { class: 'map-frame' }, map ? image(map.src, map.alt, 'map-img', map.alt) : null, mist, pins),
     h(
       'section',
       { 'aria-labelledby': 'quests-h' },

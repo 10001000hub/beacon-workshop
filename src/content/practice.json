@@ -5,7 +5,7 @@
     "routeId": "desktop_windows_codex",
     "objective": { "ja": "灯台メモの短い仕様と、3つの完了条件をCodexに整理してもらう。まだファイルは作らせない。", "en": "Have Codex organize a short spec for the lighthouse notes and three completion criteria. Do not have it create files yet." },
     "requiredState": [
-      { "ja": "Windows で、公式のデスクトップ環境から Codex を使える状態（利用枠があること）", "en": "Windows, with Codex usable from the official desktop environment (with usage allowance available)" },
+      { "ja": "Windows で、公式のデスクトップ環境から Codex を使える状態（利用枠があること）", "en": "Windows, with Codex usable from the official desktop environment (with usage quota available)" },
       { "ja": "練習専用の空のフォルダ（例：beacon-notes-practice）。仕事用のフォルダは使わない", "en": "An empty folder just for practice (for example: beacon-notes-practice). Do not use a work folder" }
     ],
     "whereToAct": { "ja": "Codex に依頼を書く入力欄。ターミナル（コマンドを打つ画面）ではない。画面の名前や位置は版によって変わるため、ここでは特定しない。", "en": "The input box where you write a request to Codex. It is not a terminal (a screen for typing commands). Screen names and positions change by version, so they are not specified here." },
@@ -15,7 +15,7 @@
     "failureRecovery": [
       { "situation": { "ja": "ファイルを作り始めた・作ろうとしている", "en": "It started, or is about to start, creating files" }, "action": { "ja": "止めてもらい、今は整理だけだと伝え直す。", "en": "Have it stop, and tell it again that for now this is only organizing." }, "instruction": { "ja": "今は設計の整理だけです。ファイルの作成や変更は行わず、文章でまとめてください。", "en": "For now this is only organizing the design. Do not create or change any files; please summarize in text." } },
       { "situation": { "ja": "完了条件があいまい（「使いやすい」など）", "en": "The completion criteria are vague (such as \"easy to use\")" }, "action": { "ja": "画面で確かめられる形に言い換えてもらう。", "en": "Have it reword them into a form that can be checked by operating the screen." }, "instruction": { "ja": "完了条件を、画面で操作して確かめられる形に書き直してください。", "en": "Please rewrite the completion criteria in a form I can check by operating the screen." } },
-      { "situation": { "ja": "利用枠がない・画面が説明と違う", "en": "No usage allowance, or the screen differs from the description" }, "action": { "ja": "実習を「今は実行不可」にして、練習画面へ戻る。別アカウントや有料APIには切り替えない。", "en": "Mark the practice \"cannot run now\" and return to the practice screen. Do not switch to another account or a paid API." } }
+      { "situation": { "ja": "利用枠がない・画面が説明と違う", "en": "No usage quota, or the screen differs from the description" }, "action": { "ja": "実習を「今は実行不可」にして、練習画面へ戻る。別アカウントや有料APIには切り替えない。", "en": "Mark the practice \"cannot run now\" and return to the practice screen. Do not switch to another account or a paid API." } }
     ],
     "status": "draft",
     "verification": { "verifiedAt": null, "testedProductVersion": null, "contentVersion": "0.1.0", "note": { "ja": "未検証の下書き。実機では確認していません。", "en": "Unverified draft. Not checked on a real device." } },

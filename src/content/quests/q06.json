@@ -5,8 +5,8 @@
   "title": { "ja": "灯台へ届ける日", "en": "The Day We Deliver to the Lighthouse" },
   "place": { "ja": "灯台", "en": "Lighthouse" },
   "incident": { "ja": "番人が完了報告を盲信したり、軽微な装飾で止めたりする。", "en": "The keeper blindly trusts a completion report, or stops the work over a minor decoration." },
-  "notesState": { "ja": "完成見本・README・確認記録をまとめる", "en": "Put together the sample answer, README and check record" },
-  "sample": { "ja": "完成見本：灯台メモと一緒に、目的・起動と使い方・確認済みと未確認・残件を書いた引き渡しパックがある。秘密情報や作業ログの全文は入っていない。", "en": "Sample answer: a handover pack that comes with the lighthouse notes and contains the goal, how to start and use it, what is checked and unchecked, and what remains. It does not include secrets or the full text of the work log." },
+  "notesState": { "ja": "完成見本・README・確認記録をまとめる", "en": "Put together the worked example, README and check record" },
+  "sample": { "ja": "完成見本：灯台メモと一緒に、目的・起動と使い方・確認済みと未確認・残件を書いた引き渡しパックがある。秘密情報や作業ログの全文は入っていない。", "en": "Worked example: a handover pack that comes with the lighthouse notes and contains the goal, how to start and use it, what is checked and unchecked, and what remains. It does not include secrets or the full text of the work log." },
   "objectives": [
     { "id": "q06-o1", "text": { "ja": "目的に関わる不具合と、後でよい小さな改善を分けられる", "en": "You can separate bugs related to the goal from small improvements that can wait" } },
     { "id": "q06-o2", "text": { "ja": "起動方法・確認記録・残件をまとめて、他の人へ渡せる", "en": "You can hand over how to start it, the check record and what remains as one set to another person" } },
@@ -76,7 +76,7 @@
           "reasons": [
             { "id": "i3-evidence", "label": { "ja": "現在の版で、必要な動作をすべて確かめて成功しているから", "en": "Because all the needed actions were checked and succeeded on the current version" }, "explain": { "ja": "対象の版・検査・結果がそろっています。", "en": "The target version, the checks and the results are all there." } },
             { "id": "i3-recheck", "label": { "ja": "念のため、もう一度全部確かめ直したいから", "en": "Because just in case, I want to check everything once more" }, "explain": { "ja": "確かめ終わった動作を、止める理由なく繰り返すことになります。", "en": "You would repeat actions already checked, with no reason to stop." } },
-            { "id": "i3-wait", "label": { "ja": "何か問題が見つかるまで、止めておくべきだから", "en": "Because it should be held until some problem is found" }, "explain": { "ja": "問題が見つかっていないのに止めても、根拠になりません。", "en": "Stopping when no problem has been found is not grounds." } }
+            { "id": "i3-wait", "label": { "ja": "何か問題が見つかるまで、止めておくべきだから", "en": "Because it should be held until some problem is found" }, "explain": { "ja": "問題が見つかっていないのに止めても、根拠になりません。", "en": "Stopping when no problem has been found is not a valid reason." } }
           ]
         },
         {
@@ -137,7 +137,7 @@
           "next": { "ja": "項目4の判断と理由を見直しましょう。", "en": "Review the decision and reason for item 4." }
         },
         "minor_as_blocker": {
-          "what": { "ja": "正しく動く作品が、角の丸みのために届けられません。番人のもう一つの誤りと同じです。", "en": "Working work could not be delivered because of round corners. That is the keeper's other mistake." },
+          "what": { "ja": "正しく動く作品が、角の丸みのために届けられません。番人のもう一つの誤りと同じです。", "en": "Work that runs correctly could not be delivered because of round corners. That is the keeper's other mistake." },
           "why": { "ja": "角の丸みは目的に関わらない見た目の点で、押すと正しく動くことも分かっています。", "en": "Round corners are a point of appearance not related to the goal, and it is also known that it works correctly when pressed." },
           "next": { "ja": "項目2の判断と理由を見直しましょう。", "en": "Review the decision and reason for item 2." }
         },

@@ -108,6 +108,18 @@
   display: block;
   object-fit: cover;
 }
+.map-mist {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.map-mist .mist {
+  position: absolute;
+  width: 20%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0.4;
+}
 .map-pins {
   position: absolute;
   inset: 0;
